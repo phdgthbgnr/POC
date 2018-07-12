@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rayban Pitchfork</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta property="og:url" content="http://www.deezer.com/app/rayban/" /> 
+    <meta property="og:title" content="Comme Ray-Ban prouve que tu es a la pointe de l'innovation musicale" />
+    <meta property="og:description" content="Crée ta plalyist #Pionierenliteforce et remporte les dernières places pour le Pitchfork Music Festival" /> 
+    <meta property="og:image" content="http://demo.greengardendigital.com/Deezer/rayban/_images/rayban-logo2.png" />
+    
+    <!--<link href="http://cdn-files.deezer.com/css/deezer-v00209297.css" rel="stylesheet" type="text/css">-->
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="_js/jquery.fittext.js"></script>
+    
+    <script>
+	/*
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-56015158-1', 'auto');
+      ga('send', 'pageview');
+	*/
+    </script>
+     
+</head>
+<body>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P53Q62"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P53Q62');</script>
+<!-- End Google Tag Manager -->
+
+<script>
+        
+var busy=null;
+var allshr=Array();
+var curr='';
+var posTrack=0;
+var curposTrack=0;
+var indexTrack=0;
+var curAlbum=0;
+var curPlst=0;
+var trackSearch=0; // la piste qui joue est issue de la recherche
+var arrAlbums=Array();
+var arrPlsts=Array();
+    
+        // This is called with the results from from FB.getLoginStatus().
+function statusChangeCallback(response) {
+    // console.log('statusChangeCallback');
+    //console.log(response);
+    //console.log('accessToken FB : '+response.authResponse.accessToken);
+    //console.log('id FB : '+response.authResponse.userID);
+    
+    // FBToken=response.authResponse.accessToken;
+    // FBid=response.authResponse.userID;
+    
+    // The response object is returned with a status field that lets the
+        // app know the current login status of the person.
+        // Full docs on the response object can be found in the documentation
+        // for FB.getLoginStatus().
+        if (response.status === 'connected') {
+          // Logged into your app and Facebook.
+          testAPI();
+        } else if (response.status === 'not_authorized') {
+          // The person is logged into Facebook, but not your app.
+          document.getElementById('status').innerHTML = 'Please log ' + 'into this app.';
+
+            FB.login(function(response) {
+            // handle the response
+            }, {scope: 'publish_actions'}); //'public_profile,email,publish_actions'
+
+        } else {
+          // The person is not logged into Facebook, so we're not sure if
+          // they are logged into this app or not.
+          document.getElementById('status').innerHTML = 'Please log ' + 'into Facebook.';
+        }
+      }
+
+      // This function is called when someone finishes with the Login
+      // Button.  See the onlogin handler attached to it in the sample
+      // code below.
+      function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
+      }
+
+    
+      window.fbAsyncInit = function() {
+          
+          
+          FB.init({
+            appId      : '327387360780080',
+            cookie     : true,  // enable cookies to allow the server to access the session
+            xfbml      : true,  // parse social plugins on this page
+            version    : 'v2.1' // use version 2.1
+          });
+          
+          
+          // Now that we've initialized the JavaScript SDK, we call 
+          // FB.getLoginStatus().  This function gets the state of the
+          // person visiting this page and can return one of three states to
+          // the callback you provide.  They can be:
+          //
+          // 1. Logged into your app ('connected')
+          // 2. Logged into Facebook, but not your app ('not_authorized')
+          // 3. Not logged into Facebook and can't tell if they are logged into
+          //    your app or not.
+          //
+          // These three cases are handled in the callback function.
+
+          /*
+          FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+          });
+          */
+          
+
+      };
+
+      // Load the SDK asynchronously
+
+    
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+    
+      // Here we run a very simple test of the Graph API after login is
+      // successful.  See statusChangeCallback() for when this call is made.
+      function testAPI() {
+        //console.log('Welcome!  Fetching your information.... ');
+        FB.api('/me', function(response) {
+          //console.log('Successful login for: ' + response.name);
+          document.getElementById('status').innerHTML =
+            'Thanks for logging in, ' + response.name + '!';
+        });
+      }
+    
+    
+    
+        // Include the Twitter Library
+        window.twttr = (function (d,s,id) {
+          var t, js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+          js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+          return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+        }(document, "script", "twitter-wjs"));
+
+        // On ready, register the callback...
+        twttr.ready(function (twttr) {
+            twttr.events.bind('tweet', function (event) {
+                allshr.push('tweet');
+                curr='tweet';
+                $('#okshareplst').css('display','block');
+                busy=null;
+            });
+        });
+    
+</script>
+    <div class="page">
+        
+        <div class="content">
+            
+            <img src="_images/transp.png"/>
+            
+            
+            <div class="colleft">
+                <div class="header"><img src="_images/kindness.jpg" width="280" height="187" alt="kindness - adam bainbridge"/></div>
+                <div class="bio">
+                    <h2>KINDNESS</h2>
+                    <h3>Adam Bainbridge, l'Anglais qui se cache derrière Kindness, n'est pas un adepte du teasing. Plutôt que de parier sur l'attente, il mise sur l'effet de surprise et cultive en ce sens un épais mystère à son endroit. C'est en 2007…</h3>
+                    <h4>
+                        <a href="#" class="links1" id="affkbio">lire sa bio complète</a>
+                        <a href="#" target="_blank" id="affkplst">découvre la playlist idéale de kindness</a>
+                    </h4>
+                    <div class="kndplst">
+                        <a href="#" id="playinhead" class="playinhead"><img src="_images/kindplst.png"/></a>
+                    </div>
+                    <p class="clearboth"></p>
+                <!--<a class="left dz-share right dz-btn dz-parsed dz-inapp dz-widget" data-id="1013201841" data-type="playlist"><button class="dz-btn"><span class="dz-icn"></span> <span class="text">Partager</span></button></a>-->
+                </div>
+                
+            </div>
+            
+            <div class="logorb"><img src="_images/rayban-logo2.png"/></div>
+            
+            
+            
+            <div class="intro">
+                <div class="reso">
+                <a href="" class="shFB" id="FBsh"></a>
+                <a href="" class="shTW" id="TWsh"></a>
+                </div>
+                <h1>PIONNIER EN LITEFORCE</h1>
+                <h2>Ray-Ban innove avec sa nouvelle technologie Liteforce : confort, légèreté et résistance pour vos lunettes de vue iconiques !</h2>
+                <h3>Toi aussi, tu es pionnier dans l’âme ? Partage tes découvertes les plus pointues et deviens <span class="bred">#pionnierenliteforce</span> pour gagner ton entrée au Festival</h3>
+                <div class="pitch"><img src="_images/pitchfork-rayban.png"/></div>
+                <ul>
+                    <li>Propose les 5 titres les plus innovants et crée ta playlist</li>
+                    <li>Partage la sur Facebook ou Twitter avec <span class="htag">#Pionnierenliteforce</span></li>
+                    <li><span class="kndss">Kindness&nbsp;</span> en personne sélectionnera les playlists gagnantes<br/>pour les inviter au Pitchfork Festival</li>
+                </ul>
+                <a href="#" class="start" id="jouer">commencer!</a>
+            </div>
+            
+            <div class="kbio" id="kbio">
+                <div class="kbioint">
+                <a href="#" class="clsrstbio" id="clsrstbio"></a>    
+                <img src="_images/kindness2.jpg"/>
+                    <div class="t1">Kindness</div>
+                    <div class="t2">Adam Bainbridge, l'Anglais qui se cache derrière
+                        Kindness, n'est pas un adepte du teasing. Plutôt que de
+                        parier sur l'attente, il mise sur l'effet de surprise et
+                        cultive en ce sens un épais mystère à son endroit. C'est en
+                        2007 que l'Anglais fait parler de lui pour la première fois.
+                        Parti s'enfermer en studio avec son ami Kurt Vile, alors
+                        inconnu, à Philadelphie (Etats-Unis), les deux acolytes
+                        accouchent au bout d'un mois d'une sorte d'album
+                        expérimental. Leur Live in Philly, ovni musical composé de
+                        bidouillages de sons, demeure à l'état de projet et ne voit
+                        pas le jour sous un format physique.
+                    </div>
+                </div>                        
+            </div>
+            
+            <!--
+            <div class="oksharefb" id="oksharefb">
+                <br/><br/>
+                Merci d'avoir partagé sur Facebook !<br/><br/><a href="javascript:$('#oksharefb').css('display','none'); void(0);">Fermer</a>
+            </div>
+            -->
+            
+            
+             <div class="okshareplst" id="okshareplst">
+                <!--<a href="javascript:$('#oksharefb').css('display','none'); void(0);"></a>-->
+                ta playlist est partagée<br/>merci de confirmer tes coordonnées pour participer au tirage au sort<br/><br/>
+                 <fieldset>
+                     <input type="text" value="" id="sharemail">
+                     <a href="#" class="partager" id="partager">Valider</a><br/><br/>
+                     <label id="plabel"><input type="checkbox" name="accepte" id="accepte" value="1" class="check"/>J'accepte les <a href="http://cdn-content.deezer.com/ads/Ops/Reglement_Ray_Ban_Pitchfork.pdf" target="_blank">conditions</a> de participation</label>
+                 </fieldset>
+            </div>
+            
+            
+            <div class="okshareplst" id="dejapart">
+                <!--<a href="javascript:$('#oksharefb').css('display','none'); void(0);"></a>-->
+                <br/>
+                tu as déjà partagé ta playlist !<br/>
+                <a href="javascript:$('#dejapart').css('display','none'); void(0);">Fermer</a>
+            </div>
+            
+            <!--
+            <div class="kbio" id="kplst">
+                <div class="kplstint">
+                    <a href="#" class="clsrstbio" id="clsrstplst"></a> 
+                    <iframe scrolling="no" frameborder="0" allowTransparency="true" src="http://www.deezer.com/plugins/player?autoplay=false&playlist=true&width=700&height=400&cover=true&type=playlist&id=1013201841&title=" width="100%" height="100%"></iframe>
+                </div>
+            </div>
+            -->
+            
+            
+            <div class="searchdz" style="display:none">
+                
+                <div class="addtrck">
+                <div id="curtracks"></div>
+                </div>
+                
+                <div class="errtrck" id="errtrck1"><span>Ce titre est déjà présent dans ta playlist !</span><a href="#" id="clserr1" class="btnstn errbtn">OK</a></div>
+                
+                <div class="pitch2"><img src="_images/pitchfork-rayban-h.png"/></div>
+                <ul>
+                    <li>Propose les 5 titres les plus innovants et crée ta playlist</li>
+                    <li>Partage la sur Facebook ou Twitter avec <span class="htag">#Pionnierenliteforce</span></li>
+                    <li>UTILISE LE MOTEUR DE RECHERCHE, POUR AJOUTER UN TITRE :</li>
+                </ul>
+                <input type="text" value="" class="fldsch" id="fldsch" placeholder="Recherche un titre"/>
+                <p class="clearboth"></p>
+                <div class="choiplst" id="fivetracks">
+                    <div class="thumbig tfirst"><div class="lowrsc"><img src="_images/thmbtrns.png"/></div><div class="artistrb">&nbsp;</div><div class="titrerb">&nbsp;</div></div>
+                    <div class="thumbig"><div class="lowrsc"><img src="_images/thmbtrns.png"/></div><div class="artistrb">&nbsp;</div><div class="titrerb">&nbsp;</div></div>
+                    <div class="thumbig"><div class="lowrsc"><img src="_images/thmbtrns.png"/></div><div class="artistrb">&nbsp;</div><div class="titrerb">&nbsp;</div></div>
+                    <div class="thumbig"><div class="lowrsc"><img src="_images/thmbtrns.png"/></div><div class="artistrb">&nbsp;</div><div class="titrerb">&nbsp;</div></div>
+                    <div class="thumbig"><div class="lowrsc"><img src="_images/thmbtrns.png"/></div><div class="artistrb">&nbsp;</div><div class="titrerb">&nbsp;</div></div>
+                </div>
+                <div class="shareplst" id="shareplst">TA PLAYLIST EST PRÊTE ! PARTAGE-LA SUR FACEBOOK ET TWITTER<br/>AVEC LE HASHTAG #PIONNIERENLITEFORCE<a href="#" id="FBbt" class="btnFB">facebook</a><a href="https://twitter.com/intent/tweet?text=Innovateur%20en%20musique?%20Tente%20de%20gagner%20tes%20places%20pour%20le%20@pitchforkparis%20en%20créant%20ta%20playlist%20%23pionnierenliteforce%20&url=http://www.deezer.com/app/rayban/" id="TWbt" class="btnTW">Twitter</a></div>
+                <a href="#" class="clsrslt" id="clsrst1">Fermer les résultats</a>
+                <div class="results" id="resultrb"></div>
+            
+            </div>
+            
+            <div class="footer">
+                <ul>
+                    <!--<li><a href="#">crédits</a></li>-->
+                    <li><a href="http://cdn-content.deezer.com/ads/Ops/Reglement_Ray_Ban_Pitchfork.pdf" target="_blank">réglement</a></li>
+                </ul>
+                <a href="http://www.ray-ban.com/france" target="_blank" class="website">www.ray-ban.com/france</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="dz-root"></div>
+    <div id="fb-root"></div>
+    <div id="kdplayer"></div>
+    <div id="status" style="visibility:hidden"></div>
+    <script src="http://cdn-files.deezer.com/js/min/dz.js"></script>
+    <script type="text/javascript">
+        /*
+        // not asynchronous
+		DZ.init({
+			appId      : '145051',
+			channelUrl : 'http://demo.greengardendigital.com/rayban/channel.html',
+			player     : true
+		});
+        */
+        
+        // asynchronous
+        window.dzAsyncInit = function() {
+            DZ.init({
+                appId  : '145051', //'145651',
+                channelUrl : 'http://demo.greengardendigital.com/Deezer/rayban/channel.html',
+                player: {
+                    onload: function(response) {
+                        //console.log('DZ.player is ready', response);
+                        DZ.Event.subscribe('player_position', function(track, evt_name){
+                           // console.log("position in the track", track);
+                            posTrack=track[0];
+                        });
+                        
+                        DZ.Event.subscribe('player_paused', function(track, evt_name){
+                           // console.log("position in the track", track);
+                            var o=DZ.player.getCurrentTrack();
+                            var id=parseInt(o.id);
+                            if($.inArray(id,arrAlbums)>-1)  curAlbum=0;
+                            if($.inArray(id,arrPlsts)>-1)  curPlst=0;
+                            //posTrack=track[0];
+                        });
+                        
+                    }
+                }
+            });
+            
+            DZ.ready(function(sdk_options){
+                //console.log('ready');
+                DZ.api('/playlist/1013201841', function(response){
+                    arrPlsts=Array();
+                    for(var i in response.tracks.data){
+                        arrPlsts.push(response.tracks.data[i].id);
+                    }
+                  //  console.log(arrPlsts);
+                });
+                DZ.api('/album/8300120', function(response){
+                    arrAlbums=Array();
+                    for(var i in response.tracks.data){
+                        arrAlbums.push(response.tracks.data[i].id);
+                    }
+                    //console.log(arrAlbums);
+                });
+                
+                //console.log('---------------------------------');
+	       });
+          
+        };
+        
+          (function() {
+            var e = document.createElement('script');
+            e.src = 'http://cdn-files.deezer.com/js/min/dz.js';
+            e.async = true;
+            document.getElementById('dz-root').appendChild(e);
+          }());
+        
+        
+       
+        
+	</script>
+    
+    <script>
+        
+        jQuery(document).ready(function($){
+            
+            
+            // recuperation des ID des track à prendre en compte lors de l'arret du player DEEZER (hors appli)
+            
+            
+            
+            $('#TWsh').click(function(){
+                var width  = 575,
+                height = 400,
+                left   = ($(window).width()  - width)  / 2,
+                top    = ($(window).height() - height) / 2,
+                url    = "http://twitter.com/share?text=Crée%20la%20playlist%20la%20plus%20innovante%20%23pionnierenliteforce%20et%20gagne%20des%20places%20pour%20le%20%23pitchforkmusicfestival%20&url=http://www.deezer.com/app/rayban/",
+                opts   = 'status=1' +
+                ',width='  + width  +
+                ',height=' + height +
+                ',top='    + top    +
+                ',left='   + left;
+
+                window.open(url, 'twitter', opts);
+                
+                return false;
+            });
+            
+            
+            $('#FBsh').click(function(){
+            
+                /*
+                FB.ui({
+                  method: 'share',
+                  href: 'http://demo.greengardendigital.com/Deezer/rayban/_images/rayban',
+                }, function(response){
+                
+                });
+                */
+                
+                FB.ui({
+                    method: 'feed',
+                    name: 'Comme Ray-Ban prouve que tu es à la pointe de l\'innovation musicale.',
+                    link: 'http://www.deezer.com/app/rayban/',
+                    picture: 'http://demo.greengardendigital.com/Deezer/rayban/_images/rayban-logo3.png',
+                    caption: 'RAYBAN LITEFORCE',
+                    description: 'Crée ta playlist #Pionnierenliteforce et remporte les dernières places pour le Pitchfork Music Festival'
+                },function(){
+                    //console.log('share FB');
+                });
+                
+                
+               /*
+                 var msg="Comme Ray-Ban prouve que tu es a la pointe de l'innovation musicale.";
+                    FB.api('/me/feed', 'post', {
+                          message: msg,
+                          link:'http://www.deezer.com/app/145051',
+                          picture:'http://demo.greengardendigital.com/Deezer/rayban/_images/rayban-logo2.png',
+                          name: 'Crée ta plalyist #Pionnierenliteforce',
+                          description: 'et remporte les dernières places pour le Pitchfork Music Festival'
+                     },function(data) {
+                        $('#oksharefb').css('display','block');
+                     });
+                */
+                return false;
+            });
+            
+            /*
+            $('#TWbt').click(function(){
+                var width  = 575,
+                height = 400,
+                left   = ($(window).width()  - width)  / 2,
+                top    = ($(window).height() - height) / 2,
+                url    = "http://twitter.com/share?text=Innovateur%20en%20musique?"+"Tente%20de%20gagner%20tes%20places%20pour%20le%20@pitchforkparis%20"+"en%20créant%20ta%20playlist%20%23pionnierenliteforce%20&url=http://www.deezer.com/app/rayban",
+                opts   = 'status=1' +
+                ',width='  + width  +
+                ',height=' + height +
+                ',top='    + top    +
+                ',left='   + left;
+
+                var mywin=window.open(url, 'twitter', opts);
+                
+                mywin.onclose=function(t){
+                    $('#okshareplst').css('display','block');
+                }
+                
+                return false;
+
+		  });
+            */
+            
+            
+            // bttn FACEBOOK
+            $('#FBbt').click(function(){
+                /*
+                    if(myshare.length==0){
+                        alert('aucune playlist sélectionnée');
+                    }else{
+                        msg=constrmsg();
+                        console.log(msg);
+                        FB.api('/me/music.playlists', {
+                     },function(data) {
+                          console.log(data);
+                     });
+                     */
+                /*
+                    var msg="Je viens de créer ma playlist #pionnierenliteforce avec Ray-Ban";
+                    FB.api('/me/feed', 'post', {
+                          message: msg,
+                          link:'http://www.deezer.com/app/145051',
+                          picture:'http://demo.greengardendigital.com/rayban/_images/RB_genuine.jpg',
+                          name: 'RAYBAN LiteForce',
+                          description: 'Toi aussi crée ta plalyist ‪#Pionnierenliteforce‬ et remporte les dernières places pour le Pitchfork Music Festival'
+                     },function(data) {
+                         $('#okfbplst').css('display','block');
+                     });
+                */
+                
+                FB.ui({
+                    method: 'feed',
+                    name: 'Je viens de créer ma playlist #pionnierenliteforce avec Ray-Ban',
+                    link: 'http://www.deezer.com/app/rayban/',
+                    picture: 'http://demo.greengardendigital.com/Deezer/rayban/_images/rayban-logo3.png',
+                    caption: 'RAYBAN LiteForce',
+                    description: 'Toi aussi crée ta plalyist ‪#Pionnierenliteforce‬ et remporte les dernières places pour le Pitchfork Music Festival'
+                },function(d){
+                    if(d!=null) {
+                        allshr.push('faceb');
+                        curr='faceb';
+                        $('#okshareplst').css('display','block');
+                        busy=null;
+                    }
+                });
+                
+                    return false;
+                    
+            });
+            
+            
+            $(".content").fitText();
+            
+            var myPlaylists=Array();
+            var myshare=Array();
+            
+            
+            $('#partage').click(function(){
+                return false;
+            });
+            
+            
+            $('#affkbio').click(function(){
+                $('#kbio').css('visibility','visible');
+                return false;
+            });
+            
+            
+            $('#clsrstbio').click(function(){
+                $('#kbio').css('visibility','hidden');
+                return false;
+            });
+            
+            
+            $('#playinhead').click(function(){
+                //$('#kplst').css('visibility','visible');
+                DZ.player.playAlbum(8300120);
+                curAlbum=8300120;
+                curPlst=0;
+                return false;
+            });
+            
+            
+            $('#affkplst').click(function(){
+                //$('#kplst').css('visibility','visible');
+                DZ.player.playPlaylist(1013201841);
+                curAlbum=0;
+                curPlst=1013201841;
+                return false;
+            });
+            
+            
+            $('#clsrstplst').click(function(){
+                $('#kplst').css('visibility','hidden');
+                return false;
+            });
+             
+
+            
+            $('#jouer').click(function(){
+                login();
+                return false;
+            });
+            
+            
+            $('#partager').click(function(){
+                //$('#okshareplst').css('display','none');
+                $('#okshareplst label').removeClass('rouge');
+                DZ.api('/user/me', function(response){
+                    var busy=null;
+                    if(busy) busy.abort();
+                    //console.log(response);
+                    var nom=response.lastname;
+                    var prenom=response.firstname;
+                    var dzmail=response.email;
+                    var mail=$('#sharemail').val();
+                    var dzid=response.id;
+                    var playlist=myshare; //Array(12154,45455,4545454,454554,9898989);
+                    var accepte=0;
+                    if($('#accepte').is(':checked')) accepte=1;
+                    $.ajax({
+                        url:'classphp/inscription.php',
+				        type:'POST',
+                        data:{action:'inscription',nom:nom,prenom:prenom,mail:mail,dzmail:dzmail,dzid:dzid,playlist:playlist,accepte:accepte,reso:curr},
+                        success:function(resp){
+                            if(resp)
+                            {
+            
+                                if(resp=='accepte') $('#plabel').addClass('rouge');
+                                if(resp=='dejajoue1' || resp=='dejajoue2') {
+                                    $('#okshareplst').css('display','none');
+                                    $('#dejapart').css('display','block');
+                                }
+                                
+                                if(resp=='ok'){ 
+                                    $('#okshareplst').css('display','none');
+                                    if(allshr.length>=2) {
+                                        $('.searchdz').css('display','none');
+                                        $('.intro').css('display','block');
+                                    }
+                                }
+                                        
+                            }else{
+                                //console.log('failed : empty');
+                            }   
+                        }
+                    })
+                });
+                return false;
+            });
+            
+            
+            
+            function login(){
+            
+                DZ.login(function(response){
+                   //console.log(response.authResponse);
+                    if(response.authResponse){
+                        // recupere DATA user
+                        DZ.api('/user/me', function(response){
+                            //console.log(response);
+                            $('#sharemail').val(response.email);
+                            //console.log("My name", response.name);
+                            //console.log('-------------------------------------');
+                        });
+                        
+                        
+                         DZ.api('/user/me/playlists', function(response){
+                            //console.log(response);
+                            //console.log("My playlists", response);
+                            //console.log('-------------------------------------');
+                            myPlaylists=response.data;
+                            searchTracks();
+                        });
+                        
+
+                        // recupere l'historique
+                        /*
+                        DZ.api('/user/me/history', function (response){
+                            console.log(response);
+                        });
+                        */
+                    
+                    }
+                    
+                }, {perms:'email, basic_access, listening_history'});
+                
+                // facebook
+                /*
+                FB.init({
+                    appId      : '327387360780080',
+                    cookie     : true,  // enable cookies to allow the server to access the session
+                    xfbml      : true,  // parse social plugins on this page
+                    version    : 'v2.1' // use version 2.1
+                  });
+                
+                FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response);
+                });
+                */
+            }
+            
+        
+            
+   
+        
+        // built display playlist    
+            
+        function  BuildPlayList2(i,res){
+            
+            //console.log(res);
+            var nod='<div class="thumbig tfirst"><div class="lowrsc"><img src="_images/thmbtrns.png"/></div><div class="artistrb">&nbsp;</div><div class="titrerb">&nbsp;</div></div>';
+            var nod2='<div class="thumbig"><div class="lowrsc"><img src="_images/thmbtrns.png"/></div><div class="artistrb">&nbsp;</div><div class="titrerb">&nbsp;</div></div>';
+            
+            //for(var i in myshare)
+                 DZ.api('/track/'+myshare[i], function(response){
+                    // tout dans le callback                        
+                 },function(response){
+                     if(i==0){
+                         res+='<div class="thumbig tfirst"><div class="lowrsc"><img src="'+response.album.cover+'"/></div><div class="artistrb">'+response.artist.name+'</div><div class="titrerb">'+response.title+'</div></div>';
+                     }else{
+                         res+='<div class="thumbig"><div class="lowrsc"><img src="'+response.album.cover+'"/></div><div class="artistrb">'+response.artist.name+'</div><div class="titrerb">'+response.title+'</div></div>';
+                     }   
+                        //console.log('callback : '+i);
+                     i++;
+                     if(i<myshare.length) {
+                         BuildPlayList2(i,res);
+                     }else{
+                          //console.log('callback fin');
+                        var t=myshare.length;
+                        for (var ii=t;ii<5;ii++){
+                             if(i==0){
+                                 res+=nod;
+                             }else{
+                                 res+=nod2;
+                             }  
+                        }
+
+                        
+                     }
+                     
+                     $('#fivetracks').empty().append(res);
+                     
+                 });
+                 
+        }
+            
+            
+       function searchTracks(){
+            
+           
+            $('.intro').css('display','none');
+            $('.searchdz').css('display','block');
+           
+           $('#clsrst1').click(function(){
+                $('#resultrb').css('display','none');  
+                $('#clsrst1').css('visibility','hidden');
+                $('#fldsch').val('');
+               return false;
+            });
+           
+           
+           $('#fldsch').keyup(function(e){
+               
+               //console.log(e.keyCode);
+               //console.log($(this).val());
+               var val=$(this).val();
+               var doublons=Array();
+                DZ.api('/search/track?q='+val, function(response){
+                    //console.log(response);
+                    //console.log("resultats", response);
+                    //console.log('-------------------------------------');
+                    var res='<ul>';
+                    for (var r in response.data){
+                        //console.log(response.data[r]);
+                        var id=response.data[r].id;
+                        if($.inArray(id,doublons)==-1){
+                            // res+='<li><a href="'+response.data[r].album.id+'" class="track"><img src="'+response.data[r].album.cover+'" />'+response.data[r].album.title+response.data[r].artist.name+'</a></li>';
+                            res+='<li><a href="'+id+'" class="track"><span>'+response.data[r].title+'</span><img src="'+response.data[r].album.cover+'" /></a></li>';
+                            doublons.push(id);
+                        }
+                    }
+                    res+='</ul>';
+                    $('#resultrb').empty().append(res);
+                    $('#resultrb').css('display','block');  
+                    $('#clsrst1').css('visibility','visible');
+                    
+                    $('.track').each(function(){
+                        
+                        $(this).click(function(){
+                            //console.log($(this).attr('href'));
+                            if(trackSearch==1){
+                                if(DZ.player.isPlaying){DZ.player.pause()};
+                                if(curAlbum!=0 || curPlst!=0) replaymusik();
+                            }
+                                        
+                            trackSearch=0;
+                            
+                            var id=$(this).attr('href');
+                            for (var r in response.data){
+                                if(id==response.data[r].id){
+                                    //console.log('trouvé');
+                                    $html='<a href="'+id+'" id="playcurtrck" class="cover"><span class="trplay" id="trplay"><img src="_images/thmbtrns2.png"/></span><img src="'+response.data[r].album.cover+'"/></a>';
+                                    $html+='<ul>';
+                                    $html+='<li> Album : '+response.data[r].album.title+'</li>';
+                                    $html+='<li> Artiste : '+response.data[r].artist.name+'</li>';
+                                    $html+='<li style="font-size:140%"><strong>Titre : '+response.data[r].title+'</strong></li>';
+                                    $html+='<li><a href="'+id+'" id="addtoplst" class="addplst" >Ajouter à ma playlist</a></li>';
+                                    $html+='</ul>';
+                                    $html+='<a href="#" class="fermer" id="fermer"><img src="_images/close.png"/></a>';
+                                    $('#curtracks').empty().append($html);
+                                    $('.addtrck').css('display','block');
+                                    $('#fermer').click(function(){
+                                        $('#curtracks').empty();
+                                        $('.addtrck').css('display','none');
+                                        // test player
+                                        if(trackSearch==1){
+                                            if(DZ.player.isPlaying){DZ.player.pause()};
+                                            if(curAlbum!=0 || curPlst!=0) replaymusik();
+                                        }
+                                        
+                                        trackSearch=0;
+                                        
+                                        return false;
+                                        
+                                    });
+                                    
+                                    $('#playcurtrck').click(function(){
+                                        
+                                        trackSearch=1;
+                                        
+                                        if($('#trplay').hasClass('trstop'))
+                                        {
+                                            if(DZ.player.isPlaying){DZ.player.pause()};
+                                             trackSearch=0;
+                                            if(curAlbum!=0 || curPlst!=0) replaymusik();
+                                        
+                                        }else{
+                                            
+                                            var curid=$(this).attr('href');
+                                            // console.log(DZ.player.getCurrentTrack());
+                                            // console.log(DZ.player.getCurrentIndex());
+                                            indexTrack=DZ.player.getCurrentIndex();
+                                            // console.log(posTrack);
+                                            curposTrack=posTrack;
+                                            //console.log(curid);
+                                            DZ.player.playTracks([curid]);
+                                            
+                                           // trackSearch=1;
+                                        }
+                                        
+                                        $('#trplay').toggleClass('trstop');
+                                        return false;
+                                        
+                                    });
+                                    
+                                    $('#addtoplst').click(function(){
+                                        $('#fldsch').val('');
+                                        if(trackSearch==1){
+                                            if(DZ.player.isPlaying){DZ.player.pause()};
+                                            if(curAlbum!=0 || curPlst!=0) replaymusik();
+                                        }
+                                        trackSearch=0;
+                                        var trck=$(this).attr('href');
+                                        var ind=$.inArray(trck,myshare);
+                                        if(ind==-1){
+                                            myshare.push(trck);
+                                            if(myshare.length<5){
+                                                $('.addtrck').css('display','none');
+                                                $('#resultrb').css('display','none');  
+                                                $('#clsrst1').css('visibility','hidden');
+                                                BuildPlayList2(0,'');
+                                           }else{
+                                                if(myshare.length>5) myshare.pop(); 
+                                               $('.addtrck').css('display','none');
+                                                $('#shareplst').css('visibility','visible');
+                                                $('#resultrb').css('display','none');  
+                                                $('#clsrst1').css('visibility','hidden');
+                                               BuildPlayList2(0,'');
+                                           }  
+ 
+                                        }else{
+                                            $('#errtrck1').css('visibility','visible');
+                                            $('#clserr1').click(function(){
+                                                $('#errtrck1').css('visibility','hidden');
+                                            });
+                                        }
+
+                                        return false;
+                                    });
+                                }
+                            }
+                            
+                            return false;
+                           
+                        });
+                        
+                    
+                    });
+                    
+                });
+           });
+        }
+            
+            
+        function constrmsg(){
+            var res='';
+            for (var i in myPlaylists){
+                
+                var id=myPlaylists[i].id;
+                id=id.toString();
+                if($.inArray(id,myshare)>=0){
+                    res+=myPlaylists[i].link+'<br/>';
+                }
+            }
+                return res;
+        }
+            
+            
+        function replaymusik(){
+            if(curAlbum!=0){
+                DZ.player.playAlbum(curAlbum,indexTrack,curposTrack);
+            }
+            
+            if(curPlst!=0){
+                DZ.player.playPlaylist(curPlst,indexTrack,curposTrack);
+            }
+        }
+            
+            
+        });
+        
+    </script>
+    </body>
+</html>

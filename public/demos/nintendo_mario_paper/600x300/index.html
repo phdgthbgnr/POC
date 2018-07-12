@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML5 Single Expandable: 300x250 to 500x250 (Video)</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script>
+        EBModulesToLoad = ['Video', 'EBCMD'];
+    </script>
+    <script src="scripts/EBLoader.js"></script>
+    <!--[if lte IE 9]><script src="scripts/classList.js"></script><![endif]-->
+    <script>
+        EB.initExpansionParams(300, 0, 600, 250);
+    </script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="ad" class="collapsed">
+            <div id="banner">
+                <div class="artwork transart"><img src="images/artwork.jpg"/></div>
+                <div class="bloctitre transtitre"><img src="images/titre.png" class="titre"/></div>
+                <div class="pegi transpegi"><img src="images/pegi.png"/></div>
+                <div class="nintendo transnint"><img src="images/nintendo.png"/></div>
+                <div class="titre2 transtitre2"><img src="images/titre2.png"/></div>
+                <div id="cliquez" class="bouton transbout2"><img src="images/cliquez.png"/></div>
+                <div class="buttons"><button id="expand-button" class="button expand" onclick="javascript:expbanner()">&nbsp;</button></div>
+            </div>
+            <div id="panel">
+                <div class="legal"><img src="images/expand/legal.png"/></div>
+                <div id="pegi2" class="pegi"><img src="images/pegi.png"/></div>
+                <div id="nintendo2" class="nintendo"><img src="images/nintendo.png"/></div>
+                <div id="titreexp" class="bloctitrep transtitrep"><img src="images/titre.png" class="titre"/></div>
+                <div id="bsln" class="baseline"><img src="images/expand/texte.png"></div>
+                <div id="pack" class="packshot"><img src="images/expand/packshot.png"/></div>
+                <div id="perso" class="persos"><img src="images/expand/artwork2.png"/></div>
+                <div class="forme"><img src="images/expand/forme.png"/></div>
+                <div id="cta" class="cta"></div>
+                
+                <div class="buttons btexpanded">
+                    <button id="clickthrough-button" class="button clickthrough">&nbsp;</button>
+                    <button id="user-action-button" class="button useraction">UserAction</button>
+                    <button id="close-button" class="button close" onclick="javascript:clbanner()">&nbsp;</button>
+                </div>
+                <div id="video-container" class="video-container centered">
+                    <video id="video" controls poster="images/expand/poster.jpg" width="321" height="193">
+                        <source src="videos/video.mp4" type="video/mp4">
+                        <source src="videos/video.webm" type="video/webm">
+                                Your browser does not support the <code>video</code> element.
+                    </video>
+                    <div id="sdk-video-player" class="sdk-video-player">
+                        <div id="sdk-video-play-button" class="sdk-video-player-button centered"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        var $dc = function(id) {
+		  return this.document.getElementById(id);
+        };
+        
+        function addAclass(id, classe){
+            $dc(id).classList ? $dc(id).classList.add(classe) : $dc(id).className += ' '+classe;
+        }
+        
+        
+        function removeAclass(id,classe){
+            $dc(id).className = $dc(id).className.replace(' ' + classe, '').replace(classe, '');
+        }
+         
+        
+        function expbanner(){
+            video.play();
+            addAclass('pegi2','transpegi');
+            addAclass('nintendo2','transnint');
+            addAclass('titreexp','transtitreb');
+            addAclass('bsln','transbsln');
+            addAclass('pack','transpack');
+            addAclass('perso','transpersos');
+            addAclass('cta','transcta');
+        }
+        
+        
+        function clbanner(){
+            removeAclass('pegi2','transpegi');
+            removeAclass('nintendo2','transnint');
+            removeAclass('titreexp','transtitreb');
+            removeAclass('bsln','transbsln');
+            removeAclass('pack','transpack');
+            removeAclass('perso','transpersos');
+            removeAclass('cta','transcta');
+        }
+        
+        /*
+        $dc('cliquez').addEventListener("animationend", function(){
+            console.log("Transition Ended"); 
+        });
+        */
+    </script>
+</body>
+
+</html>

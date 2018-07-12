@@ -1,0 +1,66 @@
+<!doctype html> 
+<html> 
+	<head> 
+		<meta charset="utf-8"/> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/> 
+		<title>HTML5 Interstititial</title>
+		<link rel="stylesheet" href="styles/style.css" />
+	</head> 
+	<body> 
+		<div id="background-dimmer">
+			<div id="ad" class="centered">
+				<button id="close-button" style="display:none">Close</button>
+				<div class="buttons">
+					<button id="user-action-button" style="display:none">UserAction</button>
+					<button id="clickthrough-button" class="clkth">&nbsp;</button>
+				</div>
+				<div class="videos" onmouseover="unmuteVideo()" onmouseout="muteVideo()" onclick="startVideo()">
+					<img src="images/muted.gif" id="muted" class="sound nodisplay">
+					<img src="images/unmuted.gif" id="unmuted" class="sound nodisplay">
+					<video poster="images/poster.jpg" id="video" autoplay muted>
+						<source src="videos/dirtypapy10s.mp4" type="video/mp4">
+						<source src="videos/dirtypapy_lachetoi_792x328.webm" type="video/webm">
+					</video>
+				</div>
+			</div>
+		</div>
+		<script>
+		
+		function addAclass(id, classe){
+        $dc(id).classList ? $dc(id).classList.add(classe) : $dc(id).className += ' '+classe;
+		}
+			
+		function removeAclass(id,classe){
+			$dc(id).className = $dc(id).className.replace(' ' + classe, '').replace(classe, '');
+		}
+	
+		var $dc = function(id) {
+			return this.document.getElementById(id);
+		};
+		
+		function muteVideo(){
+			var video = $dc("video");
+			video.muted= true;
+			removeAclass("muted","nodisplay");
+			addAclass("unmuted","nodisplay");
+		}
+		
+		function unmuteVideo(){
+		
+			var video = $dc("video");
+			video.muted= false;
+			if(!video.paused){
+				removeAclass("unmuted","nodisplay");
+				addAclass("muted","nodisplay");
+			}
+		}
+		
+		function startVideo(){
+			var video = $dc("video");
+			video.play();
+			removeAclass("unmuted","nodisplay");
+		}
+		
+		</script>
+	</body>
+</html>

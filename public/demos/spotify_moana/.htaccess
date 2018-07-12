@@ -1,0 +1,76 @@
+#SetEnv PHP_VER 5
+SetEnv REGISTER_GLOBALS 0
+Options -Indexes
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz
+
+order allow,deny
+allow from all
+ 
+deny from 84.101.26.118
+
+# order deny,allow
+# Deny from All
+# Allow from 92.154.32.220
+# Allow from 79.94.244.62
+# Allow from 192.168.1.
+
+
+
+
+
+<IfModule mod_rewrite.c>
+
+	RewriteEngine on
+	
+	# stop facebook Liger/preview
+	RewriteCond %{HTTP:x-fb-http-engine} Liger
+	RewriteCond %{HTTP:X-Purpose} preview
+	RewriteRule .* - [F,L]
+	
+	# interdit les requetes POST ----------------------
+	
+	RewriteCond %{REQUEST_METHOD} POST
+
+	# allow the server to POST to itself
+	#RewriteCond %{REMOTE_ADDR} !127.0.0.1   
+
+	# allow POST from trusted users
+	#RewriteCond %{REMOTE_ADDR} !123.456.789.123   
+
+	# send all other post requests to 403 forbidden
+	# RewriteRule ^ / [F]
+	RewriteRule ^$ index.php [F]
+	
+	# -------------------------------------------------
+	
+	
+	
+	# redirection ancien codes
+	RewriteCond %{HTTP_HOST} ^mys.moana-spotify.com$ [NC]
+	RewriteRule ^(.*)$ http://my.moana-spotify.com [R=301,QSA,NC,L]
+	
+	RewriteCond %{HTTP_HOST} ^idn.moana-spotify.com$ [NC]
+	RewriteRule ^(.*)$ http://id.moana-spotify.com [R=301,QSA,NC,L]
+	
+	RewriteCond %{HTTP_HOST} ^phl.moana-spotify.com$ [NC]
+	RewriteRule ^(.*)$ http://ph.moana-spotify.com [R=301,QSA,NC,L]
+	
+	RewriteCond %{HTTP_HOST} ^sgp.moana-spotify.com$ [NC]
+	RewriteRule ^(.*)$ http://sg.moana-spotify.com [R=301,QSA,NC,L]
+
+	# redirection sans les www
+	RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+	RewriteRule ^(.*)$ http://%1%{REQUEST_URI} [R=301,QSA,NC,L]
+	
+	# force utilisation index.php (evite une boucle sans fin)
+	RewriteCond %{REQUEST_URI} !^index.php [NC]
+	RewriteRule ^$ index.php [L]
+	
+	# redirection 404
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d 
+	RewriteRule ^ http://%{HTTP_HOST}/ [L]
+
+
+</IfModule>

@@ -1,0 +1,33 @@
+body{
+    background: #EBEBEB;
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+#page{
+    margin: 0 auto;
+    width: 960px;
+    background: #fff;
+}
+
+#header{
+    position: relative;
+    width: 960px;
+    height: 188px;
+    background: url(img/header.png) top center no-repeat;
+}
+
+#title{
+    position: relative;
+    width: 960px;
+    height: 110px;
+    background: url(img/title.png) top center no-repeat;
+}
+
+#footer{
+    position: relative;
+    width: 960px;
+    height: 541px;
+    background: url(img/footer.png) top center no-repeat;
+}

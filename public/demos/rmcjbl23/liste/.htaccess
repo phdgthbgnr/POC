@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^([^/]*)/([^/]*)$ /rmcjbl/liste/index.php?id=$1&token=$2 [L]

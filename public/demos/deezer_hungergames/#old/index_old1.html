@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hunger Games</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta property="og:url" content="http://www.deezer.com/app/rayban/" /> 
+    <meta property="og:title" content="Comme Ray-Ban prouve que tu es a la pointe de l'innovation musicale" />
+    <meta property="og:description" content="Crée ta plalyist #Pionierenliteforce et remporte les dernières places pour le Pitchfork Music Festival" /> 
+    <meta property="og:image" content="http://demo.greengardendigital.com/Deezer/rayban/_images/rayban-logo2.png" />
+    
+    <!--<link href="http://cdn-files.deezer.com/css/deezer-v00209297.css" rel="stylesheet" type="text/css">-->
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+    
+<body>
+    
+
+    
+<script>
+
+
+
+function statusChangeCallback(response) {
+        if (response.status === 'connected') {
+          // Logged into your app and Facebook.
+          testAPI();
+        } else if (response.status === 'not_authorized') {
+          // The person is logged into Facebook, but not your app.
+          document.getElementById('status').innerHTML = 'Please log ' + 'into this app.';
+
+            FB.login(function(response) {
+            // handle the response
+            }, {scope: 'publish_actions'}); //'public_profile,email,publish_actions'
+
+        } else {
+          // The person is not logged into Facebook, so we're not sure if
+          // they are logged into this app or not.
+          document.getElementById('status').innerHTML = 'Please log ' + 'into Facebook.';
+        }
+      }
+
+
+      function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
+      }
+
+    
+      window.fbAsyncInit = function() {
+          
+          
+          FB.init({
+            appId      : '327387360780080',
+            cookie     : true,  // enable cookies to allow the server to access the session
+            xfbml      : true,  // parse social plugins on this page
+            version    : 'v2.1' // use version 2.1
+          });
+
+      };
+
+      // Load the SDK asynchronously
+
+    
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+    
+      // Here we run a very simple test of the Graph API after login is
+      // successful.  See statusChangeCallback() for when this call is made.
+      function testAPI() {
+        FB.api('/me', function(response) {
+          document.getElementById('status').innerHTML =
+            'Thanks for logging in, ' + response.name + '!';
+        });
+      }
+    
+    
+
+        // Include the Twitter Library
+        window.twttr = (function (d,s,id) {
+          var t, js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+          js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+          return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+        }(document, "script", "twitter-wjs"));
+
+        // On ready, register the callback...
+        twttr.ready(function (twttr) {
+            twttr.events.bind('tweet', function (event) {
+                /*
+                allshr.push('tweet');
+                curr='tweet';
+                $('#okshareplst').css('display','block');
+                busy=null;
+                */
+            });
+        });
+        
+    
+    
+</script>
+    
+    <!-- contenu -->
+    
+    <div class="page">
+        
+        <div class="bmain">
+            
+            <div class="haut-gauche"></div>
+            <div class="haut-droit"></div>
+            <div class="bas-gauche"></div>
+            <div class="bas-droit"></div>
+            <a href="#1" class="share tw" id="inapptw"><img src="_images/sharetw.png"/></a>
+            <a href="#2" class="share fb" id="inappfb"><img src="_images/sharefb.png"/></a>
+            
+            
+            <!-- intro -->
+            <div content="content" id="contenu">
+                <!-- intro -->
+                <div class="imgintro"><img src="_images/katniss.png"/></div>
+                <div class="gauche">
+                    <div class="titre"><img src="_images/hungergames.png"/></div>
+                    <div class="date"><img src="_images/date.png"/></div>
+                    <div class="bparticipe">
+                        <div class="fparticipe">
+                            <div class="tr_test"><img src="_images/titre_test.png"/></div>
+                            <div class="tr_gagner"><img src="_images/a_gagner.png"/></div>
+                            <div class="tr_partcp" id="jouer"><a href="#"><img src="_images/tr_participer.png"/></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- video -->
+            <div class="trailer" id="bannonce">
+                <div class="titrel"><img src="_images/hungergames2.png"/></div>
+                <div id="ytvideo" class="videoyt">
+                    <div id="player"></div>
+                    <img src="_images/videoblnk.png"/>
+                </div>
+            </div>
+            
+            
+            <!-- images -->
+            <div class="imgfilm" id="filmimgs">
+                <div class="titrel titrep2"><img src="_images/hungergames2.png"/></div>
+                <div class="contslides">
+                    <div id="slides" class="mslides">
+                        <img src="_pct/picture01.jpg"/>
+                        <img src="_pct/picture02.jpg"/>
+                        <img src="_pct/picture03.jpg"/>
+                        <img src="_pct/picture04.jpg"/>
+                        <img src="_pct/picture05.jpg"/>
+                        <img src="_pct/picture06.jpg"/>
+                        <img src="_pct/picture07.jpg"/>
+                        <img src="_pct/picture08.jpg"/>
+                        <img src="_pct/picture09.jpg"/>
+                        <img src="_pct/picture10.jpg"/>
+                        <img src="_pct/picture11.jpg"/>
+                        <img src="_pct/picture12.jpg"/>
+                        <img src="_pct/picture13.jpg"/>
+                        <img src="_pct/picture14.jpg"/>
+                        <img src="_pct/picture15.jpg"/>
+                        <img src="_pct/picture16.jpg"/>
+                        <img src="_pct/picture17.jpg"/>
+                        <a href="#" class="slidesjs-previous slidesjs-navigation"><img src="_images/fxbt.png"/></a>
+                        <a href="#" class="slidesjs-next slidesjs-navigation"><img src="_images/fxbt.png"/></a>    
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- questions -->
+            <div class="trailer" id="jeux">
+                <div class="titrel"><img src="_images/hungergames2.png"/></div>
+                <div class="question quest1" id="qst1"><img src="_images/question01.png"/></div>
+                <div class="question quest2" id="qst2"><img src="_images/question02.png"/></div>
+                <div class="question quest3" id="qst3"><img src="_images/question03.png"/></div>
+                <div id="ytvideogame" class="videoytgame">
+                    <div id="player2"></div>
+                    <img src="_images/videoblnk.png"/>
+                </div>
+                <div class="reponses">
+                    <a href="r1" class="reponse rep1 rp1" id="resp11"><img src="_images/reptrans.png"/></a>
+                    <a href="r2" class="reponse rep2 rp2" id="resp12"><img src="_images/reptrans.png"/></a>
+                    <a href="r3" class="reponse rep1 rp3" id="resp21"><img src="_images/reptrans.png"/></a>
+                    <a href="r4" class="reponse rep2 rp4" id="resp22"><img src="_images/reptrans.png"/></a>
+                    <a href="r5" class="reponse rep1 rp5" id="resp31"><img src="_images/reptrans.png"/></a>
+                    <a href="r6" class="reponse rep2 rp6" id="resp32"><img src="_images/reptrans.png"/></a>
+                </div>
+                <div class="bparticipe2">
+                    <div class="fparticipe2">
+                        <div class="tr_test2"><img src="_images/titre_test.png"/></div>
+                        <div class="tr_gagner2"><img src="_images/a_gagner.png"/></div>
+                    </div>
+                </div>
+            </div> 
+            
+            <!-- gagne -->
+            <div class="gagne" id="gagne">
+                <div class="titrel"><img src="_images/hungergames2.png"/></div>
+                <h2><img src="_images/felicitations.png"/></h2>
+                <div class="bform">
+                    <h3><img src="_images/validmail.png"/></h3>
+                    <form id="validm">
+                        <fieldset>
+                            <input type="text" id="fmail" name="mail" class="mailf"/>
+                            <label id="plabel" class="labelp"><input type="checkbox" name="accepte" id="accepte" value="1" class="check"/>J'accepte les <a href="#" target="_blank">conditions</a> de participation</label>
+                            <input type="submit" value="Valider" id="sendm" class="msend"/>
+                        </fieldset>
+                    </form>
+                    <div class="gerror" id="error"></div>
+                </div>
+            </div>
+            
+            
+            <!-- gagne 2eme ecran -->
+            <div class="gagne" id="gagne2">
+                <div class="titrel"><img src="_images/hungergames2.png"/></div>
+                <h2><img src="_images/felicitations.png"/></h2>
+                <div class="bform">
+                    <h3><img src="_images/augmente.png"/></h3>
+                    <ul class="partage" id="partageft">
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- perdu -->
+            <div class="perdu" id="perdu">
+                <div class="titrel"><img src="_images/hungergames2.png"/></div>
+                <h2><img src="_images/pasreussi.png"/></h2>
+                <div class="bform">
+                    <h3><img src="_images/inviteamis.png"/></h3>
+                    <ul class="invite" id="invite">
+                        <li><img src="_images/icnfrnd.png" class="icn"/><a href="callFBf" id="callFBf"><img src="_images/invitefb.png"/></a></li>
+                        <li><img src="_images/icnfb.png" class="icn"/><a href="callFBfs" id="callFBfs"><img src="_images/invitepfb.png"/></a></li>
+                        <li><img src="_images/icntw.png" class="icn"/><a href="callFBtw" id="callFBtw"><img src="_images/invitetw.png"/></a></li>
+                    </ul>
+                </div>
+            </div>            
+            
+            
+            <!-- playlist -->
+            <div class="playlist" id="playlist">
+                <div class="titrel titrep"><img src="_images/hungergames2.png"/></div>
+                <div class="titrel2"><img src="_images/choisis.png"/></div>
+                <div class="jauge">
+                    <a href="katniss" class="ajtitre katniss" id="kat"><img src="_images/ajoutrnsp.png"/></a>
+                    <a href="peeta" class="ajtitre peeta" id="peet"><img src="_images/ajoutrnsp.png"/></a>
+                    <img src="_images/jauge.png"/>
+                </div>
+                <div class="wplst wp1">
+                    <iframe style="position:absolute; top:-80px; left:0" scrolling="no" frameborder="0" allowTransparency="true" src="http://www.deezer.com/plugins/player?autoplay=false&playlist=true&width=700&height=265&cover=false&type=playlist&id=1020139411&title=&app_id=146061" width="100%" height="265"></iframe>
+                </div>
+                <div class="wplst wp2">
+                    <iframe style="position:absolute; top:-80px; left:0" scrolling="no" frameborder="0" allowTransparency="true" src="http://www.deezer.com/plugins/player?autoplay=false&playlist=true&width=700&height=265&cover=false&type=playlist&id=1020139521&title=&app_id=146061" width="100%" height="265"></iframe>
+                </div>
+                <div class="sharecoll coll1"><img src="_images/shareplst.png"/><a href="tw1" id="shtw1"></a><a href="fb1" id="shfb1"></a></div>
+                <div class="sharecoll coll2"><img src="_images/shareplst.png"/><a href="tw2" id="shtw2"></a><a href="fb2" id="shfb2"></a></div>
+                
+                <div class="lsttracks" id="lsttrack">
+                    <form>
+                        <fieldset>
+                            <input type="text" class="titretrack" id="tracks" placeholder="Rechercher un titre"/>
+                            <input type="submit" class="send" id="send">
+                        </fieldset>
+                    </form>
+                    <div class="resultat" id="resultats">
+                    </div>
+                    <a href="#" class="clslst" id="fermer1"><img src="_images/btfermer.png"/></a>
+                </div>
+                
+                <div class="conttracks" id="conttrack">
+                    <div id="curtracks" class="addtrck"></div>
+                    <a href="#" class="clslst" id="fermer2"><img src="_images/btfermer.png"/></a>
+                </div>
+                
+            </div>
+            
+            
+            
+        </div>
+        
+        <ul class="menus" id="smenu">
+            <li class="menu menu1"><a href="#" id="btplst"><img src="_images/rub1.png"/></a></li>
+            <li class="menu menu2"><a href="#" id="btimg"><img src="_images/rub2.png"/></a></li>
+            <li class="menu menu3"><a href="#" id="trailer"><img src="_images/rub3.png"/></a></li>
+        </ul>
+    </div>
+    
+    <!-- fin contenu -->
+
+    <div id="dz-root"></div>
+    <div id="fb-root"></div>
+    <div id="kdplayer"></div>
+    <div id="status" style="visibility:hidden"></div>
+    <script src="http://cdn-files.deezer.com/js/min/dz.js"></script>
+    <script type="text/javascript">
+
+        // ******* DEEZER *************************************
+        
+        window.dzAsyncInit = function() {
+            
+            DZ.init({
+                appId  : '146061', //'145651',
+                channelUrl : 'http://demo.greengardendigital.com/Deezer/hungergames/channel.html',
+                player: {
+                    onload: function(response) {
+                        /*
+                        //console.log('DZ.player is ready', response);
+                        DZ.Event.subscribe('player_position', function(track, evt_name){
+                           // console.log("position in the track", track);
+                            posTrack=track[0];
+                        });
+                        
+                        DZ.Event.subscribe('player_paused', function(track, evt_name){
+                           // console.log("position in the track", track);
+                            var o=DZ.player.getCurrentTrack();
+                            var id=parseInt(o.id);
+                            if($.inArray(id,arrAlbums)>-1)  curAlbum=0;
+                            if($.inArray(id,arrPlsts)>-1)  curPlst=0;
+                            //posTrack=track[0];
+                        });
+                        */
+                    }
+                }
+            });
+            
+            
+            DZ.ready(function(sdk_options){
+
+                /*
+                DZ.api('/playlist/1013201841', function(response){
+                    arrPlsts=Array();
+                    for(var i in response.tracks.data){
+                        arrPlsts.push(response.tracks.data[i].id);
+                    }
+                });
+                
+                DZ.api('/album/8300120', function(response){
+                    arrAlbums=Array();
+                    for(var i in response.tracks.data){
+                        arrAlbums.push(response.tracks.data[i].id);
+                    }
+                });
+                */
+	       });
+          
+        };
+        
+          (function() {
+            var e = document.createElement('script');
+            e.src = 'http://cdn-files.deezer.com/js/min/dz.js';
+            e.async = true;
+            document.getElementById('dz-root').appendChild(e);
+          }());
+        
+        
+	</script>
+    
+    <script>
+        
+        var request=null;
+        var curblock='#contenu';
+        var trackSearch=0; // la piste qui joue est issue de la recherche
+        var camp=0; // 0 : aucun , 1 : katniss , 2 : peeta
+        var dzID;
+        var dzMAIL;
+        
+        var nbquest=1;
+        var arrrep=Array();
+        
+        var player;
+        var player2;
+        var testTime;
+        
+        var menu1='<li class="menu menu1"><a href="#" id="btplst"><img src="_images/rub1.png"/></a></li>';
+        var menu2='<li class="menu menu2"><a href="#" id="btimg"><img src="_images/rub2.png"/></a></li>';
+        var menu3='<li class="menu menu3"><a href="#" id="trailer"><img src="_images/rub3.png"/></a></li>';
+        var menu4='<li class="menu menu2b"><a href="#" id="concours"><img src="_images/rub4.png"/></a></li>';
+        
+        
+         // boutons perdu
+            function boutonperdu(){
+            $('#callFBf').click(function(e){
+                
+                FB.ui({
+                  method: 'send',
+                  link: 'http://www.deezer.com/app/hungergames'
+                }, function(response){
+                    console.log(response);
+                    if (request) request.abort(); 
+                        request=$.ajax({
+                            url:'_inc/perdu.php',
+                            type:'POST',
+                            data:{action:'testcall',dzid:dzID}
+                        });
+
+                        request.done(function(resp){
+                            $('#invite').empty().append(resp);
+                        });
+                });
+                
+                return false;
+                });
+                
+               $('#callFBfs').click(function(e){
+                    return false;
+                });
+            
+                $('#callFBtw').click(function(e){
+                    return false;
+                });
+                     
+            }
+        
+        
+        jQuery(document).ready(function($){
+            
+                        
+            
+            // 3 MENUS BAS
+            function menubas(){
+                $('.menu a').each(function(){
+                    $(this).click(function(e){
+                        switch($(this).attr('id')){
+                         case 'btplst':
+                            $('#smenu').empty().append(menu4+menu2+menu3);
+                                break;
+                         case 'btimg':
+                               $('#smenu').empty().append(menu1+menu4+menu3);
+                                break;
+                        case 'trailer':
+                               $('#smenu').empty().append(menu1+menu2+menu4);
+                                break;
+                        case 'concours':
+                               $('#smenu').empty().append(menu1+menu2+menu3);
+                                break;
+                        }
+                        
+                        //console.log(e.currentTarget.id);
+                        if(curblock=='#filmimgs'){
+                            $(curblock).css('visibility','hidden');
+                        }else{
+                            $(curblock).css('display','none');
+                        }
+                        player.pauseVideo();
+                        player2.pauseVideo();
+                        menubas();
+                        return false;
+                    });
+                 });
+                
+                    // 2 bouton participer
+                        $('#jouer').click(function(e){
+                            $(curblock).css('display','none');
+                            curblock='#jeux';
+                            $(curblock).css('display','block');
+                            if(typeof USER === 'undefined') login();
+                            return false;
+                        });
+                
+                        $('#concours').click(function(e){
+                            $(curblock).css('display','none');
+                            curblock='#jeux';
+                            $(curblock).css('display','block');
+                            if(typeof USER === 'undefined') login();
+                            return false;
+                        });
+
+                
+                        // bouton images du film
+                        $('#btimg').click(function(e){ 
+                            curblock='#filmimgs';
+                            $(curblock).css('visibility','visible');
+                            $(curblock).css('display','block');
+                            $('#slides').slidesjs({
+                                width: 800,
+                                height: 400,
+                                pagination:false,
+                                navigation:false
+                              });
+                        });
+
+
+                        // bouton bande annonce
+                        $('#trailer').click(function(e){
+                            curblock='#bannonce';
+                            $(curblock).css('display','block');
+                            if(player) player.playVideo();
+                        });
+
+                        // bouton playlist
+                        $('#btplst').click(function(e){
+                            camp=0;
+                            curblock='#playlist';
+                            $(curblock).css('display','block');
+                            if(typeof USER === 'undefined') login();
+                        });
+                
+            }
+            
+            menubas();
+            
+            
+            // ajouter un titre playlist katniss
+            $('#kat').click(function(e){
+                camp=1;
+                searchTracks();
+                return false;
+            });
+            
+             // ajouter un titre playlist peeta
+            $('#peet').click(function(e){
+                camp=2;
+                searchTracks();
+                return false;
+            });
+            
+            
+            // boutons fermer liste pistes recherchees
+            $('#fermer1').click(function(e){
+                $('#lsttrack').css('display','none');
+                $('#tracks').val('');
+                $('#resultats').empty();
+                return false;
+            });
+            
+            
+            // partage sur FB la playlist katniss
+            $('#shfb1').click(function(e){
+                
+                FB.ui({
+                    method: 'feed',
+                    name: 'HUNGER GAMES : la révolution a commencé!',
+                    link: 'http://www.deezer.com/playlist/1020139411',
+                    picture: 'http://demo.greengardendigital.com/Deezer/hungergames/hungergames-film.jpg',
+                    caption: 'HUNGER GAMES',
+                    description: 'Participe à la playlist de ton district, et tente de gagner des places pour l\'avant première de Hunger Games !'
+                },function(d){
+                    if(d!=null) {
+
+                    }
+                });
+                
+                return false;
+            });
+            
+            
+            
+            // partage sur FB la playlist peeta
+            $('#shfb2').click(function(e){
+                
+                FB.ui({
+                    method: 'feed',
+                    name: 'HUNGER GAMES : la révolution a commencé!',
+                    link: 'http://www.deezer.com/playlist/1020139521',
+                    picture: 'http://demo.greengardendigital.com/Deezer/hungergames/hungergames-film.jpg',
+                    caption: 'HUNGER GAMES',
+                    description: 'Participe à la playlist de ton district, et tente de gagner des places pour l\'avant première de Hunger Games !'
+                },function(d){
+                    if(d!=null) {
+
+                    }
+                });
+                
+                return false;
+            });
+            
+            
+            // partage sur TW la playlist katniss
+            $('#shtw1').click(function(e){
+                var width  = 575,
+                height = 400,
+                left   = ($(window).width()  - width)  / 2,
+                top    = ($(window).height() - height) / 2,
+                url    = "http://twitter.com/share?text=Découvre%20la%20playlist%20de%20Katniss%20@TheHungerGames&url=http://www.deezer.com/playlist/1020139411",
+                opts   = 'status=1' +
+                ',width='  + width  +
+                ',height=' + height +
+                ',top='    + top    +
+                ',left='   + left;
+
+                window.open(url, 'twitter', opts);
+                
+                return false;
+            });
+            
+            
+            // partage sur TW la playlist peeta
+            $('#shtw2').click(function(e){
+                var width  = 575,
+                height = 400,
+                left   = ($(window).width()  - width)  / 2,
+                top    = ($(window).height() - height) / 2,
+                url    = "http://twitter.com/share?text=Découvre%20la%20playlist%20de%20Peeta%20@TheHungerGames&url=http://www.deezer.com/playlist/1020139521",
+                opts   = 'status=1' +
+                ',width='  + width  +
+                ',height=' + height +
+                ',top='    + top    +
+                ',left='   + left;
+
+                window.open(url, 'twitter', opts);
+                
+                return false;
+            });
+            
+            
+            // GESTION REPONSE
+            $('.reponse').each(function(){
+                $(this).click(function(e){
+                    var r=$(this).attr('href');
+                    if(request) request.abort();
+                    request = $.ajax({
+                        url : '_inc/test.php',
+                        type : 'POST',
+                        data : {action:'test',resp:r}
+                    });
+                    
+                    request.done(function(msg){
+                        if(msg=='good') arrrep.push('ok');
+                        switch (nbquest){
+                            case 1 :
+                                $('#qst1').css('display','none');
+                                $('#resp11').css('display','none');
+                                $('#resp12').css('display','none');
+                                player2.playVideo();
+                                nbquest++;
+                            break;
+                            
+                            case 2:
+                                $('#qst2').css('display','none');
+                                $('#resp21').css('display','none');
+                                $('#resp22').css('display','none');
+                                player2.playVideo();
+                                nbquest++;
+                            break;
+                                
+                            case 3:
+                                $('#qst3').css('display','none');
+                                $('#resp31').css('display','none');
+                                $('#resp32').css('display','none');
+                                player2.playVideo();
+                                nbquest++;
+                            break;
+                        }
+                        
+                        request=null;
+                    });
+                    
+                    request.fail(function(jqXHR,textStatus){
+                        request=null;
+                    });
+                    
+                    return false;
+                });
+            });
+            
+            
+            // envoi formulaire mail
+            $('#sendm').click(function(e){
+                
+                $('#error').empty();
+                
+                DZ.api('/user/me', function(response){
+                    
+                    var nom=response.lastname;
+                    var prenom=response.firstname;
+                    var dzmail=response.email;
+                    var mail=$('#fmail').val();
+                    var dzid=response.id;
+                    var sc=arrrep.length;
+                    
+                    var accepte=0;
+                    if($('#accepte').is(':checked')) accepte=1;
+                
+                    if(request) request.abort();
+                    
+
+                    request=$.ajax({
+                        url:'_inc/inscription.php',
+                        type:'POST',
+                        data:{action:'inscription',nom:nom,prenom:prenom,mail:mail,dzmail:dzmail,dzid:dzid,accepte:accepte,score:sc}
+                    });
+                    
+                    request.done(function(msg){
+                        
+                        switch(msg){
+                            case 'ok':
+                                $('#gagne').css('display','none');
+                                $('#gagne2').css('display','block');
+                                // test si déjà partage
+                                var req=$.ajax({
+                                    url:'_inc/testshare.php',
+                                    type:'POST',
+                                    data:{action:'testshare',dzid:dzid}
+                                });
+                                
+                                req.done(function(rspns){
+                                    //console.log(rspns);
+                                    request=null;
+                                    $('#partageft').empty().append(rspns);
+                                    $('.chance').each(function(){
+                                        $(this).click(function(e){
+                                            var $this=$(this);
+                                            if($this.hasClass('inactif')==false){
+                                                var $type=$this.attr('href');
+                                                if($type!='#'){
+                                                    if(request) request.abort();
+                    
+                                                    request=$.ajax({
+                                                        url:'_inc/chances.php',
+                                                        type:'POST',
+                                                        data:{action:'chances',dzid:dzID,stype:$type}
+                                                    });
+                                                    
+                                                    request.done(function(resp){
+                                                        if(resp=='ok') $this.addClass('inactif');
+                                                        request=null;
+                                                    });
+                                                    
+                                                    request.fail(function(jqXHR,textStatus){
+                                                        console.log('error : '+textStatus);
+                                                        request=null;
+                                                    });
+                                                }
+                                            }
+                                            return false;
+                                        });
+                                    });
+                                });
+                                
+                                req.fail(function(jqXHR,textStatus){
+                                    console.log('error : '+textStatus);
+                                });
+                                
+                                break;
+                            case 'accepte':
+                                $('#error').empty().append('Merci d\'accepter les conditions de participation');
+                                break;
+                            default:
+                                $('#error').empty().append('Erreur inconnue');
+                                break;        
+                        }
+                        request=null;
+                    });
+                    
+                    request.fail(function(jqXHR,textStatus){
+                        $('#error').empty().append('Requete impossible : '+textStatus);
+                        request=null;
+                    });
+                    
+                });
+                
+                return false;
+            });
+            
+            
+            $('#callFBfs').click(function(e){
+                return false;
+            });
+            
+            $('#callFBtw').click(function(e){
+                return false;
+            });
+            
+            
+            
+            
+            
+            
+            // bttn TWITTER
+            $('#inapptw').click(function(){
+                var width  = 575,
+                height = 400,
+                left   = ($(window).width()  - width)  / 2,
+                top    = ($(window).height() - height) / 2,
+                url    = "http://twitter.com/share?text=Participe%20à%20la%20playlist%20de%20ton%20district,%20et%20tente%20de%20gagner%20des%20places%20pour%20l'avant%20première%20de%20@TheHungerGames%20!&url=http://bit.ly/1nrRmZV",
+                opts   = 'status=1' +
+                ',width='  + width  +
+                ',height=' + height +
+                ',top='    + top    +
+                ',left='   + left;
+
+                window.open(url, 'twitter', opts);
+                
+                return false;
+            });
+            
+                
+                
+            
+            // bttn FACEBOOK
+            $('#inappfb').click(function(){
+                
+                FB.ui({
+                    method: 'feed',
+                    name: 'HUNGER GAMES : la révolution a commencé!',
+                    link: 'http://www.deezer.com/app/hungergames/',
+                    picture: 'http://demo.greengardendigital.com/Deezer/hungergames/hungergames-film.jpg',
+                    caption: 'HUNGER GAMES',
+                    description: 'Participe à la playlist de ton district, et tente de gagner des places pour l\'avant première de Hunger Games !'
+                },function(d){
+                    if(d!=null) {
+
+                    }
+                });
+                
+                    return false;
+                    
+            });
+            
+                        
+            var myPlaylists=Array();
+            var myshare=Array();
+            
+            
+            $('#partage').click(function(){
+                return false;
+            });
+                        
+            
+            
+            // login
+            
+            function login(){
+            
+                DZ.login(function(response){
+                   //console.log(response.authResponse);
+                    if(response.authResponse){
+                        // recupere DATA user
+                        DZ.api('/user/me', function(response){
+                            //console.log(response);
+                            dzID=response.id;
+                            dzMAIL=response.email;
+                            //$('#sharemail').val(response.email);
+                            //console.log("My name", response.name);
+                            //console.log('-------------------------------------');
+                        });
+                        
+                        /*
+                         DZ.api('/user/me/playlists', function(response){
+                            //console.log(response);
+                            //console.log("My playlists", response);
+                            //console.log('-------------------------------------');
+                            myPlaylists=response.data;
+                            searchTracks();
+                        });
+                        */
+
+                        // recupere l'historique
+                        
+                        // DZ.api('/user/me/history', function (response){
+                        //    console.log(response);
+                        // });
+                        
+                    
+                    }
+                    
+                }, {perms:'email, basic_access, manage_library'});
+                
+            }
+            
+        
+            
+   
+        
+        // built display playlist    
+        function  BuildPlayList2(i,res){
+                      
+        }
+            
+  
+            
+       function searchTracks(){
+            
+           
+           $('#lsttrack').css('display','block');
+           /*
+            $('.intro').css('display','none');
+            
+           
+           $('#clsrst1').click(function(){
+                $('#resultrb').css('display','none');  
+                $('#clsrst1').css('visibility','hidden');
+                $('#fldsch').val('');
+               return false;
+            });
+           */
+           
+           
+           // lance la recherche de track
+           
+           $('#send').click(function(e){
+               
+               //console.log(e.keyCode);
+               //console.log($(this).val());
+               var val=$('#tracks').val();
+               var doublons=Array();
+                DZ.api('/search/track?q='+val, function(response){
+                    //console.log(response);
+                    //console.log("resultats", response);
+                    //console.log('-------------------------------------');
+                    var res='<ul>';
+                    for (var r in response.data){
+                        //console.log(response.data[r]);
+                        var id=response.data[r].id;
+                        if($.inArray(id,doublons)==-1){
+                            // res+='<li><a href="'+response.data[r].album.id+'" class="track"><img src="'+response.data[r].album.cover+'" />'+response.data[r].album.title+response.data[r].artist.name+'</a></li>';
+                            res+='<li><a href="'+id+'" class="track"><span>'+response.data[r].title+'</span><img src="'+response.data[r].album.cover+'" /></a></li>';
+                            doublons.push(id);
+                        }
+                    }
+                    res+='</ul>';
+                    $('#resultats').empty().append(res);
+                    $('#resultats').css('display','block');  
+                    //$('#clsrst1').css('visibility','visible');
+                    
+                    
+                    
+                    $('.track').each(function(){
+                        
+                        $(this).click(function(){
+                            //console.log($(this).attr('href'));
+                            /*
+                            if(trackSearch==1){
+                                if(DZ.player.isPlaying){DZ.player.pause()};
+                                if(curAlbum!=0 || curPlst!=0) replaymusik();
+                            }
+                                        
+                            trackSearch=0;
+                            */
+                            
+                            
+                            var id=$(this).attr('href');
+                            for (var r in response.data){
+                                if(id==response.data[r].id){
+                                    //console.log('trouvé');
+                                    $html='<a href="'+id+'" id="playcurtrck" class="cover"><span class="trplay" id="trplay"><img src="_images/thmbtrns2.png"/></span><img src="'+response.data[r].album.cover+'"/></a>';
+                                    $html+='<ul>';
+                                    $html+='<li> Album : '+response.data[r].album.title+'</li>';
+                                    $html+='<li> Artiste : '+response.data[r].artist.name+'</li>';
+                                    $html+='<li style="font-size:140%"><strong>Titre : '+response.data[r].title+'</strong></li>';
+                                    $html+='<li><a href="'+id+'" id="addtoplst" class="addplst" >Ajouter à la playlist de Katniss</a></li>';
+                                    $html+='</ul>';
+                                    //$html+='<a href="#" class="fermer" id="fermer"><img src="_images/close.png"/></a>';
+                                    $('#curtracks').empty().append($html);
+                                    $('#conttrack').css('display','block');
+                                    $('#fermer2').click(function(){
+                                        $('#curtracks').empty();
+                                        $('#conttrack').css('display','none');
+                                        // test player
+                                        if(trackSearch==1){
+                                            if(DZ.player.isPlaying){DZ.player.pause()};
+                                            //if(curAlbum!=0 || curPlst!=0) replaymusik();
+                                        }
+                                        
+                                        trackSearch=0;
+                                        
+                                        return false;
+                                        
+                                    });
+                                    
+                                    $('#playcurtrck').click(function(){
+                                        
+                                        //trackSearch=1;
+                                        
+                                        if($('#trplay').hasClass('trstop'))
+                                        {
+                                            if(DZ.player.isPlaying){DZ.player.pause()};
+                                            trackSearch=0;
+                                            //if(curAlbum!=0 || curPlst!=0) replaymusik();
+                                        
+                                        }else{
+                                            
+                                            var curid=$(this).attr('href');
+                                            // console.log(DZ.player.getCurrentTrack());
+                                            // console.log(DZ.player.getCurrentIndex());
+                                            //indexTrack=DZ.player.getCurrentIndex();
+                                            // console.log(posTrack);
+                                            //curposTrack=posTrack;
+                                            //console.log(curid);
+                                            DZ.player.playTracks([curid]);
+                                            trackSearch=1;
+                                        }
+                                        
+                                        $('#trplay').toggleClass('trstop');
+                                        return false;
+                                        
+                                    });
+                                    
+                                    $('#addtoplst').click(function(){
+                                        /*
+                                        $('#fldsch').val('');
+                                        if(trackSearch==1){
+                                            if(DZ.player.isPlaying){DZ.player.pause()};
+                                            if(curAlbum!=0 || curPlst!=0) replaymusik();
+                                        }
+                                        trackSearch=0;
+                                        */
+                                        var trck=$(this).attr('href');
+                                        var idplst=camp==1?1020139411:1020139521;
+                                        
+                                        DZ.api('playlist/'+ idplst + '/tracks', 'POST', {songs: trck}, function(response){
+                                            //console.log(response);
+                                            camp=0;
+                                            $('#conttrack').css('display','none');
+                                            $('#lsttracks').css('display','none');
+                                            $('#tracks').val('');
+                                            $('#resultats').empty();
+                                        });
+                                        /*
+                                        DZ.api('/user/'+dzID+'/playlists/'+idplst, function(response){
+                                            
+                                            console.log(response);
+                                            
+                                            DZ.api('playlist/'+ idplst + '/tracks', 'POST', {songs: trck}, function(response){
+                                                console.log(response); 
+                                            });
+                                        });
+                                        */    
+                                        
+
+                                        return false;
+                                    });
+                                }
+                            }
+                            
+                            return false;
+                           
+                        });    
+                    
+                    });
+                });
+               return false;
+           });
+        }
+            
+            
+            
+        function replaymusik(){
+            if(curAlbum!=0){
+                DZ.player.playAlbum(curAlbum,indexTrack,curposTrack);
+            }
+            
+            if(curPlst!=0){
+                DZ.player.playPlaylist(curPlst,indexTrack,curposTrack);
+            }
+        }
+            
+            
+        });
+        
+    </script>
+    
+    
+    
+    <script>
+        
+    // GAMES --------------------------------------------------------------------------    
+     
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    //tag.src = "http://www.youtube.com/player_api";
+    tag.src = "https://www.youtube.com/player_api";
+    //tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+       
+    
+    //function onYouTubeIframeAPIReady() {    
+    function onYouTubePlayerAPIReady() {
+        
+        //console.log('API YT ready');
+        
+        player = new YT.Player('player', {
+            width: '100%',
+            height: '100%',
+            videoId: 'zdMIft77FEY',
+            playerVars: { 'autoplay': 0, 'controls': 0, 'html5': 1 ,'enablejsapi':0,'showinfo':0,'iv_load_policy':3,'modestbranding':1,'rel':0},
+
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+        
+        
+        player2 = new YT.Player('player2', {
+            width: '100%',
+            height: '100%',
+            videoId: 'zdMIft77FEY',
+            playerVars: { 'autoplay': 0, 'controls': 0, 'html5': 1 ,'enablejsapi':0,'showinfo':0,'iv_load_policy':3,'modestbranding':1,'rel':0},
+
+            events: {
+                'onReady': onPlayerReady2,
+                'onStateChange': onPlayerStateChange2
+            }
+        });
+    }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+          //console.log('video ready');
+        //event.target.playVideo();
+      }
+        
+        function onPlayerReady2(event) {
+        //console.log('video2 ready');
+           testTime = setInterval(function(){
+                if(player2.getCurrentTime()>16.6 && nbquest==1){ //16.6
+                    player2.pauseVideo() ;
+                    $('#qst1').addClass('fromFade');
+                    $('#resp11').addClass('fromFade');
+                    $('#resp12').addClass('fromFade');
+                }
+               
+                if(player2.getCurrentTime()>31 && nbquest==2){ //16.6
+                    player2.pauseVideo() ;
+                    $('#qst2').addClass('fromFade');
+                    $('#resp21').addClass('fromFade');
+                    $('#resp22').addClass('fromFade');
+                }
+               
+               if(player2.getCurrentTime()>46.5 && nbquest==3){ //16.6
+                    player2.pauseVideo() ;
+                    $('#qst3').addClass('fromFade');
+                    $('#resp31').addClass('fromFade');
+                    $('#resp32').addClass('fromFade');
+                }
+               
+                if(player2.getPlayerState()==0) {
+                    $('#jeux').css('display','none');
+                    //console.log(arrrep);
+                    if(arrrep.length==3){
+                        $('#gagne').css('display','block');
+                        $('#fmail').val(dzMAIL);
+                        curblock='#gagne';
+                    }else{
+                        $('#perdu').css('display','block');
+                        curblock='#perdu';
+                        var req=$.ajax({
+                            url:'_inc/perdu.php',
+                            type:'POST',
+                            data:{action:'testcall',dzid:dzID}
+                        });
+                        
+                        req.done(function(resp){
+                            $('#invite').empty().append(resp);
+                            boutonperdu();
+                        });
+                        
+                        req.fail(function(jqXHR,textStatus){
+                            console.log('error : '+textStatus);
+                        });
+                    }
+                     clearInterval(testTime);
+                }
+            },100);
+        }
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          //setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+        
+        
+        function onPlayerStateChange2(event) {
+            //console.log(player2.getCurrentTime());
+      }
+        
+        
+      function stopVideo() {
+        player.stopVideo();
+      }
+        
+    </script>
+    
+    <script src="_js/jquery.slides.min.js"></script>
+    
+    <script>
+    $(function() {
+      $('#slides').slidesjs({
+        width: 800,
+        height: 400,
+        pagination:false,
+        navigation:false
+          /*
+        pagination: {
+          active: true,
+            // [boolean] Create pagination items.
+            // You cannot use your own pagination. Sorry.
+          effect: "slide"
+            // [string] Can be either "slide" or "fade".
+        }
+        */
+      });
+    });
+  </script>
+    
+    </body>
+</html>

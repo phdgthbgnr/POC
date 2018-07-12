@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>Nike Magista</title>
+<link href="grnm_css/grnm_style.css" rel="stylesheet" type="text/css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="grnm_js/jquery-timing.js"></script>
+</head>
+
+<body>
+	
+    <div class="header">
+    	<img src="grnm_images/header.png" width="998" height="149"/>
+    </div>
+
+    <div class="grnm_content">
+    
+        <div class="grnm_video_intro">
+        <img src="grnm_images/grnm_video.jpg" width="980" height="550"/>
+        <!--
+            <video width="980" height="550" id="grnmvideo" poster="grnm_images/grnm_video.jpg" preload="auto"  autoplay="true" loop>
+            <source src="grnm_videos/ball-loop_1.mp4" type="video/mp4" />
+            </video>
+            -->
+          <div class="grnm_decouvre"><a href="" target="_blank" id="grnmdecouvre"></a></div>
+        </div>
+        
+        <div class="grnm_youtube" id="grnmyoutube"><div class="grnm_close"><a href="#" id="grnmclose"><span>Fermer</span></a></div><!--<div id="grnmytplayer"></div>--><!--<iframe width="980" height="550" src="//www.youtube.com/embed/qP1PQDmR9uQ" frameborder="0" allowfullscreen></iframe>--></div>
+        
+        <div class="grnm_magista">
+        	<div class="grnm_bloctitre">
+            	<div class="grnm_titre"><img src="grnm_images/grnm_magista.png" width="409" height="74"/></div>
+                <div class="grnm_titre"><img src="grnm_images/grnm_baseline.png" width="409" height="23"/></div>
+                <div class="grnm_swooth"><img src="grnm_images/grnm_nike-logo.png" width="409" height="94"/></div>
+            </div>
+            <div class="grnm_magista_prd"><img src="grnm_images/grnm_magista-prd.png" width="728" height="421"/></div>
+            <div class="grnm_creativite"><img src="grnm_images/grnm_creativite.png" width="503" height="58"/></div>
+        </div>
+        
+        <div class="grnm_slideg"></div>
+        <div class="grnm_slided"></div>
+        
+        <div class="grnm_bulle grnm_bull0" id="bulleb"><span class="grnm_titre">NIKE FLYKNIT</span><span class="grnm_texte">L'empeigne Flyknit à été intégrée pour la première fois sur une chaussure de football et offre un toucher de balle inégalé</span></div>
+        <div class="grnm_bulle grnm_bull1" id="bulle0"><span class="grnm_titre">NIKE FLYKNIT</span><span class="grnm_texte">L'empeigne Flyknit à été intégrée pour la première fois sur une chaussure de football et offre un toucher de balle inégalé</span></div>
+        <div class="grnm_bulle grnm_bull2" id="bulle1"><span class="grnm_titre">SENSATION UNIQUE</span><span class="grnm_texte">Le bracelet Dynamic Fit mi-montant offre un meilleur ressenti du ballon et garantit une sensation unique</span></div>
+        <div class="grnm_bulle grnm_bull3" id="bulle2"><span class="grnm_titre">TRACTION 360°</span><span class="grnm_texte">La plaque en nylon Pebax avec crampons coniques assurent une traction optimale à 360° pour offrir une totale liberté de mouvements</span></div>
+        <div class="grnm_bulle grnm_bull4" id="bulle3"><span class="grnm_titre">ACC</span><span class="grnm_texte">Le jeu ne cesse d'aller plus vite, garde le contrôle sur le ballon, quelles que soient les conditions</span></div>
+        
+        <div class="grnm_flecheg"><a href="#" id="grnmgauche"></a></div>
+        <div class="grnm_fleched"><a href="#" id="grnmdroite"></a></div>
+        
+        <div class="grnm_cercle" id="grnmcercle"></div>
+        
+       
+        
+        <div class="grnm_final">
+        
+        <!--<div class="grnm_lightn"></div>-->
+        
+        <!--<div class="grnm_ballon"></div>-->
+        
+         <div class="grnm_duo"></div>
+        
+        	<div class="grnm_prem"><span class="grnm_titreprm">SOIS LE PREMIER</span><span class="grnm_texteprm">Prend une longueur d’avance et sois le premier à être informé des pré-commandes, des offres exclusives, des séances de testing 
+et plus encore.</span></div>
+        
+        	<div class="grnm_inscrire"><a href="https://pages.official.nike.com/footballsignup?c=fr" target="_blank"></a></div>
+        </div>
+        
+     </div>
+    
+</body>
+<script type="text/javascript">
+
+	var tag = document.createElement('script');
+	tag.src = "https://www.youtube.com/player_api";
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+	var ind=0;
+	var player;
+	
+	$('#grnmgauche').css('display','none');
+
+ $(document).ready(function(){
+	 
+	 /*
+	 interv=setInterval(function() {
+		 console.log(intervb);
+		  intervb=setInterval(function() {
+    		$('.grnm_lightn').toggleClass('animlight');
+			},50);
+	},1000);
+	*/
+	
+	//$('.grnm_lightn').repeat(3600).toggleClass('animlight').repeat(70).toggleClass('animlight').until(7);
+	//$('.grnm_ballon').repeat(3600).toggleClass('animballon').repeat(70).toggleClass('animballon').until(7);
+	//$('.grnm_duo').repeat(3600).toggleClass('animgrnmduo').repeat(70).toggleClass('animgrnmduo').until(7);;
+	
+	 
+	 $('#grnmgauche').click(function(){
+		 $('#grnmdroite').css('display','block');
+		 $('#bulleb').css('display','none');
+		 oldind=ind;
+		 ind--;
+		 ind=ind<0?0:ind;
+		 var pos=ind*-320;
+		 var posc=ind*-490;
+		 $('.grnm_slideg').css('background-position',pos+'px');
+		 $('.grnm_slided').css('background-position',pos+'px');
+		 $('#grnmcercle').css('background-position',posc+'px');
+		 $('#bulle'+ind).removeClass('anim1');
+		 $('#bulle'+ind).removeClass('anim2');
+		 $('#bulle'+ind).addClass('anim1');
+		 
+		 if(oldind!=ind){
+			 $('#bulle'+oldind).addClass('anim2');
+			 
+			 $('#bulle'+oldind).bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+				$('#bulle'+oldind).removeClass('anim1');
+				$('#bulle'+oldind).removeClass('anim2');
+				$('#bulle'+oldind).unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd");
+			 });
+			 
+		 }
+		 
+		 if(ind==0) $(this).css('display','none');
+		 
+		 return false;
+	 });
+	 
+	 $('#grnmdroite').click(function(){ 
+	 $('#grnmgauche').css('display','block');
+		 $('#bulleb').addClass('anim2');
+	 	 oldind=ind;
+		 ind++;
+		 ind=ind>3?3:ind;
+		 var pos=ind*-320;
+		 var posc=ind*-490;
+		 $('.grnm_slideg').css('background-position',pos+'px');
+		 $('.grnm_slided').css('background-position',pos+'px');
+		 $('#grnmcercle').css('background-position',posc+'px');
+		 $('#bulle'+ind).removeClass('anim1');
+		 $('#bulle'+ind).removeClass('anim2');
+		 $('#bulle'+ind).addClass('anim1');
+	
+		 if(oldind!=ind){
+			$('#bulle'+oldind).addClass('anim2');
+			
+		 	$('#bulle'+oldind).bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+				$('#bulle'+oldind).removeClass('anim2');
+				$('#bulle'+oldind).removeClass('anim1');
+				$('#bulle'+oldind).unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd");
+		 	});
+		 }
+		 
+		 console.log(oldind+' '+ind);
+		 if(ind==3) $(this).css('display','none');
+		 
+		 return false;
+	 });
+	 
+	 $('#grnmdecouvre').click(function(){ 
+	 		$('#grnmyoutube').append('<div id="grnmytplayer">');
+			 player = new YT.Player('grnmytplayer', {
+			  height: '550',
+			  width: '980',
+			  videoId: 'qP1PQDmR9uQ',
+			  events: {
+            	'onReady': onPlayerReady,
+            	'onStateChange': onPlayerStateChange
+       		 }
+			})
+			//player.getPlayerState();
+		 	$('#grnmyoutube').css('display','block');
+			return false;
+		 });
+		 
+		 function onPlayerReady()
+		 {
+			// console.log(player.getPlayerState());
+			// if(player.getPlayerState()==-1) ;
+			 player.playVideo();
+		 }
+		 
+		 function onPlayerStateChange()
+		 {
+			// console.log(player.getPlayerState());
+			 if(player.getPlayerState()==0){
+				  $('#grnmyoutube').css('display','none');
+				  $('#grnmytplayer').remove();
+				  player=null;
+				 // player.seekTo(0,false);
+			 }
+		 }
+		 
+		 $('#grnmyoutube').hover(function(){
+			 $('.grnm_close').css('display','block');
+		 },function(){
+			 $('.grnm_close').css('display','none');
+		 });
+		 
+		 $('#grnmclose').click(function(){
+			 $('#grnmyoutube').css('display','none');
+			 console.log(player);
+			 player.seekTo(0,false);
+			 player.stopVideo(); 
+			 player.clearVideo();
+			 //player.removeEventListener("onStateChange",onPlayerStateChange);
+			 //player.removeEventListener("onReady",onPlayerReady);
+			 $('#grnmytplayer').remove();
+			 player=null;
+			 return false;
+		 });
+		 
+		 $('#grnmvideo')[0].onplay = function () {
+    		//console.log('playing');
+			$('.grnm_decouvre').css('display','block');
+		};
+			 
+ });
+</script>
+</html>

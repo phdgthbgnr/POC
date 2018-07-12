@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		
+		<style type="text/css">
+			* { margin: 0; padding: 0; }
+			.video-container {
+				width: 100%;
+				max-width: 853px;
+				margin: 0 auto;
+				background: #eee;
+				position: relative;
+			}
+			.video-player-size {
+				padding-left: 100%;
+				padding-top: 56.25%;
+			}
+			.video-player {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+		</style>
+    </head>
+    <body>
+        <div class="video-container">
+			<div class="video-player-size"></div>
+			<div class="video-player">
+				<iframe src="https://www.youtube.com/embed/YR0tztlrveQ?autoplay=0&amp;controls=0&amp;html5=1&amp;enablejsapi=1&amp;showinfo=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;rel=0" title="YouTube video player" allowfullscreen="1" id="player" frameborder="0" height="100%" width="100%"></iframe>
+			</div>
+		</div>
+    </body>
+</html>

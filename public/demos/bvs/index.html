@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Batman VS Superman</title>
+        <style>
+            html,body{
+                width: 100%;
+                height: auto;
+                padding: 0;
+                margin: 0;
+            }
+            body{
+                background-color: #ccc;
+            }
+            
+            .global{
+                position: relative;
+                width:1466px;
+                height: auto;
+                min-height: 1600px;
+                margin:0 auto;
+                background: #f1f1f1 url('_images/top.png') top center no-repeat;
+                padding-top: 146px;
+            }
+            
+            .content{
+                position: relative;
+                width:1236px;
+                height: auto;
+                min-height: 1000px;
+                margin:0 0 0 228px;
+                text-align: center;
+                background-color: #f1f1f1;
+            }
+            
+            .masthead{
+                width:970px;
+                height:250px;
+                background-color: #666;
+                margin:20px auto 0 auto;
+            }
+            
+            .yt{
+                width: :1064px;
+                margin:10px auto 0 auto;
+                text-align: center;
+            }
+            
+            .expand{
+                height: 500px;
+            }
+        </style>
+        <script>
+            document.domain = "demo.greengardendigital.com";
+        </script>
+    </head>
+    <body>
+        <div class="global">
+            <div class="content">
+                <div class="masthead" id="masthead">
+                    <iframe src="BvS_masthead_yt_970x250-500/index.html" frameBorder="0" width="970" height="250" scrolling="no"></iframe>
+                </div>
+                <div class="yt">
+                    <img src="_images/yt.jpg" with="1064" height="984"/>
+                </div>
+            </div>
+            <div class="footer">
+                <img src="_images/footer.png" width="1466" height="155"/>
+            </div>
+        </div>
+        <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($){
+               // console.log('jquery');
+                
+                
+            })
+            
+            function expand(){
+                //console.log('expand');
+                $('#masthead').addClass("expand");
+                $('iframe').height(500);
+            }
+            
+            function collapse(){
+               // console.log('collapse');
+                $('#masthead').removeClass("expand");
+                $('iframe').height(250);
+            }
+        </script>
+    </body>
+</html>

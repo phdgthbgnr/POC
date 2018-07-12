@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Nike Tiempo</title>
+    <link type='text/css' rel='stylesheet' href='files/style.css' />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      
+</head>
+
+<body>
+	
+        
+        <div id="grgd-content"> 
+		<!-- PART 1 -->
+		
+        <div id="grgd-part1">
+            
+            <div id="grgd-colg">
+                <div id="grgd-colgab">
+                    <div id="grgd-colga"><img src="files/img/imgb1.png" id="imggrgd-colga"/></div>
+                    <div id="grgd-colgb"><img src="files/img/imgb1.png" id="imggrgd-colgb"/></div>
+                </div>
+            </div>
+            
+            <div id="grgd-cold">
+                <div id="grgd-coldab">
+                    <div id="grgd-colda"><img src="files/img/imga1.jpg" id="imggrgd-colda"/></div>
+                    <div id="grgd-coldb"><img src="files/img/imga1.jpg" id="imggrgd-coldb"/></div>
+                </div>
+            </div>
+            
+            <div id="grgd-nava"></div>
+            
+            <a href="#" class="grgd-suite grgd-suitea" id="to2"></a>
+            
+        </div>
+        
+        <div id="grgd-petitlogo"><img src="files/img/iamtiempo.png" width="222" height="90"/></div>
+        
+        <div id="grgd-grologo"><img src="files/img/logo-nike-tiempo.png" width="228" height="316"/></div>
+        
+        <!-- PART 2 -->
+        
+        <div id="grgd-part2">
+            <div id="grgd-colg"><img src="files/img/blank.png" width="293" height="881" id="grgd-part2imgg"/></div>
+            <!--<div id="grgd-cold"><img src="files/img/blank.png" width="320" height="664" id="part2imgd"/></div>-->
+            <a href="#" class="grgd-suite grgd-suiteb" id="to3"></a>
+        </div>
+            
+        <!-- PART 3 -->    
+            
+        <div id="grgd-part3">
+            <h2>CHAUSSURES DE FOOTBALL TIEMPO : <br/>UNE MAÎTRISE TOTALE DU TOUCHER</h2>
+            <div id="grgd-part3cont"><img src="files/img/blank.png" width="642" height="319" id="grgd-part3img"/></div>
+            
+            <div class="grgd-target grgd-trg1" id="target1"><a href="#" class="grgd-rotating"><img src="files/img/blank.png" width="82" height="84"/></a></div>   
+            <div class="grgd-target grgd-trg2" id="target2"><a href="#" class="grgd-rotating"><img src="files/img/blank.png" width="82" height="84"/></a></div>
+            <div class="grgd-target grgd-trg3" id="target3"><a href="#" class="grgd-rotating"><img src="files/img/blank.png" width="82" height="84"/></a></div>
+            <div class="grgd-target grgd-trg4" id="target4"><a href="#" class="grgd-rotating"><img src="files/img/blank.png" width="82" height="84"/></a></div>
+            
+            
+            <div class="grgd-texte grgd-texte1"><h4><span class="grgd-numero">01</span><span class="grgd-ttx">Crampons pour terrain souple (SG), adaptés aux terrains humides et boueux nécessitant une traction optimale</span></h4></div>
+            <div class="grgd-texte grgd-texte2"><h4><span class="grgd-numero">02</span><span class="grgd-ttx">Surface à rainures pour plus de précision et de contrôle</span></h4></div>
+            <div class="grgd-texte grgd-texte3"><h4><span class="grgd-numero">03</span><span class="grgd-ttx">Empeigne en cuir de kangourou (Kanga-Lite) imperméable s'adapte à votre pied pour une tenue parfaite</span></h4></div>
+            <div class="grgd-texte grgd-texte4"><h4><span class="grgd-numero">04</span><span class="grgd-ttx">Plaque en plastique TPU sur toute la longueur avec 6 crampons en aluminium interchangeables pour une adhérence personnalisée</span></h4></div>
+            
+           
+            <a href="#" class="grgd-recule"></a>
+            <a href="#" class="grgd-avance"></a>
+            
+            <a href="#" class="grgd-suite grgd-suitec" id="to4"></a>
+            
+            <h3>La chaussure de football Nike Tiempo 5 vous garantit un confort<br/>et un toucher de balle inégalés pour un jeu puissant et précis sur le terrain.</h3>
+        </div>
+    
+		
+        <!-- PART 4 -->
+        
+        <div id="grgd-part4">
+            <div id="grgd-colg"><img src="files/img/part4img1.jpg" width="497" height="992" id="grgd-part4imgg"/></div>
+            <div id="grgd-cold"><img src="files/img/part4img2.jpg" width="483" height="992" id="grgd-part4imgd"/></div>
+            <!--<a href="#" class="grgd-suite grgd-suited" id="to5"></a>-->
+        </div>
+        
+        <!-- PART 5 -->
+        
+        <div id="grgd-part5">
+            <div class="grgd-reservez"><a href="#">réservez</a></a></div>
+        </div>
+    </div>
+    
+
+
+</body>
+    <script>
+        
+    var clic=false;
+    var decal;
+        
+    $(window).ready(function(){
+        
+        // ----- SLIDESHOW --------------------------------------------------------
+        
+       
+        var rep='files/img/';
+        var imgd=['imga1.jpg','imga2.jpg','imga3.jpg','imga4.jpg','imga5.jpg','imga6.jpg'];
+        var imgg=['imgb1.png','imgb2.png','imgb3.png','imgb4.png','imgb5.png','imgb6.png'];
+        var ind=0;
+        
+        var interv;
+        
+        var ypart=$('#grgd-content').position();
+        decal=ypart.top;
+        
+        
+        // navigation slideshow
+        var nav='';
+        for (var t in imgd)
+        {
+            nav+='<a href="#" class="grgd-nav" id="nav'+t+'"></a>';
+        }
+            
+        interv=setTimeout(function(){mytimeout()},1500);
+        
+        $('#grgd-nava').append(nav);
+        $('#nav0').addClass('grgd-navon');
+        
+        $('.grgd-nav').click(function(){
+            var id=$(this).attr('id');
+            var indd=id.substr(3,id.length);
+            ind=parseInt(indd);
+            
+            if(ind>=imgg.length) ind=0;
+            clearInterval(interv);
+            
+            interv=setTimeout(function(){mytimeout()},1500);
+            
+            loadimg('#grgd-colgab','#imggrgd-colga',rep+imgg[ind]);
+            loadimg('#grgd-coldab','#imggrgd-colda',rep+imgd[ind]);
+            
+            $('.grgd-nav').removeClass('grgd-navon');
+           
+        });
+        
+        $('#grgd-coldab').bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+            
+            $('#grgd-coldab').removeClass('move');
+            $('#grgd-coldab').css('left','-483px');
+            $('#imggrgd-coldb').attr('src',rep+imgd[ind]);
+            
+            if(ind>0)
+            {
+                $('#nav'+(ind-1)).removeClass('grgd-navon');
+                $('#nav'+ind).addClass('grgd-navon');
+            }else{
+                //console.log(imgg.length-1);
+                $('#nav'+(imgg.length-1)).removeClass('grgd-navon');
+                $('#nav'+ind).addClass('grgd-navon');
+            }
+            
+           
+            clearInterval(interv);
+            interv=setTimeout(function(){mytimeout()},1500);
+            
+            //setTimeout('mytimeout()', 2000);
+        });
+        
+        
+        function loadimg(col,target,img)
+        {
+            //console.log(img);
+            var newimage=img;
+            $(target).one('load',function(){
+                //console.log('loaded : '+img);
+                    if(target=='#imggrgd-colgb')
+                    {
+                        $('#imggrgd-colgb').removeClass('brighten');
+                        $( '#grgd-colgb' ).fadeTo( 800 , 1, function() {
+                             
+                            $('#imggrgd-colgb').addClass('brighten');
+                            $('#imggrgd-colgb').bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd")
+                            {
+                        
+                                var nn=ind==0?imgg.length-1:ind-1;
+                                $('#imggrgd-colga').attr('src',rep+imgg[ind]);
+                                //$('#imggrgd-colgb').removeClass('brighten');
+                               // $('#grgd-colgb').css({"opacity":0});  
+                                 $( '#grgd-colgb' ).fadeTo( 200 , 0); 
+                            }
+                            
+                        });
+                    }
+                    if(col!='#grgd-colgab')
+                    {
+                        $(col).addClass('move');
+                        $(col).css({"left":"0"});
+                    }
+            })
+            .attr('src',newimage)
+            .each(function(){
+               // if(this.complete)
+                $(this).trigger('load');  
+            });
+        }
+        
+        function mytimeout()
+        {
+            ind++;
+            if(ind>=imgg.length) ind=0;
+            loadimg('#grgd-colgab','#imggrgd-colgb',rep+imgg[ind]);
+            loadimg('#grgd-coldab','#imggrgd-colda',rep+imgd[ind]);
+        }
+        
+       function gestionclic()
+        {
+            clic=false;
+        }
+        
+        // ----- PART 2 ---------------------------------------------------------------
+        
+    
+        
+        // chargement image gauche puis droite
+        
+        // chergement image gauche 
+        var newimageg='files/img/nike-tiempo-dessus2.png';
+        $('#grgd-part2imgg').one('load',function(){
+
+            })
+            .attr('src',newimageg)
+            .each(function(){
+               // if(this.complete)
+                $(this).trigger('load');  
+            });
+        
+        
+        // ----- PART 3 ---------------------------------------------------------------
+        
+        var chaussure=0;
+        var chaussures=['files/img/part3img1.png','files/img/part3img2.png','files/img/part3img3.png','files/img/part3img4.png'];
+        
+        //var newimage3='files/img/grgd-part3img4.png';
+        function loadchaussure(fic)
+        {
+        var newimage3=fic;
+         $('#grgd-part3img').one('load',function(){
+                $('.grgd-texte').css('display','none');
+                $('.grgd-target').css('display','none');
+               
+                $('#grgd-part3img').delay(50).fadeTo( 500 , 1);
+                $('.grgd-trg'+(chaussure+1)).css('display','block');
+                $('.grgd-texte'+(chaussure+1)).delay(100).fadeTo( 500 , 1); 
+            })
+            .attr('src',newimage3)
+            .each(function(){
+                
+                /*
+               console.log(this.complete);
+                console.log('loaded');
+                $(this).trigger('load');  
+                */
+               if(this.complete) $(this).load();
+            });
+        }
+        
+        
+        loadchaussure(chaussures[chaussure]);
+        
+        $('.grgd-avance').click(function(){
+            chaussure++;
+            if(chaussure>=(chaussures.length)) chaussure=0;
+            $('#grgd-part3img').css('opacity',0);
+            loadchaussure(chaussures[chaussure]);
+
+             $('.grgd-trg'+(chaussure+1)).fadeTo( 1000 , 1);
+
+            return false;
+        });
+        
+        $('.grgd-recule').click(function(){
+            chaussure--;
+            if(chaussure<0) chaussure=chaussures.length-1;
+            $('#grgd-part3img').css('opacity',0);
+            loadchaussure(chaussures[chaussure]);
+
+             $('.grgd-trg'+(chaussure+1)).fadeTo( 1000 , 1);
+            
+            return false;
+        });
+        
+    });
+        
+        
+        
+    $(window).scroll(function() {
+        var ha = $(window).scrollTop();
+        
+        var hb = $('#grgd-content').position();
+        
+        var height=ha-hb.top;
+        
+        //part2
+        if(height<=0 && clic==false){
+            $('#grgd-part2imgg').removeClass('grgd-move');
+             $('#grgd-part2imgg').css('top','-881px');
+        }
+        
+        if(height>0 && height<=800 && clic==false){
+            // console.log('ok2');
+            $('#grgd-part2imgg').css('top','-200px');
+            $('#grgd-part2imgg').addClass('grgd-move');
+            $('#grgd-part2imgg').bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+                $('#grgd-part2imgg').unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd");
+                $('#grgd-part2imgg').removeClass('grgd-move');
+            });
+        }
+        if (height>1300 && height<1500 && clic==false)
+        {
+            $('#grgd-part2imgg').css('top','-881px');
+            $('#grgd-part2imgg').addClass('grgd-move');
+        }
+        // part4
+        if(height > 1500 ) {
+            $('#grgd-part4imgd').bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+                $('#grgd-part4imgd').unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd");
+                $('#grgd-part4imgg').removeClass('grgd-move');
+                $('#grgd-part4imgd').removeClass('grgd-move2');
+                $('#grgd-part4imgg').addClass('grgd-brighten');
+                $('#grgd-part4imgd').addClass('grgd-brighten2');
+                
+                $('#grgd-part4imgd').bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+                    $('#grgd-part4imgd').unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd");
+                    $('#grgd-part4imgg').removeClass('grgd-brighten');
+                    $('#grgd-part4imgd').removeClass('grgd-brighten2');
+                    var p=$('#grgd-part5').position();
+            
+                    $('html, body').animate({  
+							scrollTop:p.top+decal
+                    }, 'slow');
+                 });
+                //console.log('ok');
+            });
+
+            $('#grgd-part4imgg').addClass('grgd-move');
+            $('#grgd-part4imgg').css('top','-63px');
+            $('#grgd-part4imgd').addClass('grgd-move2');
+            $('#grgd-part4imgd').css('top','0px');
+            
+        }
+        if(height>2900){
+            $('#grgd-part4imgd').unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd");
+            $('#grgd-part4imgg').removeClass('grgd-move');
+            $('#grgd-part4imgd').removeClass('grgd-move2');
+            //$('#grgd-part4imgg').css('top','0');
+            //$('#grgd-part4imgd').css('top','-100px');
+        }
+         if(height<1500){
+            $('#grgd-part4imgd').unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd");
+            $('#grgd-part4imgg').removeClass('grgd-move');
+            $('#grgd-part4imgd').removeClass('grgd-move2');
+            $('#grgd-part4imgg').css('top','0');
+            $('#grgd-part4imgd').css('top','-100px');
+        }
+    });
+        
+        
+        // nav grgd-suite
+        $('.grgd-suite').click(function(){
+            
+            var dest='';
+            var anch=$(this).attr('id');
+                switch(anch)
+                {
+                    case 'to2':
+                        clic=true;
+                        dest='#grgd-part2';
+
+                        $('#grgd-part2imgg').css('top','-200px');
+                        $('#grgd-part2imgg').addClass('grgd-move');
+                        $('#grgd-part2imgg').bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+
+                            $('#grgd-part2imgg').unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd");
+                            $('#grgd-part2imgg').removeClass('grgd-move');
+                            var p=$('#grgd-part3').position();
+                                $('html, body').animate({  
+							     scrollTop:p.top+decal
+                                }, 2000, function(){
+                                    clic=false;
+                                });
+                        });
+
+                        break;
+                    case 'to3':
+                        dest='#grgd-part3';
+                        break;
+                    case 'to4':
+                        dest='#grgd-part4';
+                        break;
+                    case 'to5':
+                        dest='#grgd-part5';
+                        break;
+                }
+            var p=$(dest).position();
+            
+            $('html, body').animate({  
+							scrollTop:p.top+decal
+            }, 'slow');
+            return false;
+        });
+        
+      
+    </script>
+</html>

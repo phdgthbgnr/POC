@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Lunar Stefan Janovski</title>
+        <link type="text/css" href="style.css" rel="stylesheet">
+        <script type="text/javascript" src="_js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript">
+            
+        // SLIDER RELATED
+        var currentSlideId = 2;
+            
+            
+        function nikeSlider(newSlideId) {
+                if (newSlideId !== currentSlideId) {
+                    var currentSlide = $('#nike_slider_' + currentSlideId);
+                    var newSlide = $('#nike_slider_' + newSlideId);
+                    var slideContainer = $('#nike_slider_container');
+
+                    switch (newSlideId) {
+                        case 1: newMarginLeftVal = '249px'; break;
+                        case 3: newMarginLeftVal = '-737px'; break;
+                        case 4: newMarginLeftVal = '-1475px'; break;
+                        default: newMarginLeftVal = '-239px';
+                    }
+
+                    currentSlide.removeClass('nike_slider_image_active');
+                    $('#nike_thumb_' + currentSlideId).removeClass('nike_slider_thumb_active');
+                    newSlide.addClass('nike_slider_image_active');
+                    $('#nike_thumb_' + newSlideId).addClass('nike_slider_thumb_active');
+                    slideContainer.css('margin-left', newMarginLeftVal);
+
+                    currentSlideId = newSlideId;
+                }
+         }
+
+        // OVERLAY RELATED
+        function openNikeOverlay() {
+                var nikeOverlay = $('#nike_overlay');
+                nikeOverlay.css('display','block');
+                var videoSJ=$('.nike_janoskivideo');
+                var videoHSJ = document.getElementById("nike_janoskivideo");
+                videoHSJ.currentTime=0;
+                videoHSJ.play();
+                var dSJ=$('.lunarSJ').position();
+                dSJ=dSJ.top;
+                var tSJ=$(document).scrollTop();
+                var hSJ=$(window).height();
+                //console.log(dSJ);
+                var topSJ=(tSJ-dSJ)+((hSJ-480)/2);
+                videoSJ.css('top',topSJ+'px');
+                videoSJ.css('left','132px');
+                nikeOverlay.animate({opacity: 1}, 300, 'swing');
+                $('.nike_close_overlay').css('top',topSJ+10+'px');
+        }
+
+        function closeNikeOverlay() {
+            var nikeOverlay = $('#nike_overlay');
+            nikeOverlay.animate({opacity: 0}, 300, 'swing', function(){
+                nikeOverlay.css('display','none')
+                var videoHSJ = document.getElementById("nike_janoskivideo");
+                videoHSJ.currentTime=0;
+                videoHSJ.pause();
+            });
+           
+        }
+            
+        jQuery(document).ready(function($){
+
+            $('#nike_janoskivideo').click(function( event ) {
+                //event.stopPropagation(); // This prevents the click to propagate to the containing overlay div which closes when clicked
+            });
+
+            $(document).keyup(function(e) {
+                if (e.keyCode == 27) { closeNikeOverlay(); }   // esc
+            });
+            
+            $('a.linkzSJ').each(function(){
+                $(this).click(function(){
+                    return false;
+                });
+            });
+            
+        });
+            
+    </script>
+    </head>
+    
+    <body>
+        <div class="contentSJ">
+            <div class="headSJ"><img src="_images/head.png" width="1006" height="179"/></div>
+            
+            <!-- start stephanJanovski -->
+            
+            <div class="lunarSJ">
+                <div id="nike_overlay" class="nike_overlay" onclick="closeNikeOverlay();">
+                    <div class="nike_close_overlay">x</div>
+                    <video id="nike_janoskivideo" class="nike_janoskivideo" width="720" height="480">
+                        <source src="vid/lunarjanoski.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="nike_branding">
+                    <div class="nike_banner">
+                        <div class="nike_banner_left"></div>
+                        <div class="nike_banner_right">
+                            <div class="nike_banner_right_image">
+                                <div class="titreHSJ"><img src="img/titreSJ.png" width="447"  height="107" alt="lunar stefan janovski"/></div>
+                                <div class="shoes1"><img src="img/shoes1.png" height="383" width="163"/></div>
+                                <div class="shoes2"><img src="img/shoes2.png" height="375" width="186"/></div>
+                                <div class="nikesb"><img src="img/nikesb.png" height="45" width="90"/></div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="nike_slide_product">
+                        <div class="nike_slider_container" id="nike_slider_container">
+                            <div class="nike_slider_content" id="nike_slider_1" onclick="nikeSlider(1);"><img src="img/janoski_detail_preview_1.jpg" alt="Detail 1" /></div>
+
+                            <div class="nike_slider_content nike_vid_thumb nike_slider_image_active" style="background-image: url(img/nike_video_preview.jpg);" onclick="nikeSlider(2); openNikeOverlay();"><span></span></div>
+
+                            <div class="nike_slider_content" id="nike_slider_3" onclick="nikeSlider(3);"><img src="img/janoski_detail_preview_2.jpg" alt="Detail 2" /></div>
+
+                            <div class="nike_slider_content" id="nike_slider_4" onclick="nikeSlider(4);"><img src="img/janoski_detail_preview_3.jpg" alt="Detail 3" /></div>
+                        </div>
+
+                        <div class="nike_slider_thumbs">
+                            <ul>
+                                <li><button id="nike_thumb_1" class="nike_slider_thumb" onclick="nikeSlider(1);"><img src="img/janoski_detail_thumb_1.jpg" alt="Figure 1" /></button></li>
+                                <li><button id="nike_thumb_2" class="nike_slider_thumb nike_slider_thumb_active" onclick="nikeSlider(2);"><img src="img/nike_video_thumb.jpg" alt="Video thumb" /></button></li>
+                                <li><button id="nike_thumb_3" class="nike_slider_thumb" onclick="nikeSlider(3);"><img src="img/janoski_detail_thumb_2.jpg" alt="Figure 2" /></button></li>
+                                <li><button id="nike_thumb_4" class="nike_slider_thumb" onclick="nikeSlider(4);"><img src="img/janoski_detail_thumb_3.jpg" alt="Figure 3" /></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="nike_product">
+                                <h2 class="h2SJ">PROTECTION OPTIMALE<br/>CONTRE LES CHOCS<br/>ET EXCELLENT CONTRÔLE<br/>DU SKATEBOARD</h2>
+                                <!--<h3 class="h3SJ">La chaussure Nike Lunar Stefan Janoski pour Homme possède une semelle intermédiaire Lunarlon pour une excellente absorption des impacts et une flexibilité à 360 degrés.<br/>La semelle extérieure en caoutchouc près du sol et adhérente optimise l'adhérence et les sensations sur la planche.</h3>-->
+                                <div class="shoes1big"><img src="img/shoes1big.png" width="292" height="685"/></div>
+                                <div class="shoes2big"><img src="img/shoes2big.png" width="339" height="685"/></div>
+                                <a href="#" class="linkzSJ linkzSJ1"><span class="zoomSJ"><img src="img/semelle.png" width="201" height="209" /></span><span class="hrefSJ"></span><span class="textzSJ">Semelle extérieure avec motif à chevrons pour une résistance, une flexibilité et une adhérence optimales</span></a>
+                                <a href="#" class="linkzSJ linkzSJ2"><span class="zoomSJ"><img src="img/empeigne.png" width="201" height="209" /></span><span class="hrefSJ"></span><span class="textzSJ">Empeigne en daim, en cuir et en nubuck pour un maintien et un confort supérieurs</span></a>
+                                <a href="#" class="linkzSJ linkzSJ3"><span class="zoomSJ"><img src="img/amorti.png" width="201" height="209" /></span><span class="hrefSJ"></span><span class="textzSJ">Amorti Lunarlon ultra-léger offrant un excellent rebond pour une absorption des chocs à la fois souple et performante</span></a>
+                                <a href="#" class="linkzSJ linkzSJ4"><span class="zoomSJ"><img src="img/autoclave.png" width="201" height="209" /></span><span class="hrefSJ"></span><span class="textzSJ">Structure autoclave qui fixe la semelle d'usure à l'empeigne pour un look et une sensation classiques et aérodynamiques</span></a>
+                        
+                        </div>
+                        
+                        <div class="signatureSJ"><img src="img/logoSJ.png" width="309" height="122" alt="Stefan Janovski - Nike sb"/></div>
+                        <a href="#" class="precomSJ">précommanez-les</a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- end stephanJanovski -->
+            
+            <div class="footerSJ"><img src="_images/footer.png" width="1006" height="1050"/></div>
+        </div>
+    </body>
+
+
+</html>

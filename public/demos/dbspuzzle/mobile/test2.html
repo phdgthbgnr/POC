@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html">
+        <title>DBS PUZZLE</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <!-- <meta name="format-detection" content="telephone=no"> -->
+        <!-- <meta name="HandheldFriendly" content="true" / -->
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> -->
+        <!-- <link rel="stylesheet" href="_css/dbspuzzle.css"> -->
+        <style>
+            html,body{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+            .contener{
+                width: 500px;
+                height: 500px;
+                overflow: hidden;
+                border: 1px solid red;
+                user-select: none;
+                vertical-align: top;
+            }
+            .nodisplay{
+                display: none;
+            }
+            .drag-drop{
+                -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
+                width:100px;
+                height: 100px;
+                -ms-touch-action: none;
+                touch-action: none;
+            }
+
+            #drag-me::before {
+            content: "#" attr(id);
+            font-weight: bold;
+            }
+            .drag-drop img{
+                width: 100%;
+                height: auto;
+            }
+            ul{
+                list-style: none;
+                display:block;
+                margin: 0;
+                padding: 0;
+                width: 20%;
+                height: auto
+            }
+            ul li{
+                width: 100%;
+                height: auto;
+            }
+
+            ul li img{
+                width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contener">
+            <ul>
+                <li><img id="zdrop01" src="_img/1/1-1.png" data-src="1-1.png" class="dropzone"/></li>
+            </ul>
+            <div id="piece01" class="draggable drag-drop piece">
+                <img src="_img/1/1-1.png" data-src="1-1.png" />
+            </div> 
+        </div>
+        <script type="text/javascript" src="_js/interact.min.js"></script>
+        <script>
+            interact('.draggable')
+            .draggable({
+                // enable inertial throwing
+                inertia: true,
+                // keep the element within the area of it's parent
+                restrict: {
+                restriction: "parent",
+                endOnly: true,
+                elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+                },
+                // enable autoScroll
+                autoScroll: true,
+
+                // call this function on every dragmove event
+                onmove: dragMoveListener,
+                // call this function on every dragend event
+                onend: function (event) {
+                
+                }
+            });
+
+            function dragMoveListener (event) {
+                var target = event.target,
+                    // keep the dragged position in the data-x/data-y attributes
+                    x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+                    y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+                // translate the element
+                target.style.webkitTransform =
+                target.style.transform =
+                'translate(' + x + 'px, ' + y + 'px)';
+
+                // update the posiion attributes
+                target.setAttribute('data-x', x);
+                target.setAttribute('data-y', y);
+            }
+
+            // this is used later in the resizing and gesture demos
+            window.dragMoveListener = dragMoveListener;
+
+        interact('.dropzone').dropzone({
+            // only accept elements matching this CSS selector
+            accept: '.piece',
+            // Require a 75% element overlap for a drop to be possible
+            overlap: 0.1,
+            // listen for drop related events:
+            ondropactivate: function (event) {
+                // add active dropzone feedback
+                console.log('ondropactivate');
+            },
+            ondragenter: function (event) {
+                console.log('dragenter');
+                var draggableElement = event.relatedTarget,
+                dropzoneElement = event.target;
+            },
+            ondragleave: function (event) {
+                console.log('dragleave');
+                // remove the drop feedback style
+            },
+            ondrop: function (event) {
+                console.log('ondrop');
+            },
+            ondropdeactivate: function (event) {
+                console.log('ondropdeactivate');
+                // remove active dropzone feedback
+            }
+        });
+        </script>
+    </body>

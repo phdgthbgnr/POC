@@ -1,0 +1,22 @@
+
+#header{
+    position: relative;
+    width: 980px;
+    height: 145px;
+    background: url(img/header.png) top center no-repeat;
+}
+
+#content{
+    margin: 0 auto;
+    width: 980px;
+    background: #fff;
+    padding: 0;
+    position:relative;    
+}
+
+#footer{
+    position: relative;
+    width: 980px;
+    height: 259px;
+    background: url(img/footer.png) top center no-repeat;
+}

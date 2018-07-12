@@ -1,0 +1,259 @@
+.novisible{
+  display: none;
+}
+.liens{
+  margin-bottom: 0;
+}
+.tbloc{
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  vertical-align: top;
+  text-align: left;
+}
+.tblocs{
+  margin: 0 0 5% 0;
+  position: relative;
+}
+.ttbloc{
+  width:49.5%;
+  display: inline-block;
+  color: #000;
+}
+.ttbloc img {
+	max-width: 95%;
+}
+.purple-bg .ttbloc h3, .purple-bg .ttbloc h4 {
+	text-align: left;
+}
+.purple-bg .ttbloc h3 {
+	color: #fff;
+	font-family: "montserratregular";
+}
+.ttbloc h5, .ttbloc h6{
+  padding-left:2%;
+  font-size:13px;
+}
+.ttbloc h5{
+  margin: 2.5% 0;
+}
+.ttbloc h6 p{
+  margin: 4% 0;
+  text-transform: uppercase;
+}
+.ttbloc h6 ul{
+  padding-left: 3%;
+}
+.ttbloc h6 ul li{
+  list-style-position: outside;
+  list-style-type: disc;
+  font-size: 14px;
+  margin: 1% 0;
+}
+.ttbloc ul.logos{
+  margin-top: 5%;
+}
+.ttbloc ul.logos li{
+  display: inline-block;
+  width: 9%;
+}
+.ttbloc ul.logos li img{
+  width: 100%;
+  height: auto;
+}
+.ttbloc1{
+  position: absolute;
+  left: 1%;
+  height: auto;
+  margin: auto;
+  line-height: 150%;
+  width: 48%;
+  top: calc(100% - 50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.ttbloc2{
+  margin-left: 50%;
+  overflow: hidden;
+}
+h5{
+  text-align: left;
+}
+.zooms{
+  padding: 0;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+}
+.zooms li{
+  width: 19.5%;
+  display: inline-block;
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.zooms li.addt{
+  width:30%;
+}
+.zooms li a{
+  display: block;
+  width:100%;
+  text-align: center;
+}
+.zooms li a img{
+  display: block;
+  border: 0;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.zooms li a img.zoom{
+  /*width:25%;*/
+  width: 40px;
+  max-width: 40px;
+  height: auto;
+  margin: 0 auto;
+  z-index: 5;
+}
+.zooms li a span.popup{
+  display: block;
+  width:auto;
+  position: absolute;
+  z-index: 4;
+  /*bottom: 17%;*/
+  bottom: 42px;
+  right:0;
+  left: 0;
+  font-size: 12px;
+  border: 2px solid #a0a0a0;
+  padding:5%;
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.8);
+  -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33ffffff,endColorstr=#33ffffff);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33ffffff,endColorstr=#33ffffff);
+  zoom: 1;
+  color: #000;
+  text-align: left;
+  visibility: hidden;
+  line-height: 18px;
+}
+.zooms li a span.selected{
+  visibility: visible;
+}
+.zooms li a span.popup span.popuptitle{
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6%;
+  text-transform: uppercase;
+}
+
+.figuradd{
+  width: 100%;
+  max-width: 1170;
+  text-align: center;
+}
+
+h3.cntadd{
+  margin-top: 5%;
+  color: #eb5e1c;
+  text-transform: uppercase;
+  font-size: 23px;
+}
+
+h4.cntaddtxt{
+  margin:3% auto;
+  max-width: 1170px;
+}
+
+.figuradd li{
+  list-style: none;
+  display: inline-block;
+  width: 24%;
+  max-width: 120px;
+}
+
+.figuradd li img{
+  width:100%;
+  height: auto;
+}
+
+.purple-bg {
+	background: url(../img/figurines/bg-grad-disney.jpg) top center repeat-x;
+}
+
+
+/* ------------------------------------------------------------------------------------ PETITS ECRANS */
+
+@media screen and (max-width:767px){
+  .gris{
+    margin:10px auto 20px auto;
+  }
+  .ttbloc h6 ul{
+    padding-left: 3%;
+  }
+  .ttbloc h5{
+    margin-bottom: 5%;
+  }
+  .ttbloc h6 ul li{
+    margin:3% 0;
+  }
+  .onglets li a span{
+    font-size: 11px;
+    font-weight: bold;
+    padding:0 2%;
+  }
+  .ttbloc{
+    width: 95%;
+	padding: 2% 0;
+	margin: 0 0 0 -2%;
+  }
+  .purple-bg .ttbloc h4 {
+	text-align: justify;
+	line-height: 18px;
+  }
+  .ttbloc1{
+    float: none;
+    position: relative;
+    top: 0;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .ttbloc img {
+	max-width: 100%;
+    position: relative;
+	margin: 20px auto;
+  }
+  .ttbloc2{
+    margin-left: 0;
+  }
+  .zooms{
+    margin-top:5%;
+  }
+  .zooms li{
+    width:100%;
+    height: auto;
+  }
+  .zooms li.addt{
+    width: 95%;
+  }
+
+  .zooms li a img{
+    width:60%;
+    max-width: 200px;
+  }
+  .zooms li a img.zoom{
+    /*width:15%;*/
+    width: 40px;
+    max-width: 40px;
+  }
+  .zooms li a span.popup{
+    right: 5%;
+    left: 5%;
+    font-size: 14px;
+  }
+}

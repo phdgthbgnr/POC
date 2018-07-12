@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Infinity</title>
+<link rel="stylesheet" type="text/css" href="./scripts/webfontkit/stylesheet.css">
+<link href="./styles/style.css" media="screen" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="styles/skin_produkt.css" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.easing.compatibility.js"></script>
+<script type="text/javascript" src="scripts/jquery.jcarousel.js"></script>
+<script type="text/javascript">
+ 
+$(document).ready(function(){
+	
+	$('#navi li').mouseenter(function(){
+		
+		$(this).animate({
+			marginTop: "-10"
+			
+		}, 400, 'easeOutQuad');
+			
+	});
+	
+	$('#navi li').mouseleave(function(){
+		
+		$(this).animate({
+			marginTop: "5"	
+			
+		}, 400, 'easeOutQuad');
+			
+	});
+	
+	$('#more').click(function(){
+		$('#more_text').css("display","block");
+		$(this).css("display","none")	;
+	});
+	
+	$('#less').click(function(){
+		$('#more_text').css("display","none");
+		$('#more').css("display","block");
+	});
+	
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+	
+	$('#carousel').jcarousel({
+		wrap: 'circular',
+		auto: 5,
+		initCallback: mycarousel_initCallback
+	});
+	
+	
+});
+ 
+</script>
+
+<!--[if lt IE 9]>
+<style>
+
+#content_wrapper{
+	zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#c8c8c9', Direction=0, Strength=10)
+    progid:DXImageTransform.Microsoft.Shadow(color='#c8c8c9', Direction=180, Strength=10);
+    margin: -10px 0 10px 0;
+}
+
+#content{
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+</style>
+<![endif]-->
+</head>
+<body>
+	<div id="header">
+    <div class="bloch">
+    	<div class="revenir">
+    	<a href="http://www.micromania.fr/vente/rayon.php?titrerecherche=infinity+disney" target="_blank"><img src="logo_Micromania.png"/></a>
+        </div>
+		<div id="logo">
+			<a href="./index.html"><img src="./images/logo.png" /></a>
+	  	</div>
+        <div class="retourne">
+        <a href="http://www.micromania.fr/vente/rayon.php?titrerecherche=infinity+disney" target="_blank"><img src="logo_Micromania.png"/></a>
+        </div>
+        </div>
+	</div>
+	<div class="navig">
+		<ul>
+			<li><a href="./index.html"><img src="./images/navigAccueil.jpg" /></a></li>
+			<li id="navigComment"><a href="./comment.html"><img src="./images/navigComment.jpg" /></a></li>
+			<li><a href="./pack.html"><img src="./images/navigPack.jpg" /></a></li>
+			<li><a href="./toy-box.html"><img src="./images/navigToy.jpg" /></a></li>
+			<li id="lastLi"><a href="./commander.html"><img src="./images/navigCommanderHover.jpg" /></a></li>
+		</ul>
+	</div>	
+	<div id="commanderContent">
+		<div class="content">
+			<h1>Disponible 
+		  sur PS3, Wii, Wii U, Xbox360.</h1>	
+			<div class="leftcol4">
+				<img src="./images/commanderTopLeft.jpg" />
+			</div>
+			<div class="rightcol4">
+				<p class="txttype2">
+				<span>Le pack de démarrage contient :</span>
+					<ul>
+						<li>Le jeu vidéo Disney Infinity permettant de jouer<br/>  aux modes Aventure et Toy Box</li>
+						<li>1 lecteur Disney Infinity</li>
+						<li>3 figurines Disney Infinity : M. Indestructible, Jack Sparrow et Sulli</li>
+						<li>3 Packs Aventures d&eacute;bloquables gr&acirc;ce au troph&eacute;e : Monstres Academy, Pirates des Caraïbes et Les Indestructibles</li>
+						<li>Votre premier Power Disc Disney Infinity</li>
+						<li>Une carte pour débloquer du contenu en ligne et sur votre mobile. </li>
+					</ul>
+				</p>				
+			</div>
+			 <div id="produkt_slider">
+			        <div style="background:url(images/box_top_right.png) no-repeat top right;">
+			        <div style="background-color:#FFFFFF; margin:0px 5px 0px 5px; border-top: 1px solid #eeeeee;">
+			            <div style="background-image:url(images/box_top_left.png);margin: 0px 5px 0px -5px;width:5px;height:5px;"></div>
+			        </div>
+			       
+			        	
+			       
+			        <div  class="jcarousel-skin-tango" style="margin:0;background-color:#FFFFFF; border-left: 1px solid #eeeeee;border-right: 1px solid #eeeeee;">
+			        	
+			            	<div class="jcarousel-clip">
+			                	<ul class="jcarousel-list" id="carousel">
+			                    	<li class="produkt"><a href="http://www.micromania.fr/vente/achat_disney-infinity-pack-demarrage_Jeu-52710-WII.html"><img src="images/produkte/wii.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_disney-infinity-pack-demarrage_Jeu-52704-WII.html"><img src="images/produkte/wiiu.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_disney-infinity-pack-demarrage_Jeu-52706-XBOX360.html"><img src="images/produkte/x360.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_disney-infinity-pack-demarrage_Jeu-52702-PS3.html"><img src="images/produkte/ps3.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_disney-infinity-pack-demarrage_Jeu-52708-3DS.html"><img src="images/produkte/3ds.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_disney-infinity-pack-aventure-lone-ranger_Accessoire-53092-DIVERS.html"><img src="images/produkte/pack_ranger.jpg" alt=""/></a></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_disney-infinity-pack-aventure-cars_Accessoire-52712-DIVERS.html"><img src="images/produkte/pack_cars.jpg" alt="" /></a><a href="http://www.micromania.fr/vente/achat_disney-infinity-pack-de-mechants_Accessoire-53093-DIVERS.html"><img src="images/produkte/3PACK_VILLAINS.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_disney-infinity-pack-de-compagnons-bob-elastigirl-barbossa-_Accessoire-52713-DIVERS.html"><img src="images/produkte/3PACK_SIDEKICKS.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_disney-infinity-pack-aventure-toy-story_Accessoire-53094-DIVERS.html"><img src="images/produkte/3PACK_toys.jpg" alt="" /></a></li>
+                                     <li class="produkt"><img src="images/produkte/3pack_heros.jpg" alt="" /></li>
+                                      <li class="produkt"><img src="images/produkte/2pack_ralph.jpg" alt="" /></li>
+                                       <li class="produkt"><a href="http://www.micromania.fr/disney-infinity-pack-toy-box-reine-des-neiges-55706.html"><img src="images/produkte/2pack_anna.jpg" alt="" /></a></li>
+                                       <li class="produkt"><a href="http://www.micromania.fr/disney-infinity-pack-toy-box-phineas-ferb-55705.html"><img src="images/produkte/2pack_agentp.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-leon_Accessoire-53079-DIVERS.html"><img src="images/produkte/leon.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-bob_Accessoire-52715-DIVERS.html"><img src="images/produkte/mike.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-barbossa_Accessoire-52720-DIVERS.html"><img src="images/produkte/barbossa.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-davy-jones_Accessoire-52721-DIVERS.html"><img src="images/produkte/davy_jones.jpg" alt="" /></a></li>
+                                     <li class="produkt"><img src="images/produkte/pack-JSC.jpg" alt="" /></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-elastigirl_Accessoire-52719-DIVERS.html"><img src="images/produkte/mrs_incredible.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href=" http://www.micromania.fr/vente/achat_figurine-disney-infinity-fleche_Accessoire-52716-DIVERS.html"><img src="images/produkte/dash.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-violette_Accessoire-52718-DIVERS.html"><img src="images/produkte/violet.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-syndrome_Accessoire-52714-DIVERS.html"><img src="images/produkte/syndrome.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-francesco_Accessoire-52717-DIVERS.html"><img src="images/produkte/francesco.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-francesco_Accessoire-52722-DIVERS.html"><img src="images/produkte/martin.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-woody_Accessoire-53081-DIVERS.html"><img src="images/produkte/woody.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-jack-skellington_Accessoire-53082-DIVERS.html"><img src="images/produkte/jack.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-cristal-sulli_Accessoire-53083-DIVERS.html"><img src="images/produkte/Sulli.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-cristal-m-indestructible_Accessoire-53086-DIVERS.html"><img src="images/produkte/Mr_Indestructible.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-cristal-flash-mcqueen_Accessoire-53087-DIVERS.html"><img src="images/produkte/Flash_McQueen.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-cristal-lone-ranger_Accessoire-53085-DIVERS.html"><img src="images/produkte/Lone-Ranger.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-raiponce_Accessoire-53088-DIVERS.html"><img src="images/produkte/raiponse.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-elsa_Accessoire-53089-DIVERS.html"><img src="images/produkte/elsa.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-anna_Accessoire-53090-DIVERS.html"><img src="images/produkte/anna.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-mickey-l-apprenti-sorcier_Accessoire-53091-DIVERS.html"><img src="images/produkte/mickey.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-woody_Accessoire-53098-DIVERS.html"><img src="images/produkte/buzz.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-ralph_Accessoire-54885-DIVERS.html"><img src="images/produkte/ralph.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_figurine-disney-infinity-vaneloppe_Accessoire-54886-DIVERS.html"><img src="images/produkte/vaneloppe.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/figurine-disney-infinity-agent-p-55707.html"><img src="images/produkte/pack-agentp.jpg" alt="" /></a></li>
+                                     <li class="produkt"><img src="images/produkte/pack-agentpC.jpg" alt="" /></li>
+                                      <li class="produkt"><a href="http://www.micromania.fr/figurine-disney-infinity-phineas-55708.html"><img src="images/produkte/pack-phineas.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_disney-infinity-pack-power-disc_Accessoire-52723-DIVERS.html"><img src="images/produkte/powerdisc1.jpg" alt="" /></a></li>
+                                    <li class="produkt"><a href="http://www.micromania.fr/vente/achat_disney-infinity-pack-power-disc-2_Accessoire-53078-DIVERS.html"><img src="images/produkte/powerdisc2.jpg" alt="" /></a></li>
+                                     <li class="produkt"><a href="http://www.micromania.fr/vente/achat_disney-infinity-pack-power-disc-2_Accessoire-53078-DIVERS.html"><img src="images/produkte/powerdisc3.jpg" alt="" /></a></li>
+                                    
+                                    <!--<li class="produkt"><a href="#" target="_blank"><img src="images/produkte/powerdisc2.jpg" /></a></li>-->
+
+			                  	</ul>
+          </div>
+			                <div disabled="disabled" class="jcarousel-prev jcarousel-prev-disabled"></div>
+			                <div class="jcarousel-next"></div>
+			          
+			        </div>
+        <div style="background:url(images/box_bottom_right.png) no-repeat top right;">	
+            <div style="background-color:#FFFFFF;margin:0px 5px 0px 5px; border-bottom: 1px solid #eeeeee;">
+                <div style="background-image:url(images/box_bottom_left.png);margin:0px 5px 0px -5px;width:5px;height:5px;"></div>	
+            </div>
+        </div>
+    	</div>
+	</div>
+		</div>
+	</div>
+	<div id="footer">
+	  <div id="copyright">
+	    <div id="plusinfo" style="position:relative; margin: 0 auto; top: 15px;"><a href="https://infinity.disney.com/fr" target="_blank">Plus d&rsquo;infos sur Disney.com/Infinity</a>&nbsp;| &copy; 2014 Disney &copy; 2014 Disney / Pixar</div>
+	    <div id="footerlogos">
+	      <ul>
+	        <li><a href="http://www.xbox.com/fr-FR/" target="_blank"><img src="./images/logo360.png" alt="" width="99" height="23" /></a></li>
+	        <li><a href="http://www.xbox.com/fr-FR/" target="_blank"><img src="./images/logoXBL.png" alt="" width="41" height="24" /></a></li>
+	        <li><a href="http://fr.playstation.com/" target="_blank"><img src="./images/logoPS.png" alt="" width="20" height="24" /></a></li>
+	        <li><a href="http://fr.playstation.com/" target="_blank"><img src="./images/logoPSN.png" alt="" width="34" height="24" /></a></li>
+	        <li><a href="http://fr.playstation.com/" target="_blank"><img src="./images/logoPs3.png" alt="" width="65" height="22" /></a></li>
+	        <li><a href="http://www.nintendo.fr/" target="_blank"><img src="./images/logoWi.png" alt="" width="46" height="23" /></a></li>
+	        <li><a href="http://www.nintendo.fr/" target="_blank"><img src="./images/logoWiu.png" alt="" width="70" height="24" /></a></li>
+	        <li></li>
+          </ul>
+	      <div id="text" style="font-size:9px; position:relative; margin:0 auto; width:900px;">
+	        <p>&copy; 2014 Disney &copy; Disney/Pixar. M. Indestructible, Sulli et le Capitaine Jack Sparrow sont inclus dans le pack de d&eacute;marrage. Les autres figurines seront vendues s&eacute;par&eacute;ment. L&rsquo;exp&eacute;rience multi-joueurs varie selon les plateformes. Xbox, Xbox 360, Xbox LIVE et les logos Xbox sont des marques du groupe Microsoft et sont utilis&eacute;s sous licence de Microsoft. &rdquo;[PS logo]&ldquo;PlayStation&rdquo;, &ldquo;[PSN logo]&rdquo;, et &ldquo;[PS3 logo]&rdquo;  sont des marques d&eacute;pos&eacute;es par  Sony Computer Entertainment Inc. Les marques sont la propri&eacute;t&eacute; de leurs propri&eacute;taires respectifs. Wii et Wii U sont des marques de Nintendo.</p>
+            <p>&copy; 2014 Nintendo. THE LONE RANGER. &copy; Disney Enterprises, Inc. and Jerry Bruckheimer, Inc.</p>
+          </div>
+        </div>
+      </div>
+	</div>
+</body>
+</html>

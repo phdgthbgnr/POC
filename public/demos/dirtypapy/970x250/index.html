@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML5 Rich Banner: 300x600 (Video)</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script>
+        EBModulesToLoad = ['Video', 'EBCMD'];
+    </script>
+    <script src="scripts/EBLoader.js"></script>
+    <script src="scripts/script.js"></script>
+</head>
+
+<body>
+    <div id="ad">
+		<div class="background"></div>
+		
+        <div id="banner">
+		<div class="dirty"></div>
+		<div class="papy"></div>
+		<div class="name1"></div>
+		<div class="name2"></div>
+		<div class="date">
+			<div class="date2"></div>
+		</div>
+            <div class="buttons">
+                <button id="user-action-button" class="button useraction" style="display:none">UserAction</button>
+                <button id="clickthrough-button" class="button clickthrough" onmouseover="unmuteVideo()" onmouseout="muteVideo()">&nbsp;</button>
+            </div>
+			<div id="video-container" class="video-container centered" onclick="startVideo()" onmouseover="unmuteVideo()" onmouseout="muteVideo()">
+				<img src="images/muted.gif" id="muted" class="sound nodisplay">
+				<img src="images/unmuted.gif" id="unmuted" class="sound nodisplay">
+                <video id="video" poster="images/poster.jpg" autoplay muted>
+                    <source src="videos/dirtypapy_respect_440x182.mp4" type="video/mp4">
+                     <source src="videos/dirtypapy_respect_440x182.webm" type="video/webm">
+                            Your browser does not support the <code>video</code> element.
+                </video>
+                <div id="sdk-video-player" class="sdk-video-player" style="display:none">
+                    <div id="sdk-video-play-button" class="sdk-video-player-button centered"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script>
+		
+		function addAclass(id, classe){
+        $dc(id).classList ? $dc(id).classList.add(classe) : $dc(id).className += ' '+classe;
+		}
+			
+		function removeAclass(id,classe){
+			$dc(id).className = $dc(id).className.replace(' ' + classe, '').replace(classe, '');
+		}
+	
+		var $dc = function(id) {
+			return this.document.getElementById(id);
+		};
+		
+		function muteVideo(){
+			var video = $dc("video");
+			video.muted= true;
+			if(!video.paused){
+				removeAclass("muted","nodisplay");
+				addAclass("unmuted","nodisplay");
+			}
+		}
+		
+		function unmuteVideo(){
+		
+			var video = $dc("video");
+			video.muted= false;
+			if(!video.paused){
+				removeAclass("unmuted","nodisplay");
+				addAclass("muted","nodisplay");
+			}
+		}
+		
+		function startVideo(){
+			var video = $dc("video");
+			video.play();
+			removeAclass("unmuted","nodisplay");
+		}
+		
+		</script>
+</body>
+
+</html>

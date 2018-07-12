@@ -1,0 +1,60 @@
+html, body{
+    margin:0;
+    padding:0;
+    height:100%;
+    background-color: #000;
+    background: -webkit-linear-gradient(linear, left top, left bottom, from(#b2e5ea), to(#f5d2e6)) fixed;
+    background: -moz-linear-gradient(linear, left top, left bottom, from(#b2e5ea), to(#f5d2e6)) fixed;  
+    background: linear-gradient(to bottom, #b2e5ea, #f5d2e6); 
+    background-repeat: no-repeat;
+}
+#circle{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: transparent url(_images/backgrnd.png) center center no-repeat;/*#000;*/
+    top:0;
+    left:0;
+    z-index:2;
+}
+
+#myCanvas{
+    position: absolute;
+    top:0;
+    left:0;
+    margin:0;
+}
+
+#circle-in{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+#picker, #picker2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 30px;
+    margin-top: -15px;
+    width: 50%;
+    /* important: sets the transform origin to the center of the circle */
+    -ms-transform-origin: center left;
+    transform-origin: center left;
+}
+
+
+#picker-circle, #picker-circle2{
+    width: 20px;
+    height: 20px;
+    border:5px solid #fff;
+    border-radius: 50%;
+    background: #5d5d5d;
+    margin: 0 0 0 auto;
+    cursor: move;
+}

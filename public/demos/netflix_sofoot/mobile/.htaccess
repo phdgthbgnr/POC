@@ -1,0 +1,68 @@
+#SetEnv PHP_VER 5
+SetEnv REGISTER_GLOBALS 0
+Options -Indexes
+
+#AddType image/svg+xml svg svgz
+#AddEncoding gzip svgz
+#order deny,allow
+#Deny from All
+#Allow from 92.154.32.220
+# Allow from 79.94.244.62
+#Allow from 192.168.1.
+#Allow from www.facebook.com
+
+<IfModule mod_headers.c>
+	#   bloque iframe si pas dans sofoot
+    #Header set Content-Security-Policy "default-src 'self'; img-src 'self' www.facebook.com; script-src 'self' www.google-analytics.com;"
+	#Header Set Content-Security-Policy "frame-ancestors http://www.sofoot.com http://sftntflx.entertainmentggd.com;"
+    #Header set X-Content-Type-Options nosniff
+	#   IE et firefox
+	#Header set X-Frame-Options "ALLOW-FROM http://www.sofoot.com"
+</IfModule>
+
+
+
+<IfModule mod_rewrite.c>
+
+	RewriteEngine on
+	
+	# stop facebook Liger/preview
+	RewriteCond %{HTTP:x-fb-http-engine} Liger
+	RewriteCond %{HTTP:X-Purpose} preview
+	RewriteRule .* - [F,L]
+	
+	# interdit les requetes POST ----------------------
+	
+	RewriteCond %{REQUEST_METHOD} POST
+
+	# allow the server to POST to itself
+	#RewriteCond %{REMOTE_ADDR} !127.0.0.1   
+
+	# allow POST from trusted users
+	#RewriteCond %{REMOTE_ADDR} !123.456.789.123   
+
+	# send all other post requests to 403 forbidden
+	# RewriteRule ^ / [F]
+	RewriteRule ^$ index.php [F]
+	
+	# -------------------------------------------------
+	
+	
+	# force utilisation index.php (evite une boucle sans fin)
+	RewriteCond %{REQUEST_URI} !^index.php [NC]
+	RewriteRule ^$ index.php [L]
+	
+	
+	# redirection 404
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d 
+	RewriteRule ^ http://%{HTTP_HOST}/ [L]
+	
+	
+	# stop Blank UA and Referer
+	RewriteCond %{HTTP_REFERER} ^$ [NC]
+	RewriteCond %{HTTP_USER_AGENT} ^$ [NC]
+	#RewriteRule ^(.*)\.(ico|gif|jpe?g|png|bmp|swf)$ - [F,L]
+
+
+</IfModule>

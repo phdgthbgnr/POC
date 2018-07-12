@@ -1,0 +1,1786 @@
+@charset "UTF-8";
+
+.dz-widget .btn-facebook:after, .dz-widget .btn-googleplus:after, .dz-widget .btn-twitter:after, .dz-widget .btn-slide .slide {
+  background-image: url("/images/bootstrap/base/buttons/buttons-v00200207.png");
+  background-repeat: no-repeat;
+}
+.dz-widget .btn, .dz-widget .dz-btn {
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  line-height: 16px;
+  margin: 0;
+  padding: 7px 13px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #f7f7f7;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjZjdmN2Y3Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZWRlZGVkIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7f7f7), color-stop(30%, #f7f7f7), color-stop(100%, #ededed));
+  background-image: -webkit-linear-gradient(top, #f7f7f7 0%, #f7f7f7 30%, #ededed 100%);
+  background-image: -moz-linear-gradient(top, #f7f7f7 0%, #f7f7f7 30%, #ededed 100%);
+  background-image: -o-linear-gradient(top, #f7f7f7 0%, #f7f7f7 30%, #ededed 100%);
+  background-image: linear-gradient(top, #f7f7f7 0%, #f7f7f7 30%, #ededed 100%);
+  border-color: #dbdbdb;
+  color: #666666;
+  text-shadow: none;
+}
+.dz-widget .btn:hover, .dz-widget .btn-upload:hover .btn, .dz-widget .btn-upload:hover .dz-btn, .dz-widget .dz-btn:hover, .dz-widget .btn:active, .dz-widget .btn-upload:active .btn, .dz-widget .btn-upload:active .dz-btn, .dz-widget .dz-btn:active {
+  outline: 0;
+  text-decoration: none;
+}
+.dz-widget .btn:hover, .dz-widget .btn-upload:hover .btn, .dz-widget .btn-upload:hover .dz-btn, .dz-widget .dz-btn:hover, .dz-widget .btn:active, .dz-widget .btn-upload:active .btn, .dz-widget .btn-upload:active .dz-btn, .dz-widget .dz-btn:active, .dz-widget .btn.active, .dz-widget .active.dz-btn {
+  background-color: white;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZjdmN2Y3Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(30%, #ffffff), color-stop(100%, #f7f7f7));
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 30%, #f7f7f7 100%);
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #ffffff 30%, #f7f7f7 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0%, #ffffff 30%, #f7f7f7 100%);
+  background-image: linear-gradient(top, #ffffff 0%, #ffffff 30%, #f7f7f7 100%);
+  color: #666666;
+}
+.dz-widget .btn:active, .dz-widget .btn-upload:active .btn, .dz-widget .btn-upload:active .dz-btn, .dz-widget .dz-btn:active {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);
+}
+.dz-widget .btn .icon, .dz-widget .dz-btn .icon, .dz-widget .btn .dz-icn, .dz-widget .dz-btn .dz-icn {
+  margin-bottom: 0;
+  position: relative;
+  vertical-align: top;
+}
+.dz-widget .btn:active, .dz-widget .btn-upload:active .btn, .dz-widget .btn-upload:active .dz-btn, .dz-widget .dz-btn:active, .dz-widget .btn:focus, .dz-widget .dz-btn:focus {
+  outline: 0;
+}
+.dz-widget .btn:active, .dz-widget .btn-upload:active .btn, .dz-widget .btn-upload:active .dz-btn, .dz-widget .dz-btn:active, .dz-widget .btn:focus, .dz-widget .dz-btn:focus {
+  outline: 0;
+}
+.dz-widget .btn.btn-disabled, .dz-widget .btn-disabled.dz-btn {
+  box-shadow: none;
+  cursor: default;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+.dz-widget .btn.btn-label, .dz-widget .btn-label.dz-btn {
+  background: white none;
+  box-shadow: none;
+  cursor: default;
+  color: #999999;
+  font-weight: normal;
+}
+.dz-widget .btn:active, .dz-widget .btn-upload:active .btn, .dz-widget .btn-upload:active .dz-btn, .dz-widget .dz-btn:active, .dz-widget .btn:focus, .dz-widget .dz-btn:focus {
+  outline: 0;
+}
+.dz-widget .btn-small {
+  padding: 4px 10px;
+}
+.dz-widget .btn-large {
+  font-size: 15px;
+  line-height: 18px;
+  padding: 10px 19px;
+}
+.dz-widget .btn-large .icon, .dz-widget .btn-large .dz-icn {
+  top: 1px;
+}
+.dz-widget .btn-xlarge {
+  font-size: 20px;
+  line-height: 26px;
+  padding: 20px 26px;
+}
+.dz-widget .btn-xlarge .icon, .dz-widget .btn-xlarge .dz-icn {
+  top: 4px;
+}
+.dz-widget .btn-block {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.dz-widget .btn-block + .dz-widget .btn-block {
+  margin-top: 20px;
+}
+.dz-widget .btn-primary, .dz-widget .btn-premiumplus, .dz-widget .dz-btn-primary {
+  background-color: #3995cd;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM5OTVjZCIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjMzk5NWNkIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMjM3YWFlIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3995cd), color-stop(30%, #3995cd), color-stop(100%, #237aae));
+  background-image: -webkit-linear-gradient(top, #3995cd 0%, #3995cd 30%, #237aae 100%);
+  background-image: -moz-linear-gradient(top, #3995cd 0%, #3995cd 30%, #237aae 100%);
+  background-image: -o-linear-gradient(top, #3995cd 0%, #3995cd 30%, #237aae 100%);
+  background-image: linear-gradient(top, #3995cd 0%, #3995cd 30%, #237aae 100%);
+  border-color: #28668c;
+  color: white;
+  text-shadow: 1px -1px 2px rgba(22, 84, 122, 0.75);
+}
+.dz-widget .btn-primary:hover, .dz-widget .btn-premiumplus:hover, .dz-widget .dz-btn-primary:hover, .dz-widget .btn-primary:active, .dz-widget .btn-premiumplus:active, .dz-widget .dz-btn-primary:active, .dz-widget .btn-primary.active, .dz-widget .active.btn-premiumplus, .dz-widget .active.dz-btn-primary {
+  background-color: #40a6e6;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQwYTZlNiIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjNDBhNmU2Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMjY4YWM2Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #40a6e6), color-stop(30%, #40a6e6), color-stop(100%, #268ac6));
+  background-image: -webkit-linear-gradient(top, #40a6e6 0%, #40a6e6 30%, #268ac6 100%);
+  background-image: -moz-linear-gradient(top, #40a6e6 0%, #40a6e6 30%, #268ac6 100%);
+  background-image: -o-linear-gradient(top, #40a6e6 0%, #40a6e6 30%, #268ac6 100%);
+  background-image: linear-gradient(top, #40a6e6 0%, #40a6e6 30%, #268ac6 100%);
+  color: white;
+}
+.dz-widget .btn-primary:active, .dz-widget .btn-premiumplus:active, .dz-widget .dz-btn-primary:active {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.dz-widget .btn-cancel {
+  background-color: #dd1717;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RkMTcxNyIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjZGQxNzE3Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjOWUwMDBiIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dd1717), color-stop(30%, #dd1717), color-stop(100%, #9e000b));
+  background-image: -webkit-linear-gradient(top, #dd1717 0%, #dd1717 30%, #9e000b 100%);
+  background-image: -moz-linear-gradient(top, #dd1717 0%, #dd1717 30%, #9e000b 100%);
+  background-image: -o-linear-gradient(top, #dd1717 0%, #dd1717 30%, #9e000b 100%);
+  background-image: linear-gradient(top, #dd1717 0%, #dd1717 30%, #9e000b 100%);
+  border-color: #a2080d;
+  color: white;
+  text-shadow: 1px -1px 2px #a2080d;
+}
+.dz-widget .btn-cancel:hover, .dz-widget .btn-cancel:active, .dz-widget .btn-cancel.active {
+  background-color: #f71b1b;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3MWIxYiIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjZjcxYjFiIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZGQxNzE3Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f71b1b), color-stop(30%, #f71b1b), color-stop(100%, #dd1717));
+  background-image: -webkit-linear-gradient(top, #f71b1b 0%, #f71b1b 30%, #dd1717 100%);
+  background-image: -moz-linear-gradient(top, #f71b1b 0%, #f71b1b 30%, #dd1717 100%);
+  background-image: -o-linear-gradient(top, #f71b1b 0%, #f71b1b 30%, #dd1717 100%);
+  background-image: linear-gradient(top, #f71b1b 0%, #f71b1b 30%, #dd1717 100%);
+  color: white;
+}
+.dz-widget .btn-cancel:active {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.dz-widget .btn-validate {
+  background-color: #73bb02;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzczYmIwMiIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjNzNiYjAyIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjM2E4MjAwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #73bb02), color-stop(30%, #73bb02), color-stop(100%, #3a8200));
+  background-image: -webkit-linear-gradient(top, #73bb02 0%, #73bb02 30%, #3a8200 100%);
+  background-image: -moz-linear-gradient(top, #73bb02 0%, #73bb02 30%, #3a8200 100%);
+  background-image: -o-linear-gradient(top, #73bb02 0%, #73bb02 30%, #3a8200 100%);
+  background-image: linear-gradient(top, #73bb02 0%, #73bb02 30%, #3a8200 100%);
+  border-color: #478102;
+  color: white;
+  text-shadow: 1px -1px 12px #478102;
+}
+.dz-widget .btn-validate:hover, .dz-widget .btn-validate:active, .dz-widget .btn-validate.active {
+  background-color: #7acb02;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdhY2IwMiIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjN2FjYjAyIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNWFhMjAxIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7acb02), color-stop(30%, #7acb02), color-stop(100%, #5aa201));
+  background-image: -webkit-linear-gradient(top, #7acb02 0%, #7acb02 30%, #5aa201 100%);
+  background-image: -moz-linear-gradient(top, #7acb02 0%, #7acb02 30%, #5aa201 100%);
+  background-image: -o-linear-gradient(top, #7acb02 0%, #7acb02 30%, #5aa201 100%);
+  background-image: linear-gradient(top, #7acb02 0%, #7acb02 30%, #5aa201 100%);
+  color: white;
+}
+.dz-widget .btn-validate:active {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.dz-widget .btn-premium {
+  background-color: #1daaa2;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFkYWFhMiIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjMWRhYWEyIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDk2ZTY4Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1daaa2), color-stop(30%, #1daaa2), color-stop(100%, #096e68));
+  background-image: -webkit-linear-gradient(top, #1daaa2 0%, #1daaa2 30%, #096e68 100%);
+  background-image: -moz-linear-gradient(top, #1daaa2 0%, #1daaa2 30%, #096e68 100%);
+  background-image: -o-linear-gradient(top, #1daaa2 0%, #1daaa2 30%, #096e68 100%);
+  background-image: linear-gradient(top, #1daaa2 0%, #1daaa2 30%, #096e68 100%);
+  border-color: #0b706a;
+  color: white;
+  text-shadow: 1px -1px 2px #0b706a;
+}
+.dz-widget .btn-premium:hover, .dz-widget .btn-premium:active, .dz-widget .btn-premium.active {
+  background-color: #20bbb2;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIwYmJiMiIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjMjBiYmIyIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMWRhYWEyIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #20bbb2), color-stop(30%, #20bbb2), color-stop(100%, #1daaa2));
+  background-image: -webkit-linear-gradient(top, #20bbb2 0%, #20bbb2 30%, #1daaa2 100%);
+  background-image: -moz-linear-gradient(top, #20bbb2 0%, #20bbb2 30%, #1daaa2 100%);
+  background-image: -o-linear-gradient(top, #20bbb2 0%, #20bbb2 30%, #1daaa2 100%);
+  background-image: linear-gradient(top, #20bbb2 0%, #20bbb2 30%, #1daaa2 100%);
+  color: white;
+}
+.dz-widget .btn-premium:active {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.dz-widget .btn-inverse {
+  background-color: #5c5c5c;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzVjNWM1YyIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjNWM1YzVjIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNDQ0NDQ0Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5c5c5c), color-stop(30%, #5c5c5c), color-stop(100%, #444444));
+  background-image: -webkit-linear-gradient(top, #5c5c5c 0%, #5c5c5c 30%, #444444 100%);
+  background-image: -moz-linear-gradient(top, #5c5c5c 0%, #5c5c5c 30%, #444444 100%);
+  background-image: -o-linear-gradient(top, #5c5c5c 0%, #5c5c5c 30%, #444444 100%);
+  background-image: linear-gradient(top, #5c5c5c 0%, #5c5c5c 30%, #444444 100%);
+  border-color: #323232;
+  color: white;
+  text-shadow: 1px -1px 2px #323232;
+}
+.dz-widget .btn-inverse:hover, .dz-widget .btn-inverse:active, .dz-widget .btn-inverse.active {
+  background-color: #666666;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjY2NiIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjNjY2NjY2Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNGQ0ZDRkIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #666666), color-stop(30%, #666666), color-stop(100%, #4d4d4d));
+  background-image: -webkit-linear-gradient(top, #666666 0%, #666666 30%, #4d4d4d 100%);
+  background-image: -moz-linear-gradient(top, #666666 0%, #666666 30%, #4d4d4d 100%);
+  background-image: -o-linear-gradient(top, #666666 0%, #666666 30%, #4d4d4d 100%);
+  background-image: linear-gradient(top, #666666 0%, #666666 30%, #4d4d4d 100%);
+  color: white;
+}
+.dz-widget .btn-inverse:active {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.dz-widget .btn-facebook {
+  padding-left: 58px;
+  padding-right: 25px;
+  background: #5f78ab none;
+  border-color: #405a91;
+  color: white;
+  text-shadow: 1px -1px 2px #405a91;
+}
+.dz-widget .btn-facebook:hover, .dz-widget .btn-facebook:active, .dz-widget .btn-facebook.active {
+  background: #6584c3 none;
+  color: white;
+}
+.dz-widget .btn-facebook:active {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.dz-widget .btn-facebook:before {
+  border-right: 1px solid #405a91;
+  bottom: 0;
+  content: " ";
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 33px;
+}
+.dz-widget .btn-facebook:after {
+  background-position: 0 -20px;
+  content: " ";
+  height: 19px;
+  left: 12px;
+  margin-top: -9px;
+  position: absolute;
+  top: 50%;
+  width: 9px;
+}
+.dz-widget .btn-googleplus {
+  padding-left: 58px;
+  padding-right: 25px;
+  background: #dd4b39 none;
+  border-color: #bc4031;
+  color: white;
+  text-shadow: 1px -1px 2px #bc4031;
+}
+.dz-widget .btn-googleplus:hover, .dz-widget .btn-googleplus:active, .dz-widget .btn-googleplus.active {
+  background: #e74b37 none;
+  color: white;
+}
+.dz-widget .btn-googleplus:active {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.dz-widget .btn-googleplus:before {
+  border-right: 1px solid #bc4031;
+  bottom: 0;
+  content: " ";
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 33px;
+}
+.dz-widget .btn-googleplus:after {
+  background-position: -9px -20px;
+  content: " ";
+  height: 23px;
+  left: 4px;
+  margin-top: -11px;
+  position: absolute;
+  top: 50%;
+  width: 24px;
+}
+.dz-widget .btn-twitter {
+  padding-left: 58px;
+  padding-right: 25px;
+  background: #37abde none;
+  border-color: #2287b4;
+  color: white;
+  text-shadow: 1px -1px 2px #2287b4;
+}
+.dz-widget .btn-twitter:hover, .dz-widget .btn-twitter:active, .dz-widget .btn-twitter.active {
+  background: #43b7ea none;
+  color: white;
+}
+.dz-widget .btn-twitter:active {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.dz-widget .btn-twitter:before {
+  border-right: 1px solid #2287b4;
+  bottom: 0;
+  content: " ";
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 33px;
+}
+.dz-widget .btn-twitter:after {
+  background-position: -33px -20px;
+  content: " ";
+  height: 17px;
+  left: 7px;
+  margin-top: -9px;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+}
+.dz-widget .btn-orange {
+  background-color: #fd8435;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkODQzNSIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjZmQ4NDM1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmY2NjAxIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fd8435), color-stop(30%, #fd8435), color-stop(100%, #ff6601));
+  background-image: -webkit-linear-gradient(top, #fd8435 0%, #fd8435 30%, #ff6601 100%);
+  background-image: -moz-linear-gradient(top, #fd8435 0%, #fd8435 30%, #ff6601 100%);
+  background-image: -o-linear-gradient(top, #fd8435 0%, #fd8435 30%, #ff6601 100%);
+  background-image: linear-gradient(top, #fd8435 0%, #fd8435 30%, #ff6601 100%);
+  border-color: #da5601;
+  color: white;
+  text-shadow: 1px -1px 2px rgba(194, 95, 32, 0.75);
+}
+.dz-widget .btn-orange:hover, .dz-widget .btn-orange:active, .dz-widget .btn-orange.active {
+  background-color: #f98b43;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y5OGI0MyIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjZjk4YjQzIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmE3ZjMwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f98b43), color-stop(30%, #f98b43), color-stop(100%, #fa7f30));
+  background-image: -webkit-linear-gradient(top, #f98b43 0%, #f98b43 30%, #fa7f30 100%);
+  background-image: -moz-linear-gradient(top, #f98b43 0%, #f98b43 30%, #fa7f30 100%);
+  background-image: -o-linear-gradient(top, #f98b43 0%, #f98b43 30%, #fa7f30 100%);
+  background-image: linear-gradient(top, #f98b43 0%, #f98b43 30%, #fa7f30 100%);
+  color: white;
+}
+.dz-widget .btn-orange:active {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.dz-widget .btn-operator {
+  display: inline-table;
+  text-align: left;
+}
+.dz-widget .btn-operator.btn-block {
+  display: table;
+}
+.dz-widget .btn-operator .operator-logo {
+  font-size: 0;
+  display: table-cell;
+  height: 43px;
+  text-align: center;
+  vertical-align: middle;
+  width: 43px;
+}
+.dz-widget .btn-operator .operator-logo img {
+  vertical-align: middle;
+}
+.dz-widget .btn-operator .operator-text {
+  display: table-cell;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 16px;
+  padding-left: 10px;
+  vertical-align: middle;
+}
+.dz-widget .btn-upload {
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+}
+.dz-widget .btn-upload input[type="file"] {
+  cursor: pointer;
+  font-size: 100px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=1);
+  opacity: 0.01;
+}
+.dz-widget .btn-slide {
+  padding-right: 65px;
+}
+.dz-widget .btn-slide .slide {
+  background-position: -28px 0;
+  height: 20px;
+  margin-top: -10px;
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  width: 54px;
+  -webkit-transition: background-position 0.15s linear;
+  -moz-transition: background-position 0.15s linear;
+  -o-transition: background-position 0.15s linear;
+  transition: background-position 0.15s linear;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+.dz-widget .btn-slide .slide.slide-on {
+  background-position: 0 0;
+}
+.dz-widget .btn-slide .slide.slide-on.no-animated {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.dz-widget .btn-slide label {
+  cursor: pointer;
+}
+.dz-widget .btn-slide input[type=checkbox] {
+  display: none;
+}
+.dz-widget .btn-slide.btn-small {
+  padding-right: 62px;
+}
+.dz-widget .btn-slide.btn-small .slide {
+  right: 3px;
+}
+.dz-widget .btn-slide.btn-large {
+  padding-right: 80px;
+}
+.dz-widget .btn-slide.btn-large .slide {
+  right: 11px;
+}
+.dz-widget .btn-app {
+  padding: 0;
+  font-size: 0;
+}
+.dz-widget .btn-app .app {
+  background: url('/images/sprites_c/bootstrap/base/buttons/app-s57cb4a09a2.png') no-repeat;
+  display: block;
+}
+.dz-widget .btn-app .app-blackberry {
+  background-position: 0 0;
+  height: 45px;
+  width: 128px;
+}
+.dz-widget .btn-app .app-android {
+  background-position: 0 -45px;
+  height: 45px;
+  width: 128px;
+}
+.dz-widget .btn-app .app-ios {
+  background-position: 0 -180px;
+  height: 45px;
+  width: 128px;
+}
+.dz-widget .btn-app .app-windows-phone {
+  background-position: 0 -135px;
+  height: 45px;
+  width: 128px;
+}
+.dz-widget .btn-app .app-windows-store {
+  background-position: 0 -90px;
+  height: 45px;
+  width: 128px;
+}
+.dz-widget .btn-group {
+  display: inline-block;
+  font-size: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.dz-widget .btn-group > .btn, .dz-widget .btn-group > .dz-btn {
+  border-radius: 0;
+  position: relative;
+}
+.dz-widget .btn-group > .btn:first-child, .dz-widget .btn-group > .dz-btn:first-child {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  margin-left: 0;
+}
+.dz-widget .btn-group > .btn:last-child, .dz-widget .btn-group > .dz-btn:last-child {
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.dz-widget .btn-group > .btn + .btn, .dz-widget .btn-group > .dz-btn + .btn, .dz-widget .btn-group > .btn + .dz-btn, .dz-widget .btn-group > .dz-btn + .dz-btn {
+  margin-left: -1px;
+}
+.dz-widget .btn-group + .btn-group {
+  margin-left: 10px;
+}
+.dz-widget button.btn::-moz-focus-inner, .dz-widget button.dz-btn::-moz-focus-inner,
+.dz-widget input[type="submit"].btn::-moz-focus-inner,
+.dz-widget input[type="submit"].dz-btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.dz-widget ::-webkit-file-upload-button {
+  cursor: pointer;
+}
+.dz-widget .icon, .dz-widget .dz-icn {
+  background: url('../image/icons-s6fcaa17944.png') no-repeat;
+  display: inline-block;
+  margin-bottom: 2px;
+  vertical-align: middle;
+}
+.dz-widget .icon.icon-add, .dz-widget .icon-add.dz-icn {
+  background-position: 0 -1488px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-add-grey, .dz-widget .icon-add-grey.dz-icn, .dz-widget.dz-follow .dz-icn, .dz-widget.dz-follow .icon.dz-icn {
+  background-position: 0 -1904px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-add-white, .dz-widget .icon-add-white.dz-icn {
+  background-position: 0 -1584px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-add-black, .dz-widget .icon-add-black.dz-icn {
+  background-position: 0 -1808px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-album, .dz-widget .icon-album.dz-icn {
+  background-position: 0 -704px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-arrow-filter-down, .dz-widget .icon-arrow-filter-down.dz-icn {
+  background-position: 0 -1920px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-arrow-filter-up, .dz-widget .icon-arrow-filter-up.dz-icn {
+  background-position: 0 -1936px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-artist-grey, .dz-widget .icon-artist-grey.dz-icn {
+  background-position: 0 -128px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-app, .dz-widget .icon-app.dz-icn {
+  background-position: 0 -816px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-back, .dz-widget .icon-back.dz-icn {
+  background-position: 0 -1776px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-cart, .dz-widget .icon-cart.dz-icn {
+  background-position: 0 -1088px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-cart-grey, .dz-widget .icon-cart-grey.dz-icn, .dz-widget.dz-buy .dz-icn, .dz-widget.dz-buy .icon.dz-icn {
+  background-position: 0 -240px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-cart-white, .dz-widget .icon-cart-white.dz-icn {
+  background-position: 0 -272px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-cart-black, .dz-widget .icon-cart-black.dz-icn {
+  background-position: 0 -1120px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-charts, .dz-widget .icon-charts.dz-icn {
+  background-position: 0 -768px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-check, .dz-widget .icon-check.dz-icn {
+  background-position: 0 -1136px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-check-grey, .dz-widget .icon-check-grey.dz-icn {
+  background-position: 0 -416px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-check-white, .dz-widget .icon-check-white.dz-icn {
+  background-position: 0 -400px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-comments, .dz-widget .icon-comments.dz-icn {
+  background-position: 0 -1344px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-delete, .dz-widget .icon-delete.dz-icn {
+  background-position: 0 -496px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-delete-black, .dz-widget .icon-delete-black.dz-icn {
+  background-position: 0 -1728px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-delete-grey, .dz-widget .icon-delete-grey.dz-icn {
+  background-position: 0 -224px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-delete-small, .dz-widget .icon-delete-small.dz-icn {
+  background-position: 0 -1520px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-delete-white, .dz-widget .icon-delete-white.dz-icn {
+  background-position: 0 -160px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-down-grey, .dz-widget .icon-down-grey.dz-icn {
+  background-position: 0 -752px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-down-red, .dz-widget .icon-down-red.dz-icn {
+  background-position: 0 -1280px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-download, .dz-widget .icon-download.dz-icn {
+  background-position: 0 -1648px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-edit-grey, .dz-widget .icon-edit-grey.dz-icn {
+  background-position: 0 -512px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-edit-white, .dz-widget .icon-edit-white.dz-icn {
+  background-position: 0 -448px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-email, .dz-widget .icon-email.dz-icn {
+  background-position: 0 -624px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-embed, .dz-widget .icon-embed.dz-icn {
+  background-position: 0 -80px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-error, .dz-widget .icon-error.dz-icn {
+  background-position: 0 0;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-folder, .dz-widget .icon-folder.dz-icn {
+  background-position: 0 -1824px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-folder-create, .dz-widget .icon-folder-create.dz-icn {
+  background-position: 0 -1024px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-folder-open, .dz-widget .icon-folder-open.dz-icn {
+  background-position: 0 -1552px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-info, .dz-widget .icon-info.dz-icn {
+  background-position: 0 -48px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-infos-grey, .dz-widget .icon-infos-grey.dz-icn {
+  background-position: 0 -1072px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-library, .dz-widget .icon-library.dz-icn {
+  background-position: 0 -1392px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-link-more, .dz-widget .icon-link-more.dz-icn {
+  background-position: 0 -1888px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-lovetrack, .dz-widget .icon-lovetrack.dz-icn {
+  background-position: 0 -1264px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-lovetrack-shadow, .dz-widget .icon-lovetrack-shadow.dz-icn {
+  background-position: 0 -592px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-mp3, .dz-widget .icon-mp3.dz-icn {
+  background-position: 0 -480px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-offline-green, .dz-widget .icon-offline-green.dz-icn {
+  background-position: 0 -992px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-offline-grey, .dz-widget .icon-offline-grey.dz-icn {
+  background-position: 0 -960px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-picks, .dz-widget .icon-picks.dz-icn {
+  background-position: 0 -1744px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-pin, .dz-widget .icon-pin.dz-icn {
+  background-position: 0 -96px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-play-grey, .dz-widget .icon-play-grey.dz-icn {
+  background-position: 0 -1456px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-play-suggest, .dz-widget .icon-play-suggest.dz-icn {
+  background-position: 0 -16px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-play-white, .dz-widget .icon-play-white.dz-icn {
+  background-position: 0 -1328px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-playlist, .dz-widget .icon-playlist.dz-icn {
+  background-position: 0 -1616px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-playlist-collaborative, .dz-widget .icon-playlist-collaborative.dz-icn {
+  background-position: 0 -672px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-playlist-create, .dz-widget .icon-playlist-create.dz-icn {
+  background-position: 0 -1440px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-playlist-public, .dz-widget .icon-playlist-public.dz-icn {
+  background-position: 0 -832px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-radio, .dz-widget .icon-radio.dz-icn {
+  background-position: 0 -800px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-reco, .dz-widget .icon-reco.dz-icn {
+  background-position: 0 -1008px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-search, .dz-widget .icon-search.dz-icn {
+  background-position: 0 -176px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-settings, .dz-widget .icon-settings.dz-icn {
+  background-position: 0 -576px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-search-grey, .dz-widget .icon-search-grey.dz-icn {
+  background-position: 0 -384px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-share, .dz-widget .icon-share.dz-icn, .dz-widget.dz-share .dz-icn, .dz-widget.dz-share .icon.dz-icn {
+  background-position: 0 -928px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-share-grey, .dz-widget .icon-share-grey.dz-icn {
+  background-position: 0 -352px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-share-white, .dz-widget .icon-share-white.dz-icn {
+  background-position: 0 -656px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-star, .dz-widget .icon-star.dz-icn {
+  background-position: 0 -1184px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-star-grey, .dz-widget .icon-star-grey.dz-icn, .dz-widget.dz-library .dz-icn, .dz-widget.dz-library .icon.dz-icn {
+  background-position: 0 -336px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-star-white, .dz-widget .icon-star-white.dz-icn {
+  background-position: 0 -608px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-star-yellow, .dz-widget .icon-star-yellow.dz-icn {
+  background-position: 0 -1104px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-success, .dz-widget .icon-success.dz-icn {
+  background-position: 0 -912px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-time, .dz-widget .icon-time.dz-icn {
+  background-position: 0 -32px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-timer, .dz-widget .icon-timer.dz-icn {
+  background-position: 0 -112px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-trash-grey, .dz-widget .icon-trash-grey.dz-icn {
+  background-position: 0 -1712px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-trash-white, .dz-widget .icon-trash-white.dz-icn {
+  background-position: 0 -1536px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-up-green, .dz-widget .icon-up-green.dz-icn {
+  background-position: 0 -1296px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-up-grey, .dz-widget .icon-up-grey.dz-icn {
+  background-position: 0 -544px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .icon.icon-upload, .dz-widget .icon-upload.dz-icn {
+  background-position: 0 -144px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-add-white, .dz-widget a:hover .icon-add-white.dz-icn,
+.dz-widget .btn:hover .icon.icon-add-white,
+.dz-widget .btn-upload:hover .btn .icon.icon-add-white,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-add-white,
+.dz-widget .dz-btn:hover .icon.icon-add-white,
+.dz-widget .btn:hover .icon-add-white.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-add-white.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-add-white.dz-icn,
+.dz-widget .dz-btn:hover .icon-add-white.dz-icn {
+  background-position: 0 -1696px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-add-black, .dz-widget a:hover .icon-add-black.dz-icn,
+.dz-widget .btn:hover .icon.icon-add-black,
+.dz-widget .btn-upload:hover .btn .icon.icon-add-black,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-add-black,
+.dz-widget .dz-btn:hover .icon.icon-add-black,
+.dz-widget .btn:hover .icon-add-black.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-add-black.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-add-black.dz-icn,
+.dz-widget .dz-btn:hover .icon-add-black.dz-icn {
+  background-position: 0 -1856px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-add-grey, .dz-widget a:hover .icon-add-grey.dz-icn, .dz-widget.dz-follow a:hover .dz-icn, .dz-widget.dz-follow a:hover .icon.dz-icn,
+.dz-widget .btn:hover .icon.icon-add-grey,
+.dz-widget .btn-upload:hover .btn .icon.icon-add-grey,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-add-grey,
+.dz-widget .dz-btn:hover .icon.icon-add-grey,
+.dz-widget .btn:hover .icon-add-grey.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-add-grey.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-add-grey.dz-icn,
+.dz-widget .dz-btn:hover .icon-add-grey.dz-icn,
+.dz-widget.dz-follow .btn:hover .dz-icn,
+.dz-widget.dz-follow .btn-upload:hover .btn .dz-icn,
+.dz-widget.dz-follow .btn-upload:hover .dz-btn .dz-icn,
+.dz-widget.dz-follow .dz-btn:hover .dz-icn,
+.dz-widget.dz-follow .btn-upload:hover .btn .icon.dz-icn,
+.dz-widget.dz-follow .btn-upload:hover .dz-btn .icon.dz-icn,
+.dz-widget.dz-follow .dz-btn:hover .icon.dz-icn {
+  background-position: 0 -1760px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-cart-grey, .dz-widget a:hover .icon-cart-grey.dz-icn, .dz-widget.dz-buy a:hover .dz-icn, .dz-widget.dz-buy a:hover .icon.dz-icn,
+.dz-widget .btn:hover .icon.icon-cart-grey,
+.dz-widget .btn-upload:hover .btn .icon.icon-cart-grey,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-cart-grey,
+.dz-widget .dz-btn:hover .icon.icon-cart-grey,
+.dz-widget .btn:hover .icon-cart-grey.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-cart-grey.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-cart-grey.dz-icn,
+.dz-widget .dz-btn:hover .icon-cart-grey.dz-icn,
+.dz-widget.dz-buy .btn:hover .dz-icn,
+.dz-widget.dz-buy .btn-upload:hover .btn .dz-icn,
+.dz-widget.dz-buy .btn-upload:hover .dz-btn .dz-icn,
+.dz-widget.dz-buy .dz-btn:hover .dz-icn,
+.dz-widget.dz-buy .btn-upload:hover .btn .icon.dz-icn,
+.dz-widget.dz-buy .btn-upload:hover .dz-btn .icon.dz-icn,
+.dz-widget.dz-buy .dz-btn:hover .icon.dz-icn {
+  background-position: 0 -256px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-cart-white, .dz-widget a:hover .icon-cart-white.dz-icn,
+.dz-widget .btn:hover .icon.icon-cart-white,
+.dz-widget .btn-upload:hover .btn .icon.icon-cart-white,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-cart-white,
+.dz-widget .dz-btn:hover .icon.icon-cart-white,
+.dz-widget .btn:hover .icon-cart-white.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-cart-white.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-cart-white.dz-icn,
+.dz-widget .dz-btn:hover .icon-cart-white.dz-icn {
+  background-position: 0 -432px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-cart-black, .dz-widget a:hover .icon-cart-black.dz-icn,
+.dz-widget .btn:hover .icon.icon-cart-black,
+.dz-widget .btn-upload:hover .btn .icon.icon-cart-black,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-cart-black,
+.dz-widget .dz-btn:hover .icon.icon-cart-black,
+.dz-widget .btn:hover .icon-cart-black.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-cart-black.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-cart-black.dz-icn,
+.dz-widget .dz-btn:hover .icon-cart-black.dz-icn {
+  background-position: 0 -1360px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-check-grey, .dz-widget a:hover .icon-check-grey.dz-icn,
+.dz-widget .btn:hover .icon.icon-check-grey,
+.dz-widget .btn-upload:hover .btn .icon.icon-check-grey,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-check-grey,
+.dz-widget .dz-btn:hover .icon.icon-check-grey,
+.dz-widget .btn:hover .icon-check-grey.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-check-grey.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-check-grey.dz-icn,
+.dz-widget .dz-btn:hover .icon-check-grey.dz-icn {
+  background-position: 0 -320px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-check-white, .dz-widget a:hover .icon-check-white.dz-icn,
+.dz-widget .btn:hover .icon.icon-check-white,
+.dz-widget .btn-upload:hover .btn .icon.icon-check-white,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-check-white,
+.dz-widget .dz-btn:hover .icon.icon-check-white,
+.dz-widget .btn:hover .icon-check-white.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-check-white.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-check-white.dz-icn,
+.dz-widget .dz-btn:hover .icon-check-white.dz-icn {
+  background-position: 0 -880px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-delete-black, .dz-widget a:hover .icon-delete-black.dz-icn,
+.dz-widget .btn:hover .icon.icon-delete-black,
+.dz-widget .btn-upload:hover .btn .icon.icon-delete-black,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-delete-black,
+.dz-widget .dz-btn:hover .icon.icon-delete-black,
+.dz-widget .btn:hover .icon-delete-black.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-delete-black.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-delete-black.dz-icn,
+.dz-widget .dz-btn:hover .icon-delete-black.dz-icn {
+  background-position: 0 -1872px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-delete-grey, .dz-widget a:hover .icon-delete-grey.dz-icn,
+.dz-widget .btn:hover .icon.icon-delete-grey,
+.dz-widget .btn-upload:hover .btn .icon.icon-delete-grey,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-delete-grey,
+.dz-widget .dz-btn:hover .icon.icon-delete-grey,
+.dz-widget .btn:hover .icon-delete-grey.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-delete-grey.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-delete-grey.dz-icn,
+.dz-widget .dz-btn:hover .icon-delete-grey.dz-icn {
+  background-position: 0 -208px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-delete-small, .dz-widget a:hover .icon-delete-small.dz-icn,
+.dz-widget .btn:hover .icon.icon-delete-small,
+.dz-widget .btn-upload:hover .btn .icon.icon-delete-small,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-delete-small,
+.dz-widget .dz-btn:hover .icon.icon-delete-small,
+.dz-widget .btn:hover .icon-delete-small.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-delete-small.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-delete-small.dz-icn,
+.dz-widget .dz-btn:hover .icon-delete-small.dz-icn {
+  background-position: 0 -1168px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-delete-white, .dz-widget a:hover .icon-delete-white.dz-icn,
+.dz-widget .btn:hover .icon.icon-delete-white,
+.dz-widget .btn-upload:hover .btn .icon.icon-delete-white,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-delete-white,
+.dz-widget .dz-btn:hover .icon.icon-delete-white,
+.dz-widget .btn:hover .icon-delete-white.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-delete-white.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-delete-white.dz-icn,
+.dz-widget .dz-btn:hover .icon-delete-white.dz-icn {
+  background-position: 0 -192px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-down-grey, .dz-widget a:hover .icon-down-grey.dz-icn,
+.dz-widget .btn:hover .icon.icon-down-grey,
+.dz-widget .btn-upload:hover .btn .icon.icon-down-grey,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-down-grey,
+.dz-widget .dz-btn:hover .icon.icon-down-grey,
+.dz-widget .btn:hover .icon-down-grey.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-down-grey.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-down-grey.dz-icn,
+.dz-widget .dz-btn:hover .icon-down-grey.dz-icn {
+  background-position: 0 -1280px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-download, .dz-widget a:hover .icon-download.dz-icn,
+.dz-widget .btn:hover .icon.icon-download,
+.dz-widget .btn-upload:hover .btn .icon.icon-download,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-download,
+.dz-widget .dz-btn:hover .icon.icon-download,
+.dz-widget .btn:hover .icon-download.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-download.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-download.dz-icn,
+.dz-widget .dz-btn:hover .icon-download.dz-icn {
+  background-position: 0 -1664px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-edit-grey, .dz-widget a:hover .icon-edit-grey.dz-icn,
+.dz-widget .btn:hover .icon.icon-edit-grey,
+.dz-widget .btn-upload:hover .btn .icon.icon-edit-grey,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-edit-grey,
+.dz-widget .dz-btn:hover .icon.icon-edit-grey,
+.dz-widget .btn:hover .icon-edit-grey.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-edit-grey.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-edit-grey.dz-icn,
+.dz-widget .dz-btn:hover .icon-edit-grey.dz-icn {
+  background-position: 0 -464px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-edit-white, .dz-widget a:hover .icon-edit-white.dz-icn,
+.dz-widget .btn:hover .icon.icon-edit-white,
+.dz-widget .btn-upload:hover .btn .icon.icon-edit-white,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-edit-white,
+.dz-widget .dz-btn:hover .icon.icon-edit-white,
+.dz-widget .btn:hover .icon-edit-white.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-edit-white.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-edit-white.dz-icn,
+.dz-widget .dz-btn:hover .icon-edit-white.dz-icn {
+  background-position: 0 -1152px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-email, .dz-widget a:hover .icon-email.dz-icn,
+.dz-widget .btn:hover .icon.icon-email,
+.dz-widget .btn-upload:hover .btn .icon.icon-email,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-email,
+.dz-widget .dz-btn:hover .icon.icon-email,
+.dz-widget .btn:hover .icon-email.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-email.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-email.dz-icn,
+.dz-widget .dz-btn:hover .icon-email.dz-icn {
+  background-position: 0 -640px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-embed, .dz-widget a:hover .icon-embed.dz-icn,
+.dz-widget .btn:hover .icon.icon-embed,
+.dz-widget .btn-upload:hover .btn .icon.icon-embed,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-embed,
+.dz-widget .dz-btn:hover .icon.icon-embed,
+.dz-widget .btn:hover .icon-embed.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-embed.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-embed.dz-icn,
+.dz-widget .dz-btn:hover .icon-embed.dz-icn {
+  background-position: 0 -864px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-infos-grey, .dz-widget a:hover .icon-infos-grey.dz-icn,
+.dz-widget .btn:hover .icon.icon-infos-grey,
+.dz-widget .btn-upload:hover .btn .icon.icon-infos-grey,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-infos-grey,
+.dz-widget .dz-btn:hover .icon.icon-infos-grey,
+.dz-widget .btn:hover .icon-infos-grey.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-infos-grey.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-infos-grey.dz-icn,
+.dz-widget .dz-btn:hover .icon-infos-grey.dz-icn {
+  background-position: 0 -1040px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-lovetrack, .dz-widget a:hover .icon-lovetrack.dz-icn,
+.dz-widget .btn:hover .icon.icon-lovetrack,
+.dz-widget .btn-upload:hover .btn .icon.icon-lovetrack,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-lovetrack,
+.dz-widget .dz-btn:hover .icon.icon-lovetrack,
+.dz-widget .btn:hover .icon-lovetrack.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-lovetrack.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-lovetrack.dz-icn,
+.dz-widget .dz-btn:hover .icon-lovetrack.dz-icn {
+  background-position: 0 -64px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-play-grey, .dz-widget a:hover .icon-play-grey.dz-icn,
+.dz-widget .btn:hover .icon.icon-play-grey,
+.dz-widget .btn-upload:hover .btn .icon.icon-play-grey,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-play-grey,
+.dz-widget .dz-btn:hover .icon.icon-play-grey,
+.dz-widget .btn:hover .icon-play-grey.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-play-grey.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-play-grey.dz-icn,
+.dz-widget .dz-btn:hover .icon-play-grey.dz-icn {
+  background-position: 0 -1472px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-play-white, .dz-widget a:hover .icon-play-white.dz-icn,
+.dz-widget .btn:hover .icon.icon-play-white,
+.dz-widget .btn-upload:hover .btn .icon.icon-play-white,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-play-white,
+.dz-widget .dz-btn:hover .icon.icon-play-white,
+.dz-widget .btn:hover .icon-play-white.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-play-white.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-play-white.dz-icn,
+.dz-widget .dz-btn:hover .icon-play-white.dz-icn {
+  background-position: 0 -1424px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-share-grey, .dz-widget a:hover .icon-share-grey.dz-icn,
+.dz-widget .btn:hover .icon.icon-share-grey,
+.dz-widget .btn-upload:hover .btn .icon.icon-share-grey,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-share-grey,
+.dz-widget .dz-btn:hover .icon.icon-share-grey,
+.dz-widget .btn:hover .icon-share-grey.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-share-grey.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-share-grey.dz-icn,
+.dz-widget .dz-btn:hover .icon-share-grey.dz-icn {
+  background-position: 0 -304px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-share-white, .dz-widget a:hover .icon-share-white.dz-icn,
+.dz-widget .btn:hover .icon.icon-share-white,
+.dz-widget .btn-upload:hover .btn .icon.icon-share-white,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-share-white,
+.dz-widget .dz-btn:hover .icon.icon-share-white,
+.dz-widget .btn:hover .icon-share-white.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-share-white.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-share-white.dz-icn,
+.dz-widget .dz-btn:hover .icon-share-white.dz-icn {
+  background-position: 0 -976px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-star-grey, .dz-widget a:hover .icon-star-grey.dz-icn, .dz-widget.dz-library a:hover .dz-icn, .dz-widget.dz-library a:hover .icon.dz-icn,
+.dz-widget .btn:hover .icon.icon-star-grey,
+.dz-widget .btn-upload:hover .btn .icon.icon-star-grey,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-star-grey,
+.dz-widget .dz-btn:hover .icon.icon-star-grey,
+.dz-widget .btn:hover .icon-star-grey.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-star-grey.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-star-grey.dz-icn,
+.dz-widget .dz-btn:hover .icon-star-grey.dz-icn,
+.dz-widget.dz-library .btn:hover .dz-icn,
+.dz-widget.dz-library .btn-upload:hover .btn .dz-icn,
+.dz-widget.dz-library .btn-upload:hover .dz-btn .dz-icn,
+.dz-widget.dz-library .dz-btn:hover .dz-icn,
+.dz-widget.dz-library .btn-upload:hover .btn .icon.dz-icn,
+.dz-widget.dz-library .btn-upload:hover .dz-btn .icon.dz-icn,
+.dz-widget.dz-library .dz-btn:hover .icon.dz-icn {
+  background-position: 0 -288px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-star-white, .dz-widget a:hover .icon-star-white.dz-icn,
+.dz-widget .btn:hover .icon.icon-star-white,
+.dz-widget .btn-upload:hover .btn .icon.icon-star-white,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-star-white,
+.dz-widget .dz-btn:hover .icon.icon-star-white,
+.dz-widget .btn:hover .icon-star-white.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-star-white.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-star-white.dz-icn,
+.dz-widget .dz-btn:hover .icon-star-white.dz-icn {
+  background-position: 0 -1056px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-trash-grey, .dz-widget a:hover .icon-trash-grey.dz-icn,
+.dz-widget .btn:hover .icon.icon-trash-grey,
+.dz-widget .btn-upload:hover .btn .icon.icon-trash-grey,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-trash-grey,
+.dz-widget .dz-btn:hover .icon.icon-trash-grey,
+.dz-widget .btn:hover .icon-trash-grey.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-trash-grey.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-trash-grey.dz-icn,
+.dz-widget .dz-btn:hover .icon-trash-grey.dz-icn {
+  background-position: 0 -1680px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-trash-white, .dz-widget a:hover .icon-trash-white.dz-icn,
+.dz-widget .btn:hover .icon.icon-trash-white,
+.dz-widget .btn-upload:hover .btn .icon.icon-trash-white,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-trash-white,
+.dz-widget .dz-btn:hover .icon.icon-trash-white,
+.dz-widget .btn:hover .icon-trash-white.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-trash-white.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-trash-white.dz-icn,
+.dz-widget .dz-btn:hover .icon-trash-white.dz-icn {
+  background-position: 0 -1600px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget a:hover .icon.icon-up-grey, .dz-widget a:hover .icon-up-grey.dz-icn,
+.dz-widget .btn:hover .icon.icon-up-grey,
+.dz-widget .btn-upload:hover .btn .icon.icon-up-grey,
+.dz-widget .btn-upload:hover .dz-btn .icon.icon-up-grey,
+.dz-widget .dz-btn:hover .icon.icon-up-grey,
+.dz-widget .btn:hover .icon-up-grey.dz-icn,
+.dz-widget .btn-upload:hover .btn .icon-up-grey.dz-icn,
+.dz-widget .btn-upload:hover .dz-btn .icon-up-grey.dz-icn,
+.dz-widget .dz-btn:hover .icon-up-grey.dz-icn {
+  background-position: 0 -1296px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-add, .dz-widget .dz-btn.dz-selected .icon.icon-add, .dz-widget.dz-library.remove .dz-btn .icon.icon-add, .dz-widget .selected .icon-add.dz-icn, .dz-widget .dz-btn.dz-selected .icon-add.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-add.dz-icn,
+.dz-widget .selected:hover .icon.icon-add,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-add,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-add,
+.dz-widget .selected:hover .icon-add.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-add.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-add.dz-icn {
+  background-position: 0 -1504px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-album, .dz-widget .dz-btn.dz-selected .icon.icon-album, .dz-widget.dz-library.remove .dz-btn .icon.icon-album, .dz-widget .selected .icon-album.dz-icn, .dz-widget .dz-btn.dz-selected .icon-album.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-album.dz-icn,
+.dz-widget .selected:hover .icon.icon-album,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-album,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-album,
+.dz-widget .selected:hover .icon-album.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-album.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-album.dz-icn {
+  background-position: 0 -848px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-app, .dz-widget .dz-btn.dz-selected .icon.icon-app, .dz-widget.dz-library.remove .dz-btn .icon.icon-app, .dz-widget .selected .icon-app.dz-icn, .dz-widget .dz-btn.dz-selected .icon-app.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-app.dz-icn,
+.dz-widget .selected:hover .icon.icon-app,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-app,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-app,
+.dz-widget .selected:hover .icon-app.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-app.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-app.dz-icn {
+  background-position: 0 -688px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-cart, .dz-widget .dz-btn.dz-selected .icon.icon-cart, .dz-widget.dz-library.remove .dz-btn .icon.icon-cart, .dz-widget .selected .icon-cart.dz-icn, .dz-widget .dz-btn.dz-selected .icon-cart.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-cart.dz-icn,
+.dz-widget .selected:hover .icon.icon-cart,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-cart,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-cart,
+.dz-widget .selected:hover .icon-cart.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-cart.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-cart.dz-icn {
+  background-position: 0 -1248px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-charts, .dz-widget .dz-btn.dz-selected .icon.icon-charts, .dz-widget.dz-library.remove .dz-btn .icon.icon-charts, .dz-widget .selected .icon-charts.dz-icn, .dz-widget .dz-btn.dz-selected .icon-charts.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-charts.dz-icn,
+.dz-widget .selected:hover .icon.icon-charts,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-charts,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-charts,
+.dz-widget .selected:hover .icon-charts.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-charts.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-charts.dz-icn {
+  background-position: 0 -784px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-check, .dz-widget .dz-btn.dz-selected .icon.icon-check, .dz-widget.dz-library.remove .dz-btn .icon.icon-check, .dz-widget .selected .icon-check.dz-icn, .dz-widget .dz-btn.dz-selected .icon-check.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-check.dz-icn,
+.dz-widget .selected:hover .icon.icon-check,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-check,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-check,
+.dz-widget .selected:hover .icon-check.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-check.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-check.dz-icn {
+  background-position: 0 -1216px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-comments, .dz-widget .dz-btn.dz-selected .icon.icon-comments, .dz-widget.dz-library.remove .dz-btn .icon.icon-comments, .dz-widget .selected .icon-comments.dz-icn, .dz-widget .dz-btn.dz-selected .icon-comments.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-comments.dz-icn,
+.dz-widget .selected:hover .icon.icon-comments,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-comments,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-comments,
+.dz-widget .selected:hover .icon-comments.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-comments.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-comments.dz-icn {
+  background-position: 0 -1376px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-delete, .dz-widget .dz-btn.dz-selected .icon.icon-delete, .dz-widget.dz-library.remove .dz-btn .icon.icon-delete, .dz-widget .selected .icon-delete.dz-icn, .dz-widget .dz-btn.dz-selected .icon-delete.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-delete.dz-icn,
+.dz-widget .selected:hover .icon.icon-delete,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-delete,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-delete,
+.dz-widget .selected:hover .icon-delete.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-delete.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-delete.dz-icn {
+  background-position: 0 -368px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-down-grey, .dz-widget .dz-btn.dz-selected .icon.icon-down-grey, .dz-widget.dz-library.remove .dz-btn .icon.icon-down-grey, .dz-widget .selected .icon-down-grey.dz-icn, .dz-widget .dz-btn.dz-selected .icon-down-grey.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-down-grey.dz-icn,
+.dz-widget .selected:hover .icon.icon-down-grey,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-down-grey,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-down-grey,
+.dz-widget .selected:hover .icon-down-grey.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-down-grey.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-down-grey.dz-icn {
+  background-position: 0 -1280px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-folder, .dz-widget .dz-btn.dz-selected .icon.icon-folder, .dz-widget.dz-library.remove .dz-btn .icon.icon-folder, .dz-widget .selected .icon-folder.dz-icn, .dz-widget .dz-btn.dz-selected .icon-folder.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-folder.dz-icn,
+.dz-widget .selected:hover .icon.icon-folder,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-folder,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-folder,
+.dz-widget .selected:hover .icon-folder.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-folder.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-folder.dz-icn {
+  background-position: 0 -1840px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-folder-open, .dz-widget .dz-btn.dz-selected .icon.icon-folder-open, .dz-widget.dz-library.remove .dz-btn .icon.icon-folder-open, .dz-widget .selected .icon-folder-open.dz-icn, .dz-widget .dz-btn.dz-selected .icon-folder-open.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-folder-open.dz-icn,
+.dz-widget .selected:hover .icon.icon-folder-open,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-folder-open,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-folder-open,
+.dz-widget .selected:hover .icon-folder-open.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-folder-open.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-folder-open.dz-icn {
+  background-position: 0 -1568px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-library, .dz-widget .dz-btn.dz-selected .icon.icon-library, .dz-widget.dz-library.remove .dz-btn .icon.icon-library, .dz-widget .selected .icon-library.dz-icn, .dz-widget .dz-btn.dz-selected .icon-library.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-library.dz-icn,
+.dz-widget .selected:hover .icon.icon-library,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-library,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-library,
+.dz-widget .selected:hover .icon-library.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-library.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-library.dz-icn {
+  background-position: 0 -1408px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-lovetrack, .dz-widget .dz-btn.dz-selected .icon.icon-lovetrack, .dz-widget.dz-library.remove .dz-btn .icon.icon-lovetrack, .dz-widget .selected .icon-lovetrack.dz-icn, .dz-widget .dz-btn.dz-selected .icon-lovetrack.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-lovetrack.dz-icn,
+.dz-widget .selected:hover .icon.icon-lovetrack,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-lovetrack,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-lovetrack,
+.dz-widget .selected:hover .icon-lovetrack.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-lovetrack.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-lovetrack.dz-icn {
+  background-position: 0 -1312px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-mp3, .dz-widget .dz-btn.dz-selected .icon.icon-mp3, .dz-widget.dz-library.remove .dz-btn .icon.icon-mp3, .dz-widget .selected .icon-mp3.dz-icn, .dz-widget .dz-btn.dz-selected .icon-mp3.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-mp3.dz-icn,
+.dz-widget .selected:hover .icon.icon-mp3,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-mp3,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-mp3,
+.dz-widget .selected:hover .icon-mp3.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-mp3.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-mp3.dz-icn {
+  background-position: 0 -528px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-picks, .dz-widget .dz-btn.dz-selected .icon.icon-picks, .dz-widget.dz-library.remove .dz-btn .icon.icon-picks, .dz-widget .selected .icon-picks.dz-icn, .dz-widget .dz-btn.dz-selected .icon-picks.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-picks.dz-icn,
+.dz-widget .selected:hover .icon.icon-picks,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-picks,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-picks,
+.dz-widget .selected:hover .icon-picks.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-picks.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-picks.dz-icn {
+  background-position: 0 -1792px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-playlist, .dz-widget .dz-btn.dz-selected .icon.icon-playlist, .dz-widget.dz-library.remove .dz-btn .icon.icon-playlist, .dz-widget .selected .icon-playlist.dz-icn, .dz-widget .dz-btn.dz-selected .icon-playlist.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-playlist.dz-icn,
+.dz-widget .selected:hover .icon.icon-playlist,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-playlist,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-playlist,
+.dz-widget .selected:hover .icon-playlist.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-playlist.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-playlist.dz-icn {
+  background-position: 0 -1632px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-playlist-collaborative, .dz-widget .dz-btn.dz-selected .icon.icon-playlist-collaborative, .dz-widget.dz-library.remove .dz-btn .icon.icon-playlist-collaborative, .dz-widget .selected .icon-playlist-collaborative.dz-icn, .dz-widget .dz-btn.dz-selected .icon-playlist-collaborative.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-playlist-collaborative.dz-icn,
+.dz-widget .selected:hover .icon.icon-playlist-collaborative,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-playlist-collaborative,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-playlist-collaborative,
+.dz-widget .selected:hover .icon-playlist-collaborative.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-playlist-collaborative.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-playlist-collaborative.dz-icn {
+  background-position: 0 -720px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-playlist-public, .dz-widget .dz-btn.dz-selected .icon.icon-playlist-public, .dz-widget.dz-library.remove .dz-btn .icon.icon-playlist-public, .dz-widget .selected .icon-playlist-public.dz-icn, .dz-widget .dz-btn.dz-selected .icon-playlist-public.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-playlist-public.dz-icn,
+.dz-widget .selected:hover .icon.icon-playlist-public,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-playlist-public,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-playlist-public,
+.dz-widget .selected:hover .icon-playlist-public.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-playlist-public.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-playlist-public.dz-icn {
+  background-position: 0 -944px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-radio, .dz-widget .dz-btn.dz-selected .icon.icon-radio, .dz-widget.dz-library.remove .dz-btn .icon.icon-radio, .dz-widget .selected .icon-radio.dz-icn, .dz-widget .dz-btn.dz-selected .icon-radio.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-radio.dz-icn,
+.dz-widget .selected:hover .icon.icon-radio,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-radio,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-radio,
+.dz-widget .selected:hover .icon-radio.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-radio.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-radio.dz-icn {
+  background-position: 0 -736px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-reco, .dz-widget .dz-btn.dz-selected .icon.icon-reco, .dz-widget.dz-library.remove .dz-btn .icon.icon-reco, .dz-widget .selected .icon-reco.dz-icn, .dz-widget .dz-btn.dz-selected .icon-reco.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-reco.dz-icn,
+.dz-widget .selected:hover .icon.icon-reco,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-reco,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-reco,
+.dz-widget .selected:hover .icon-reco.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-reco.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-reco.dz-icn {
+  background-position: 0 -1200px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-settings, .dz-widget .dz-btn.dz-selected .icon.icon-settings, .dz-widget.dz-library.remove .dz-btn .icon.icon-settings, .dz-widget .selected .icon-settings.dz-icn, .dz-widget .dz-btn.dz-selected .icon-settings.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-settings.dz-icn,
+.dz-widget .selected:hover .icon.icon-settings,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-settings,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-settings,
+.dz-widget .selected:hover .icon-settings.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-settings.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-settings.dz-icn {
+  background-position: 0 -560px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-share, .dz-widget .dz-btn.dz-selected .icon.icon-share, .dz-widget.dz-library.remove .dz-btn .icon.icon-share, .dz-widget .selected .icon-share.dz-icn, .dz-widget .dz-btn.dz-selected .icon-share.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-share.dz-icn, .dz-widget.dz-share .selected .dz-icn, .dz-widget.dz-share .dz-btn.dz-selected .dz-icn, .dz-widget.dz-library.remove .dz-btn .dz-widget.dz-share .dz-icn, .dz-widget.dz-share .dz-widget.dz-library.remove .dz-btn .dz-icn, .dz-widget.dz-share .selected .icon.dz-icn, .dz-widget.dz-share .dz-btn.dz-selected .icon.dz-icn, .dz-widget.dz-library.remove .dz-btn .dz-widget.dz-share .icon.dz-icn, .dz-widget.dz-share .dz-widget.dz-library.remove .dz-btn .icon.dz-icn,
+.dz-widget .selected:hover .icon.icon-share,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-share,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-share,
+.dz-widget .selected:hover .icon-share.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-share.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-share.dz-icn,
+.dz-widget.dz-share .selected:hover .dz-icn,
+.dz-widget.dz-share .dz-btn.dz-selected:hover .dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .dz-widget.dz-share .dz-icn,
+.dz-widget.dz-share .dz-widget.dz-library.remove .dz-btn:hover .dz-icn,
+.dz-widget.dz-share .dz-btn.dz-selected:hover .icon.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .dz-widget.dz-share .icon.dz-icn,
+.dz-widget.dz-share .dz-widget.dz-library.remove .dz-btn:hover .icon.dz-icn {
+  background-position: 0 -896px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-star, .dz-widget .dz-btn.dz-selected .icon.icon-star, .dz-widget.dz-library.remove .dz-btn .icon.icon-star, .dz-widget .selected .icon-star.dz-icn, .dz-widget .dz-btn.dz-selected .icon-star.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-star.dz-icn,
+.dz-widget .selected:hover .icon.icon-star,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-star,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-star,
+.dz-widget .selected:hover .icon-star.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-star.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-star.dz-icn {
+  background-position: 0 -1104px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-star-grey, .dz-widget .dz-btn.dz-selected .icon.icon-star-grey, .dz-widget.dz-library.remove .dz-btn .icon.icon-star-grey, .dz-widget .selected .icon-star-grey.dz-icn, .dz-widget .dz-btn.dz-selected .icon-star-grey.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-star-grey.dz-icn, .dz-widget.dz-library .selected .dz-icn, .dz-widget.dz-library .dz-btn.dz-selected .dz-icn, .dz-widget.dz-library.remove .dz-btn .dz-icn, .dz-widget.dz-library .selected .icon.dz-icn, .dz-widget.dz-library .dz-btn.dz-selected .icon.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon.dz-icn,
+.dz-widget .selected:hover .icon.icon-star-grey,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-star-grey,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-star-grey,
+.dz-widget .selected:hover .icon-star-grey.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-star-grey.dz-icn,
+.dz-widget.dz-library .selected:hover .dz-icn,
+.dz-widget.dz-library .dz-btn.dz-selected:hover .dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .dz-icn,
+.dz-widget.dz-library .dz-btn.dz-selected:hover .icon.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.dz-icn {
+  background-position: 0 -1104px;
+  height: 16px;
+  width: 16px;
+}
+.dz-widget .selected .icon.icon-up-grey, .dz-widget .dz-btn.dz-selected .icon.icon-up-grey, .dz-widget.dz-library.remove .dz-btn .icon.icon-up-grey, .dz-widget .selected .icon-up-grey.dz-icn, .dz-widget .dz-btn.dz-selected .icon-up-grey.dz-icn, .dz-widget.dz-library.remove .dz-btn .icon-up-grey.dz-icn,
+.dz-widget .selected:hover .icon.icon-up-grey,
+.dz-widget .dz-btn.dz-selected:hover .icon.icon-up-grey,
+.dz-widget.dz-library.remove .dz-btn:hover .icon.icon-up-grey,
+.dz-widget .selected:hover .icon-up-grey.dz-icn,
+.dz-widget .dz-btn.dz-selected:hover .icon-up-grey.dz-icn,
+.dz-widget.dz-library.remove .dz-btn:hover .icon-up-grey.dz-icn {
+  background-position: 0 -1296px;
+  height: 16px;
+  width: 16px;
+}
+
+/**
+ * ------------------------------------------
+ * - Follow
+ * ------------------------------------------
+ */
+.dz-share-follow, .dz-btn-follow, .dz-btn-follow a, .dz-btn-follow a .dz-icon, .dz-btn-follow a .dz-label, .dz-count-follow, .dz-count-follow a {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.dz-btn-follow a {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #F1F1F1;
+  border: 1px solid gainsboro;
+  color: #3A3A3A;
+  cursor: pointer;
+  font: bold 11px/16px Arial;
+  position: relative;
+  text-decoration: none;
+}
+.dz-btn-follow a .dz-icon {
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  -ms-border-radius: 2px 0 0 2px;
+  -o-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+  background-color: #3A3A3A;
+  border: 1px solid #3a3a3a;
+  height: 100%;
+  left: -1px;
+  position: absolute;
+  top: -1px;
+  width: 18px;
+}
+.dz-btn-follow a .dz-icon i {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAICAYAAADJEc7MAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkFEQjFCQjJENUIwNDExRTJBNTg2RDYzQjdGNzNFM0FEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkFEQjFCQjJFNUIwNDExRTJBNTg2RDYzQjdGNzNFM0FEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QURCMUJCMkI1QjA0MTFFMkE1ODZENjNCN0Y3M0UzQUQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QURCMUJCMkM1QjA0MTFFMkE1ODZENjNCN0Y3M0UzQUQiLz4gPC9yZGY6RGVzY3JpcHRpb24%2BIDwvcmRmOlJERj4gPC94OnhtcG1ldGE%2BIDw%2FeHBhY2tldCBlbmQ9InIiPz4FGFb8AAAAZklEQVR42mL8%2F%2F8%2FAylg3aNfYA1MuBR8mn3oPwjjkmdiIBMwfZ1W%2Bx%2BE8Sm692LefxCmio2ML0W0wSaJvb7CyPBRHmIq%2F0PGl4y9YLb4%2F2LGA9fswGwHrUOM5sc%2B%2F6fMj%2BRqBAgwAJ6qK%2FEjJwuKAAAAAElFTkSuQmCC");
+  height: 8px;
+  left: 2px;
+  margin-top: -4px;
+  position: absolute;
+  top: 50%;
+  width: 14px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2) {
+  .dz-btn-follow a .dz-icon i {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAQCAYAAAAFzx/vAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjgyQ0RDQzYyNUIyMDExRTI4RTI2RDc4QkRBMEQzREU4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjgyQ0RDQzYzNUIyMDExRTI4RTI2RDc4QkRBMEQzREU4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODJDRENDNjA1QjIwMTFFMjhFMjZENzhCREEwRDNERTgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODJDRENDNjE1QjIwMTFFMjhFMjZENzhCREEwRDNERTgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5Ux+bMAAAAgElEQVR42mL8//8/Ay3Buke/UCxgYqAzYCFVw6fZh1BczJdqx0iKfrr7cPhbyPJ1Wi1KnHBnNTOSY9C9F/NQzFGSSGIcjUO6AMaXItooYS/2+gok7D/KoxZB/A/B4i8Ze1HExf8Xg8UPXLNDEXfQOgQWNz/2+f9oHI5aSBEACDAA1kgklVNN+BgAAAAASUVORK5CYII=);
+    -webkit-background-size: 14px 8px;
+    -moz-background-size: 14px 8px;
+    -o-background-size: 14px 8px;
+    background-size: 14px 8px;
+  }
+}
+.dz-btn-follow a .dz-label {
+  padding: 1px 4px 1px 24px;
+  white-space: nowrap;
+}
+.dz-btn-follow a:hover {
+  background-color: #EDEDED;
+  border: 1px solid #b3b3b3;
+  color: #3A3A3A;
+  text-decoration: none;
+}
+.dz-btn-follow.dz-btn-active a .dz-label {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjhCMzA4OEI1NUIxMjExRTJCQkEyRUVENEFBMDk5QjZEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjhCMzA4OEI2NUIxMjExRTJCQkEyRUVENEFBMDk5QjZEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OEIzMDg4QjM1QjEyMTFFMkJCQTJFRUQ0QUEwOTlCNkQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OEIzMDg4QjQ1QjEyMTFFMkJCQTJFRUQ0QUEwOTlCNkQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz41hV34AAAApUlEQVR42mI8c+YMAwlAiIVIhaJAPBOIjzMRodgSiM8D8Wsg7iakIQGIDwDxQSBOBwnANOgCMSea4kwgng/EN4E4BSYI0qAOxCCfHwNiRSSTpwHxRyAOAuLvyBpAJlQCsQFUYy8Qz4HKFwDxHWRrYaHUB8RsQNwOxEVQsX1AvADdU8ie7gDieij7L8yT6AA9HpqAmBmI5dCdgksDA9QWflzhDBBgAAfeHHoeDPyaAAAAAElFTkSuQmCC");
+  padding-right: 18px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2) {
+  .dz-btn-follow.dz-btn-active a .dz-label {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAATCAYAAAB7u5a2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNDRTY1MjU3NUIyMDExRTJBN0YyODM2NkRERjNDNUEyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNDRTY1MjU4NUIyMDExRTJBN0YyODM2NkRERjNDNUEyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0NFNjUyNTU1QjIwMTFFMkE3RjI4MzY2RERGM0M1QTIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0NFNjUyNTY1QjIwMTFFMkE3RjI4MzY2RERGM0M1QTIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7VzKiuAAABWUlEQVR42mI8c+YMA5WBBxC3A7E5ExUN5QTiCUC8HYh5QJiFSgabAfEiIFYH4ptA7AzE76jh8hwgPgY1+A7U4KcgCUpczgwNhhwo/zUQe8IMpsRwUJiuhkYeCHwHYh+oyxkoMVwaGmm6SGIpQHwKXSFymEsQYbAcEB9GM3g6EC/DphhkOBsQTwbiJ0BchMdgRajBikhiZ4G4AJcGkOFLoZECiqBeIF4HDVNsLpZDEnsHxEFA/Auf4fXQmIaBQCAGZVstKF8UiPdCwxoZRAPxI3xhCDL8GjRtIlsASrMngTgBiLcAsQqavrlAvINQBMEi9DIQu0G9ipzc5kNzHzIAOaKMmGSFnFouQC34SEBPAZojiDIcFvv4LNiBK9kRYzgDNDOAsvEXNHFQqsglJbfhKriOQy34jiQ2Cz17k2s4CBxBsgCEW0ktJwiVLQeB2B+IvYH4BamGAwQYACRkQg1B7gYyAAAAAElFTkSuQmCC);
+    -webkit-background-size: 12px 11px;
+    -moz-background-size: 12px 11px;
+    -o-background-size: 12px 11px;
+    background-size: 12px 11px;
+  }
+}
+
+.dz-btn-large a {
+  font-size: 13px;
+  line-height: 26px;
+}
+.dz-btn-large a .dz-icon {
+  width: 25px;
+}
+.dz-btn-large a .dz-icon i {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAKCAYAAABWiWWfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjAyQ0Y5M0UwNUIxNDExRTI5N0JCOTJCNkUwQTI3MzY4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjAyQ0Y5M0UxNUIxNDExRTI5N0JCOTJCNkUwQTI3MzY4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDJDRjkzREU1QjE0MTFFMjk3QkI5MkI2RTBBMjczNjgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDJDRjkzREY1QjE0MTFFMjk3QkI5MkI2RTBBMjczNjgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7QsW1DAAAAdUlEQVR42mL8//8/AyVg3aNfcANYCCn+NPsQXDFfqh0jPrVMDFQELF+n1cJt5s5qZiSk4d6LeXD1ShJJjDRzGVUNY3wpog13ttjrK4wMH+UR0cv/kPElYy+cL/6/mPHANTs430HrEKP5sc//B783qWoYQIABAAAOJIljcTFbAAAAAElFTkSuQmCC);
+  height: 10px;
+  left: 3px;
+  margin-top: -5px;
+  width: 19px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2) {
+  .dz-btn-large a .dz-icon i {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAUCAYAAADhj08IAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkEwNUY4RUIyNUIyMDExRTJBRDUwRDc3RTY4MDgxNTVEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkEwNUY4RUIzNUIyMDExRTJBRDUwRDc3RTY4MDgxNTVEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QTA1RjhFQjA1QjIwMTFFMkFENTBENzdFNjgwODE1NUQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QTA1RjhFQjE1QjIwMTFFMkFENTBENzdFNjgwODE1NUQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5fC4UzAAAAjklEQVR42mL8//8/w0CCdY9+YXUAE8MgBSyUGvBp9iGsPuZLtWOkxNxBG2KjDiM5jX2dVos1jXBnNTNSw4J7L+ZhNV9JIolxNCpHHTbqMCyA8aWINtZcI/b6CiTXfJTHXpnyPwTLv2TsxSov/r8YLH/gmh1WeQetQ2B582Of/49G5ajDRh026jAKAECAAQAaoySd8Jwx6QAAAABJRU5ErkJggg==);
+    -webkit-background-size: 19px 10px;
+    -moz-background-size: 19px 10px;
+    -o-background-size: 19px 10px;
+    background-size: 19px 10px;
+  }
+}
+.dz-btn-large a .dz-label {
+  padding: 0 6px 0 33px;
+}
+.dz-btn-large.dz-btn-active a .dz-label {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAANCAYAAAB2HjRBAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkU3NjlBMDI3NUIxRjExRTJBMTlFODFGRUVGN0E2RUExIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkU3NjlBMDI4NUIxRjExRTJBMTlFODFGRUVGN0E2RUExIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTc2OUEwMjU1QjFGMTFFMkExOUU4MUZFRUY3QTZFQTEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTc2OUEwMjY1QjFGMTFFMkExOUU4MUZFRUY3QTZFQTEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4LFS+yAAAA4ElEQVR42mI8c+YMAxnAD4j5mUjUxAPEM4F4ERDfZCFBoy4QrwNiaSB2A+JTxNrsAcTHgFgOiP2B+AhIkBjNsUC8BerkXCDeDZOAaS6C+oUNTWM4EM8HYmYgXgzEs5AlQX5WB+IWIOYEYgMgDgXiR9AQXQTVeBmI09GdBLL5JhB7AvF3IDYDYlDcVQDxaqhL/gJxHFQeQzMIHIQGBEiBKBC3I3mhG4gvYAsM5AADBUQQEP9CErsDxE24QhI9tHegGVCPzbm4NIPAViCOgAbSSnxxiCue1wOxFTSwcAKAAAMAhgIpAG7zLLIAAAAASUVORK5CYII=);
+  padding-right: 20px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2) {
+  .dz-btn-large.dz-btn-active a .dz-label {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAZCAYAAADNAiUZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJEMjNDNjgyNUIyMDExRTJCMzlCQTI4QzIzQkJDOEU1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJEMjNDNjgzNUIyMDExRTJCMzlCQTI4QzIzQkJDOEU1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkQyM0M2ODA1QjIwMTFFMkIzOUJBMjhDMjNCQkM4RTUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkQyM0M2ODE1QjIwMTFFMkIzOUJBMjhDMjNCQkM4RTUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6RlNBiAAABrElEQVR42ryVT0QFQRzHty0RERHxThGd3imiU4eI6BIdIlKk6NKSDp0i0dMhPUWn9JQOKb3jJkqpUzZFdKlTRDy6RkTfH79hjJl9s+3O/vgcZnZmvju/f9MQRZGXk7WCDVBqykmwHxyBLlDzHYs1gzVwy4JPYMflTXvACSjymASHXN50CjxKgs9gkARp4EJ0HeyDFh6/g2HwJRZk6V4SOQBj0lyNb/ghL8xKtADOQJ809w1GwJu6OAtRitsF6FTm58G9bkPamPaCa41gGVRMm3ylgF/BaIKCJ8F2Zf4GLMZtFKKzfEA3x4baVWPMPopdyK3NUxJnHPzWE6WYbHP3ELYELjVuk2PYpvk2CT7rucjnwqW/+1G+DYCI3ShnaWgQ3ATnNnER7q2CCY1bCuz2BRYKeU41Kotl2+yTE+nUIExu3+IkKxrOmdN4ykqU7BhMGxKhw3DGIbhKUme+4ZAZy/3UT4OkxW1qDhVL4UBu5GlFyfa4lZnsjr3iZSlKthvjvsD7p9n03rKmrVGmP7gUFYUv1+FKmlciydNW4pqlDvWSlyjZaky9WtufAAMAoblM6qADpS8AAAAASUVORK5CYII=);
+    -webkit-background-size: 15px 13px;
+    -moz-background-size: 15px 13px;
+    -o-background-size: 15px 13px;
+    background-size: 15px 13px;
+  }
+}
+
+.dz-btn-active a {
+  border-color: #F1F1F1;
+  color: #999999;
+  text-decoration: none;
+}
+.dz-btn-active a:hover {
+  color: #999999;
+  text-decoration: none;
+}
+.dz-btn-active a .dz-label {
+  background-position: right center;
+  background-repeat: no-repeat;
+  margin-right: 6px;
+}
+
+.dz-count-follow {
+  background-color: white;
+  border: 1px solid gainsboro;
+  color: #3A3FA3A;
+  font: normal 11px/18.99px Arial;
+  height: 18px;
+  margin-left: 3px;
+  position: relative;
+  text-decoration: none;
+}
+.dz-count-follow:after, .dz-count-follow:before {
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  position: absolute;
+  right: 100%;
+  width: 0;
+}
+.dz-count-follow:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-right-color: white;
+  border-width: 4px;
+  margin-top: -4px;
+  top: 50%;
+}
+.dz-count-follow:before {
+  border-color: rgba(220, 220, 220, 0);
+  border-right-color: #DCDCDC;
+  border-width: 5px;
+  margin-top: -5px;
+  top: 50%;
+}
+.dz-count-follow a {
+  color: #3A3A3A;
+  padding: 0 5px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.dz-count-follow a:hover {
+  color: #3A3A3A;
+  text-decoration: none;
+}

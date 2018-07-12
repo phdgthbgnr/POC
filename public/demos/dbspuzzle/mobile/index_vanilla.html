@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html">
+        <title>DBS PUZZLE</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> -->
+        <!-- <link rel="stylesheet" href="_css/dbspuzzle.css"> -->
+        <style>
+            html,body{
+                margin: 0;
+                padding: 0;
+            }
+            .nodisplay{
+                display: none;
+            }
+        </style>
+    </head>
+    
+    <body>
+
+        <div id="intro" class="contener intro nodisplay">
+            <img src="_img/bg_intro_blk.png" data-src1="_img/fond_intro.jpg"/>
+            <img src="_img/bg_intro_blk.png" data-src1="_img/comp_intro.png" class="compo"/>
+            <a href="#play" id="play"><img src="_img/bg_intro_blk.png" data-src1="_img/play.png"/></a>
+            <img src="" data-src1="_img/logo_dbs.png" id="logo" class="logo"/>
+        </div> 
+
+        <div id="contener" class="contener nodisplay">
+            <div class="blocright" id="board">
+                <img src="_img/bg00.png" id="bgpuzzle" class="bckgnd" data-bg="_img/bg01.jpg"/>
+                <ul>
+                       <li id="zdrop01" class="droppable"><img src="_img/0/1-1_blk.png" class="imgdroppable" id="drop01"/></li><!--
+                    --><li id="zdrop02" class="droppable"><img src="_img/0/1-2_blk.png" class="imgdroppable" id="drop02"/></li><!--
+                    --><li id="zdrop03" class="droppable"><img src="_img/0/1-3_blk.png" class="imgdroppable" id="drop03"/></li><!--
+                    --><li id="zdrop04" class="droppable"><img src="_img/0/2-1_blk.png" class="imgdroppable" id="drop04"/></li><!--
+                    --><li id="zdrop05" class="droppable"><img src="_img/0/2-2_blk.png" class="imgdroppable" id="drop05"/></li><!--
+                    --><li id="zdrop06" class="droppable"><img src="_img/0/2-3_blk.png" class="imgdroppable" id="drop06"/></li><!--
+                    --><li id="zdrop07" class="droppable"><img src="_img/0/3-1_blk.png" class="imgdroppable" id="drop07"/></li><!--
+                    --><li id="zdrop08" class="droppable"><img src="_img/0/3-2_blk.png" class="imgdroppable" id="drop08"/></li><!--
+                    --><li id="zdrop09" class="droppable"><img src="_img/0/3-3_blk.png" class="imgdroppable" id="drop09"/></li><!--
+                    --><li id="zdrop10" class="droppable"><img src="_img/0/4-1_blk.png" class="imgdroppable" id="drop10"/></li><!--
+                    --><li id="zdrop11" class="droppable"><img src="_img/0/4-2_blk.png" class="imgdroppable" id="drop11"/></li><!--
+                    --><li id="zdrop12" class="droppable"><img src="_img/0/4-3_blk.png" class="imgdroppable" id="drop12"/></li>
+                </ul>
+                <div class="grille" id="grille">
+                    <svg id="grille1" data-name="grille1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 611.416 812.265"><title>grille</title><path id="_03" data-name="03" d="M414.942,0c2.467,10.337,17.77,74.721,9.055,80.675a12.413,12.413,0,0,1-13.76.164C404.759,78.1,396.982,70.46,390.856,70.46c-10.151,0-18.391,13.8-18.391,30.805s8.24,30.806,18.391,30.806c6.143,0,13.972-7.685,19.486-10.437a12.4,12.4,0,0,1,13.758.16c8.734,5.974-6.632,75.127-9.19,85.47,9.358,2.168,66.6,17.98,72.63,9.167a12.371,12.371,0,0,0,.164-13.75C478.8,189,477.256,187.542,477.256,183.212c0-10.146,13.8-18.374,30.831-18.374s30.839,8.228,30.839,18.374c0,4.323-1.543,5.783-10.389,19.371a12.356,12.356,0,0,0,.164,13.742c6.375,9.319,79.466-8.751,80.715-9.061" transform="translate(1 0.232)" style="fill:none;stroke:#353535;stroke-miterlimit:10;stroke-width:2px"/><path id="_01" data-name="01" d="M201.045,0c-2.187,9.472-17.878,74.614-9.033,80.672a12.408,12.408,0,0,0,13.757.16c13.6-8.84,15.061-10.379,19.394-10.379,10.155,0,18.385,13.8,18.385,30.811s-8.23,30.8-18.385,30.8c-4.344,0-5.79-1.534-19.493-10.442a12.425,12.425,0,0,0-13.757.16c-8.773,6.007,6.8,75.336,9.115,85.477-10.3,2.516-73.1,17.874-79.082,9.139a12.38,12.38,0,0,1-.165-13.751c2.752-5.5,10.453-13.336,10.453-19.471,0-10.15-13.808-18.371-30.829-18.371s-30.84,8.221-30.84,18.371c0,6.123,7.64,13.894,10.383,19.371a12.359,12.359,0,0,1-.16,13.746c-6.3,9.195-78.43-8.459-80.788-9.034" transform="translate(1 0.232)" style="fill:none;stroke:#353535;stroke-miterlimit:10;stroke-width:2px"/><path id="_02" data-name="02" d="M414.942,0c2.467,10.337,17.77,74.721,9.055,80.675a12.413,12.413,0,0,1-13.76.164C404.759,78.1,396.982,70.46,390.856,70.46c-10.151,0-18.391,13.8-18.391,30.805s8.24,30.806,18.391,30.806c6.143,0,13.972-7.685,19.486-10.437a12.4,12.4,0,0,1,13.758.16c8.734,5.974-6.632,75.127-9.19,85.47h0c-.5.13-82.926,18.413-89.338,9.052a12.4,12.4,0,0,1-.16-13.747c8.846-13.59,10.389-15.042,10.389-19.374,0-10.146-13.808-18.368-30.835-18.368S274.13,173.049,274.13,183.2c0,4.332,1.535,5.784,10.444,19.475a12.361,12.361,0,0,1-.153,13.744c-5.968,8.713-73.119-6.648-83.393-9.15h0c-2.316-10.141-17.888-79.47-9.115-85.477a12.425,12.425,0,0,1,13.757-.16c13.7,8.908,15.149,10.442,19.493,10.442,10.155,0,18.385-13.788,18.385-30.8s-8.23-30.811-18.385-30.811c-4.333,0-5.79,1.539-19.394,10.379a12.408,12.408,0,0,1-13.757-.16c-8.845-6.058,6.846-71.2,9.033-80.672" transform="translate(1 0.232)" style="fill:none;stroke:#353535;stroke-miterlimit:10;stroke-width:2px"/><path id="_01-2" data-name="01" d="M0,420.982c1.983.495,77.052,18.4,83.391,9.149a12.361,12.361,0,0,0,.159-13.742C74.643,402.7,73.1,401.247,73.1,396.914c0-10.143,13.8-18.375,30.833-18.375s30.834,8.232,30.834,18.375c0,4.333-1.533,5.783-10.381,19.37a12.382,12.382,0,0,0,.16,13.751c5.97,8.726,68.179-6.522,78.583-9.063h0s16.434-89.813,7.061-96.235a12.418,12.418,0,0,0-13.762-.154c-13.7,8.908-15.149,10.443-19.486,10.443-10.162,0-18.387-13.8-18.387-30.812S166.78,273.4,176.942,273.4c4.326,0,5.788,1.54,19.385,10.378a12.394,12.394,0,0,0,13.756-.16c8.774-5.988-6.588-66.114-9.055-76.357-10.3,2.516-73.1,17.874-79.082,9.139a12.38,12.38,0,0,1-.165-13.751c2.752-5.5,10.453-13.336,10.453-19.471,0-10.15-13.808-18.371-30.829-18.371s-30.84,8.221-30.84,18.371c0,6.123,7.64,13.894,10.383,19.371a12.359,12.359,0,0,1-.16,13.746c-6.3,9.195-78.43-8.459-80.788-9.034v.038" transform="translate(1 0.232)" style="fill:none;stroke:#353535;stroke-miterlimit:10;stroke-width:2px"/><path id="_03-2" data-name="03" d="M609.416,207.264s-74.34,18.36-80.715,9.041a12.356,12.356,0,0,1-.164-13.742c8.846-13.588,10.389-15.048,10.389-19.371,0-10.146-13.814-18.374-30.839-18.374s-30.831,8.228-30.831,18.374c0,4.33,1.539,5.783,10.448,19.469a12.371,12.371,0,0,1-.164,13.75c-6.032,8.813-63.272-6.979-72.63-9.147-2.524,10.348-17.892,70.869-9.168,76.837a12.421,12.421,0,0,0,13.76.16c13.7-8.907,15.151-10.441,19.486-10.441,10.156,0,18.389,13.784,18.389,30.8s-8.233,30.813-18.389,30.813c-4.328,0-5.787-1.537-19.383-10.38a12.42,12.42,0,0,0-13.76.159c-9.334,6.386,10.944,94.624,11.217,95.74,10.345-2.467,66.167-17.755,72.125-9.047a12.382,12.382,0,0,1,.164,13.747c-2.741,5.473-10.387,13.244-10.387,19.365,0,10.144,13.806,18.376,30.831,18.376s30.831-8.232,30.831-18.376c0-6.139-7.691-13.96-10.446-19.47a12.373,12.373,0,0,1,.16-13.746c5.978-8.727,68.725,6.628,79.076,9.181" transform="translate(1 0.232)" style="fill:none;stroke:#353535;stroke-miterlimit:10;stroke-width:2px"/><path id="_01-3" data-name="01" d="M0,420.982c1.983.495,77.052,18.4,83.391,9.149a12.361,12.361,0,0,0,.159-13.742C74.643,402.7,73.1,401.247,73.1,396.914c0-10.143,13.8-18.375,30.833-18.375s30.834,8.232,30.834,18.375c0,4.333-1.533,5.783-10.381,19.37a12.382,12.382,0,0,0,.16,13.751c5.97,8.726,68.179-6.522,78.583-9.063-2.469,10.243-19.989,59.6-11.212,65.588a12.39,12.39,0,0,0,13.753.16c13.6-8.839,15.061-10.379,19.387-10.379,10.162,0,18.387,13.8,18.387,30.812s-8.225,30.811-18.387,30.811c-4.337,0-5.787-1.534-19.486-10.442a12.422,12.422,0,0,0-13.764.153c-9.37,6.422,9.164,81.164,9.164,81.164h0c-10.4,2.54-72.655,17.784-78.628,9.059a12.4,12.4,0,0,1-.16-13.753c8.851-13.586,10.383-15.036,10.383-19.369,0-10.144-13.806-18.376-30.835-18.376S70.9,574.632,70.9,584.776c0,4.333,1.543,5.783,10.452,19.475a12.368,12.368,0,0,1-.16,13.743c-6.341,9.253-79.2-8.656-81.19-9.151" transform="translate(1 0.232)" style="fill:none;stroke:#353535;stroke-miterlimit:10;stroke-width:2px"/><path id="_03-3" data-name="03" d="M609.416,420.983c-10.351-2.553-73.1-17.908-79.076-9.181a12.373,12.373,0,0,0-.16,13.746c2.755,5.51,10.446,13.331,10.446,19.47,0,10.144-13.8,18.376-30.831,18.376s-30.831-8.232-30.831-18.376c0-6.121,7.646-13.892,10.387-19.365a12.382,12.382,0,0,0-.164-13.747c-5.958-8.708-61.78,6.58-72.125,9.047h0s16.341,59.66,6.968,66.081a12.42,12.42,0,0,1-13.762.154c-13.7-8.908-15.151-10.443-19.488-10.443-10.16,0-18.387,13.8-18.387,30.812s8.227,30.811,18.387,30.811c4.329,0,5.789-1.539,19.387-10.378a12.392,12.392,0,0,1,13.754.159c8.776,5.989-6.592,70.434-9.061,80.678,10.28-2.5,66.183-17.759,72.13-9.065a12.36,12.36,0,0,1,.16,13.747c-2.743,5.478-10.381,13.24-10.381,19.37,0,10.144,13.8,18.369,30.832,18.369s30.831-8.225,30.831-18.369c0-6.141-7.7-13.975-10.451-19.472a12.378,12.378,0,0,1,.166-13.749c6.036-8.82,71.254,6.838,81.269,9.119" transform="translate(1 0.232)" style="fill:none;stroke:#353535;stroke-miterlimit:10;stroke-width:2px"/><path id="_03-4" data-name="03" d="M414.86,608.827c2.469-10.244,17.837-74.689,9.061-80.678a12.392,12.392,0,0,0-13.754-.159c-13.6,8.839-15.058,10.378-19.387,10.378-10.16,0-18.387-13.8-18.387-30.811s8.227-30.812,18.387-30.812c4.337,0,5.789,1.535,19.488,10.443a12.42,12.42,0,0,0,13.762-.154c9.373-6.421-6.968-66.081-6.968-66.081-9.549,2.179-83.8,17.221-89.385,9.077a12.38,12.38,0,0,1-.16-13.739c2.746-5.485,10.39-13.248,10.39-19.379,0-10.143-13.805-18.364-30.84-18.364s-30.825,8.221-30.825,18.364c0,6.143,7.693,13.969,10.44,19.474a12.375,12.375,0,0,1-.156,13.748c-5.991,8.754-73.148-6.673-83.4-9.162-2.469,10.243-19.989,59.6-11.212,65.588a12.39,12.39,0,0,0,13.753.16c13.6-8.839,15.061-10.379,19.387-10.379,10.162,0,18.387,13.8,18.387,30.812s-8.225,30.811-18.387,30.811c-4.337,0-5.787-1.534-19.486-10.442a12.422,12.422,0,0,0-13.764.153c-9.37,6.422,9.164,81.164,9.164,81.164" transform="translate(1 0.232)" style="fill:none;stroke:#353535;stroke-miterlimit:10;stroke-width:2px"/><path id="_03-5" data-name="03" d="M200.971,608.839c10.263-2.5,76.957-17.747,82.9-9.057a12.373,12.373,0,0,1,.165,13.747c-2.744,5.477-10.386,13.247-10.386,19.375,0,10.146,13.8,18.367,30.836,18.367s30.825-8.221,30.825-18.367c0-6.139-7.695-13.978-10.449-19.476a12.4,12.4,0,0,1,.164-13.75c5.994-8.738,79.443,6.64,89.83,9.149,2.469-10.244,17.837-74.689,9.061-80.678a12.392,12.392,0,0,0-13.754-.159c-13.6,8.839-15.058,10.378-19.387,10.378-10.16,0-18.387-13.8-18.387-30.811s8.227-30.812,18.387-30.812c4.337,0,5.789,1.535,19.488,10.443a12.42,12.42,0,0,0,13.762-.154c9.373-6.421-6.968-66.081-6.968-66.081-9.549,2.179-83.8,17.221-89.385,9.077a12.38,12.38,0,0,1-.16-13.739c2.746-5.485,10.39-13.248,10.39-19.379,0-10.143-13.805-18.364-30.84-18.364s-30.825,8.221-30.825,18.364c0,6.143,7.693,13.969,10.44,19.474a12.375,12.375,0,0,1-.156,13.748c-5.991,8.754-73.148-6.673-83.4-9.162-2.469,10.243-19.989,59.6-11.212,65.588a12.39,12.39,0,0,0,13.753.16c13.6-8.839,15.061-10.379,19.387-10.379,10.162,0,18.387,13.8,18.387,30.812s-8.225,30.811-18.387,30.811c-4.337,0-5.787-1.534-19.486-10.442a12.422,12.422,0,0,0-13.764.153C182.437,534.1,200.971,608.839,200.971,608.839Z" transform="translate(1 0.232)" style="fill:none;stroke:#353535;stroke-miterlimit:10;stroke-width:2px"/><path id="_03-6" data-name="03" d="M203.129,420.972s16.434-89.813,7.061-96.235a12.418,12.418,0,0,0-13.762-.154c-13.7,8.908-15.149,10.443-19.486,10.443-10.162,0-18.387-13.8-18.387-30.812S166.78,273.4,176.942,273.4c4.326,0,5.788,1.54,19.385,10.378a12.394,12.394,0,0,0,13.756-.16c8.774-5.988-6.588-66.114-9.055-76.357,10.274,2.5,77.425,17.863,83.393,9.15a12.361,12.361,0,0,0,.153-13.744c-8.909-13.691-10.444-15.143-10.444-19.475,0-10.146,13.809-18.368,30.836-18.368S335.8,173.049,335.8,183.2c0,4.332-1.543,5.784-10.389,19.374a12.4,12.4,0,0,0,.16,13.747c6.412,9.361,88.837-8.922,89.338-9.052-2.524,10.348-17.892,70.869-9.168,76.837a12.421,12.421,0,0,0,13.76.16c13.7-8.907,15.151-10.441,19.486-10.441,10.156,0,18.389,13.784,18.389,30.8s-8.233,30.813-18.389,30.813c-4.328,0-5.787-1.537-19.383-10.38a12.42,12.42,0,0,0-13.76.159c-9.334,6.386,10.944,94.624,11.217,95.74-9.549,2.179-83.8,17.221-89.385,9.077a12.38,12.38,0,0,1-.16-13.739c2.746-5.485,10.39-13.248,10.39-19.379,0-10.143-13.805-18.364-30.84-18.364s-30.825,8.221-30.825,18.364c0,6.143,7.693,13.969,10.44,19.474a12.375,12.375,0,0,1-.156,13.748C280.535,438.888,213.378,423.461,203.129,420.972Z" transform="translate(1 0.232)" style="fill:none;stroke:#353535;stroke-miterlimit:10;stroke-width:2px"/><path id="_03-7" data-name="03" d="M200.971,608.839c10.263-2.5,76.957-17.747,82.9-9.057a12.373,12.373,0,0,1,.165,13.747c-2.744,5.477-10.386,13.247-10.386,19.375,0,10.146,13.8,18.367,30.836,18.367s30.825-8.221,30.825-18.367c0-6.139-7.695-13.978-10.449-19.476a12.4,12.4,0,0,1,.164-13.75c5.994-8.738,79.443,6.64,89.83,9.149" transform="translate(1 0.232)" style="fill:none;stroke:#353535;stroke-miterlimit:10;stroke-width:2px"/><path id="_03-8" data-name="03" d="M609.416,608.782v0c-10.015-2.281-75.233-17.939-81.269-9.119a12.378,12.378,0,0,0-.166,13.749c2.754,5.5,10.451,13.331,10.451,19.472,0,10.144-13.8,18.369-30.831,18.369s-30.832-8.225-30.832-18.369c0-6.13,7.638-13.892,10.381-19.37a12.36,12.36,0,0,0-.16-13.747c-5.947-8.694-61.85,6.568-72.13,9.065h0c-2.314,10.141-17.906,75.156-9.133,81.164a12.429,12.429,0,0,0,13.757.16c13.7-8.909,15.151-10.442,19.492-10.442,10.156,0,18.388,13.786,18.388,30.8s-8.232,30.812-18.388,30.812c-4.332,0-5.789-1.54-19.391-10.379a12.412,12.412,0,0,0-13.758.16c-8.846,6.058,6.844,71.2,9.032,80.676" transform="translate(1 0.232)" style="fill:none;stroke:#353535;stroke-miterlimit:10;stroke-width:2px"/><path id="_01-4" data-name="01" d="M200.967,811.8c2.55-10.406,17.792-74.7,9.063-80.672a12.4,12.4,0,0,0-13.757-.164c-13.6,8.839-15.05,10.379-19.387,10.379-10.154,0-18.387-13.8-18.387-30.8s8.233-30.812,18.387-30.812c4.337,0,5.791,1.533,19.49,10.442a12.4,12.4,0,0,0,13.76-.16c8.719-5.97-6.641-70.814-9.165-81.166h0c-10.4,2.54-72.655,17.784-78.628,9.059a12.4,12.4,0,0,1-.16-13.753c8.851-13.586,10.383-15.036,10.383-19.369,0-10.144-13.806-18.376-30.835-18.376S70.9,574.632,70.9,584.776c0,4.333,1.543,5.783,10.452,19.475a12.368,12.368,0,0,1-.16,13.743c-6.341,9.253-79.2-8.656-81.19-9.151" transform="translate(1 0.232)" style="fill:none;stroke:#353535;stroke-miterlimit:10;stroke-width:2px"/><path id="_01-5" data-name="01" d="M200.967,811.8c2.55-10.406,17.792-74.7,9.063-80.672a12.4,12.4,0,0,0-13.757-.164c-13.6,8.839-15.05,10.379-19.387,10.379-10.154,0-18.387-13.8-18.387-30.8s8.233-30.812,18.387-30.812c4.337,0,5.791,1.533,19.49,10.442a12.4,12.4,0,0,0,13.76-.16c8.719-5.97-6.641-70.814-9.165-81.166,10.263-2.5,76.957-17.747,82.9-9.057a12.373,12.373,0,0,1,.165,13.747c-2.744,5.477-10.386,13.247-10.386,19.375,0,10.146,13.8,18.367,30.836,18.367s30.825-8.221,30.825-18.367c0-6.139-7.695-13.978-10.449-19.476a12.4,12.4,0,0,1,.164-13.75c5.994-8.738,79.443,6.64,89.83,9.149-2.314,10.141-17.906,75.156-9.133,81.164a12.429,12.429,0,0,0,13.757.16c13.7-8.909,15.151-10.442,19.492-10.442,10.156,0,18.388,13.786,18.388,30.8s-8.232,30.812-18.388,30.812c-4.332,0-5.789-1.54-19.391-10.379a12.412,12.412,0,0,0-13.758.16c-8.846,6.058,6.844,71.2,9.032,80.676" transform="translate(1 0.232)" style="fill:none;stroke:#353535;stroke-miterlimit:10;stroke-width:2px"/></svg>
+                </div>
+
+                <!-- <img src="_img/grille.png" class="grille ie10" data-grid="_img/contour05.png"/> -->
+                
+            </div>
+            <div class="blocleft" id="blocpieces">
+                <div id="gui" class="gui">
+                    <img src="" data-src1="_img/logo_dbs.png" id="logo" class="logo"/>
+                    <div class="bloctimer"><div class="timer"><span id="curtime">00:00</span></div></div>
+                    <ul>
+                        <li class="level1 levelb" id="level1"><img src="_img/bg_intro_blk.png"/></li><!--
+                     --><li class="level2 levelb" id="level2"><img src="_img/bg_intro_blk.png"/></li><!--
+                     --><li class="level3 levelb" id="level3"><img src="_img/bg_intro_blk.png"/></li><!--
+                     --><li class="level4 levelb" id="level4"><img src="_img/bg_intro_blk.png"/></li><!--
+                     --><li class="level5 levelb" id="level5"><img src="_img/bg_intro_blk.png"/></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a unselectable="on" id="piece01" class="piece defer piece01" draggable="true" style="z-index: 1"><img src="_img/0/1-1_blk.png" data-src="1-1.png"  /></a> 
+            <a unselectable="on" id="piece02" class="piece defer piece02" draggable="true" style="z-index: 2"><img src="_img/0/1-2_blk.png" data-src="1-2.png"  /></a> 
+            <a unselectable="on" id="piece03" class="piece defer piece03" draggable="true" style="z-index: 3"><img src="_img/0/1-3_blk.png" data-src="1-3.png"  /></a> 
+            <a unselectable="on" id="piece04" class="piece defer piece04" draggable="true" style="z-index: 4"><img src="_img/0/2-1_blk.png" data-src="2-1.png"  /></a> 
+            <a unselectable="on" id="piece05" class="piece defer piece05" draggable="true" style="z-index: 5"><img src="_img/0/2-2_blk.png" data-src="2-2.png"  /></a> 
+            <a unselectable="on" id="piece06" class="piece defer piece06" draggable="true" style="z-index: 6"><img src="_img/0/2-3_blk.png" data-src="2-3.png"  /></a> 
+            <a unselectable="on" id="piece07" class="piece defer piece07" draggable="true" style="z-index: 7"><img src="_img/0/3-1_blk.png" data-src="3-1.png"  /></a> 
+            <a unselectable="on" id="piece08" class="piece defer piece08" draggable="true" style="z-index: 8"><img src="_img/0/3-2_blk.png" data-src="3-2.png"  /></a> 
+            <a unselectable="on" id="piece09" class="piece defer piece09" draggable="true" style="z-index: 9"><img src="_img/0/3-3_blk.png" data-src="3-3.png"  /></a> 
+            <a unselectable="on" id="piece10" class="piece defer piece10" draggable="true" style="z-index: 10"><img src="_img/0/4-1_blk.png" data-src="4-1.png" /></a> 
+            <a unselectable="on" id="piece11" class="piece defer piece11" draggable="true" style="z-index: 11"><img src="_img/0/4-2_blk.png" data-src="4-2.png" /></a> 
+            <a unselectable="on" id="piece12" class="piece defer piece12" draggable="true" style="z-index: 12"><img src="_img/0/4-3_blk.png" data-src="4-3.png" /></a>
+            
+        </div>
+
+        <!-- ecran passage puzzle + -->
+        <div id="nextlevel" class="contener nextlevel nodisplay">
+            <div class="popup" id="popup1">
+                <p>WELL DONE !</p>
+                <p id="scoretime"></p>
+                <a href="#continue" id="continue">CONTINUE</a>
+            </div>
+        </div>
+       
+        <!-- ecran finale -->
+        <div id="endgame" class="contener nextlevel nodisplay">
+            <div class="popup" id="popup2">
+                <p>YOU FINISH THE GAME !</p>
+                <p>Total time:<br/><span id="scoretimef"></span></p>
+                <a href="#replay" id="replay">PLAY AGAIN ?</a>
+            </div>
+        </div>
+
+        <!-- barre chargement -->
+        <div id="levels" class="levels invisible nodisplay"><div id="level" class="level"></div></div>
+
+        <!-- Preload des images puzzle vide + gui pour CSS -->
+        <div class="nodisplay">
+            <img src="" data-src1="_img/0/1-1.png"/>
+            <img src="" data-src1="_img/0/1-2.png"/>
+            <img src="" data-src1="_img/0/1-3.png"/>
+            <img src="" data-src1="_img/0/2-1.png"/>
+            <img src="" data-src1="_img/0/2-2.png"/>
+            <img src="" data-src1="_img/0/2-3.png"/>
+            <img src="" data-src1="_img/0/3-1.png"/>
+            <img src="" data-src1="_img/0/3-2.png"/>
+            <img src="" data-src1="_img/0/3-3.png"/>
+            <img src="" data-src1="_img/0/4-1.png"/>
+            <img src="" data-src1="_img/0/4-2.png"/>
+            <img src="" data-src1="_img/0/4-3.png"/>
+
+            <img src="" data-src1="_img/bg_ui.jpg"/>
+
+            <img src="" data-src1="_img/sprt_balls.png"/>
+
+            <img src="" data-src1="_img/timer.png"/>
+        </div>
+        
+        <script type="text/javascript">
+            var ie8 = false;
+            var ie9 = false;
+            var ie10 = false
+            /*@cc_on
+                if (/^10/.test(@_jscript_version)) {
+                    ie10 = true;
+                }
+            @*/
+        </script>
+        <!--[if IE 8]> <script> ie8 = true </script><![endif]-->
+        <!--[if IE 9]> <script> ie9 = true </script><![endif]-->
+
+        <script>
+            
+            (function(){
+
+
+                var _i = 0, // a remettre à zero pour chaque rechragement des js/css
+                _m, 
+                _curpiece, // id piece selectionnée
+                _curpImage, // inutile, a effacer  
+                _isTouch, 
+                _dropTouchcoord = {}, 
+                _curtargetTouch = '', 
+                _curPuzzle = 1,  // level puzzle
+                _maxPuzzle = 5, // nb de puzzle à compléter
+                _repPiece = '_img/'+_curPuzzle+'/', // rep des pieces de puzzle à charger
+                _winH = 0, // hauteur window en mode landscape 
+                _offsetDragX  = 0, // desktop : position x de la souris dans l'element à draguer
+                _offsetDragY  = 0, // idem y
+                _started = false,
+                _timer, // interval Timer
+                _curTime = 0, // nb secondes (pour un puzzle)
+                _totTime = 0, // nb secondes duree jeux (affichage finale)
+                _stringTime = '00:00', // time elapsed for display in popup
+                _scoref = 12, // nb pieces à déposer
+                _score = 0, // nb pieces déposées
+                _dropOK = false, // controler les drop echoués
+                _ieVers = 0,
+
+                deferjs1 = [
+                '_css/dbspuzzle_vanilla.css',
+                '_js/manageEvents14.js',
+                ],
+                
+                progressLoadImg = function(cur, tot){
+                    var nodelevel =  _m.$dc('level');
+                    if(_m.hasAclass('levels','invisible')) _m.removeAclass('levels','invisible'); 
+                    var bounds = _m.$dc('levels').getBoundingClientRect();
+                    var wdth = (bounds.width/tot)*cur;
+                    nodelevel.style.width = wdth+"px";
+                    if(Math.floor(parseInt(nodelevel.style.width)) == Math.floor(bounds.width)) {
+                        _m.addAclass('levels','invisible');
+                    } 
+                }
+
+                deferImages = function(callback, dt, rep, progress){
+                    var totImgDefer = 0;
+                    var imgDefer = document.getElementsByTagName('img');
+                    var nbDefer = [];
+                    // dt == data-srcslide
+                    for (var i=0; i<imgDefer.length; i++) {
+                        // if (m.hasAclass(imgDefer[i],'nomobile') && ismobile == 1 && ipad == 0) continue;
+                        if(imgDefer[i].getAttribute(dt)){
+                            nbDefer.push(imgDefer[i]);
+                        }
+                    }
+                    for (var i = 0; i<nbDefer.length; i++) {
+                        try{
+                            nbDefer[i].setAttribute('src', rep+nbDefer[i].getAttribute(dt));
+                        }catch(err){
+                            continue;
+                        }
+
+                        if (nbDefer[i].addEventListener != undefined){
+                            nbDefer[i].onload = function(e){
+                                if(progress) progress(totImgDefer,nbDefer.length-1);
+                                if(totImgDefer >= nbDefer.length-1) {
+                                    callback();
+                                }
+                                totImgDefer++;
+                            };
+                        }else if (nbDefer[i].readyState){ // IE8
+                            nbDefer[i].onreadystatechange = function(){
+                                if(nbDefer[i].readyState == 'loaded' || nbDefer[i].readyState == 'complete') {
+                                    if(progress) progress(totImgDefer,nbDefer.length-1);
+                                    if(totImgDefer >= nbDefer.length-1) {
+                                        callback();
+                                    }
+                                    totImgDefer++;
+                                }
+                            };
+                        }
+                    
+                    };
+                },
+
+                resizePiece = function(){
+                    var nodepieces = document.querySelectorAll('.piece');
+                    nodepieces.forEach(function(el,n,l){
+                        // console.log(el,n);
+                        var w = el.children[0].getBoundingClientRect();
+                        // console.log(w);
+                    });
+                },
+
+                // downPiece = function(e,c,t){
+                //     c.setAttribute('style','z-index:10000');
+                //     return false;
+                // },
+
+                testScore = function(){
+                    _score++;
+                    if(_score == _scoref){
+                        _curPuzzle++;
+                        _m.addAclass('grille','nodisplay');
+                        if(_curPuzzle <= _maxPuzzle){
+                            // next level
+                            _m.$dc('scoretime').innerHTML = _stringTime;
+                            _m.removeAclass('nextlevel','nodisplay');
+                            setTimeout(function(){
+                                _m.addAclass('popup1','anime');
+                            },100);
+                            stopTimer();
+                            _score=0;
+                        }else{
+                            // end game
+                            _score = 0;
+                            _curPuzzle = 1,  // level puzzle
+                            _repPiece = '_img/' + _curPuzzle + '/', 
+                            _m.removeAclass('endgame','nodisplay');
+                            setTimeout(function(){
+                                _m.addAclass('popup2','anime');
+                            },100);
+                            var nodelevels = document.querySelectorAll('.levelb');
+                            nodelevels.forEach(function(el,i,arr){
+                                _m.removeAclass(el,'played');
+                            });
+                            _m.$dc('scoretimef').innerHTML = timeInMnSec(_totTime);
+                            _totTime = 0;
+                            stopTimer();
+                        }
+                    }
+
+                },
+
+                dragstartPiece = function(e,c,t){
+                    _dropOK = false;
+                    var img = e.currentTarget.querySelector('img');
+                    // console.log(img);
+                    // e.dataTransfer.setData('text/plain',null);
+                    var bounds = img.getBoundingClientRect();
+                    var imgdrag = new Image();
+                    imgdrag.style.width = bounds.width+"px";
+                    imgdrag.style.height = bounds.height+"px";
+                    imgdrag.src = img.src;
+                    console.log(imgdrag.width);
+                    console.log(bounds.width);
+                    imgdrag.style='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='+img.src+')';
+                    imgdrag.style='filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);';
+                    e.dataTransfer.setDragImage(imgdrag, (bounds.width/2), (bounds.height/2));
+                    _curpiece = e.currentTarget.id;
+                    setTimeout(function(){ _m.addAclass(_curpiece, 'nodisplay')}, 0);
+                    // setTimeout(function(){ _m.addAclass(_curpiece, 'nodisplay')}, 0);
+                    _offsetDragX = e.clientX-bounds.left;
+                    _offsetDragY = e.clientY-bounds.top;
+                    // change le pointer-events de toutes les autres pieces (permet de draguer dessus)
+                    var nodespieces = document.querySelectorAll('.piece');
+                    nodespieces.forEach(function(el,i,arr){
+                        if(_curpiece != el.getAttribute('id')) _m.addAclass(el,'nopointer');
+                    });
+                    // _curpImage = e.currentTarget.children[0].getAttribute('data-src');
+                    // c.setAttribute('style','z-index:10000');
+                },
+
+                dragPiece = function(e,c,t){
+                    // console.log('drag');
+                },
+
+                dropPiece = function(e,c,t){
+                    _dropOK = true;
+                    var n1 = _curpiece.substr(5);
+                    var id = e.currentTarget.id;
+                    var n2 = id.substr(5);
+                    if(n1 == n2){
+                        //e.currentTarget.setAttribute('src',_curpImage);
+                        _m.addAclass(e.currentTarget.querySelector('img'),'nodisplay');
+                        _m.addAclass(_curpiece,'nodisplay');
+                        testScore();
+                    }else{
+                        _m.removeAclass(_curpiece,'nodisplay');
+                    }
+                    _m.removeAclass(e.currentTarget,'over');
+                    
+                },
+
+                dropOut = function(e,c,t){
+                    console.log('dropout');
+                    _dropOK = true;
+                    var id = e.currentTarget.getAttribute('id');
+                    var bounds = _m.$dc(_curpiece).getBoundingClientRect();
+                    console.log('e.clientX ',e.clientX);
+                    console.log('_offsetDragX ', _offsetDragX);
+                    // change les z-index de la pile
+                    var nodespiece = document.querySelectorAll('.piece');
+                    var oldzindex = _m.$dc(_curpiece).style.zIndex;
+                    nodespiece.forEach(function(el,i,arr){
+                        if(parseInt(el.style.zIndex) >= parseInt(oldzindex)) {
+                            el.style.zIndex = el.style.zIndex-1;
+                        }
+                    });
+                    _m.$dc(_curpiece).style.zIndex = nodespiece.length;
+                    _m.removeAclass(_curpiece,'nodisplay');
+                    _m.$dc(_curpiece).style.left = e.clientX-_offsetDragX+"px";  
+                    _m.$dc(_curpiece).style.top  = e.clientY-_offsetDragY+"px";
+                    return false;
+                },
+
+                dragoverPiece = function(e,c,t){
+                    _m.addAclass(e.currentTarget,'over');
+                },
+                
+                dragleavePiece = function(e,c,t){
+                    _m.removeAclass(e.currentTarget,'over');
+                },
+
+                dragOut = function(e,c,t){
+                    console.log('dragOut');
+                    return false;
+                },
+
+                // overMouse = function(e,c,t){
+                //     console.log('overMouse');
+                //     return true;
+                // },
+
+                dragEnd = function(e,c,t){
+                    console.log('dragEnd');
+                    if(!_dropOK) _m.removeAclass(_curpiece,'nodisplay');
+                    var nodespieces = document.querySelectorAll('.piece');
+                    nodespieces.forEach(function(el,i,arr){
+                        if(_m.hasAclass(el,'nopointer')) _m.removeAclass(el,'nopointer');
+                    });
+                },
+
+
+                startTouch = function(e,c,t){
+                    _curpiece = e.currentTarget.id;
+                    // _m.$dc(_curpiece).setAttribute('style','z-index:10000');
+                    _m.listenerAdd(_curpiece,'touchmove', moveTouch, true);
+                    // var event = new TouchEvent('touchstart');
+                    // console.log(_m.$dc('zonedrop01').dispatchEvent(event));
+                    return false;
+                },
+
+                endTouch = function(e,c,t){
+                    var n1 = _curpiece.substr(5);
+                    // var id = e.currentTarget.getAttribute('id');
+                    // console.log(id);
+                    var n2 = _curtargetTouch.substr(5);
+                    if(n1==n2){
+                        //e.currentTarget.setAttribute('src',_curpImage);
+                        _m.removeAclass(_curtargetTouch,'over');
+                        _m.addAclass(_m.$dc(_curtargetTouch).children[0],'nodisplay');
+                        _m.addAclass(_curpiece,'nodisplay');
+                    }
+                    _m.listenerRemove(_curpiece, 'touchmove', true);
+                    return false;
+                },
+
+                moveTouch = function(e,c,t){
+                    // touch
+                    var x = 0, y = 0, x2 = 0, y2 = 0;
+                    if(e.targetTouches) {
+                        x = e.targetTouches[0].pageX;
+                        y = e.targetTouches[0].pageY;
+                    }
+                    // console.log('x ', x, 'y ', y);
+                    x2=x-e.currentTarget.getBoundingClientRect().width/2;
+                    y2=y-e.currentTarget.getBoundingClientRect().height/2;
+                    _m.$dc(_curpiece).style.left = x2+"px";
+                    _m.$dc(_curpiece).style.top = y2+"px";
+
+                    // console.log(x,y);
+                    for (var k in _dropTouchcoord){
+                        // console.log(k,_dropTouchcoord[k]);
+                        // console.log(_dropTouchcoord[k].x);
+                        if(x > _dropTouchcoord[k].x && x < (_dropTouchcoord[k].x +_dropTouchcoord[k].w) && y > _dropTouchcoord[k].y && y <  (_dropTouchcoord[k].y + _dropTouchcoord[k].h)){
+                            _m.addAclass(k,'over');
+                            _curtargetTouch = k;
+                            var nodesdropp = document.querySelectorAll('.droppable');
+                            nodesdropp.forEach(function(el,n,l){
+                                if(el.parentNode.id != k) _m.removeAclass(el.parentNode,'over');
+                            });
+                        }
+
+                    }
+                },
+
+                is_touch_device = function() {
+                    return (('ontouchstart' in window)
+                    || (navigator.MaxTouchPoints > 0)
+                    || (navigator.msMaxTouchPoints > 0));
+                },
+
+                whenAllPiecesLoaded = function(){
+                    var nodesdropp = document.querySelectorAll('.imgdroppable');
+                    // mise en tableau des dimensions et coordonnées des cible de puzzle pour test hit
+                    nodesdropp.forEach(function(el,n,l){
+                        // console.log(el.parentNode.id);
+                        var Bounds = el.getBoundingClientRect();
+                        // console.log(Bounds);
+                        _dropTouchcoord[el.parentNode.id] = {'x':Bounds.left, 'y':Bounds.top, 'w':Bounds.width, 'h':Bounds.height};
+                        // console.log(w);
+                    })
+                    
+                    var bounds1 = _m.$dc('blocpieces').getBoundingClientRect();
+                    var bounds2 = _m.$dc('gui').getBoundingClientRect();
+                    var nodespieces = document.querySelectorAll('.piece');
+                    nodespieces.forEach(function(el,i,arr){
+                        var id = el.getAttribute('id');
+                        var ii = i < 9 ? '0'+(i+1): i+1;
+                        var zdrop = 'zdrop'+ii;
+                        // mise à la taille des pieces de puzzle (== taille des cibles)
+                        _m.$dc(id).children[0].style.width  =  _dropTouchcoord[zdrop]['w']+"px";
+                        _m.$dc(id).children[0].style.height =  _dropTouchcoord[zdrop]['h']+"px";
+
+                        // position aléatoire des pieces
+                        var x1 = bounds1.left
+                        var x2 = bounds1.right - (_dropTouchcoord[zdrop]['w']+10);
+                        var y1 = bounds2.height;
+                        var y2 = bounds1.height - (_dropTouchcoord[zdrop]['h']+10);
+                        var x = Math.floor(Math.random()*(x2-x1+1)+x1); 
+                        var y = Math.floor(Math.random()*(y2-y1+1)+y1);  
+                        _m.$dc(id).style.left = x+"px";
+                        _m.$dc(id).style.top  = y+"px";
+                    });
+                    // affiche niveau
+                    _m.addAclass('level'+_curPuzzle,'played');
+                    return false;
+                },
+
+                clicPlay = function(e,c,t){
+                    if(_started) return false;
+                    _started = true;
+                    _m.removeAclass('play','anime');
+                    // resizePiece();
+                    var st1;
+                    deferImages(function(){
+                        st1 = setTimeout(function(){
+                            _m.removeAclass('contener','nodisplay');
+                            console.log('images deferred');
+                            if(!_isTouch){
+                                // _m.listenClass('piece', 'mousedown', downPiece, false);
+                                _m.listenClass('piece', 'dragstart', dragstartPiece, false); // false
+                                _m.listenClass('piece', 'dragend', dragEnd, false);
+                                // _m.listenClass('piece', 'drop', dropPiece, true);
+                                
+                                _m.listenClass('droppable', 'drop', dropPiece, true);
+                                _m.listenClass('droppable', 'dragover', dragoverPiece, true);
+                                _m.listenClass('droppable', 'dragleave', dragleavePiece, true);
+
+                                _m.listenerAdd('blocpieces','drop', dropOut, true);
+                                // _m.listenerAdd('bgpuzzle','drop', dragOut, false);
+                                _m.listenerAdd('blocpieces','dragover', dragOut, true);
+                            }else{
+
+                                _m.listenClass('piece', 'touchstart', startTouch, true);
+                                _m.listenClass('piece', 'touchend', endTouch, true);
+                                // _m.listenClass('droppable', 'mouseenter', overMouse, true);
+                                // _m.listenerAdd('zonedrop01', 'touchstart', overMouse, false);
+                            }
+                            
+                            whenAllPiecesLoaded();
+                            
+                            // defer image bg puzzle
+                            deferImages(function(){
+                                _m.addAclass('intro','nodisplay');
+                                startTimer();
+                                clearTimeout(st1);
+                                st1 = null;
+                                reSize();
+                            },'data-bg','');
+                            
+                        },200)
+                    }, 'data-src', _repPiece, progressLoadImg);
+                    return false;
+                },
+
+                nextLevel = function(e,c,t){
+                    _repPiece = '_img/'+_curPuzzle+'/';
+                    var nodesDrop = document.querySelectorAll('.imgdroppable');
+                    nodesDrop.forEach(function(el,i,arr){
+                        _m.removeAclass(el,'nodisplay');
+                    });
+                    var nodesPiece = document.querySelectorAll('.piece');
+                    nodesPiece.forEach(function(el,i,arr){
+                        _m.removeAclass(el,'nodisplay');
+                    });
+                    _m.$dc('bgpuzzle').setAttribute('data-bg','_img/bg0'+_curPuzzle+'.jpg');
+                    deferImages(function(){
+                        console.log('images deferred 2');
+                        whenAllPiecesLoaded();
+                        deferImages(function(){
+                            if(_m.hasAclass('popup1','anime')) _m.removeAclass('popup1','anime');
+                            setTimeout(function(){
+                                if(!_m.hasAclass('nextlevel','nodisplay')) _m.addAclass('nextlevel','nodisplay');
+                            },250);
+                            if(!_m.hasAclass('endgame','nodisplay')) _m.addAclass('endgame','nodisplay');
+                            _m.removeAclass('grille','nodisplay');
+                            startTimer();
+                        },'data-bg','');
+                    },'data-src', _repPiece, progressLoadImg);
+                    return false;
+                },
+
+                startTimer = function(){
+                    _curTime = 0;
+                    _timer = setInterval(function(){
+                        _curTime++;
+                        _totTime++;
+                        _m.$dc('curtime').innerHTML = timeInMnSec(_curTime); 
+                    },1000);
+                },
+
+                stopTimer = function(){
+                    clearInterval(_timer);
+                    _m.$dc('curtime').innerHTML = '00:00';
+                },
+
+                timeInMnSec = function(t){
+                    var sec = t/60 < 1 ? t : t%60;
+                    var mn = t > 60 ? Math.floor(t/60) : '0';
+                    sec = sec < 10 ? '0'+sec : sec;
+                    mn = mn < 10 ? '0'+mn : mn;
+                    _stringTime = mn +':' + sec;
+                    return _stringTime;
+                },
+
+                initAfter = function(){
+                    _m = manageEvents;
+                    _m.removeAclass('levels','nodisplay');
+                    _m.addAclass('play','anime');
+                    deferImages(function(){
+                        _m.removeAclass('intro','nodisplay');
+                        _m.listenerAdd('play', 'click', clicPlay, true);
+                        _m.listenerAdd('continue','click', nextLevel, true);
+                        _m.listenerAdd('replay','click', nextLevel, true);
+                        var t = setTimeout(function(){
+                            // obligation d'un délai : les transitions et les display:none -> block
+                            _m.addAclass('logo','appear');
+                        },100);
+                    },'data-src1','', progressLoadImg);
+                    
+                    // _m.listenerAdd('board', 'drop', dropPiece, true);
+                    // _m.listenerAdd('board', 'dragover', dragoverPiece, true);
+                },
+
+                reSize = function(){
+                    var bounds = _m.$dc('board').getBoundingClientRect();
+                    _m.$dc('nextlevel').style.left = bounds.width+"px";
+                    _m.$dc('endgame').style.left = bounds.width+"px";
+                },
+
+                downloadJSAtOnload = function(arr, callback) {
+                    // charge JS et CSS
+                    var t = arr.length-1;
+                    if (arr[_i].match('^(.*\.js)')){
+                    var element = document.createElement('script');
+                        element.setAttribute('type','text/javascript');
+                        element.setAttribute('src',arr[_i]);
+                        if (element.addEventListener != undefined){
+                        element.addEventListener('load',function(e){
+                            _i++;
+                            if(_i <= t) downloadJSAtOnload(arr, callback);
+                            if(_i > t) {
+                                callback();
+                            }
+                        });
+                        }else if (element.readyState){ // IE8
+                            element.onreadystatechange = function(){
+                                if(element.readyState == 'loaded' || element.readyState == 'complete') {
+                                    _i++;
+                                if(_i <= t) downloadJSAtOnload(arr, callback);
+                                    if(_i > t) {
+                                        callback();
+                                    }
+                                }
+                            }
+                        }
+                        if(_i <= t) document.body.appendChild(element);
+                    };
+                    // chargement CSS
+                    if (arr[_i].match('^(.*\.css)$')){
+                        // loadStylesheet(deferjs[i]);
+                        if (document.createStyleSheet){
+                            document.createStyleSheet(arr[_i]);
+                        }else {
+                            var stylesheet = document.createElement('link');
+                            stylesheet.href = arr[_i];
+                            stylesheet.rel = 'stylesheet';
+                            stylesheet.type = 'text/css';
+                            document.getElementsByTagName('head')[0].appendChild(stylesheet);
+                        }
+                        _i++;
+                        if(_i <= t) downloadJSAtOnload(arr, callback);
+                        //if(i > t) window.myConsole('CSS chargées');
+                    }
+                },
+
+                DomLoaded = function(){
+                    // if (ie9) deferjs1.push('_js/Points.js');
+                    if(navigator.userAgent.match('/Edge\/18|Edge\/17|Edge\/16')) _ieVers = 16;
+                    if(navigator.userAgent.match('/trident\/7|rv:11')) _ieVers = 11;
+                    if(ie10 || navigator.userAgent.match('/trident\/6|MSIE 10/')) _ieVers = 10;
+                    if(ie9) _ieVers = 9;
+                    if(ie8) _ieVers = 8;
+                    if(_ieVers < 16 && _ieVers > 0) deferjs1.push('_js/foreach.polyfill.js', '_js/foreachnodelist.polyfill.js', '_js/setdragimagepolyfill.js');
+                    if(_ieVers == 16) deferjs1.push('_js/setdragimagepolyfill.js');
+                    _isTouch = is_touch_device();
+                    _winH = window.innerHeight < window.innerWidth ? window.innerHeight : window.innerWidth;
+                    downloadJSAtOnload(deferjs1, initAfter);
+                };
+
+
+                if (window.addEventListener){
+                    window.addEventListener('DOMContentLoaded', function(){DomLoaded()});
+                }else if (window.attachEvent){ // IE8
+                    window.attachEvent('onload', function() { DomLoaded(); });
+                }else{
+                    window.onload = DomLoaded();
+                };
+
+            })();
+
+
+        </script>
+
+    </body>
+
+    </html>

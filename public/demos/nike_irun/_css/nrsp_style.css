@@ -1,0 +1,975 @@
+@charset "utf-8";
+
+
+@font-face {
+    font-family: 'DrukWeb-Medium';
+    src: url('../_fonts/druk/DrukWeb-Medium.eot?#iefix') format('embedded-opentype'),  url('../_fonts/druk/DrukWeb-Medium.woff') format('woff'), url('../_fonts/druk/DrukWeb-Medium.ttf')  format('truetype'), url('../_fonts/druk/DrukWeb-Medium.svg#DrukWeb-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TradeGotfNike';
+    src: url('../_fonts/trade365/TradeGothicforNike365-BdCn.eot?#iefix') format('embedded-opentype'),  url('../_fonts/trade365/TradeGothicforNike365-BdCn.woff') format('woff'), url('../_fonts/trade365/TradeGothicforNike365-BdCn.ttf')  format('truetype'), url('../_fonts/trade365/TradeGothicforNike365-BdCn.svg#TradeGothicforNike365-BdCn') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'TradeGot18';
+    src: url('../_fonts/trade18/TradeGothicLTStd-Cn18.eot?#iefix') format('embedded-opentype'),  url('../_fonts/trade18/TradeGothicLTStd-Cn18.otf')  format('opentype'), url('../_fonts/trade18/TradeGothicLTStd-Cn18.woff') format('woff'), url('../_fonts/trade18/TradeGothicLTStd-Cn18.ttf')  format('truetype'), url('../_fonts/trade18/TradeGothicLTStd-Cn18.svg#TradeGothicLTStd-Cn18') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.nrspcontent{
+    font-size:12pt;
+    background-color: #fff;
+    margin-bottom: 50px;
+}
+
+.nrspcontent .separator{
+    width:100%;
+    height: 10px;
+}
+
+.nrspcontent .sepra{
+    background: #435057;
+}
+
+.nrspcontent .seprb{
+    background: #182a40;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE4MmE0MCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM0JSIgc3RvcC1jb2xvcj0iIzNjN2ZiYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY1JSIgc3RvcC1jb2xvcj0iI2RmODY0MCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmYzQxMTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left, #182a40 0%, #3c7fbc 34%, #df8640 65%, #fc4118 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#182a40), color-stop(34%,#3c7fbc), color-stop(65%,#df8640), color-stop(100%,#fc4118));
+    background: -webkit-linear-gradient(left, #182a40 0%,#3c7fbc 34%,#df8640 65%,#fc4118 100%);
+    background: -o-linear-gradient(left, #182a40 0%,#3c7fbc 34%,#df8640 65%,#fc4118 100%);
+    background: -ms-linear-gradient(left, #182a40 0%,#3c7fbc 34%,#df8640 65%,#fc4118 100%);
+    background: linear-gradient(to right, #182a40 0%,#3c7fbc 34%,#df8640 65%,#fc4118 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#182a40', endColorstr='#fc4118',GradientType=1 );
+}
+
+.nrspcontent h1{
+    margin: 0;
+    padding: 0; 
+    display: block;
+    height: 210px;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    line-height: 210px;
+}
+
+.nrspcontent h1 img{
+    vertical-align: middle;
+}
+
+.nrspcontent .nrsp_bloc1{
+    width:100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.nrspcontent .nrsp_bloc1 video.nbrspvid0{
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 0;
+}
+
+.nrspcontent .nrsp_bloc1 video.nodisplay{
+    display: none;
+}
+
+.nrspcontent .nrsp_bloc1 video.nbrspvid1{
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 0;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    -ms-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+}
+
+.nrspcontent .nrsp_bloc1 video.zindex{
+    z-index:10;
+    opacity:1;
+}
+
+.nrspcontent .nrsp_bloc1 video.nbrspvid2{
+    position: absolute;
+    right: 0;
+    top:0;
+}
+
+.nrspcontent .nrsp_bloc1 .nrspgenres{
+    position: absolute;
+    top: 300px;
+    left: 0;
+    width: 750px;
+    height: 200px;  
+}
+
+.nrspcontent .nrsp_bloc1 .nrspgenres h3{
+    display: block;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 200px;
+    position: absolute;
+    top:0px;
+    margin: 0;
+    padding: 0;
+}
+
+.nrspcontent .nrsp_bloc1 .nrspgenres h3.nrspfemme{
+    left:0;
+    background: #666 url(../_img/nrsp_femme.jpg) center center no-repeat;
+}
+
+.nrspcontent .nrsp_bloc1 .nrspgenres h3.nrsphomme{
+    left:50%;
+    background: #666 url(../_img/nrsp_homme.jpg) center center no-repeat;
+}
+
+
+.nrspcontent .nrsp_bloc1 .nrspgenres h3 a{
+    display: inline-block;
+    background-color: #fff;
+    line-height:12pt;
+    color: #000;
+    padding: 15px 30px;
+    font-family: 'DrukWeb-Medium', arial, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .1em;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: normal;
+
+    -webkit-transition: all .5s ease-in-out 0.05s;
+    -moz-transition: all .5s ease-in-out 0.05s;
+    -o-transition: all .5s ease-in-out 0.05s;
+    -ms-transition: all .5s ease-in-out 0.05s;
+    transition: all .5s ease-in-out 0.05s;
+}
+
+.nrspcontent .nrsp_bloc1 .nrspgenres h3 a:hover, .nrspcontent .nrsp_bloc1 .nrspgenres h3 a.currentp{
+    color: #fff;
+    background-color: #000;
+}
+
+.nrspcontent .nrsp_bloc1 ul{
+    margin: 0;
+    padding: 0;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    text-align: center;
+}
+
+.nrspcontent .nrsp_bloc1 ul li{
+    list-style: none;
+    margin: 13% 0 0 0;
+}
+
+.nrspcontent .nrsp_bloc1 ul li a{
+    display: inline-block;
+    width: 84px;
+    height: 84px;
+    vertical-align: middle;
+    line-height: 0;
+    font-family: 'DrukWeb-Medium', arial, sans-serif;
+    font-size: 1.0em;
+    font-weight: normal;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nrspcontent .nrsp_bloc1 ul li a span{
+    display: inline-block;
+    margin: 0;
+    padding: 10px 0 0 0;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity .3s ease-in-out 0.01s;
+    -moz-transition: opacity .3s ease-in-out 0.01s;
+    -o-transition: opacity .3s ease-in-out 0.01s;
+    -ms-transition: opacity .3s ease-in-out 0.01s;
+    transition: opacity .3s ease-in-out 0.01s;
+}
+
+.nrspcontent .nrsp_bloc1 ul li a:hover span, .nrspcontent .nrsp_bloc1 ul li a span.current{
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+
+.nrspcontent .nrsp_bloc1 ul li a img{
+    transform: scale(.9);
+    -webkit-transition: transform .3s ease-in-out 0.01s;
+    -moz-transition: transform .3s ease-in-out 0.01s;
+    -o-transition: transform .3s ease-in-out 0.01s;
+    -ms-transition: transform .3s ease-in-out 0.01s;
+    transition: transform .3s ease-in-out 0.01s;
+    border:0;
+}
+
+.nrspcontent .nrsp_bloc1 ul li a:hover img{
+    transform: scale(1);
+}
+
+.nrspcontent .nrspslider{
+    width:1000px;
+    height: 499px;
+    overflow: hidden;
+    position: relative;
+}
+
+.nrspcontent .nrspslider ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    width:6000px;
+    position: absolute;
+    top:0;
+    left:0;
+    -webkit-transition: all 1s ease-in-out 0.05s;
+    -moz-transition: all 1s ease-in-out 0.05s;
+    -o-transition: all 1s ease-in-out 0.05s;
+    -ms-transition: all 1s ease-in-out 0.05s;
+    transition: all 1s ease-in-out 0.05s;
+}
+
+.nrspcontent .nrspslider ul li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    display: block;
+    width: 1000px;
+    height: 499px;
+    float:left;
+}
+
+.nrspcontent .nrspslider ul li img{
+    width:1000px;
+    height: 499px;
+    float:left;
+}
+
+
+.nrspcontent .nrspslider ul.bullet, .nrspcontent .nrspcenter .apparel ul.bullet{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    width:100%;
+    text-align: center;
+    left:0;
+}
+
+.nrspcontent .nrspslider ul.bullet li, .nrspcontent .nrspcenter .apparel ul.bullet li{
+    display: inline-block;
+    width: 12px;
+    height: 11px;
+    float: none;
+}
+
+.nrspcontent .nrspslider ul.bullet li a, .nrspcontent .nrspcenter .apparel ul.bullet li a{
+    display: block;
+    width: 12px;
+    height: 11px;
+    background: transparent url(../_img/bullets.png) top center no-repeat;
+}
+
+.nrspcontent .nrspslider ul.bullet li a:hover, .nrspcontent .nrspcenter .apparel ul.bullet li a:hover{
+    background-position: bottom center;
+}
+
+.nrspcontent .nrspslider ul.bullet li a.current, .nrspcontent .nrspcenter .apparel ul.bullet li a.current{
+    background-position: bottom center;
+}
+
+.nrspcontent .nrspslider ul.bullet1{
+    height: 11px;
+    top: 460px;
+}
+
+/*
+.nrspcontent .nrspcenter .apparel ul.bullet2{
+    height: 30px;
+    bottom: 0px;
+    line-height: 30px;
+    vertical-align: middle;
+    background-color: #000;
+}
+*/
+
+/* -- CONTENT homme / femme -------------------------------------------------------------------------------- */ 
+
+.nrspcontent .nrspcenter{
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: max-height .5s ease-in; 
+    -moz-transition: max-height .5s ease-in; 
+    -ms-transition: max-height .5s ease-in; 
+    -o-transition: max-height .5s ease-in; 
+    transition: max-height .5s ease-in;
+}
+
+.nrspcontent .fullheight{
+    max-height: 1600px;
+}
+
+.nrspcontent .nrspcenter .headerart{
+    position: relative;
+    width: 100%;
+    height:170px;
+    background: #bec6c3;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JlYzZjMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #bec6c3 0%, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bec6c3), color-stop(100%,#ffffff));
+    background: -webkit-linear-gradient(top, #bec6c3 0%,#ffffff 100%);
+    background: -o-linear-gradient(top, #bec6c3 0%,#ffffff 100%);
+    background: -ms-linear-gradient(top, #bec6c3 0%,#ffffff 100%);
+    background: linear-gradient(to bottom, #bec6c3 0%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bec6c3', endColorstr='#ffffff',GradientType=0 );
+    text-align: center;
+}
+
+.nrspcontent .nrspcenter .headerart .centerh{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.nrspcontent .nrspcenter .headerart .centerh h3{
+    margin: 0;
+    padding: 0;
+    font-family: 'DrukWeb-Medium', arial, sans-serif;
+    font-size: 2.4em;
+    font-weight: normal;
+    line-height: 1.0em;
+    letter-spacing: 0.05em;
+}
+
+.nrspcontent .nrspcenter .headerart .centerh h4{
+    margin: 0;
+    padding: 18px 0 0 0;
+    font-family: 'TradeGot18', arial, sans-serif;
+    font-size: 1.0em;
+    font-weight: normal;
+    line-height: 1.4em;
+}
+
+.nrspcontent .nrspcenter ul.nrspthmb{
+    width:90%;
+    text-align: justify;
+    margin: 0 5% 0 5%;
+    padding: 0;
+}
+
+.nrspcontent .nrspcenter ul.nrspthmb:after{
+    content: "";
+    width: 100%;
+    display: inline-block;
+}
+
+.nrspcontent .nrspcenter ul.nrspthmb li{
+    list-style: none;
+    display: inline;
+    text-align: center;
+    
+}
+
+.nrspcontent .nrspcenter ul.nrspthmb li a:hover{
+    filter: alpha(opacity=100);
+    opacity:1;
+}
+
+.nrspcontent .nrspcenter ul.nrspthmb li a.noopacity{
+    filter: alpha(opacity=100);
+    opacity:1;
+}
+
+.nrspcontent .nrspcenter ul.nrspthmb li a{
+    display: inline-block;
+    font-family: 'DrukWeb-Medium', arial, sans-serif;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: .1em;
+    filter: alpha(opacity=50);
+    opacity:.5;
+    -webkit-transition: all .8s ease-in-out 0.05s;
+    -moz-transition: all .8s ease-in-out 0.05s;
+    -o-transition: all .8s ease-in-out 0.05s;
+    -ms-transition: all .8s ease-in-out 0.05s;
+    transition: all .8s ease-in-out 0.05s;
+}
+
+.nrspcontent .nrspcenter ul.nrspthmb li a img{
+    border:0;
+}
+
+.nrspcontent .nrspcenter ul.nrspthmb li a span{
+    display: block;
+}
+
+.nrspcontent .nrspcenter .nrspcards{
+    position: relative;
+    width: 100%;
+    height: 309px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.nrspcontent .nrspcenter .nrspcards .nrspcard{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 309px;
+    z-index: 0;
+}
+
+.nrspcontent .nrspcenter .nrspcards .zindex{
+    z-index: 10;
+}
+
+.nrspcontent .nrspcenter .nrspcards .nrspcard .nrspproduct{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:661px;
+    opacity: 1;
+    /*ù
+    -webkit-transition: all .5s ease-in-out 0.05s;
+    -moz-transition: all .5s ease-in-out 0.05s;
+    -o-transition: all .5s ease-in-out 0.05s;
+    -ms-transition: all .5s ease-in-out 0.05s;
+    transition: all .5s ease-in-out 0.05s;
+    */
+    
+    -webkit-transition: all 600ms cubic-bezier(1.000, 0, 0.400, 1); /* older webkit */
+    -webkit-transition: all 600ms cubic-bezier(1.000, -0.060, 0.400, 1.170); 
+       -moz-transition: all 600ms cubic-bezier(1.000, -0.060, 0.400, 1.170); 
+         -o-transition: all 600ms cubic-bezier(1.000, -0.060, 0.400, 1.170); 
+         -ms-transition: all 600ms cubic-bezier(1.000, -0.060, 0.400, 1.170); 
+            transition: all 600ms cubic-bezier(1.000, -0.060, 0.400, 1.170); /* custom */
+    
+    -webkit-transition-timing-function: cubic-bezier(1.000, 0, 0.400, 1); /* older webkit */
+    -webkit-transition-timing-function: cubic-bezier(1.000, -0.060, 0.400, 1.170); 
+       -moz-transition-timing-function: cubic-bezier(1.000, -0.060, 0.400, 1.170); 
+         -o-transition-timing-function: cubic-bezier(1.000, -0.060, 0.400, 1.170);
+         -ms-transition-timing-function: cubic-bezier(1.000, -0.060, 0.400, 1.170); 
+            transition-timing-function: cubic-bezier(1.000, -0.060, 0.400, 1.170); /* custom */
+
+}
+
+.nrspcontent .nrspcenter .nrspcards .nrspcard .outofp{
+    left:-661px;
+    opacity: 0;
+}
+
+.nrspcontent .nrspcenter .nrspcards .nrspcard .nrspspec{
+    position: absolute;
+    top:0;
+    left: 661px;
+    bottom: 0;
+    width: 304px;
+    /* right: 0; */
+    padding: 0 0 0 35px;
+    opacity: 1;
+    background-color: #fff;
+    -webkit-transition: all .5s ease-in-out 0.05s;
+    -moz-transition: all .5s ease-in-out 0.05s;
+    -o-transition: all .5s ease-in-out 0.05s;
+    -ms-transition: all .5s ease-in-out 0.05s;
+    transition: all .5s ease-in-out 0.05s;
+}
+
+.nrspcontent .nrspcenter .nrspcards .nrspcard .outofs{
+    left:1000px;
+    opacity: 0;
+}
+
+.nrspcontent .nrspcenter .nrspcards .nrspcard .nrspspec h4, .nrspcontent .nrspcenter .nrspcards .nrspcard .nrspspec h5{
+    margin: 0;
+    padding: 0;
+    font-family: 'TradeGotfNike', arial, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.0em;
+    padding-right: 20px; 
+}
+
+.nrspcontent .nrspcenter .nrspcards .nrspcard .nrspspec h5{
+    margin-top: 16px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.nrspcontent .nrspcenter .nrspcards .nrspcard .nrspspec ul{
+    list-style: none;
+    margin: 16px 0 0 0;
+    padding: 0;
+    font-family: 'TradeGot18', arial, sans-serif;
+    font-size: .9em;
+}
+
+.nrspcontent .nrspcenter .nrspcards .nrspcard .nrspspec ul li{
+    letter-spacing: -.03em;
+    margin-bottom: 10px;
+    padding-right: 20px;
+}
+
+.nrspcontent .nrspcenter .nrspcards .nrspcard .nrspspec ul li:before{
+    content: '•';
+    margin-right: 6px;
+}
+
+.nrspcontent .nrspcenter .nrspcards .nrspcard .nrspspec a{
+    position: absolute;
+    bottom: 0;
+    background: #111111;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 25px;
+    text-transform: uppercase;
+    font-family: 'DrukWeb-Medium', arial, sans-serif;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+
+    -webkit-transition: background-color .3s ease-in-out 0.05s;
+    -moz-transition: background-color .3s ease-in-out 0.05s;
+    -o-transition: background-color .5s ease-in-out 0.05s;
+    -ms-transition: background-color .5s ease-in-out 0.05s;
+    transition: background-color .3s ease-in-out 0.05s;
+}
+
+.nrspcontent .nrspcenter .nrspcards .nrspcard .nrspspec a:hover{
+    color: #000;
+    background-color: #bec6c3;
+}
+
+/* -- carrousel apparel -- */
+
+.nrspcontent .nrspcenter .apparel{
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    height: 514px;
+    background: #fff url(../_img/bgweather.jpg) top left no-repeat;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 4000px;
+    height: 514px;
+    overflow: hidden;
+    
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li{
+    list-style: none;
+    display: inline-block;
+    position: absolute;
+    width: 1000px;
+    height: 514px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li.zindex{
+    z-index: 10;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li img{
+    filter: alpha(opacity=0);
+    opacity: 0;
+    position: absolute;
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -o-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    transform: translateX(-50px);
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li img.apparait{
+    filter: alpha(opacity=100);
+    opacity: 1;
+    
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+
+    -webkit-transition: -webkit-transform .3s ease-in-out .05s, opacity .3s ease-in-out .05s;
+    -moz-transition: -moz-transform .3s ease-in-out .05s, opacity .3s ease-in-out .05s;
+    -o-transition: -o-transform .3s ease-in-out .05s, opacity .3s ease-in-out .05s;
+    -ms-transition: -ms-transform .3s ease-in-out .05s, opacity .3s ease-in-out .05s;
+    transition: transform .3s ease-in-out .05s, opacity .3s ease-in-out .05s;
+
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li img.disapparait{
+    filter: alpha(opacity=100);
+    opacity: 0;
+    
+    -webkit-transform: translateX(50px);
+    -moz-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    -o-transform: translateX(50px);
+    transform: translateX(50px);
+
+    -webkit-transition: -webkit-transform .3s ease-in-out .05s, opacity .3s ease-in-out .05s;
+    -moz-transition: -moz-transform .3s ease-in-out .05s, opacity .3s ease-in-out .05s;
+    -o-transition: -o-transform .3s ease-in-out .05s, opacity .3s ease-in-out .05s;
+    -ms-transition: -ms-transform .3s ease-in-out .05s, opacity .3s ease-in-out .05s;
+    transition: transform .3s ease-in-out .05s, opacity .3s ease-in-out .05s;
+
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li span.specs{
+    position: absolute;
+    display: inline-block;
+    top: 165px;
+    bottom: 0;
+    left: 327px;
+    width: 673px;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    -o-transform: translateY(50px);
+    transform: translateY(50px);
+
+    -webkit-transition: -webkit-transform .3s ease-in-out .05s, opacity .3s ease-in-out .05s;
+    -moz-transition: -moz-transform .3s ease-in-out .05s, opacity .3s ease-in-out .05s;
+    -o-transition: -o-transform .3s ease-in-out .05s, opacity .3s ease-in-out .05s;
+    -ms-transition: -ms-transform .3s ease-in-out .05s, opacity .3s ease-in-out .05s;
+    transition: transform .3s ease-in-out .05s, opacity .3s ease-in-out .05s;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li span.anim{
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li span.specs a.acheter{
+    position: absolute;
+    font-size: 13pt;
+    display: inline-block;
+    font-family: 'DrukWeb-Medium', arial, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    background-color: #000;
+    padding: 13px 25px;
+    letter-spacing: 0.1em;
+    left:50%;
+    bottom: 30px;
+    border-radius: 3px;
+    background-color: #000;
+    text-transform: uppercase;
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    
+    -webkit-transition: background-color .3s ease-in-out 0.05s;
+    -moz-transition: background-color .3s ease-in-out 0.05s;
+    -o-transition: background-color .5s ease-in-out 0.05s;
+    -ms-transition: background-color .5s ease-in-out 0.05s;
+    transition: background-color .3s ease-in-out 0.05s;
+    
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li span.specs a.acheter:hover{
+    color: #000;
+    background-color: #bec6c3;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li span.specs h3{
+    display: inline-block;
+    width: 100%;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.2em;
+    font-family: 'DrukWeb-Medium', arial, sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.05em;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li span.specs h4{
+    display: inline-block;
+    width: 100%;
+    color: #474c55;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: 'TradeGotfNike', arial, sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li span.specs ul.nodisplay{
+    display: none;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li span.specs ul{
+    position: absolute;
+    display: block;
+    left: 5%;
+    top: 135px;
+    height: 100px;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li span.specs ul li{
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    width: 32%;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li span.specs ul li.deux{
+    width: 48%;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li span.specs ul li h5{
+    display: inline;
+    position: absolute;
+    top:0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'TradeGotfNike', arial, sans-serif;
+    color: #000;
+    font-size: 1.3em;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li span.specs ul li h5 span{
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-family: 'TradeGot18', arial, sans-serif;
+    text-transform: none;
+    font-size: .8em;
+}
+
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li span.specs h5{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    left:0;
+    bottom: 85px;
+    font-size: 15pt;
+    font-family: 'TradeGotfNike', arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: -0.02em;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li a span.icone{
+    position: absolute;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-image: url(../_img/icones.png);
+    background-position: center left;
+    background-repeat: no-repeat;
+    bottom: 120px;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li a span.pluie{
+    background-position: -44px 0;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li a span.nuit{
+    background-position: -88px 0;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li a span.froid{
+    background-position: -132px 0;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li a:hover span.overlay{
+   opacity: 1;
+}
+
+.nrspcontent .nrspcenter .apparel ul.slidapparel li a img{
+    border: 0;
+}
+/* -- fin carrousel apparel -- */
+
+.nrspcontent .nrspcenter .apparel .nrspweather{
+    position: absolute;
+    left: 327px;
+    top: 35px;
+    width: 673px;
+    height: 118px;
+    position: relative;
+    text-align: center;
+    z-index: 15;
+}
+
+.nrspcontent .nrspcenter .apparel .nrspweather ul{
+    width: 80%;
+    height: 118px;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.nrspcontent .nrspcenter .apparel .nrspweather ul:after{
+    content: "";
+    width: 100%;
+    display: inline-block;
+}
+
+.nrspcontent .nrspcenter .apparel .nrspweather ul li{
+    display: inline-block;
+    width: 118px;
+    height: 118px;
+}
+
+.nrspcontent .nrspcenter .apparel .nrspweather ul li a{
+    display: block;
+    width: 118px;
+    height: 118px;
+    background-image:url(../_img/weathers.png);
+    background-repeat:  no-repeat;
+    -webkit-transform: scale(.6);
+    -moz-transform: scale(.6);
+    -ms-transform: scale(.6);
+    -o-transform: scale(.6);
+    transform: scale(.6);
+
+    -webkit-transition: transform .3s ease-in-out 0.05s;
+    -moz-transition: transform .3s ease-in-out 0.05s;
+    -o-transition: transform .3s ease-in-out 0.05s;
+    -ms-transition: transform .3s ease-in-out 0.05s;
+    transition: transform .3s ease-in-out 0.05s;
+}
+
+.nrspcontent .nrspcenter .apparel .nrspweather ul li a.soleil{
+    background-position:  -354px -118px;
+}
+.nrspcontent .nrspcenter .apparel .nrspweather ul li a.pluie{
+    background-position:  -118px -118px ;
+}
+.nrspcontent .nrspcenter .apparel .nrspweather ul li a.nuit{
+    background-position:  -236px -118px;
+}
+.nrspcontent .nrspcenter .apparel .nrspweather ul li a.froid{
+    background-position:  0px -118px;
+}
+
+.nrspcontent .nrspcenter .apparel .nrspweather ul li a.current{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    background-position-y: 0;
+}
+
+
+.nrspcontent .nrspcenter .apparel ul li a.soleil:hover, .nrspcontent .nrspcenter .apparel ul li a.soleilcurrent{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    background-position:  -354px 0px;
+}
+.nrspcontent .nrspcenter .apparel ul li a.pluie:hover, .nrspcontent .nrspcenter .apparel ul li a.pluiecurent{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    background-position:  -118px 0px;
+}
+.nrspcontent .nrspcenter .apparel ul li a.nuit:hover, .nrspcontent .nrspcenter .apparel ul li a.nuitcurrent{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    background-position:  -236px 0px;
+}
+.nrspcontent .nrspcenter .apparel ul li a.froid:hover, .nrspcontent .nrspcenter .apparel ul li a.froidcurrent{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    background-position:  0px 0px;
+}
+
+/* -- fin CONTENT homme / femme -------------------------------------------------------------------------------- */ 
+
+
+
+

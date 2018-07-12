@@ -1,0 +1,426 @@
+@font-face {
+    font-family: 'futura_md_btbold_italic';
+    src: url('../fontes/futura_bold_italic_bt-webfont.eot');
+    src: url('../fontes/futura_bold_italic_bt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/futura_bold_italic_bt-webfont.woff') format('woff'),
+         url('../fontes/futura_bold_italic_bt-webfont.ttf') format('truetype'),
+         url('../fontes/futura_bold_italic_bt-webfont.svg#futura_md_btbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'futura_md_btbold';
+    src: url('../fontes/futura_bold_bt-webfont.eot');
+    src: url('../fontes/futura_bold_bt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/futura_bold_bt-webfont.woff') format('woff'),
+         url('../fontes/futura_bold_bt-webfont.ttf') format('truetype'),
+         url('../fontes/futura_bold_bt-webfont.svg#futura_md_btbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+	background:#06090e url(../grnm_images/grnm_bg.jpg) top center no-repeat;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+.grnm_content{
+	font-size:12pt;
+	margin:0 auto;
+	width:998px;
+	background:#fff;
+	min-height:1000px;
+	padding:0;
+	position:relative;
+	height:2880px;
+}
+
+.grnm_video_intro .grnm_decouvre{
+	width:415px;
+	height:51px;
+	position:absolute;
+	left:282px;
+	top:440px;
+	z-index:100;
+}
+
+.grnm_youtube{
+	display:none;
+	position:absolute;
+	width:980px;
+	height:550px;
+	margin:0 0 0 9px;
+	padding:9px 0 0 0;
+	z-index:7;
+	top:0;
+}
+	
+.grnm_close{
+	z-index:8;
+	position:absolute;
+	top:90px;
+	left:880px;
+	width:90px;
+	height:25px;
+	display:none;
+	border:1px solid #333;
+}
+
+.grnm_close a{
+	display:block;
+	width:90px;
+	height:25px;
+	color:#999;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:90%;
+	text-align:left;
+	text-decoration:none;
+	background:transparent url(../grnm_images/grnm_close.gif) top right no-repeat;
+}
+
+
+.grnm_close a span{
+	display:block;
+	padding:4px 0 0 4px;
+}
+
+.grnm_close a:hover{
+	text-decoration:underline;
+	background-position:right -25px;
+}
+
+.grnm_video_intro{
+	position:absolute;
+	top:0;
+	width:980px;
+	height:550px;
+	margin:0 0 0 9px;
+	padding:9px 0 0 0;
+	z-index:1;
+}
+
+
+
+.grnm_video_intro .grnm_decouvre a{
+	display:block;
+	width:415px;
+	height:51px;
+	background:transparent url(../grnm_images/grnm_decouvre.png) top center no-repeat;
+}
+
+.grnm_video_intro .grnm_decouvre a:hover{
+	background-position:0 -51px;
+}
+
+.grnm_magista{
+	position:absolute;
+	top:550px;
+	width:980px;
+	height:772px;
+	margin:9px 0 0 9px;
+	background:#5d626b url(../grnm_images/grnm_bg01.jpg) top center no-repeat;
+}
+
+.grnm_bloctitre{
+	position:absolute;
+	left:100px;
+	top:70px;
+}
+
+.grnm_creativite{
+	padding-top:518px;
+}
+
+.grnm_magista_prd{
+	position:absolute;
+	left:150px;
+	top:85px;
+}
+
+.grnm_slideg{
+	position:absolute;
+	top:1320px;
+	background:#6f6f76 url(../grnm_images/grnm_gauche.jpg) top left no-repeat;
+	height:300px;
+	width:320px;
+	margin:0 0 0 9px;
+	
+	-webkit-transition: background-position, 1.5s;
+	-moz-transition: background-position, 1.5s;
+	transition: background-position, 1.5s;
+}
+
+.grnm_slided{
+	position:absolute;
+	top:1320px;
+	background:#6f6f76 url(../grnm_images/grnm_droite.jpg) top left no-repeat;
+	height:300px;
+	width:320px;
+	margin:0 0 0 669px;
+	
+	-webkit-transition: background-position, 1.5s;
+	-moz-transition: background-position, 1.5s;
+	transition: background-position, 1.5s;
+}
+
+.grnm_cercle{
+	position:absolute;
+	z-index:20;
+	top:1240px;
+	left:245px;
+	background-image: url(../grnm_images/grnm_bg_cercle.jpg);
+	background-position: 0px 0px;
+	height: 490px;
+	width: 490px;
+	-moz-border-radius: 245px;
+	-webkit-border-radius: 245px;
+	border-radius: 245px;
+	margin: 0 auto;
+	
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.92);
+	-moz-box-shadow:    0px 0px 30px 0px rgba(0, 0, 0, 0.92);
+	box-shadow:         0px 0px 30px 0px rgba(0, 0, 0, 0.92);
+	
+	-webkit-transition: background-position, 1.5s;
+	-moz-transition: background-position, 1.5s;
+	transition: background-position, 1.5s;
+}
+
+.grnm_final{
+	clear:left;
+	background:#6f6f76 url(../grnm_images/grnm_bg02.jpg) top left no-repeat;
+	height:1261px;
+	width:980px;
+	margin:0 0 0 9px;
+	position:absolute;
+	top:1600px;
+	overflow:hidden;
+}
+
+.grnm_final .grnm_prem{
+	position:absolute;
+	width:330px;
+	height:125px;
+	top:840px;
+	left:123px;
+	text-align:left;
+	z-index:5;
+}
+
+.grnm_final .grnm_prem .grnm_titreprm{
+	font-family:futura_md_btbold, Verdana, Geneva, sans-serif;
+	color:#fff;
+	font-size:160%;
+	display:block;
+	margin-bottom:20px;
+	text-shadow: 3px 3px 4px #333;
+}
+
+.grnm_final .grnm_prem .grnm_texteprm{
+	color:#fff;
+	display:block;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:100%;
+	text-align:left;
+	text-shadow: 3px 3px 4px #333;
+}
+
+
+.grnm_final .grnm_inscrire{
+	position:absolute;
+	width:134px;
+	height:51px;
+	top:1010px;
+	left:120px;
+	background:transparent;
+}
+
+.grnm_final .grnm_inscrire a{
+	display:block;
+	width:134px;
+	height:51px;
+	background:transparent url(../grnm_images/grnm_inscrire.gif) top left no-repeat;
+}
+.grnm_final .grnm_inscrire a:hover{
+	background-position:0 -51px;
+}
+
+.grnm_magista2{
+	padding-top:35px;
+}
+
+.grnm_flecheg{
+	width:57px;
+	height:73px;
+	top:1453px;
+	left:177px;
+	position:absolute;
+}
+
+.grnm_fleched{
+	width:57px;
+	height:73px;
+	top:1453px;
+	left:748px;
+	position:absolute;
+}
+
+.grnm_flecheg a{
+	display:block;
+	width:57px;
+	height:73px;
+	background:transparent url(../grnm_images/grnm_fleche_g.png) top left no-repeat;
+}
+
+.grnm_fleched a{
+	display:block;
+	width:57px;
+	height:73px;
+	background:transparent url(../grnm_images/grnm_fleche_d.png) top left no-repeat;
+}
+
+.grnm_flecheg a:hover, .grnm_fleched a:hover{
+	background-position:0 -73px;
+}
+
+.grnm_bulle{
+	position:absolute;
+	width:330px;
+	height:120px;
+	left:660px;
+	top:1180px;
+	z-index:10;
+	background:transparent url(../grnm_images/grnm_bulle.png) top left no-repeat;
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	-o-transition: all .6s ease;
+	transition: all .6s ease;
+}
+
+.grnm_bull0{
+	left:640px
+}
+
+.grnm_bull1, .grnm_bull2, .grnm_bull3, .grnm_bull4{
+	opacity:0;
+}
+
+.grnm_bulle .grnm_titre{
+	font-family:futura_md_btbold, Verdana, Geneva, sans-serif;
+	color:#fff;
+	font-size:140%;
+	display:block;
+	padding:7px;
+	text-align:left;
+}
+
+.grnm_bulle .grnm_texte{
+	color:#fff;
+	display:block;
+	width:260px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:90%;
+	text-align:left;
+	padding: 0 7px 7px 7px;
+}
+
+.anim1{	
+	opacity:1;
+	left:640px;
+}
+
+.anim2{
+	opacity:0;
+	left:0;
+}
+
+.grnm_duo{
+	position:absolute;
+	width:541px;
+	height:390px;
+	top:650px;
+	left:435px;
+	background:transparent url(../grnm_images/grnm_magista2.png) top left no-repeat;
+	/*
+	transition: all .1s ease-in;
+	-moz-transition: all .1s ease-in;
+	-ms-transition: all .1s ease-in;
+	-o-transition: all .1s ease-in;
+	-webkit-transition: all .1s ease-in;
+	*/
+}
+
+/*
+.grnm_duo:hover{
+	-webkit-transform: scale(1.25);
+	-moz-transform: scale(1.25);
+	-o-transform: scale(1.25);
+	transform: scale(1.25);
+	-webkit-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+}
+
+.animgrnmduo{
+	-webkit-transform: scale(1.25);
+	-moz-transform: scale(1.25);
+	-o-transform: scale(1.25);
+	transform: scale(1.25);
+	-webkit-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+}
+*/
+
+.animgrnmduo{
+	filter: brightness(1.5);
+	-webkit-filter: brightness(1.5);
+	-moz-filter: brightness(1.5);
+	-o-filter: brightness(1.5);
+	-ms-filter: brightness(1.5);
+}
+
+.grnm_ballon{
+	opacity:0;
+	position:absolute;
+	width:477px;
+	height:121px;
+	left:250px;
+	top:1140px;
+}
+
+.grnm_lightn{
+	opacity:0;
+	position:absolute;
+	width:979px;
+	height:850px;
+	top:450px;
+	left:0;
+}
+
+.animlight{
+	opacity:1;
+	position:absolute;
+	width:979px;
+	height:850px;
+	top:450px;
+	left:0;
+	background:transparent url(../grnm_images/grnm_lightn.png) bottom center no-repeat;
+}
+
+.animballon{
+	opacity:1;
+	position:absolute;
+	width:477px;
+	height:121px;
+	left:245px;
+	top:1145px;
+	background:transparent url(../grnm_images/grnm_ballon.png) bottom center no-repeat;
+}

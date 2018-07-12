@@ -1,0 +1,2069 @@
+@charset "utf-8";
+
+
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color:#fff;
+    overflow: hidden;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 9pt;
+    margin: 0;
+    padding: 0;
+    color:#fff;
+    overflow: hidden;
+    background: url(../bg.jpg) center top no-repeat;
+    background-size: cover;
+}
+
+a, a img{
+    border:none;
+    border-width: 0;
+}
+
+.spotify{
+    z-index: 10;
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    width:4%;
+}
+
+.spotify img{
+    width: 100%;
+    height: auto;
+}
+
+.novisible{
+    visibility: hidden;
+}
+
+.nodisplay{
+    display: none !important;
+}
+
+.main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.page, .loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    text-align: left;
+}
+
+
+.opaczero{
+    opacity: 0;
+}
+
+.blocked{
+    display: none;
+    text-align: left;
+    background: #1c618a;
+    z-index: 3000;
+}
+
+.blocked p{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+}
+
+.loader{
+    z-index: 3100;
+    text-align: center;
+    background: rgba(28,97,138,.9);
+}
+
+.loader .level3{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    right: 20%;
+    border: 1px solid #fff;
+    height: 6px;
+}
+
+.loader .level3 .level4{
+    position: absolute;
+    left:0;
+    top:0;
+    bottom: 0;
+    width:1%;
+    background: #ed462f;
+}
+
+
+.dissolve{
+    -webkit-animation: wbandissolve .8s linear 0s 1 forwards;
+    -ms-animation: msandissolve .8s linear 0s 1 forwards;
+    -o-animation: oandissolve .8s linear 0s 1 forwards;
+    -moz-animation: mozandissolve .8s linear 0s 1 forwards;
+    animation: andissolve .8s linear 0s 1 forwards;
+}
+
+.ctc{
+    position: absolute;
+    z-index: 2100;
+    top: .2%;
+    right: .2%;
+    width: 10%;
+    min-width:78px; 
+    height: auto;
+}
+.ctc img{
+    width:100%;
+    height: auto;
+}
+
+@keyframes andissolve {
+    0%   {opacity:1;visibility:visible;}
+    98%  {opacity:0;visibility:visible;}
+    100% {opacity:0;visibility:hidden;}
+}
+@-webkit-keyframes wbandissolve {
+    0%   {opacity:1;visibility:visible;}
+    98%  {opacity:0;visibility:visible;}
+    100% {opacity:0;visibility:hidden;}
+}
+@-ms-keyframes msandissolve {
+    0%   {opacity:1;visibility:visible;}
+    98%  {opacity:0;visibility:visible;}
+    100% {opacity:0;visibility:hidden;}
+}
+@-o-keyframes oandissolve {
+    0%   {opacity:1;visibility:visible;}
+    98%  {opacity:0;visibility:visible;}
+    100% {opacity:0;visibility:hidden;}
+}
+@-moz-keyframes mozandissolve {
+    0%   {opacity:1;visibility:visible;}
+    98%  {opacity:0;visibility:visible;}
+    100% {opacity:0;visibility:hidden;}
+}
+
+/* animation start */
+.transmap{
+    -webkit-transition: .7s ease-in-out;
+    -moz-transition: .7s ease-in-out;
+    -o-transition: .7s ease-in-out;
+    -ms-transition: .7s ease-in-out;
+    transition: .7s ease-in-out;
+}
+
+/* animation hors limite */
+.transmapb{
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+/* -- PAGE 1 (INTRO) ------------------------------------------- */
+
+.intro{
+    background-image: url(../bg_intro.jpg);
+    background-position: top left;
+    background-size: cover;
+    z-index:2000;
+}
+
+.decor{
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+
+/*
+.moanabig{
+    top:27%;
+    width:60%;
+    font-size: 0;
+    line-height: 0;
+    background-image: url(../moana.png);
+    background-color: transparent;
+    background-position: left bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-transition: .6s ease-in-out;
+    -moz-transition: .6s ease-in-out;
+    -o-transition: .6s ease-in-out;
+    -ms-transition: .6s ease-in-out;
+    transition: .6s ease-in-out;
+}
+
+.moanabig img{
+    height: auto;
+    width: 100%;
+}
+
+
+.transmo{
+    -webkit-transform: translate(-100%,0);
+    -moz-transform: translate(-100%,0);
+    -o-transform: translate(-100%,0);
+    -ms-transform: translate(-100%,0);
+    transform: translate(-100%,0);
+}
+*/
+
+.vague{
+    right:0;
+    font-size: 0;
+    line-height: 0;
+}
+
+.vague img{
+    width: 100%;
+    height: auto;
+}
+
+.logo1{
+    position: relative;
+    width:28%;
+    max-width: 490px;
+    margin: 2% auto 0 auto;
+    /*top: 2%;
+    bottom: 82%;*/
+}
+
+.legals{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 38%;
+}
+
+.legals img{
+    width: 100%;
+    height: auto;
+}
+
+.logo1 img{
+    height: auto;
+    width: 100%;
+}
+
+.bloctitre{
+    position: absolute;
+    display: block;
+    width: 60%;
+    /*
+    left:18%;
+    right:18%;
+    */
+    top:55%;
+    left:50%;
+    -webkit-transform: translate(-50%,-45%);
+    -o-transform: translate(-50%,-45%);
+    -moz-transform: translate(-50%,-45%);
+    -ms-transform: translate(-50%,-45%);
+    transform: translate(-50%,-45%);
+    text-align: center;
+    max-width: 1200px;
+}
+
+.bloctitre img{
+    width:100%;
+    height: auto;
+}
+
+.bloctitre .boat{
+    width:10%;
+    margin: 0 auto;
+}
+
+.bloctitre .aboard{
+    width:60%;
+    margin: 0 auto;
+}
+
+.bloctitre .trait{
+    width:60%;
+    margin: 0 auto;
+}
+
+.bloctitre .move{
+    width:100%;
+    margin-top: 2%;
+}
+
+.bloctitre a{
+    display: inline-block;
+    width: 28%;
+    max-width: 275px;
+    height: auto;
+    margin: 0 auto;
+    background: transparent url(start_now.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.bloctitre a:hover{
+   background-position: bottom center;
+}
+
+.bloctitre a img{
+    display: block;
+    width:100%;
+    height: auto;
+}
+
+ul.socials{
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 60;
+    width: 15%;
+    min-width: 200px;
+}
+
+ul.socials li{
+    display: inline-block;
+    width: 22%;
+    height: auto;
+}
+
+ul.socials li a{
+    display: block;
+}
+
+ul.socials li a img{
+    width: 100%;
+    height: auto;
+}
+
+/* -- PAGE 2 (MAP) ------------------------------------------- */
+
+.contmap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    /*
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    */
+}
+
+/*
+.blocking{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color:#fff;
+    opacity: .5;
+}
+*/
+
+.map{
+    position: absolute;
+    top:0;
+    left:0;
+    height: auto;
+    width: auto;
+    background: transparent url(../bg-fumee.png) top left no-repeat;
+    background-size: 100% 100%;
+    transform: translateZ(0);
+}
+
+.vawes{
+    animation: anvawes 40s ease-in-out 1s infinite alternate;
+    -webkit-animation: wbanvawes 40s ease-in-out 1s infinite alternate;
+    -ms-animation: msanvawes 40s ease-in-out 1s infinite alternate;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+}
+
+@keyframes anvawes {
+    0%   {background-position: 0 0;background-size: 100% 100%;}
+    50%  {background-position: -50px 0;background-size: 90% 90%;}
+    100% {background-position: 0 0;background-size: 100% 100%;}
+}
+
+@-webkit-keyframes wbanvawes {
+    0%   {background-position: 0 0;background-size: 100% 100%;}
+    50%  {background-position: -50px 0;background-size: 90% 90%;}
+    100% {background-position: 0 0;background-size: 100% 100%;}
+}
+
+@-ms-keyframes msanvawes {
+    0%   {background-position: 0 0;background-size: 100% 100%;}
+    50%  {background-position: -50px 0;background-size: 90% 90%;}
+    100% {background-position: 0 0;background-size: 100% 100%;}
+}
+
+/*
+.map object{
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: auto;
+}
+*/
+.twomaps{
+    width: 4470px;
+    height: 1079px;
+    /*border-top: 1px dashed #296b8d;
+    border-bottom: 1px dashed #296b8d;*/
+    -webkit-transform-origin: left center;
+    -ms-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+
+.twomaps:hover{
+    cursor: move;
+}
+
+.films{
+    position: absolute;
+    display: block;
+    z-index: 30;
+    /*min-width: 100px;
+    max-width: 220px;*/
+    width:6%;
+    height: auto;
+    text-align: center;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    background: transparent url(logos_spriting_4000.png) 0% top no-repeat;
+    background-size: 1500% auto;
+    opacity:1;
+    -webkit-transition: opacity .8s ease-in-out 1s;
+    -moz-transition: opacity .8s ease-in-out 1s;
+    -o-transition: opacity .8s ease-in-out 1s;
+    -ms-transition: opacity .8s ease-in-out 1s;
+    transition: opacity .8s ease-in-out 1s;
+}
+
+.boatm{
+    position: absolute;
+    z-index: 30;
+    left: 93%;
+    top: 62%;
+    width: 4%;
+    height: auto;
+    -webkit-transition: opacity .8s ease-in-out 1.3s;
+    -moz-transition: opacity .8s ease-in-out 1.3s;
+    -o-transition: opacity .8s ease-in-out 1.3s;
+    -ms-transition: opacity .8s ease-in-out 1.3s;
+    transition: opacity .8s ease-in-out 1.3s;
+    background: transparent url(../boat3.png) left center no-repeat;
+    background-size: 600% auto;
+    /*animation: anboat .8s linear 0s infinite forwards;*/
+    -webkit-animation: wbanboat 1.2s steps(5) infinite;
+    -moz-animation: mozanboat 1.2s steps(5) infinite;
+    -ms-animation: msanboat 1.2s steps(5) infinite;
+    -o-animation: oanboat 1.2s steps(5) infinite;
+    animation: anboat 1.2s steps(5) infinite;
+}
+
+@keyframes anboat {
+    100%  {background-position: 100% center}
+}
+
+@-webkit-keyframes wbanboat {
+    100%  {background-position: 100% center}
+}
+
+@-ms-keyframes msanboat {
+    100%  {background-position: 100% center}
+}
+
+@-moz-keyframes mozoanboat {
+    100%  {background-position: 100% center}
+}
+
+@-o-keyframes oanboat {
+    100%  {background-position: 100% center}
+}
+
+.boatm img{
+    width: 100%;
+    height: auto;
+}
+
+.films img{
+    width:100%;
+    height: auto;
+}
+
+/* baymax */
+.film15{
+    width:6%;
+    background-position: 100% 0;
+    top:39%;
+    left:79%;
+}
+.film15:hover, .dejavu15{
+    background-position: 100% bottom;
+}
+
+/* princess and the frog */
+.film14{
+    width:10%;
+    background-position: 85.72% 0;
+    top:43.5%;
+    left:21%;
+}
+.film14:hover, .dejavu14{
+    background-position: 85.72% bottom;
+}
+
+/* big hero 6 */
+.film13{
+    background-position: 71.43% 0;
+    top:42%;
+    left:16%;
+}
+.film13:hover, .dejavu13{
+    background-position: 71.43% bottom;
+}
+
+/* pocahontas */
+.film12{
+    background-position: 35.72% 0;
+    top:40%;
+    left:23%;
+}
+.film12:hover, .dejavu12{
+    background-position: 35.72% bottom;
+}
+
+/* moana */
+.film11{
+    width: 10%;
+    background-position: 57.14% 0;
+    right:0;
+    top:70%;
+}
+.film11:hover, .dejavu11{
+    background-position: 57.14% bottom;
+}
+
+/* junglebook */
+.film10{
+    width:7.5%;
+    background-position: 64.29% 0;
+    top:47%;
+    left:65%;
+}
+.film10:hover, .dejavu10{
+    background-position: 64.29% bottom;
+}
+
+/* lionking */
+.film9{
+    width: 8%;
+    background-position: 78.58% 0;
+    top:54%;
+    left:47%;
+}
+
+.film9:hover, .dejavu9{
+    background-position: 78.58% bottom;
+}
+
+/* mulan */
+.film8{
+    background-position: 21.43% 0;
+    top:40%;
+    left:70%;
+}
+.film8:hover, .dejavu8{
+    background-position: 21.43% bottom;
+}
+
+/* aladdin */
+.film7{
+    background-position: 92.86% 0;
+    top:42%;
+    left:56%;
+}
+.film7:hover, .dejavu7{
+    background-position: 92.86% bottom;
+}
+
+/* pinocchio */
+.film6{
+    width: 8%;
+    top:37%;
+    left:47%;
+}
+
+.film6:hover, .dejavu6{
+    background-position: 0% bottom;
+}
+
+/* mermaid */
+.film5{
+    background-position: 50% 0;
+    top:26%;
+    left:47.5%;
+}
+.film5:hover, .dejavu5{
+    background-position: 50% bottom;
+}
+
+/* tangled */
+.film4{
+    background-position: 28.58% 0;
+    top:30%;
+    left:48.5%;
+}
+.film4:hover, .dejavu4{
+    background-position: 28.58% bottom;
+}
+
+/* frozen */
+.film3{
+    background-position: 7.15% 0;
+    top:20%;
+    left:48%;
+}
+.film3:hover, .dejavu3{
+    background-position: 7.1% bottom;
+}
+
+/* cinderella */
+.film2{
+    background-position: 42.85% 0;
+    top:33%;
+    left:44.5%;
+}
+.film2:hover, .dejavu2{
+     background-position: 42.85% bottom;
+}
+
+/* peterpan */
+.film1{
+    background-position: 14.29% 0;
+    top:29%;
+    left:43%;
+}
+
+.film1:hover, .dejavu1{
+    background-position: 14.29% bottom;
+}
+
+.zooms{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 12%;
+    height: auto;
+    max-width: 200px;
+}
+
+.zooms a.zoom{
+    display: inline-block;
+    position: relative;
+    width:50%;
+    height: auto;
+    background: transparent url(../zoom.png) top left no-repeat;
+    background-size: 200% auto;
+    font-size: 0;
+    line-height: 0;
+    float:left;
+}
+.zooms a.zoom img{
+    width: 100%;
+    height: auto;
+}
+
+ .zooms a.moins{
+     background-position: bottom left;
+}
+.zooms a.zoom:hover{
+    background-position: top right;
+}
+.zooms a.moins:hover{
+    background-position: bottom right;
+}
+/* -- FOOTER --------------------------------------------------- */
+
+.page .footermap{
+    pointer-events:none;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    top:75%;
+    z-index: 1;
+}
+
+.page .footermap .vague{
+    position: absolute;
+    top:30%;
+    bottom: 0;
+    left:0;
+    width:auto;
+}
+
+.page .footermap .vague img{
+    height: 100%;
+    width: auto;
+    vertical-align: bottom;
+}
+
+.page .footermap .moanafooter{
+    position:absolute;
+    left:-2%;
+    top:0;
+    right:82%;
+    bottom:-30%;
+}
+
+.page .footermap .moanafooter2{
+    position:absolute;
+    left:-2%;
+    top:19%;
+    right:92%;
+    bottom:-39%;
+}
+
+.page .footermap .moanafooter img, .page .footermap .moanafooter2 img{
+    width: auto;
+    height: 100%;
+    padding-top: 0;
+    object-fit: contain;
+}
+
+/* animation moana footer BTS */
+.moanafanim{
+    -webkit-animation: wbanfmoana .2s ease-in-out 0s 1 forwards;
+    -moz-animation: mozanfmoana .2s ease-in-out 0s 1 forwards;
+    -o-animation: oanfmoana .2s ease-in-out 0s 1 forwards;
+    -ms-animation: msanfmoana .2s ease-in-out .0s 1 forwards;
+    animation: anfmoana .2s ease-in-out 0s 1 forwards;
+}
+
+@keyframes anfmoana {
+    0%   {padding-top:100%}
+    100% {padding-top:0}
+}
+
+@-webkit-keyframes wbanfmoana {
+    0%   {padding-top:100%}
+    100% {padding-top:0}
+}
+
+@-ms-keyframes msanfmoana {
+    0%   {padding-top:100%}
+    100% {padding-top:0}
+}
+
+@-o-keyframes oanfmoana {
+    0%   {padding-top:100%}
+    100% {padding-top:0}
+}
+
+@-moz-keyframes mozanfmoana {
+    0%   {padding-top:100%}
+    100% {padding-top:0}
+}
+
+.page .footermap .mauifooter{
+    position: absolute;
+    top:-47%;
+    left:5%;
+    right:65%;
+    bottom:-15%;
+}
+
+.page .footermap .mauifooter img{
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+.page .footermap .logofooter{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 49%;
+    display: inline-block;
+    width: 100%;
+}
+.page .footermap .logofooter img{
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+.floatleft{
+    float:left;
+}
+.page .footermap .logofooter img.theatre{
+    height: 100%;
+    width: auto;
+    vertical-align: bottom;
+}
+
+.page .footermap .logofooter img.theatre2{
+    height: 100%;
+    width: auto;
+    vertical-align: bottom;
+    /*position: absolute;
+    bottom: 0;
+    left:98%;
+    width: auto;
+    vertical-align: bottom;*/
+}
+
+.page .instruct{
+    position: absolute;
+/*    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;*/
+    top: 25%;
+    left:50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    border: 2px solid #fff;
+    z-index: 2;
+    width: 40%;
+    min-width: 350px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 5px;
+    background: rgba(28,97,138,.7);
+    opacity:1;
+    -webkit-transition: opacity .8s ease-in-out 1.3s;
+    -moz-transition: opacity .8s ease-in-out 1.3s;
+    -o-transition: opacity .8s ease-in-out 1.3s;
+    -ms-transition: opacity .8s ease-in-out 1.3s;
+    transition: opacity .8s ease-in-out 1.3s;
+}
+
+.page .instzero{
+    opacity:0;
+}
+
+.page .instruct img{
+    width: 100%;
+    height: auto;
+}
+/*
+.page .footermap .theatre img{
+    width: auto;
+    height: 100%;
+}
+*/
+
+.page a.behind{
+    z-index: 5;
+    display: block;
+    position: absolute;
+    left:28%;
+    right:55%;
+    height: auto;
+    bottom: 0;
+}
+
+.page a.behind span.anim{
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    line-height: 0;
+    font-size: 0;
+}
+
+.page a.behind span.btn{
+    display: block;
+    width: 100%;
+    height: auto;
+    line-height: 0;
+    font-size: 0;
+    background: transparent url(behind.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.page a.behind:hover span.btn{
+    background-position: bottom center;
+}
+
+.page a.behind span img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* -- PAGE 7 (BEHIND THE SCENES) ------------------------------------------- */
+
+.page .rich{
+    z-index: 2;
+    max-width:1200px;
+    /*min-width:785px;*/
+    width:80%;
+    height: auto;
+    max-height: 80%;
+    /*width: auto;*/
+    /*margin:0 auto;*/
+    position: absolute;
+    top: 5%;
+    /*left: 16%;
+    right: 16%;*/
+    left:50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /*height: auto;*/
+    background: transparent url(../bordure2.png) top left no-repeat;
+    background-size: 100% 100%;
+}
+
+.page .rich img.fake{
+    width: 100%;
+    height: auto;
+}
+
+.page .rich .close{
+    z-index: 5000;
+    position: absolute;
+    top: -1%;
+    right: -1%;
+    width:6%;
+    height: auto;
+}
+
+.page .rich .close img{
+    width:90%;
+    height: auto;
+}
+
+.page .rich .contenu{
+    position: absolute;
+    top:5.3%;
+    bottom:5.3%;
+    left:3.5%;
+    right:3.5%;
+}
+
+.page .rich .contenu .titreb{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    height: auto;
+    line-height: 0;
+    font-size: 0;
+}
+
+.page .rich .contenu .titreb img{
+    width: 100%;
+    height: auto;
+}
+
+.page .rich .contenu .blocg{
+    position: absolute;
+    top: 21%;
+    left: 0;
+    right: 47%;
+    bottom: 9%;
+}
+
+.page .rich .contenu .blocg .affiche{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 13.5%;
+    right: 13.5%;
+}
+
+.page .rich .contenu .blocg .affiche img.aff2{
+    width: auto;
+    height: 100%;
+}
+
+.page .rich .contenu .blocg .affiche img.aff1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
+
+.page .rich .soon{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    height: auto;
+}
+
+.page .rich .soon img{
+    width: 100%;
+    height: auto;
+}
+
+.page .blocg a.nav{
+    position: absolute;
+    width: 13%;
+    top: 0;
+    bottom: 0;
+    background-image:url(../fleche.png);
+    background-size: auto 200%;
+}
+
+a.prec{
+    left: 0;
+    background-position: left top;
+}
+a.prec:hover{
+    background-position: left bottom;
+}
+
+a.suiv{
+    right: 0;
+    background-position: right top;
+}
+a.suiv:hover{
+    background-position: right bottom;
+}
+
+.page .rich .contenu .blocd{
+    position: absolute;
+    top: 21%;
+    right: 5%;
+    left: 52%;
+    bottom: 9%;
+}
+
+.page .rich .contenu .blocd .menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10%;
+    text-align: center;
+}
+
+.page .rich .contenu .blocd .menu li{
+    width: 32%;
+    display: inline-block;
+}
+
+.page .rich .contenu .blocd .menu li:first-child{
+    display: none;
+}
+
+.page .rich .contenu .blocd .menu li a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color:#fff;
+    font-size: 1.1vw;
+    text-decoration: none;
+    padding-bottom: 10px;
+}
+
+.page .rich .contenu .blocd .menu li a:hover, .page .rich .contenu .blocd .menu li a.sel{
+    border-bottom: 1px solid #fff;
+    color: #ed462f;
+}
+
+.page .rich .contenu .blocd .thumb{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:11%;
+    overflow: hidden;
+}
+
+.page .rich .contenu .blocd .thumb ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.page .rich .contenu .blocd .thumb ul li{
+    display: inline-block;
+    -moz-box-shadow: 0px 0px 10px 0px #000000;
+    -webkit-box-shadow: 0px 0px 10px 0px #000000;
+    -o-box-shadow: 0px 0px 10px 0px #000000;
+    -ms-box-shadow: 0px 0px 10px 0px #000000;
+    box-shadow: 0px 0px 10px 0px #000000;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=NaN, Strength=10);
+    margin: 0 4% 4% 2%;
+}
+
+/*
+.page .rich .contenu .blocd .thumb ul li.plst:nth-child(0){
+    background: url(../playlists.jpg) center center no-repeat;
+}
+*/
+
+.page .rich .contenu .blocd .thumb ul li a{
+    display: block;
+    width: 100%;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.page .rich .contenu .blocd .thumb ul li a:hover img.fond{
+    border:1px solid #fff;
+    transform: scale(1.2,1.2);
+    z-index: 0;
+}
+
+.page .rich .contenu .blocd .thumb ul li a img.fond{
+    width: 100%;
+    height: auto;
+    border:1px solid #000;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.page .rich .contenu .blocd .thumb ul li a img.arrow, .page .rich .contenu .blocd .thumb ul li a:hover img.arrow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.page .rich .contenu .blocd .thumb ul li.trois{
+    width: 27%;
+}
+
+.page .rich .contenu .blocd .thumb ul li.deux{
+    width: 42%;
+    position: relative;
+}
+
+.page .sharecont{
+    position: absolute;
+    top: 101%;
+    width: 100%;
+    z-index: 30;
+    height: auto;
+    text-align: center;
+}
+
+.page .sharecont a{
+    position: absolute;
+    top: 0;
+    width: 23%;
+    height: auto;
+    font-size: 0;
+    line-height: 0;
+}
+
+.page .sharecont a img{
+    width: 100%;
+    height: auto;
+}
+
+.page .sharecont a.continue{
+    right: 50%;
+    background: transparent url(continue.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.page .sharecont a.share{
+    left: 50%;
+    background: transparent url(share.png) top center no-repeat;
+    background-size: 100% auto;
+}
+.page .sharecont a.shareonly{
+    left: 50%;
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    background: transparent url(share.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.page .sharecont a.skipbts{
+    left: 50%;
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    background: transparent url(skip2.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.page .sharecont a.continue:hover,.page .sharecont a.share:hover, .page .sharecont a.skipbts:hover{
+    background-position: bottom center;
+}
+
+/* -- interstitiel video ----------------------------------------------------- */
+
+.interst{
+    background-color: #0c537e;
+    background-image: url(../inter_vid_bg.jpg);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 50;
+}
+
+.interst .calling{
+    position: absolute;
+    top:2%;
+    bottom: 90%;
+    width: 100%;
+    text-align: center;
+}
+
+.interst .calling img{
+    height: 100%;
+    width: auto;
+    /*min-width: auto;
+    max-width: auto;*/
+    object-fit: contain;
+   /* margin:0 auto;*/
+}
+
+.interst .minutes{
+    position: absolute;
+    top: 12%;
+    bottom:80%;
+    width:100%;
+    text-align: center;
+}
+
+.interst a.skip{
+    position: absolute;
+    top:12%;
+    bottom: 81%;
+    width:auto;
+    left:50%;
+    visibility: hidden;
+    /*opacity: 1;*/
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    background: transparent url(skip.png) top center no-repeat;
+    background-size: auto 200%;
+}
+
+.interst a.skip:hover{
+    background-position: bottom center;
+}
+
+.interst a.skip img{
+    display: block;
+    width:auto;
+    height: 100%;
+}
+
+.fadein{
+  visibility: visible !important;
+  /*
+    -webkit-animation: wbanfadein .8s linear .6s 1 forwards;
+    -moz-animation: mozanfadein .8s linear .6s 1 forwards;
+    -o-animation: oanfadein .8s linear .6s 1 forwards;
+    -ms-animation: msanfadein .8s linear .6s 1 forwards;
+    animation: anfadein .8s linear .6s 1 forwards;
+    */
+}
+
+@keyframes anfadein {
+    0%   {opacity:0;visibility:visible;}
+    98%  {opacity:1;visibility:visible;}
+    100% {visibility:visible;opacity:1;}
+}
+
+@-webkit-keyframes wbanfadein {
+    0%   {opacity:0;visibility:visible;}
+    90%  {opacity:1;visibility:visible;}
+    100% {visibility:visible;opacity:1;}
+}
+
+@-ms-keyframes msanfadein {
+    0%   {opacity:0;visibility:visible;}
+    98%  {opacity:1;visibility:visible;}
+    100% {visibility:visible;opacity:1;}
+}
+
+@-moz-keyframes mozanfadein {
+    0%   {opacity:0;visibility:visible;}
+    98%  {opacity:1;visibility:visible;}
+    100% {visibility:visible;opacity:1;}
+}
+
+@-o-keyframes oanfadein {
+    0%   {opacity:0;visibility:visible;}
+    98%  {opacity:1;visibility:visible;}
+    100% {visibility:visible;opacity:1;}
+}
+
+.interst .travelling{
+    position: absolute;
+    top: 0;
+    width:100%;
+    font-size: 1vw;
+    text-align: center;
+}
+
+.interst .level1{
+    position: absolute;
+    top: 44%;
+    right: 28%;
+    left: 28%;
+    height: 10px;
+    border:2px solid #fff;
+    border-radius: 5px;
+}
+
+.interst .level1 .level2{
+    position: absolute;
+    left:0;
+    top:0;
+    bottom: 0;
+    width:1%;
+    background: #ed462f;
+}
+
+.fadeout{
+    visibility: hidden;
+    /*
+    -webkit-animation: wbanfadeout .8s linear 0s 1 forwards;
+    -ms-animation: msanfadeout .8s linear 0s 1 forwards;
+    -moz-animation: mozanfadeout .8s linear 0s 1 forwards;
+    -o-animation: oanfadeout .8s linear 0s 1 forwards;
+    animation: anfadeout .8s linear 0s 1 forwards;
+    */
+}
+
+@keyframes anfadeout {
+    0%   {opacity:1;visibility:visible;}
+    98%  {opacity:0;visibility:visible;}
+    100% {visibility:hidden;opacity:0;}
+}
+
+@-webkit-keyframes wbanfadeout {
+    0%   {opacity:1;visibility:visible;}
+    98%  {opacity:0;visibility:visible;}
+    100% {visibility:hidden;opacity:0;}
+}
+
+@-moz-keyframes mozanfadeout {
+    0%   {opacity:1;visibility:visible;}
+    98%  {opacity:0;visibility:visible;}
+    100% {visibility:hidden;opacity:0;}
+}
+
+@-ms-keyframes msanfadeout {
+    0%   {opacity:1;visibility:visible;}
+    98%  {opacity:0;visibility:visible;}
+    100% {visibility:hidden;opacity:0;}
+}
+
+@-o-keyframes oanfadeout {
+    0%   {opacity:1;visibility:visible;}
+    98%  {opacity:0;visibility:visible;}
+    100% {visibility:hidden;opacity:0;}
+}
+
+.interst a.share{
+    position: absolute;
+    bottom:2%;
+    top:88%;
+    width:auto;
+    left:50%;
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    background: transparent url(share.png) top center no-repeat;
+    background-size: auto 200%;
+}
+
+.interst a.share:hover{
+    background-position: bottom center;
+}
+
+.interst a.share img{
+    display: block;
+    height: 100%;
+    width: auto;
+}
+
+
+
+/* -- PLAYER VIDEO ---------------------------------------------------------- */
+.screenvideo{
+    /*left: -15000px;*/
+    margin: 0 auto;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    top :5%;
+    /*max-width: 1000px;*/
+    text-align: center;
+    height: auto;
+    font-size: 0;
+    line-height: 0;
+}
+
+.screenvideo img{
+    width: 100%;
+    height: auto;
+}
+
+.screenvideo a.closevid{
+    display: block;
+    position: absolute;
+    right: 1%;
+    top:1%;
+    width:2%;
+    height: auto;
+    z-index: 100;
+    font-size: 0;
+    line-height: 0;
+    background: transparent url(../x.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.screenvideo a.closevid:hover{
+    background-position: bottom center;
+}
+
+.screenvideo a.closevid img{
+    width: 100%;
+    height: auto;
+    font-size: 0;
+    line-height: 0;
+}
+
+/* pour interstitiel ---------------- */
+.interv{
+    position: absolute;
+    top:22%;
+    bottom: 14%;
+    width: 65%;
+    max-width: 1000px;
+    text-align: center;
+    height: auto;
+    left:50%;
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+}
+
+.interv img{
+    width: auto;
+    height: 100%;
+}
+/* ---------------------------------- */
+
+
+.videoyt{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -moz-box-shadow: 0px 0px 30px 0px #000000;
+    -webkit-box-shadow: 0px 0px 30px 0px #000000;
+    -o-box-shadow: 0px 0px 30px 0px #000000;
+    box-shadow: 0px 0px 30px 0px #000000;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=NaN, Strength=30);
+}
+
+.player{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* -- PLAYLIST ALBUM ------------------------------------------------------- */
+
+.page .rich .contenu .pctalbum{
+    position: absolute;
+    display: inline-block;
+    top:0;
+    left:0;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: 100%;
+}
+
+.page .rich .contenu .pctalbum img{
+    position: relative;
+    display: block;
+    width: auto;
+    height: 100%;
+    line-height: 0;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.page .rich .contenu .pctalbum .imgalbum{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*width: auto;*/
+    bottom: 0;
+}
+
+.page .rich .contenu .pctalbum .imgalbum img{
+    width: auto;
+    height: 100%;
+}
+
+.page .rich .contenu img.floating{
+    height: 100%;
+    width: auto;
+    float:left;
+}
+
+
+.album{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background: #181818;
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+.album iframe{
+    width:100%;
+    height: 100%;
+    min-height: 300px;
+}
+
+.album .pastille{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+}
+
+.album .pastille img{
+    width: 100%;
+    height: auto;
+}
+
+.album p.soon{
+    position:absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    text-align: center;
+    font-size:2vw;
+}
+
+.liste{
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /*
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;*/
+}
+
+.liste .gutter{
+    position:absolute;
+    top: 0;
+    left: auto;
+    width:4px;
+    right: 2px;
+    bottom: 0;
+    background: #233b49;
+}
+
+.liste .slider{
+    background: #2d5b74;
+    position: absolute;
+    top:0;
+    width:100%;
+    height: 10px;
+    border-radius: 4px;
+}
+
+
+/*
+.album .liste ul{
+    position: absolute;
+    width:98%;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    top:0;
+}
+
+.album .liste ul li{
+    display: block;
+    padding: 3px 0 2px 0;
+    margin: 0;
+    border-top:1px solid #242424;
+}
+
+.album .liste ul li a.track{
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    background: #181818;
+    width: 100%;
+    height: auto;
+
+}
+
+
+
+.album .liste ul li a.track span.icons{
+    margin-left: 1%;
+    display: inline-block;
+    width: 5%;
+    max-width: 22px;
+    height: auto;
+    line-height: 0;
+    background-image: url(../icon_track.png);
+    background-position: top center;
+    background-size: 100% auto;
+}
+
+.album .listeul li a.track:hover{
+    background: #1c1c1f;
+}
+
+.album .liste ul li a.track:hover span.icons{
+    background-position: center 25%;
+}
+
+.album .liste ul li a.currenttrack{
+    background: #222326;
+    color: #648f00;
+}
+
+.album .liste ul li a.currenttrack span.icons{
+    background-position: center 50%;
+}
+
+.album .liste ul li a.currenttrack:hover span.icons{
+    background-position: center 75%;
+}
+
+.album .liste ul li a.track span.icons img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+    border: 0;
+}
+
+.album .liste ul li a.track span.numtr{
+    color:#848484;
+    padding-left: 2%;
+    display: inline-block;
+    width: 4%;
+}
+
+.album .liste ul li a.track span.nametr{
+    display: inline-block;
+    width: 45%;
+    padding-left: 2%;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.album .liste ul li a.track span.artisttr{
+    display: inline-block;
+    width: 29%;
+    padding-left: 2%;
+    overflow: hidden;
+    color:#848484;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.album .liste ul li a.track span.dureetr{
+    color:#848484;
+    width:8%;
+    padding-left: 1%;
+}
+
+.album .header{
+    padding: 0;
+    margin: 0;
+    height: 20%;
+    overflow: hidden;
+}
+.album .header .headimg{
+    display: inline-block;
+    padding: 3% 0 0 3%;
+    width: auto;
+    height: 80%;
+    max-width: 30%;
+    margin: 0;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.album .header .headimg img{
+    width: auto;
+    height: 100%;
+    line-height: 0;
+    font-size: 0;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.album .header .titre{
+    margin: 0 0 0 2%;
+    padding: 3% 0 0 0;
+    vertical-align: top;
+    display: inline-block;
+    width: 62%;
+    color: #fff;
+    font-size: 1.8vw;
+}
+*/
+/* -- media queries --*/
+
+@media screen and (min-width:1700px){
+    .page .rich .contenu .blocd .menu li a{
+        font-size: 22px;
+    }
+    /*
+    .moanabig{
+        background-color: transparent;
+        background-position: left bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(../moana_big.png);
+    }
+    */
+}
+
+@media screen and (max-width:1200px){
+    .page .rich .contenu .blocd .menu li a{
+        font-size: 13px;
+    }
+}
+
+@media screen and (orientation:portrait){
+    .blocked{
+        display: block;
+    }
+}
+
+@media screen and (orientation:landscape){
+    .blocked{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1056px){
+    body{
+        background: url(../bg_mob.jpg) center top no-repeat;
+        background-size: cover;
+    }
+    .intro{
+        background-image: url(../bg_intro_mob.jpg);
+        background-position: top left;
+        background-size: cover;
+        z-index:2000;
+    }
+    .interst{
+        background-color: #0c537e;
+        background-image: url(../inter_vid_bg_mob.jpg);
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 50;
+    }
+
+    .map{
+        position: absolute;
+        top:0;
+        left:0;
+        height: auto;
+        width: auto;
+        background: transparent url(../bg-fumee_mob.png) top left no-repeat;
+        background-size: 100% 100%;
+        transform: translateZ(0);
+    }
+
+    ul.socials li{
+        display: block;
+        width: 22%;
+        height: auto;
+    }
+
+    .films{
+        position: absolute;
+        display: block;
+        z-index: 30;
+        /*min-width: 100px;
+        max-width: 220px;*/
+        width:6%;
+        height: auto;
+        text-align: center;
+        -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+        transform-origin: center center;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        background: transparent url(logos_spriting_4000mob.png) 0% top no-repeat;
+        background-size: 1500% auto;
+        opacity:1;
+        -webkit-transition: opacity .8s ease-in-out 1s;
+        -moz-transition: opacity .8s ease-in-out 1s;
+        -o-transition: opacity .8s ease-in-out 1s;
+        -ms-transition: opacity .8s ease-in-out 1s;
+        transition: opacity .8s ease-in-out 1s;
+    }
+
+
+    .films img{
+        width:100%;
+        height: auto;
+    }
+
+    /* baymax */
+    .film15{
+        width:6%;
+        background-position: 100% 0;
+        top:39%;
+        left:79%;
+    }
+    .film15:hover, .dejavu15{
+        background-position: 100% bottom;
+    }
+
+    /* princess and the frog */
+    .film14{
+        width:10%;
+        background-position: 85.72% 0;
+        top:43.5%;
+        left:21%;
+    }
+    .film14:hover, .dejavu14{
+        background-position: 85.72% bottom;
+    }
+
+    /* big hero 6 */
+    .film13{
+        background-position: 71.43% 0;
+        top:42%;
+        left:16%;
+    }
+    .film13:hover, .dejavu13{
+        background-position: 71.43% bottom;
+    }
+
+    /* pocahontas */
+    .film12{
+        background-position: 35.72% 0;
+        top:40%;
+        left:23%;
+    }
+    .film12:hover, .dejavu12{
+        background-position: 35.72% bottom;
+    }
+
+    /* moana */
+    .film11{
+        width: 10%;
+        background-position: 57.14% 0;
+        right:0;
+        top:70%;
+    }
+    .film11:hover, .dejavu11{
+        background-position: 57.14% bottom;
+    }
+
+    /* junglebook */
+    .film10{
+        width:7.5%;
+        background-position: 64.29% 0;
+        top:47%;
+        left:65%;
+    }
+    .film10:hover, .dejavu10{
+        background-position: 64.29% bottom;
+    }
+
+    /* lionking */
+    .film9{
+        width: 8%;
+        background-position: 78.58% 0;
+        top:54%;
+        left:47%;
+    }
+
+    .film9:hover, .dejavu9{
+        background-position: 78.58% bottom;
+    }
+
+    /* mulan */
+    .film8{
+        background-position: 21.43% 0;
+        top:40%;
+        left:70%;
+    }
+    .film8:hover, .dejavu8{
+        background-position: 21.43% bottom;
+    }
+
+    /* aladdin */
+    .film7{
+        background-position: 92.86% 0;
+        top:42%;
+        left:56%;
+    }
+    .film7:hover, .dejavu7{
+        background-position: 92.86% bottom;
+    }
+
+    /* pinocchio */
+    .film6{
+        width: 8%;
+        top:37%;
+        left:47%;
+    }
+
+    .film6:hover, .dejavu6{
+        background-position: 0% bottom;
+    }
+
+    /* mermaid */
+    .film5{
+        background-position: 50% 0;
+        top:26%;
+        left:47.5%;
+    }
+    .film5:hover, .dejavu5{
+        background-position: 50% bottom;
+    }
+
+    /* tangled */
+    .film4{
+        background-position: 28.58% 0;
+        top:30%;
+        left:48.5%;
+    }
+    .film4:hover, .dejavu4{
+        background-position: 28.58% bottom;
+    }
+
+    /* frozen */
+    .film3{
+        background-position: 7.15% 0;
+        top:20%;
+        left:48%;
+    }
+    .film3:hover, .dejavu3{
+        background-position: 7.1% bottom;
+    }
+
+    /* cinderella */
+    .film2{
+        background-position: 42.85% 0;
+        top:33%;
+        left:44.5%;
+    }
+    .film2:hover, .dejavu2{
+         background-position: 42.85% bottom;
+    }
+
+    /* peterpan */
+    .film1{
+        background-position: 14.29% 0;
+        top:29%;
+        left:43%;
+    }
+
+    .film1:hover, .dejavu1{
+        background-position: 14.29% bottom;
+    }
+
+}

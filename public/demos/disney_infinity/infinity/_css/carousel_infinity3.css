@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+.carousel{
+  display: block;
+  height: auto;
+  position:relative;
+  margin:0 auto;
+  text-align: center;
+  width: 100%;
+  max-width: 1170px;
+  background: #d6d6d5;
+  padding: 0;
+  line-height: 0;
+}
+
+.carousel img{
+  width: 100%;
+  height: auto;
+  line-height: 0;
+}
+
+.carousel ul{
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: auto;
+}
+
+.carousel ul li{
+  width: 100%;
+  height: auto;
+  list-style: none;
+  position: absolute;
+  display: block;
+  line-height: 0;
+}
+
+.carousel ul li img{
+  line-height: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}.carousel ul li img.nopacity{
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.carousel ul li img.fadin{
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.carousel ul li img.fadout{
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+.carousel ul li img.fadin:not(.nofade),
+.carousel ul li img.fadout:not(.nofade){
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+  transition: opacity .25s ease-in-out;
+}
+.carousel ul li img.nofade{
+  -webkit-transition-duration: .001s;
+  -moz-transition-duration: .001s;
+  transition-duration: .001s;
+  -webkit-transition-delay: -.25s;
+  -moz-transition-delay: -.25s;
+  transition-delay: -.25s;
+}
+.carousel a{
+  position: absolute;
+  top:0;
+  bottom: 0;
+  padding:10px;
+  text-align:center;
+}
+
+.carousel a.novisible{
+  visibility: hidden;
+}
+
+.carousel a.cleft{
+  left:0;
+  right:70%;
+}
+
+.carousel a.cright{
+  left:70%;
+  right:0;
+}
+
+.carousel a span{
+  position: absolute;
+   top: 50%;
+   left: 50%;
+   height: auto;
+   width: 30%;
+   margin: -25% 0 0 -30%;
+}
+
+.carousel a span img{
+  width: 100%;
+  height: auto;
+}
+
+.carousel a.cleft span{
+  background: url(../img/packsaventure/carousel/carousel_left.png) 0 0 no-repeat;
+}
+
+.carousel a.cright span{
+  margin: -25% 0 0 0;
+  background: url(../img/packsaventure/carousel/carousel_right.png) 0 0 no-repeat;
+}
+.carousel a.cleft span, .carousel a.cright span{
+  background-size: 100% auto;
+}
+.carousel a:hover span{
+  background-position: 0 100%;
+}
+
+.ubullet{
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1170px;
+  margin :51% auto 0 auto;
+  display: block;
+  height: auto;
+  text-align: center;
+}
+
+.ubullet li.bullets{
+  left: auto;
+  top:0;
+  position: relative;
+  display: inline-block;
+  width: 2%;
+  height: auto;
+  list-style-type: none;
+  line-height: auto;
+  margin-right: .5%;
+}
+
+.ubullet li.bullets a{
+  padding:0;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  background: url(../img/packsaventure/carousel/bullet.png) 0 0 no-repeat;
+  background-size: 100% auto;
+}
+
+.ubullet li.bullets a img{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.carousel span.numimg{
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 12px;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, .5);
+}

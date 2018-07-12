@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MADMAX FURY ROAD</title>
+    <link rel="stylesheet" href="_css/style.css">
+    <!-- <link rel="stylesheet" href="_js/magnific/magnific-popup.css"> -->
+    <!--[if lt IE 9]>
+    <script>
+    document.createElement('video');
+    </script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="content">
+        <video autoplay="true" preload="auto" class="bgvideo" id="videobg">
+            <source src="_video/MadMaxDestruPreview.mp4" type="video/mp4" />
+            <source src="_video/MadMaxDestruPreview.webm" type="video/webm" />
+        </video>
+        <a href="http://demo.greengardendigital.com/Madmax/" target="_blank" id="lien" class="lien"></a>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+        
+        jQuery(document).ready(function($){
+            
+            document.getElementById('videobg').addEventListener('ended',coursevideoend,false);
+            
+        });
+        
+        function coursevideoend(){
+           $('#lien').css('display','block');        
+        }
+        
+    </script>
+</body>
+</html>

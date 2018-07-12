@@ -1,0 +1,1020 @@
+@charset "utf-8";
+
+
+/*** OWL CAROUSEL ***/
+.owl-carousel .owl-wrapper:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}.owl-carousel,.owl-carousel .owl-wrapper{display:none;position:relative}.owl-carousel{width:100%;-ms-touch-action:pan-y}.owl-carousel .owl-wrapper-outer{overflow:hidden;position:relative;width:100%}.owl-carousel .owl-wrapper-outer.autoHeight{-webkit-transition:height .5s ease-in-out;-moz-transition:height .5s ease-in-out;-ms-transition:height .5s ease-in-out;-o-transition:height .5s ease-in-out;transition:height .5s ease-in-out}.owl-carousel .owl-item{float:left}.owl-controls .owl-buttons div,.owl-controls .owl-page{cursor:pointer}.owl-controls{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}.grabbing{cursor:url(grabbing.png) 8 8,move}.owl-carousel .owl-item,.owl-carousel .owl-wrapper{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0)}.owl-theme .owl-controls{margin-top:10px;text-align:center}.owl-theme .owl-controls .owl-buttons div{color:#FFF;display:inline-block;zoom:1;margin:5px;padding:3px 10px;font-size:12px;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px;background:#869791;filter:Alpha(Opacity=50);opacity:.5}.owl-theme .owl-controls.clickable .owl-buttons div:hover{filter:Alpha(Opacity=100);opacity:1;text-decoration:none}.owl-theme .owl-controls .owl-page{display:inline-block;zoom:1}.owl-theme .owl-controls .owl-page span{display:block;width:12px;height:12px;margin:5px 7px;filter:Alpha(Opacity=50);opacity:.5;-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px;background:#869791}.owl-theme .owl-controls .owl-page.active span,.owl-theme .owl-controls.clickable .owl-page:hover span{filter:Alpha(Opacity=100);opacity:1}.owl-theme .owl-controls .owl-page span.owl-numbers{height:auto;width:auto;color:#FFF;padding:2px 10px;font-size:12px;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px}
+.owl-carousel .owl-item a{display:block;}
+.owl-carousel .owl-item a img{margin:0 auto;display: block;}
+.owl-theme .owl-controls{margin-top:0px;}
+.owl-theme .owl-controls .owl-page span{background:#666;margin:1px;opacity:1;width:10px;height:10px;}
+.owl-theme .owl-controls .owl-page.active span{background:rgba(229, 9, 20,1);}
+.owl-carousel .owl-item{display:inline-block;}
+.owl-wrapper{width:100%;}
+.owl-carousel .owl-item div img{margin:0 auto;display: block;}
+
+html,body{
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 9pt;
+    margin: 0;
+    padding: 0;
+    color:#fff;
+}
+
+body{
+    background: url(../_images/bgnd-l.jpg) center top no-repeat #000;
+    background-size: 100% auto;
+    text-align: center;
+	height:100%;
+	width:100%;
+}
+
+a:active, a:focus {
+    outline: none;
+}
+
+.nodisplay{
+    display: none;
+}
+
+.novisible{
+    visibility: hidden;
+}
+
+#bgfake{
+	width:100%;
+	height:auto;
+	display:block;
+}
+
+.page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height:100%;
+    text-align: center;
+	overflow: hidden;
+}
+
+.page img.fake{
+    width: 100%;
+    height: auto;
+	display:block;
+}
+
+.loading{
+    background-color: rgba(0,0,0,.7);
+	width:100%;
+}
+
+.page .crane{
+    position: absolute;
+    width:25%;
+    height: auto;
+    left: 37.5%;
+    top: 35%;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    transform: translate(-50%,-50%);
+     -webkit-animation: wpulse .8s ease-in-out 0s infinite reverse;
+    -ms-animation: mspulse .8s ease-in-out 0s infinite reverse;
+    -o-animation: opulse .8s ease-in-out 0s infinite reverse;
+    -moz-animation: mozpulse .8s ease-in-out 0s infinite reverse;
+    animation: apulse .8s ease-in-out 0s infinite reverse;
+}
+
+.page .crane img{
+    width: 100%;
+    height: auto;
+}
+
+@keyframes apulse {
+    0%   {transform:scale(1,1)}
+    50%   {transform:scale(1.2,1.2)}
+    100%   {transform:scale(1,1)}
+}
+
+@-webkit-keyframes wpulse {
+    0%   {transform:scale(1,1)}
+    50%   {transform:scale(1.2,1.2)}
+    100%   {transform:scale(1,1)}
+}
+
+@-ms-keyframes mspulse {
+    0%   {transform:scale(1,1)}
+    50%   {transform:scale(1.2,1.2)}
+    100%   {transform:scale(1,1)}
+}
+
+@-o-keyframes opulse {
+    0%   {transform:scale(1,1)}
+    50%   {transform:scale(1.2,1.2)}
+    100%   {transform:scale(1,1)}
+}
+
+@-moz-keyframes mozpulse {
+    0%   {transform:scale(1,1)}
+    50%   {transform:scale(1.2,1.2)}
+    100%   {transform:scale(1,1)}
+}
+
+.page .crane span{
+    display: block;
+}
+
+.page .heroes{
+    margin:-15% auto 0;
+    width: 100%;
+    height: auto;
+}
+
+.page .heroes img{
+    width: 100%;
+    height: auto;
+}
+
+.page .bloctext{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.page .bloctext .logo{
+    margin:-5% auto 0;
+    width: 100%;
+    height: auto;
+}
+
+.page .bloctext .logo img{
+    width: 100%;
+    height: auto;
+}
+
+.page .bloctext .comp{
+    width: 50%;
+    height: auto;
+    margin:0 auto 0 auto;
+	position:relative;
+}
+
+.page .bloctext .comp img{
+    width: 100%;
+    height: auto;
+}
+
+.page .bloctext .comp:after{
+	width:180px;
+	height:1px;
+	background:#fff;
+	content:"";
+	position:absolute;
+	bottom:-10px;
+	left:50%;
+	margin-left:-90px;
+}
+
+/*
+.page .bloctext .trait{
+    
+    width: 100%;
+    height: auto;
+    margin:0 auto 0 auto;
+}
+
+.page .bloctext .trait img{
+    width: 70%;
+    height: auto;
+}
+*/
+
+
+.page .bloctext .mention{
+    margin:5% auto 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+.page .bloctext .mention img{
+    width: 100%;
+    height: auto;
+}
+
+.page .bloctext a.start{
+    display: block;
+    margin:1% auto 0 auto;
+    width:80%;
+    height: auto;
+    font-size: 0;
+    line-height: 0;
+    background: transparent url(../_images/start.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.page .bloctext a.start img{
+    width: 100%;
+    height: auto;
+}
+
+.page .bloctext a.start:hover{
+    background-position: bottom center;
+}
+
+.page .titre{
+    position: absolute;
+    top: 10px;
+    left: 10%;
+    width: 80%;
+    height: auto;
+}
+
+
+.page .titre img{
+    width:100%;
+    height: auto;
+}
+
+.page .equipe{
+    position:absolute;
+    left:0;
+    height:auto;
+    width:100%;
+	top:56%;
+}
+
+.page .equipe img{
+    width:100%;
+    height: auto;
+}
+
+
+.page a.valider{
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: auto;
+	bottom:44%;
+    left: 50%;
+    transform: translate(-50%,0);
+    background: transparent url(../_images/valider.png) top center no-repeat;
+    background-size: 100% auto;
+    font-size: 0;
+    line-height: 0;
+}
+.page a.valider img{
+    width:100%;
+    height: auto;
+}
+
+.page a.valider:hover{
+    background-position: bottom center;
+}
+
+
+.page a#valider02{
+	bottom:28%;
+}
+
+.page a.partagerfb{
+    bottom:20%;
+    width: 60%;
+	transform: none;
+    left: 20%;
+    background: transparent url(../_images/partagerfb.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.page a.partagerfb:hover{
+	background-position:top center;
+}
+
+.page a.partagertwt{
+    bottom:13%;
+    width: 60%;
+	transform: none;
+    left: 20%;
+    background: transparent url(../_images/partagertwt.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.page a.partagertwt:hover{
+	background-position:top center;
+}
+
+.page a.dwnld{
+    bottom:15.2%;
+    width: 30px;
+    right: 2%;
+    height: 30px;
+    left: auto;
+    transform: none;
+    background: transparent url(../_images/dwnld.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.page a.recommencer{
+    bottom: 7%;
+    left: 20%;
+    width: 60%;
+    transform: none;
+    background: transparent url(../_images/recommencer.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.page a.recommencer:hover{
+	background-position:top center;
+}
+
+.page a.profite{
+    bottom:0;
+    left: 10%;
+    width: 80%;
+    transform: none;
+    background: transparent url(../_images/profite.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.page a.profite:hover{
+	background-position:top center;
+}
+
+
+.page .equipe .monequipe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0%;
+    background-color: rgba(229,9,20,.75);
+}
+
+
+.page .strat {
+    height: 140px;
+    position: relative;
+    width: 100%;
+}
+
+.page#page3 .equipe .monequipe ul{
+	text-align:center;
+}
+
+.page#page3 .equipe .monequipe ul li{
+	width:25%;
+	margin:0 10px;
+}
+
+.page#page3 .equipe .monequipe #strat-attaquants ul.etoiles li{
+	margin:15px 20px 0 20px;	
+}
+
+.page#page3 .equipe .monequipe ul.etoiles li{
+	margin-top: 15px;
+	height:50px;
+}
+
+
+.page .capitaine{
+    background-color:transparent;
+    position: absolute;
+    top : 4% !important;
+    bottom: auto !important;
+    border: :1px solid red;
+}
+
+.page .capitaine .monequipe{
+    background-color:transparent;
+}
+
+.page .equipe .monequipe .titre{
+    position: absolute;
+    top: 8px;
+    left: 5%;
+    width:95%;
+    height: auto;
+}
+
+.page .equipe .monequipe .titre img{
+    width: 100%;
+    height: auto;
+}
+
+.page .equipe .monequipe ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    display: block;
+    top:26%;
+    left:2%;
+    right:0;
+    font-size: 0;
+    text-align: left;
+	width:96%;
+}
+
+.page .capitaine .monequipe ul{
+    left:4%;
+}
+
+.page .equipe .monequipe ul.labels{
+    top:78%;
+}
+
+.page .capitaine .monequipe ul.labels{
+    top:106%;
+}
+
+.page .equipe .monequipe ul li{
+    display: inline-block;
+    width: 19%;
+    margin: 0 0 0 1.2%;
+    -webkit-transform: skewX(-8deg);
+    -moz-transform: skewX(-8deg);
+    -ms-transform: skewX(-8deg);
+    -o-transform: skewX(-8deg);
+    transform: skewX(-8deg);
+	margin-left:0 10px;
+}
+
+.page .equipe .monequipe ul li:first-child{
+    margin: 0;
+}
+
+.page .equipe .monequipe ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    line-height: 0;
+    color: rgba(255,255,255,.5);
+}
+
+.page .equipe .monequipe ul li a:hover{
+    cursor: default;
+}
+
+.page .equipe .capit ul li a:hover{
+    cursor: pointer;
+}
+
+.page .equipe .monequipe ul li a span.lay1{
+    position: absolute;
+    display: block;
+    left: 10%;
+    right: 0;
+    top:10%;
+    height: 100%;
+    background-color: rgba(255,255,255,.5);
+}
+
+.page .equipe .monequipe ul li a span.lay2{
+    position: absolute;
+    display: block;
+    left: 0%;
+    right: 10%;
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.page .equipe .monequipe ul li a span.bordure{
+    position: absolute;
+    display: block;
+    left: 0%;
+    right: 10%;
+    height: 100%;
+    background-color:transparent;
+    border-top:2px solid rgba(255,255,255,.5);
+    border-right:2px solid rgba(255,255,255,.5);
+}
+
+.fullwhite{
+    background-color: rgb(255,255,255) !important;
+}
+
+.page .capitaine .capit a:hover span.fullred{
+    background-color: rgb(229,9,20) !important;
+}
+
+.page .capitaine .capit a.selectt span.fullred{
+    background-color: rgb(229,9,20) !important;
+}
+
+.fullborder{
+    border-color: rgb(255,255,255) !important;
+    color:#fff;
+}
+
+.fullbordered{
+    border-color: rgb(229,9,20) !important;
+    color: #e50914;
+}
+
+.page .equipe .monequipe ul li a span.bordure span.texte{
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: inherit;
+    font-size: 10pt;
+    top:50%;
+    transform: translate(0,-50%);
+}
+
+.page .equipe .monequipe ul li a span.noright{
+    border-right: none;
+    right: 0;
+}
+
+.page .equipe .monequipe ul li a span.padright{
+    right: 3%;
+}
+
+.page .equipe .monequipe ul li.noleft{
+    margin: 0 1% 0 0;
+}
+
+.page .equipe .monequipe ul li a span.lay2 img{
+    width: 120%;
+    height: auto;
+    margin-left: -5%;
+    -webkit-transform: skewX(8deg);
+    -moz-transform: skewX(8deg);
+    -ms-transform: skewX(8deg);
+    -o-transform: skewX(8deg);
+    transform: skewX(8deg);
+}
+
+.page .equipe .monequipe ul li a img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+.page .capitaine .capit ul{
+    top:42%;
+}
+
+.page .capitaine .capit ul.etoiles{
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 2%;
+    right: 2%;
+	text-align:center;
+}
+
+.page .capitaine .capit ul.etoiles li{
+    display: inline-block;
+    width: 19%;
+    margin: 0 0 0 1.2%;
+    -webkit-transform: skewX(0deg);
+    -moz-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+    -o-transform: skewX(0deg);
+    transform: skewX(0deg);
+    background: transparent url(../_images/etoiles.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.page .capitaine .capit ul.etoiles li:first-child{
+    margin: 0;
+}
+
+.page .capitaine .capit ul.etoiles li img{
+    width: 100%;
+    height: auto;
+}
+
+.page .capitaine .capit ul.etoiles li.rollov{
+    background-position: bottom center;
+}
+
+
+
+
+
+
+/* joueur sur le terrain */
+.page .joueur{
+    position: absolute;
+    width:44%;
+    height: auto;
+    font-size: 0;
+    line-height: 0;
+}
+
+.page .joueur img{
+    width: 100%;
+    height: auto;
+}
+
+
+.page .gard{
+    left: 28%;
+    top: 6%;
+}
+
+.page .def1{
+    left:2%;
+    top:26%;
+}
+
+.page .def2{
+    right:2%;
+    top: 26%;
+}
+
+.page .att1{
+    top: 47%;
+    left: 2%;
+}
+
+.page .att2{
+    top: 47%;
+    right: 2%;
+}
+
+/* SURVOL COMPO */
+.compo-desc{
+	display:none;
+}
+
+#page4 .joueur:hover img{
+	display:none;
+}
+#page4 .joueur:hover .compo-desc{
+	display:block;
+}
+
+
+.page .carousel{
+    position: absolute;
+    top:50px;
+    left: 0;
+    right: 0;
+    height: auto;
+    overflow: hidden;
+	height:400px;
+}
+
+.page .carousel #ahref img{
+	width:80%;
+	margin:0 auto;
+}
+
+
+.page .carousel #ahref .p1 .retirer{display:none;}
+.page .carousel #ahref .p2 .retirer{display:none;}
+.page .carousel #ahref .p3 .retirer{display:none;}
+.page .carousel #ahref .p4 .retirer{display:none;}
+.page .carousel #ahref .p5 .retirer{display:none;}
+.page .carousel #ahref .p6 .retirer{display:none;}
+.page .carousel #ahref .p7 .retirer{display:none;}
+.page .carousel #ahref .p8 .retirer{display:none;}
+.page .carousel #ahref .p9 .retirer{display:none;}
+.page .carousel #ahref .p10 .retirer{display:none;}
+.page .carousel #ahref .p11 .retirer{display:none;}
+.page .carousel #ahref .p12 .retirer{display:none;}
+.page .carousel #ahref .p13 .retirer{display:none;}
+.page .carousel #ahref .p14 .retirer{display:none;}
+.page .carousel #ahref .p15 .retirer{display:none;}
+.page .carousel #ahref .p16 .retirer{display:none;}
+.page .carousel #ahref .p17 .retirer{display:none;}
+.page .carousel #ahref .p18 .retirer{display:none;}
+
+.page .carousel #ahref .sp1 .ajouter{display:none;}
+.page .carousel #ahref .sp2 .ajouter{display:none;}
+.page .carousel #ahref .sp3 .ajouter{display:none;}
+.page .carousel #ahref .sp4 .ajouter{display:none;}
+.page .carousel #ahref .sp5 .ajouter{display:none;}
+.page .carousel #ahref .sp6 .ajouter{display:none;}
+.page .carousel #ahref .sp7 .ajouter{display:none;}
+.page .carousel #ahref .sp8 .ajouter{display:none;}
+.page .carousel #ahref .sp9 .ajouter{display:none;}
+.page .carousel #ahref .sp10 .ajouter{display:none;}
+.page .carousel #ahref .sp11 .ajouter{display:none;}
+.page .carousel #ahref .sp12 .ajouter{display:none;}
+.page .carousel #ahref .sp13 .ajouter{display:none;}
+.page .carousel #ahref .sp14 .ajouter{display:none;}
+.page .carousel #ahref .sp15 .ajouter{display:none;}
+.page .carousel #ahref .sp16 .ajouter{display:none;}
+.page .carousel #ahref .sp17 .ajouter{display:none;}
+.page .carousel #ahref .sp18 .ajouter{display:none;}
+
+.page .carousel #ahref .sp1 .retirer{display:block;}
+.page .carousel #ahref .sp2 .retirer{display:block;}
+.page .carousel #ahref .sp3 .retirer{display:block;}
+.page .carousel #ahref .sp4 .retirer{display:block;}
+.page .carousel #ahref .sp5 .retirer{display:block;}
+.page .carousel #ahref .sp6 .retirer{display:block;}
+.page .carousel #ahref .sp7 .retirer{display:block;}
+.page .carousel #ahref .sp8 .retirer{display:block;}
+.page .carousel #ahref .sp9 .retirer{display:block;}
+.page .carousel #ahref .sp10 .retirer{display:block;}
+.page .carousel #ahref .sp11 .retirer{display:block;}
+.page .carousel #ahref .sp12 .retirer{display:block;}
+.page .carousel #ahref .sp13 .retirer{display:block;}
+.page .carousel #ahref .sp14 .retirer{display:block;}
+.page .carousel #ahref .sp15 .retirer{display:block;}
+.page .carousel #ahref .sp16 .retirer{display:block;}
+.page .carousel #ahref .sp17 .retirer{display:block;}
+.page .carousel #ahref .sp18 .retirer{display:block;}
+
+/*
+
+.page .carousel img.fake{
+    width: 100%;
+    height: auto;
+}
+
+.page .carousel .slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+    display: inline;
+
+}
+
+.transit{
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.page .carousel .slide img.dims{
+    max-height: 100%;
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+.page .carousel .slide .frise{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.page .carousel .slide .frise img{
+    height: 100%;
+    width: auto;
+}
+
+.page .carousel .slide .frise img.crsl{
+    position: absolute;
+    top:0;
+    left:0;
+    height:auto;
+    width: auto;
+    z-index: 2;
+}
+
+.page .carousel .slide .frise ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    z-index: 0;
+}
+
+.page .carousel .slide .back{
+    z-index: 5;
+}
+
+.page .carousel .slide .front{
+    z-index: 10;
+}
+
+.page .carousel .slide .back ul li, .page .carousel .slide .front ul li{
+    display: inline-block;
+    width:5.55%;
+    margin: 0 0 0 5.55%;
+    height: 100%;
+}
+
+.page .carousel .slide .front ul li:first-child{
+    margin:0 0 0 0;
+}
+
+
+.page .carousel .slide .frise ul li.rollv{
+
+}
+
+
+.page .carousel .slide .frise ul li.rolls{
+
+}
+
+.page .carousel .slide ul#ahref{
+    position: absolute;
+    top:18%;
+    left: 0;
+    height: 100%;
+    right:0;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    z-index: 10;
+	
+}
+
+.page .carousel .slide ul#ahref li{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 5.25%;
+    height: 100%;     
+}
+
+
+.page .carousel .slide ul#ahref li a{
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../_images/textes.png);
+    background-color: transparent;
+    background-size: 1800% auto;
+    background-position: top left;
+    
+}
+
+
+
+.page .carousel .slide ul#ahref li a.p1{
+    background-position: 2.5% 0;
+}
+.page .carousel .slide ul#ahref li a.p2{
+    background-position: 8% 0;
+}
+.page .carousel .slide ul#ahref li a.p3{
+    background-position: 13.5% 0;
+}
+.page .carousel .slide ul#ahref li a.p4{
+    background-position: 19% 0;
+}
+.page .carousel .slide ul#ahref li a.p5{
+    background-position: 24.5% 0;
+}
+.page .carousel .slide ul#ahref li a.p6{
+    background-position: 30.2% 0;
+}
+.page .carousel .slide ul#ahref li a.p7{
+    background-position: 36% 0;
+}
+.page .carousel .slide ul#ahref li a.p8{
+    background-position: 41.5% 0;
+}
+.page .carousel .slide ul#ahref li a.p9{
+    background-position: 47.05% 0;
+}
+.page .carousel .slide ul#ahref li a.p10{
+    background-position: 52.94% 0;
+}
+.page .carousel .slide ul#ahref li a.p11{
+    background-position: 58.4% 0;
+}
+.page .carousel .slide ul#ahref li a.p12{
+    background-position: 64% 0;
+}
+.page .carousel .slide ul#ahref li a.p13{
+    background-position: 69.5% 0;
+}
+.page .carousel .slide ul#ahref li a.p14{
+    background-position: 74.6% 0;
+}
+.page .carousel .slide ul#ahref li a.p15{
+    background-position: 80.5% 0;
+}
+.page .carousel .slide ul#ahref li a.p16{
+    background-position: 86% 0;
+}
+.page .carousel .slide ul#ahref li a.p17{
+    background-position: 91.8% 0;
+}
+.page .carousel .slide ul#ahref li a.p18{
+    background-position: 97% 0;
+}
+
+.page .carousel .slide ul#ahref li a.sp1{
+    background-position: 2.5% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp2{
+    background-position: 8% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp3{
+    background-position: 13.5% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp4{
+    background-position: 19% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp5{
+    background-position: 24.5% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp6{
+    background-position: 30.2% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp7{
+    background-position: 36% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp8{
+    background-position: 41.5% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp9{
+    background-position: 47.05% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp10{
+    background-position: 52.94% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp11{
+    background-position: 58.4% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp12{
+    background-position: 64% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp13{
+    background-position: 69.5% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp14{
+    background-position: 74.6% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp15{
+    background-position: 80.5% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp16{
+    background-position: 86% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp17{
+    background-position: 91.8% -125%;
+}
+.page .carousel .slide ul#ahref li a.sp18{
+    background-position: 97% -125%;
+}
+
+
+
+.page .carousel a.nav{
+    position: absolute;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    width:10%;
+    height: auto;
+    background-size: 100% auto;
+    background-position: top center;
+    bottom: 39%;
+    border:0;
+    z-index: 15;
+}
+
+.page .carousel a.nav:active,.page .carousel a.nav:focus{
+    outline:none;
+}
+
+.page .carousel a.nav:hover{
+    background-position: bottom center;
+}
+
+.page .carousel a.nav img{
+    width: 100%;
+    height: auto;
+}
+
+.next{
+    right: 0;
+    background-image: url(../_images/arrowr.png)
+}
+
+.prev{
+    left:0;
+    background-image: url(../_images/arrowl.png)
+}
+
+*/

@@ -1,0 +1,235 @@
+
+            (function(){
+                var _m,
+                svgcnt,
+                curColor,
+                scontext,
+                scanvas,
+                url = '',
+                divzoom,
+                curScale = 1,
+                xs = 0, ys = 0,             // origine x,y mousedown pour drag
+                xd = 0, yd = 0,             // range drag
+                xod = 0, yod = 0,           // offset drag contsvg
+                attachedmove = false,
+
+                mouseover = function(e,c,t){
+
+                },
+
+                transendZoom = function(e,c,t){
+                    _m.removeAclass('contsvg','forZoom');
+                },
+
+                mouseDown = function(e,c,t){
+                    var ysvg = _m.$dc('contsvg').getBoundingClientRect().top;
+                    var xsvg = _m.$dc('contsvg').getBoundingClientRect().left;
+                    var xz = _m.$dc('zoom').getBoundingClientRect().left;
+                    var id = e.currentTarget.getAttribute('id');
+                    _m.listenerRemove(id, 'mousemove', true);
+                    _m.listenerRemove(id, 'touchmove', true);
+
+                    // no touch
+                    if(e.changedTouches === undefined || !e.changedTouches === false){
+                        xs = e.x === undefined ? e.clientX : e.x;
+                        ys = e.y === undefined ? e.clientY : e.y;
+                        //console.log(_m.myevents);
+                        //console.log('event : ',_m.myevents._searchEvt({id:'zoom', evt:'mousemove'}));
+                        _m.listenerAdd(id, 'mousemove', mouseDrag, true);
+                        attachedmove = true;
+                    
+                    }    
+                    //touch
+                    if(e.changedTouches && e.touches.length == 1) {
+                        xs = e.changedTouches[0].clientX;
+                        ys = e.changedTouches[0].clientY;
+                        _m.listenerAdd(id, 'touchmove', mouseDrag, true);
+                    }
+
+                    ys -= ysvg;
+                    xs -= (xsvg-xz);
+                },
+                
+                mouseUp = function(e,c,t){
+                    var id = e.currentTarget.getAttribute('id');
+                    if(e.changedTouches === undefined) {
+                        _m.listenerRemove(id, 'mousemove', true);
+                        // _m.forceRemove(id, 'mousemove', mouseDrag, true);
+                    }else{
+                        _m.listenerRemove(id, 'touchmove', true);
+                    }
+                },
+
+                mouseDrag = function(e,c,t){
+                    console.log('mousedrag');
+                    var id = e.currentTarget.getAttribute('id');
+                    var xd = 0;
+                    var yd = 0;
+                    // no touch
+                    if(e.changedTouches === undefined || e.changedTouches === false){
+                        xd = e.x === undefined ? e.clientX : e.x;
+                        yd = e.y === undefined ? e.clientY : e.y;
+                    }
+                    // touch
+                    if(e.changedTouches) {
+                        xd = e.changedTouches[0].clientX;
+                        yd = e.changedTouches[0].clientY;
+                    }
+
+                    var nx = xd-xs;
+                    var ny = yd-ys; 
+                    
+                    var zy = _m.$dc('contsvg').getBoundingClientRect().top;
+                    var zx = (_m.$dc('contsvg').getBoundingClientRect().left-_m.$dc('zoom').getBoundingClientRect().left);
+
+                    console.log('zy : ', zy);
+                    
+                    if(Math.abs(nx) + Math.abs(ny) > 2) {
+                        _m.$dc('contsvg').style.top = ny+"px";
+                        _m.$dc('contsvg').style.left = nx+"px";
+                        // _m.$dc('contsvg').style.transform = "translate(" + ((nx+zx)/curScale) + "px," + ((ny+zy)/curScale) + "px) scale(" + curScale + ")";
+                    }
+                },
+                
+                clic = function(e,c,t){
+                    console.log('clic');
+                    // console.log(e,c,t);
+                    // if(Math.abs(e.clientX - xs) + Math.abs(e.clientY - ys) > 4) {
+                    //     _m.listenerRemove('zoom', 'mousemove', true);
+                    //     return false;
+                    // }
+                    var id = '';
+                    try{
+                        var id = t.getAttribute('id');
+                    }catch (e){
+                        _m.listenerRemove('zoom', 'mousemove', true);
+                    }
+                    console.log('id : ',id);
+                    if(id != '' && id != null && id != 'svgcontainer') {
+                        _m.$dc(id).setAttribute('style',"fill:"+curColor);
+                    }
+                    _m.listenerRemove('zoom', 'mousemove', true);
+                    return false;
+                },
+
+                menuClic = function(e,c,t){
+                    // console.log(document.getElementById("mysvg").innerHTML);
+                    switch(e.currentTarget.getAttribute('id')){
+
+                        case 'download':
+                            var datasvg = document.getElementById("mysvg").innerHTML;
+                            canvg(document.getElementById('exportsvg'), '<svg id="svgcontainer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1311.974 1680.872">' + datasvg + '</svg>',{offsetX:171, offsetY:449, log:true, ignoreClear:true, renderCallback:function(){
+                                console.log('DONE');
+                                var data = scanvas.toDataURL('image/jpeg',.8);
+                                url = data.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
+                                _m.$dc('imgTodownload').setAttribute('href',url);
+                                _m.$dc('imgTodownload').click();                            
+                            }});
+                        break;
+                        
+                        case 'zoomin':
+                            if (curScale < 8) {
+                                curScale += .5;
+                                // _m.$dc('contsvg').style.msTransformOrigin = "50% 50% 0";
+                                // _m.$dc('contsvg').style.WebkitTransformOrigin = "50% 50% 0";
+                                // _m.$dc('contsvg').style.transformOrigin = "50% 50% 0";
+                                // _m.$dc('contsvg').style.WebkitTransition = "all .3s ease-out";
+                                // _m.$dc('contsvg').style.transition = "all .3s ease-out";
+                                _m.addAclass('contsvg','forZoom');
+                                _m.$dc('contsvg').style.transform = "scale(" + curScale + ")";
+                                _m.listenertransAdd('contsvg', 'transitionend', transendZoom);
+                            }
+                        break;
+                        
+                        case 'zoomout':
+                            if (curScale > 1){
+                                curScale -= .5;
+                                _m.addAclass('contsvg','forZoom');
+                                _m.$dc('contsvg').style.transform = "scale(" + curScale + ")";
+                                _m.listenertransAdd('contsvg', 'transitionend', transendZoom);
+                            }
+                        break;
+                    }
+
+                    // canvg('exportsvg','_svg/beerus.svg',{log:true,renderCallback:function(dom){
+                    //     console.log('DONE !');
+                    // }});
+                    return false;
+                },
+
+                colorpicker = function(e, c, t){
+                    curColor = e.currentTarget.getAttribute('style').slice(-7);
+                    console.log('colorpicker : ', curColor);
+                },
+
+                deferImageCanvas = function(callback, ind, im, x, y, w, h, dx, dy, dw, dh){
+                    if (im.addEventListener != undefined){
+                        im.addEventListener('load',function(e){
+                            callback(im, ind, x, y, w, h, dx, dy, dw, dh);
+                        });
+                    }else if (im.readyState){ // IE8
+                        im.onreadystatechange = function(){
+                            if(im.readyState == 'loaded' || im.readyState == 'complete') {
+                                callback(im, ind, x, y, w, h, dx, dy, dw, dh);
+                            }
+                        };
+                    }
+                },
+
+                loadInCanvas = function(){
+                    // ajout bg
+                    //scontext = scanvas.getContext('2d');
+                    scontext.save();
+                    scontext.setTransform(1, 0, 0, 1, 0, 0);
+                    scontext.clearRect(0, 0, 1654, 2340);
+                    scontext.restore();
+                    var bimg = new Image();
+                    bimg.src = '_bg/bg_export_color.jpg';
+                    deferImageCanvas(loadInCanvasPlayer, 0 , bimg, 0, 0, 1654, 2340, 0, 0, 1654, 2340);
+                // loadInCanvasPlayer();
+                },
+
+                loadInCanvasPlayer = function(im, ind, x, y, w, h, dx, dy, dw, dh){
+                    //loadInCanvasPlayer = function(){
+                    // dessine l'image de fond 
+                    scontext.drawImage(im, x, y, w, h, dx, dy, dw, dh);
+                    //
+                },
+
+                Init = function(){
+                    _m = manageEvents,
+                    svgcnt = _m.$dc('svgcontainer');
+                    scanvas = _m.$dc('exportsvg'),
+                    scontext = scanvas.getContext('2d'),
+
+                    _m.listenerAdd('zoom', 'touchstart', mouseDown,false);
+                    _m.listenerAdd('zoom', 'mousedown', mouseDown,false);
+
+                    _m.listenerAdd('zoom', 'mouseup', mouseUp, true);
+                    _m.listenerAdd('zoom', 'touchend', mouseUp, false);
+
+                    //_m.listenerAdd('zoom', 'mouseout', mouseUp, true);
+
+                    _m.listenerAdd('contsvg', 'click', clic, false);
+                    // _m.listenerAdd('contsvg', 'mouseover', mouseover, true);
+                    _m.listenClass('picker', 'click', colorpicker, true);
+                    _m.listenClass('menugen', 'click', menuClic, true);
+
+                    _m.listenClass('btzoom','click', menuClic, true);
+
+                    loadInCanvas();
+                },
+
+                DomLoaded = function(e){
+                    Init();
+                };
+
+                if (window.addEventListener){
+                    window.addEventListener('DOMContentLoaded', function(){DomLoaded()});
+                }else if (window.attachEvent){ // IE8
+                    window.attachEvent('onload', function() { DomLoaded(); });
+                }else{
+                    window.onload = DomLoaded();
+                }
+            })()
+        

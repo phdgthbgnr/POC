@@ -1,0 +1,657 @@
+body{
+    background: #0052c5 url(_images/bg.jpg) top center no-repeat;
+    margin:0;
+    padding:0;
+}
+
+.contentSJ{
+    width:1006px;
+    height:auto;
+    margin:0 auto;
+    background-color: #fff;
+}
+
+
+
+
+
+
+@font-face {
+    font-family: 'player_proregular';
+    src: url('typo/player_pro-webfont.eot');
+    src: url('typo/player_pro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('typo/player_pro-webfont.woff') format('woff'),
+         url('typo/player_pro-webfont.ttf') format('truetype'),
+         url('typo/player_pro-webfont.svg#player_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'player_probold';
+    src: url('typo/player_pro_bold-webfont.eot');
+    src: url('typo/player_pro_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('typo/player_pro_bold-webfont.woff') format('woff'),
+         url('typo/player_pro_bold-webfont.ttf') format('truetype'),
+         url('typo/player_pro_bold-webfont.svg#player_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+.lunarSJ{
+    width:985px;
+    margin:0 auto;
+    position: relative;
+}
+
+ .nike_branding {
+    width: 100%;
+    height: auto;
+    background-color: #0054be;
+    z-index: 5000;
+    box-sizing: border-box;
+ }
+.nike_branding > * { box-sizing: inherit; }
+     
+.nike_banner {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+        background-image: url(img/janoski_fig2.jpg);
+        background-position: top left;
+        background-repeat: no-repeat;
+        -webkit-animation: nikeBannerTopAnim1 4s infinite;
+        animation: nikeBannerTopAnim1 4s infinite;
+    }
+     
+     @-webkit-keyframes nikeBannerTopAnim1 {
+        0%    { background-image: url(img/janoski_fig2.jpg); }
+        72%   { background-image: url(img/janoski_fig2.jpg); }
+        73%   { background-image: url(img/janoski_fig1.jpg); }
+        99.9% { background-image: url(img/janoski_fig1.jpg); }
+        100%  { background-image: url(img/janoski_fig2.jpg); }
+     }
+     
+     @keyframes nikeBannerTopAnim1 {
+        0%    { background-image: url(img/janoski_fig2.jpg); }
+        72%   { background-image: url(img/janoski_fig2.jpg); }
+        73%   { background-image: url(img/janoski_fig1.jpg); }
+        99.9% { background-image: url(img/janoski_fig1.jpg); }
+        100%  { background-image: url(img/janoski_fig2.jpg); }
+     }
+     
+     .nike_banner_left {
+        height: 100%;
+        width: 60%;
+        opacity: 1;
+        background-image: url(img/janoski_fig1.jpg);
+        background-position: top left;
+        background-repeat: no-repeat;
+        -webkit-animation: nikeBannerTopAnim2 4s infinite;
+        animation: nikeBannerTopAnim2 4s infinite;
+     }
+     
+     @-webkit-keyframes nikeBannerTopAnim2 {
+        0%   { opacity: 1; background-image: url(img/janoski_fig1.jpg); }
+        25%  { opacity: 1; background-image: url(img/janoski_fig1.jpg); }
+        30%  { opacity: 0; background-image: url(img/janoski_fig1.jpg); }
+        35%  { opacity: 0; background-image: url(img/janoski_fig3.jpg); }
+        60%  { opacity: 0; background-image: url(img/janoski_fig3.jpg); }
+        65%  { opacity: 1; background-image: url(img/janoski_fig3.jpg); }
+        90%  { opacity: 1; background-image: url(img/janoski_fig3.jpg); }
+        95%  { opacity: 0; background-image: url(img/janoski_fig3.jpg); }
+        95.1%{ opacity: 1; background-image: url(img/janoski_fig1.jpg); }
+        100% { opacity: 1; background-image: url(img/janoski_fig1.jpg); }
+     }
+     
+     @keyframes nikeBannerTopAnim2 {
+        0%   { opacity: 1; background-image: url(img/janoski_fig1.jpg); }
+        25%  { opacity: 1; background-image: url(img/janoski_fig1.jpg); }
+        30%  { opacity: 0; background-image: url(img/janoski_fig1.jpg); }
+        35%  { opacity: 0; background-image: url(img/janoski_fig3.jpg); }
+        60%  { opacity: 0; background-image: url(img/janoski_fig3.jpg); }
+        65%  { opacity: 1; background-image: url(img/janoski_fig3.jpg); }
+        90%  { opacity: 1; background-image: url(img/janoski_fig3.jpg); }
+        95%  { opacity: 0; background-image: url(img/janoski_fig3.jpg); }
+        95.1%{ opacity: 1; background-image: url(img/janoski_fig1.jpg); }
+        100% { opacity: 1; background-image: url(img/janoski_fig1.jpg); }
+     }
+     
+     .nike_banner_right {
+        position: absolute;
+        overflow: hidden;
+        -webkit-transform: skewX(-10deg) translateZ(0); /* translateZ triggers anti-aliasing */
+        transform: skewX(-10deg) translateZ(0);
+        width: 75%;
+        height: 100%;
+        top: 0;
+        left: 50%;
+     }
+
+.nike_banner_right_image .titreHSJ{
+    position:absolute;
+    top:55px;
+    left:95px;
+}
+
+.nike_banner_right_image .shoes1{
+    position: absolute;
+    z-index: 10;
+    left:140px;
+    top:80px;
+    -webkit-animation-name: Floatingx2;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    
+    animation-name: Floatingx;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+}
+
+@-webkit-keyframes Floatingx2{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 15px);}
+    to {-webkit-transform: translate(0, -0px);    }    
+}
+
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 15px);}
+    to {-moz-transform: translate(0, -0px);}    
+}
+
+@-moz-keyframes Floatingx{
+    from {transform:translate(0, 0px);}
+    65% {transform:translate(0, 15px);}
+    to {transform: translate(0, -0px);}    
+}
+
+.nike_banner_right_image .shoes2{
+    position: absolute;
+    z-index: 12;
+    left:330px;
+    top:90px;
+    -webkit-animation-name: Floatingx2;
+    -webkit-animation-delay: .5s;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    
+    -moz-animation-name: Floating2;
+    -moz-animation-delay: .5s;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    
+    animation-name: Floatingx;
+    animation-delay: .5s;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes Floatingx2{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 15px);}
+    to {-webkit-transform: translate(0, -0px);    }    
+}
+
+@-moz-keyframes Floating2{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 15px);}
+    to {-moz-transform: translate(0, -0px);}    
+}
+
+@-moz-keyframes Floatingx{
+    from {transform:translate(0, 0px);}
+    65% {transform:translate(0, 15px);}
+    to {transform: translate(0, -0px);}    
+}
+
+.nike_banner_right_image .nikesb{
+    position: absolute;
+    top:430px;
+    left:50px;
+}
+     
+     .nike_banner_right_image {
+        -webkit-transform: skewX(10deg) translateX(-10%);
+        transform: skewX(10deg) translateX(-10%);
+        height: 100%;
+        width: 85%;
+        background: url(img/bg_header_shoes.jpg) top left no-repeat;
+     }
+     
+     .nike_slide_product {
+        background: url(img/nike_slider_product_bg.jpg) top center no-repeat;
+        width: 100%;
+        height: 2000px;
+        overflow: hidden;
+     }
+     
+     .nike_slider_container {
+        margin-top: 235px;
+        width: auto;
+        text-align: center;
+        overflow: hidden;
+        padding-bottom: 5px;
+        white-space: nowrap;
+        /* margin-left: 249px; /* First image */
+        /* margin-left: -737px; /* Third image */
+        /* margin-left: -1475px; /* Fourth image */
+        margin-left: -239px; /* Second image */
+     }
+     
+     #nike_slider_container {
+        -webkit-transition: margin-left .5s cubic-bezier(.81,.55,.27,1.23);
+        transition: margin-left .5s cubic-bezier(.81,.55,.27,1.23);
+     }
+     
+     .nike_slider_content {
+        background-color: #000;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 5px solid #fff;
+        width: 458px;
+        height: 306px;
+        position: relative;
+        box-shadow: -2px 2px 0px 0px #0080de, -5px 5px 0px 0px #009cff;
+        display: inline-block;
+        margin: 0 10px;
+        overflow: hidden;
+        cursor: pointer;
+     }
+     
+     .nike_slider_content img { opacity: .5; -webkit-transition: opacity .5s ease-in-out; transition: opacity .5s ease-in-out; }
+     
+     .nike_slider_image_active { cursor: default; }
+     
+     .nike_slider_image_active img { opacity: 1; }
+     
+     .nike_vid_thumb { font-size: 0; line-height: 0; cursor: pointer; }
+    
+
+/*
+     .nike_vid_thumb:before {
+        position: absolute;
+        content: "";
+        width: 38px;
+        height: 38px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 0px solid #009cff;
+        box-shadow: 0 0 0 0px #009cff, 0 0 0 3px #fff;
+        background-color: rgba(0,0,0,.3);
+        top: 65%;
+        left: calc(50% - 19px);
+        -webkit-transition: box-shadow .2s cubic-bezier(.73,.83,.58,2.16);
+        transition: box-shadow .2s cubic-bezier(.73,.83,.58,2.16);
+     }
+     
+
+     .nike_vid_thumb:after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 0 7px 11px;
+        border-color: transparent transparent transparent #ffffff;
+        top: calc(65% + 12px);
+        left: calc(50% - 4px);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: all .2s cubic-bezier(.73,.83,.58,2.16);
+        transition: all .2s cubic-bezier(.73,.83,.58,2.16);
+     }
+*/
+
+     
+.nike_vid_thumb span{
+    border-radius: 50%;
+    display: block;
+    width:44px;
+    height:44px;
+    background: transparent url(img/play.png) top center no-repeat;
+    margin:180px auto 0 auto;
+}
+
+.nike_vid_thumb span:hover{
+    background-position: center -44px;
+    box-shadow: 0 0 0 0px #009cff, 0 0 0 3px #009cff;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: box-shadow .2s cubic-bezier(.73,.83,.58,2.16);
+    transition: box-shadow .2s cubic-bezier(.73,.83,.58,2.16);
+}
+
+
+
+
+     .nike_vid_thumb:hover:before {
+        box-shadow: 0 0 0 4px #009cff, 0 0 0 2px #fff;
+         background-color: rgba(255,255,255,.67);
+     }
+     
+     .nike_vid_thumb:hover:after {
+        border-color: transparent transparent transparent #181818;
+        -webkit-transform: scale(1.25);
+        transform: scale(1.25);
+     }
+     
+     .nike_slider_thumbs {
+        margin-top: 49px;   
+     }
+     
+     .nike_slider_thumbs ul {
+        text-align: center;   
+     }
+     
+     .nike_slider_thumbs li {
+         list-style: none;
+         padding: 0 32px;
+         display: inline-block;
+     }
+     
+     .nike_slider_thumb {
+         padding: 0;
+         margin: 0;
+         border: 0;
+         box-sizing: border-box;
+         cursor: pointer;
+         display: inline-block;
+         -webkit-transition: all .2s cubic-bezier(.33,.87,.63,1);
+         -moz-transition: all .2s cubic-bezier(.33,.87,.63,1);
+         transition: all .2s cubic-bezier(.33,.87,.63,1);
+         background: #000;
+         width: 168px;
+         height: 111px;
+         overflow: hidden;
+         box-shadow: 0 0 0 0px #4dd2ff;
+     }
+     
+     .nike_slider_thumb img {
+        opacity: 0.5;
+        margin: 0;
+        padding: 0;
+        display: block;
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        transform: scale(1.05);
+        -webkit-transition: all .2s;
+        -moz-transition: all .2s;
+        transition: all .2s;
+        text-align: center;
+     }
+     
+     .nike_slider_thumb:hover,
+     .nike_slider_thumb_active {
+         box-shadow: 0 0 0 7px #4dd2ff;
+     }
+     
+     .nike_slider_thumb:hover img,
+     .nike_slider_thumb_active img {
+         opacity: 1;
+         -webkit-transform: scale(1.15) translateZ(0); /* translateZ triggers anti-aliasing */
+         -moz-transform: scale(1.15) translateZ(0);
+         transform: scale(1.15) translateZ(0);
+     }
+     
+     
+     .nike_overlay {
+        opacity: 0;
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(15,28,72,.5);
+        z-index: 9999;
+     }
+     
+     .nike_close_overlay {
+         top: 20px;
+         right: 20px;
+         color: #fff;
+         cursor: pointer;
+         position: absolute;
+         /*margin: calc(50% - 480px) 0 0 0;*/
+         font-family: 'Courier New', Courier, monospace;
+         font-size: 40px;
+         text-align: center;
+         width: 40px;
+         height: 40px;
+         padding: 10px;
+         background-color: #009cff;
+     }
+     
+     .nike_janoskivideo {
+        width: 720px;
+        height: 480px;
+/*        margin: calc(50% - 480px) 0 0 calc(50% - 360px);*/
+        position: relative;
+        box-shadow: 0 0 25px 10px rgba(0,156,255, .5);
+     }
+
+.nike_product{
+    width:100%;
+    height:830px;
+    position: relative;
+}
+
+.signatureSJ{
+    padding-top: 10px;
+    position:relative;
+    width:309px;
+    height: 122px;
+    margin: 0 auto;
+}
+
+a.precomSJ{
+    font-family: 'player_proregular',sans-serif;
+    text-transform: uppercase;
+    line-height: 61px;
+    vertical-align: middle;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18pt;
+    margin: 45px auto 0 auto;
+    display:block;
+    width:247px;
+    height: 61px;
+    background: #0054be url(img/precommande.png) top left no-repeat;
+}
+
+a.precomSJ:hover{
+    background-position: 0 -61px;
+}
+
+h2.h2SJ, h3.h3SJ{
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    width:800px;
+    margin:40px auto 0 auto;
+    color:#fff;
+    font-weight: normal;
+}
+
+h2.h2SJ{
+    font-family: 'player_probold',sans-serif;
+    text-transform: uppercase;
+    font-size: 16pt;
+    text-align: center;
+}
+
+h3.h3SJ{
+    position: absolute;
+    top:750px;
+    left:92px;
+    font-family: 'player_proregular',sans-serif;
+    text-transform: none;
+    font-size: 13.5pt;
+    margin-top: 0;
+    text-align: justify;
+    line-height: 22pt;
+}
+
+a.linkzSJ{
+    display: block;
+    width:201px;
+    height: auto;
+    position: absolute;
+    color:#fff;
+    text-decoration: none;
+    font-family: 'player_proregular',sans-serif;
+    font-size: 12pt;
+}
+
+a.linkzSJ1{
+    top:340px;
+    left:140px;
+}
+
+a.linkzSJ2{
+    top:240px;
+    left:400px;
+}
+
+a.linkzSJ3{
+    top:140px;
+    left:700px;
+}
+
+a.linkzSJ4{
+    top:40px;
+    left:300px;
+}
+
+a.linkzSJ span.zoomSJ{
+    visibility: hidden;
+    display: block;
+    opacity: 0;
+    width:201px;
+    height: 209px;
+}
+
+a.linkzSJ span.hrefSJ{
+    display: block;
+    width: 23px;
+    height: 24px;
+    position:absolute;
+    top:190px;
+    width:inherit;
+    background: transparent url(img/plus.png) top center no-repeat;
+}
+
+a.linkzSJ span.textzSJ{
+   visibility: hidden;
+    display: block;
+    opacity: 0;
+    border:3px solid #fff;
+    background-color: #3a3a3a;
+    margin: 3px 0 0 0;
+    border-radius: 10px;
+    padding:8px;
+}
+
+a.linkzSJ:hover span.hrefSJ{
+    background-position: center -24px;
+}
+
+a.linkzSJ:hover span.zoomSJ, a.linkzSJ:hover span.textzSJ{
+   visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-in-out;/* transition pour Chrome et Safari */
+    -moz-transition: opacity 0.5s ease-in-out;/* transition pour Firefox */
+    -o-transition: opacity 0.5s ease-in-out;/* transition pour Opéra */
+    transition: opacity 0.5s ease-in-out;
+    -webkit-animation-duration: 5s;
+    -moz-animation-duration: 5s;
+    animation-duration: 5s;
+    animation-delay: .5s;
+    
+}
+
+.shoes1big{
+    position: absolute;
+    top:0;
+    left:150px;
+    
+    -webkit-animation-name: Floatingx3;
+    -webkit-animation-delay: .5s;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    
+    -moz-animation-name: Floating3;
+    -moz-animation-delay: .5s;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    
+    animation-name: Floatingxx;
+    animation-delay: .5s;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+}
+
+.shoes2big{
+    position: absolute;
+    top: 0;
+    left:480px;
+    
+    -webkit-animation-name: Floatingx3;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    
+    -moz-animation-name: Floating3;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    
+    animation-name: Floatingxx;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+@-webkit-keyframes Floatingx3{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 15px);}
+    to {-webkit-transform: translate(0, -0px);    }    
+}
+
+@-moz-keyframes Floating3{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 15px);}
+    to {-moz-transform: translate(0, -0px);}    
+}
+
+@-moz-keyframes Floatingxx{
+    from {transform:translate(0, 0px);}
+    65% {transform:translate(0, 15px);}
+    to {transform: translate(0, -0px);}    
+}
+

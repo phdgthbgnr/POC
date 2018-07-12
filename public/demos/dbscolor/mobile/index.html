@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html">
+        <meta charset="utf-8">
+        <title>DBS COLOR</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> -->
+        <!-- <link rel="stylesheet" href="_css/dbscolor.css"> -->
+        <style>
+            html,body{
+                padding: 0;
+                margin: 0;
+            }
+            body{
+                background-color: #258bed;
+            }
+        </style>
+    </head>
+
+    <body id="mybody">
+
+            <canvas id="exportsvg" class="exportsvg" width="1654" height="2340"></canvas>
+            
+            <div class="page page1 nodisplay" id="intro">
+                <img src="_img/logo.png" class="logo"/>
+                <ul class="persos">
+                    <li>
+                        <a href="#beerus" class="caract">
+                            <img src="_img/bgpersoblk.png" class="shape"/>
+                            <span class="blocperso off"><img src="_img/persoblk.png" class="perso" data-perso="beerus.png"/></span>
+                            <span class="nom nbeerus"><img src="_img/nomblk.png"/></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#bulma" class="caract">
+                            <img src="_img/bgpersoblk.png" class="shape"/>
+                            <span class="blocperso off"><img src="_img/persoblk.png" class="perso" data-perso="bulma.png"/></span>
+                            <span class="nom nbulma"><img src="_img/nomblk.png"/></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#gohan" class="caract">
+                            <img src="_img/bgpersoblk.png" class="shape"/>
+                            <span class="blocperso off"><img src="_img/persoblk.png" class="perso" data-perso="gohan.png"/></span>
+                            <span class="nom ngohan"><img src="_img/nomblk.png"/></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#goku" class="caract">
+                            <img src="_img/bgpersoblk.png" class="shape"/>
+                            <span class="blocperso off"><img src="_img/persoblk.png" class="perso" data-perso="goku.png"/></span>
+                            <span class="nom ngoku"><img src="_img/nomblk.png"/></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#goten" class="caract">
+                            <img src="_img/bgpersoblk.png" class="shape"/>
+                            <span class="blocperso off"><img src="_img/persoblk.png" class="perso" data-perso="goten.png"/></span>
+                            <span class="nom ngoten"><img src="_img/nomblk.png"/></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#krillin" class="caract">
+                            <img src="_img/bgpersoblk.png" class="shape"/>
+                            <span class="blocperso off"><img src="_img/persoblk.png" class="perso" data-perso="krillin.png"/></span>
+                            <span class="nom nkrillin"><img src="_img/nomblk.png"/></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#piccolo" class="caract">
+                            <img src="_img/bgpersoblk.png" class="shape"/>
+                            <span class="blocperso off"><img src="_img/persoblk.png" class="perso" data-perso="piccolo.png"/></span>
+                            <span class="nom npiccolo"><img src="_img/nomblk.png"/></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#trunks" class="caract">
+                            <img src="_img/bgpersoblk.png" class="shape"/>
+                            <span class="blocperso off"><img src="_img/persoblk.png" class="perso" data-perso="trunks.png"/></span>
+                            <span class="nom ntrunks"><img src="_img/nomblk.png"/></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#vegeta" class="caract">
+                            <img src="_img/bgpersoblk.png" class="shape"/>
+                            <span class="blocperso off"><img src="_img/persoblk.png" class="perso" data-perso="vegeta.png"/></span>
+                            <span class="nom nvegeta"><img src="_img/nomblk.png"/></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#whis" class="caract">
+                            <img src="_img/bgpersoblk.png" class="shape"/>
+                            <span class="blocperso off"><img src="_img/persoblk.png" class="perso" data-perso="whis.png"/></span>
+                            <span class="nom nwhis"><img src="_img/nomblk.png"/></span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+
+            <div class="page page3 nodisplay" id="jeu">
+
+                <div id="zoom" class="zoom">
+                    <div class="contsvg" id="contsvg">
+                        <img src="_bg/bg01.jpg"/>
+                        <span id="mysvg">
+                                <!-- mettre ici contenu SVG -->
+                                <svg id="svgcontainer"></svg>
+                        </span>
+                    </div>    
+                </div>
+
+                <div id="gui" class="gui">
+
+                    <div id="menu" class="menu">
+                        <ul>
+                            <li><a href="#home" class="menugen home" id="home"><img src="_img/iconesblk.png" alt="home"/><span class="smenu home">&nbsp;Home&nbsp;</span></a></li><!--
+                        --><li><a href="#download" class="menugen downld" id="download"><img src="_img/iconesblk.png" alt="download"/><span class="smenu download">&nbsp;Download&nbsp;</span></a></li><!--
+                        --><li><a href="#reset" class="menugen reset" id="reset"><img src="_img/iconesblk.png" alt="reset"/><span class="smenu reset">&nbsp;Reset&nbsp;</span></a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="blocpicker">
+                        <img src="_img/logo.png" class="logo"/>
+                        <div class="colorpicker" id="colorpicker">
+                            <ul id="rowcolor">
+                               <li><a href="#" class="picker eraser" style="background-color:#ffffff"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#f0f0f0"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#a7b4b6"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#797979"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#020202"><img src="_img/picker_blk.png"/></a></li><!--
+                                
+                            --><li><a href="#" class="picker" style="background-color:#fad0be"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#d66878"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#ffee00"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#f4842c"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#c52f00"><img src="_img/picker_blk.png"/></a></li><!--
+                            
+                            --><li><a href="#" class="picker" style="background-color:#ff8787"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#e4010b"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#9781a2"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#675075"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#641732"><img src="_img/picker_blk.png"/></a></li><!--
+                            
+                            --><li><a href="#" class="picker" style="background-color:#aedf74"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#6eb532"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#4d9033"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#166460"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#356010"><img src="_img/picker_blk.png"/></a></li><!--
+                            
+                            --><li><a href="#" class="picker" style="background-color:#cedff4"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#5090c0"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#30a2dc"><img src="_img/picker_blk.png"/></a></li><!--
+                            --><li><a href="#" class="picker" style="background-color:#0e53aa"><img src="_img/picker_blk.png"/></a></li>
+                            <!-- <li><a href="#" class="picker" style="background-color:#032e78"><img src="_img/picker_blk.png"/></a></li> -->
+                            </ul>
+                            <img src="_img/logo.png" class="logop"/>
+                        </div>
+                        <img src="_img/frise.png" class="frise"/>
+                    </div>
+                    <img src="_img/copyr.png" class="copyr"/>
+                </div>
+
+                <a href="#" id="zoomin"  class="btzoom zoomin"></a>
+                <a href="#" id="zoomout" class="btzoom zoomout"></a>
+
+                <div id="miniature" class="miniature miniatureclose">
+                    <a href="#mini" id="openmini">
+                        <img src="_img/miniatures/blk.png" data-miniature="" id="imgmini"/>
+                    </a>
+                    <p class="bordure down"></p>
+                </div>
+
+            
+            </div>
+
+            <div class="page page2 nodisplay" id="pcolor">
+                <div class="brush" id="brush"><img src="" data-src1="brush.png"/></div>   
+                <div class="pcolor" id="colour"><img src="" data-src1="color.png"/></div>   
+            </div>
+
+            <a href="#ullscrn" id="fullscrn" class="fullscrn nodisplay">&nbsp;</a>
+
+
+        <a href="#" download="beerus.jpg" id="imgTodownload"></a>
+
+        <script>
+
+            var _i = 0, _m, _carac, _sending, isMobile = false, safariMobile = false, _init = false,
+
+            deferjs1 = [
+                '_css/dbscolor.css',
+                '_js/manageEvents14.js',
+                '_js/q2.js',
+                '_js/manageEventsPromises12.js'
+            ],
+
+            deferjs2 = [
+                '_js/manageEventsTransition10.js',
+                '_js/rgbcolor.js',
+                '_js/StackBlur.js',
+                '_js/canvg.js',
+                '_js/play.js',
+            ],
+
+            loadSVG = function(c){
+                var file = '';
+                switch(c){
+                    case 'beerus':
+                    file = 'beerus';
+                    break;
+                    case 'bulma':
+                    file = 'bulma';
+                    break;
+                    case 'gohan':
+                    file = 'gohan';
+                    break;
+                    case 'goku':
+                    file = 'goku';
+                    break;
+                    case 'goten':
+                    file = 'goten';
+                    break;
+                    case 'krillin':
+                    file = 'krillin';
+                    break;
+                    case 'piccolo':
+                    file = 'piccolo';
+                    break;
+                    case 'trunks':
+                    file = 'trunks';
+                    break;
+                    case 'vegeta':
+                    file = 'vegeta';
+                    break;
+                    case 'whis':
+                    file = 'whis';
+                    break;
+                }
+                if(file!=''){
+                    if(_sending) return;
+                    _sending = true;
+                    var datas = '';
+                    // _m.promises.httpRequest('_svg/'+file, 'GET', datas, 30000, "application/x-www-form-urlencoded").then(function(e){
+                    _m.promises.httpRequest('_svg/'+file+'.svg', 'GET', datas, 20000, "image/svg+xml").then(function(e){
+                        // console.log(e);
+                        var st2 = setTimeout(function(){
+                            _m.addAclass('pcolor','nodisplay');
+                            _m.addAclass('intro','nodisplay');
+                            _m.removeAclass('jeu','nodisplay');
+                            _m.removeAclass('brush','anim1');
+                            _m.removeAclass('colour','anim2');
+                            clearTimeout(st2);
+                        },2000);
+                        _sending = false;
+                        _m.$dc('mysvg').innerHTML = e;
+                        _m.$dc('imgmini').setAttribute('data-miniature',file+'.png');
+                        deferImages(function(){
+                            Init(_init, _carac);
+                            _init = true;
+                        },'data-miniature','_img/miniatures/');
+                    }).fail(function(error){
+                        _sending = false;
+                        // console.log('fail');
+                    }).progress(function(progress){
+                    }).fin(function(){
+                        // console.log('fin');
+                    });
+                };
+            },
+
+            deferImages = function(callback, dt, rep){
+                var totImgDefer = 0;
+                var imgDefer = document.getElementsByTagName('img');
+                var nbDefer = [];
+                // dt == data-srcslide
+                for (var i=0; i<imgDefer.length; i++) {
+                    if (_m.hasAclass(imgDefer[i],'nomobile') && ismobile == 1 && ipad == 0) continue;
+                    if(imgDefer[i].getAttribute(dt)){
+                        nbDefer.push(imgDefer[i]);
+                    }
+                }
+                for (var i = 0; i<nbDefer.length; i++) {
+                    try{
+                        nbDefer[i].setAttribute('src', rep+nbDefer[i].getAttribute(dt));
+                    }catch(err){
+                        continue;
+                    }
+
+                    if (nbDefer[i].addEventListener != undefined){
+                        nbDefer[i].addEventListener('load',function(e){
+                            if(totImgDefer >= nbDefer.length-1) {
+                                callback();
+                            }
+                            totImgDefer++;
+                        });
+                    }else if (nbDefer[i].readyState){ // IE8
+                        nbDefer[i].onreadystatechange = function(){
+                            if(nbDefer[i].readyState == 'loaded' || nbDefer[i].readyState == 'complete') {
+                                if(totImgDefer >= nbDefer.length-1) {
+                                    callback();
+                                }
+                                totImgDefer++;
+                            }
+                        };
+                    }
+            
+                }
+            }
+
+            initAfter2 = function(){
+                loadSVG(_carac);
+                return false;
+            },
+
+            openmini = function(e,c,t){
+                if(_m.hasAclass('miniature','miniatureclose')){
+                    _m.removeAclass('miniature','miniatureclose');
+                } else{
+                    _m.addAclass('miniature','miniatureclose');
+                }
+                    
+            },
+
+            clic = function(e,c,t){
+                _carac = e.currentTarget.getAttribute('href').substr(1);
+                _m.removeAclass('pcolor','nodisplay');
+                _i=0;
+                if (!_init){
+                    deferImages(function(){
+                        var st1 = setTimeout(function(){
+                            _m.addAclass('brush','anim1');
+                            _m.addAclass('colour','anim2');
+                            clearTimeout(st1);
+                        },300);
+                        downloadJSAtOnload(deferjs2, initAfter2);
+                    }, 'data-src1', '_img/');
+                }else{
+                    var st1 = setTimeout(function(){
+                        _m.addAclass('brush','anim1');
+                        _m.addAclass('colour','anim2');
+                        clearTimeout(st1);
+                        initAfter2();
+                    },300);
+                };
+                return false;
+            },
+
+            initAfter = function(){
+                _m = manageEvents;
+                
+                deferImages(function(){
+                    _m.removeAclass('intro','nodisplay');
+                    _m.listenClass('caract', 'click', clic, true);
+                    _m.listenerAdd('openmini', 'click', openmini, true);
+                }, 'data-perso', '_img/');
+
+                _m.listenerAdd('fullscrn','click', function(e,c,t){
+                    var docfscr = window.document;
+                    var docElfscr = docfscr.documentElement;
+                    
+                    requestFullScreen = docElfscr.requestFullscreen || docElfscr.mozRequestFullScreen || docElfscr.webkitRequestFullScreen || docElfscr.msRequestFullscreen;
+                    cancelFullScreen = docfscr.exitFullscreen || docfscr.mozCancelFullScreen || docfscr.webkitExitFullscreen || docfscr.msExitFullscreen;
+
+                    if (requestFullScreen !== undefined){
+                        requestFullScreen.call(docElfscr);
+                        _m.addAclass('fullscrn','nodisplay');
+                    }
+
+                },true);
+
+                if(!safariMobile && isMobile) _m.removeAclass('fullscrn','nodisplay');
+
+                // }
+               
+            },
+
+            downloadJSAtOnload = function(arr, callback) {
+                // charge JS et CSS
+                var t = arr.length-1;
+                if (arr[_i].match('^(.*\.js)')){
+                var element = document.createElement('script');
+                    element.setAttribute('type','text/javascript');
+                    element.setAttribute('src',arr[_i]);
+                    if (element.addEventListener != undefined){
+                    element.addEventListener('load',function(e){
+                        _i++;
+                        if(_i <= t) downloadJSAtOnload(arr, callback);
+                        if(_i > t) {
+                            callback();
+                        }
+                    });
+                    }else if (element.readyState){ // IE8
+                        element.onreadystatechange = function(){
+                            if(element.readyState == 'loaded' || element.readyState == 'complete') {
+                                _i++;
+                            if(_i <= t) downloadJSAtOnload(arr, callback);
+                                if(_i > t) {
+                                    callback();
+                                }
+                            }
+                        }
+                    }
+                    if(_i <= t) document.body.appendChild(element);
+                };
+                // chargement CSS
+                if (arr[_i].match('^(.*\.css)$')){
+                    // loadStylesheet(deferjs[i]);
+                    if (document.createStyleSheet){
+                        document.createStyleSheet(arr[_i]);
+                    }else {
+                        var stylesheet = document.createElement('link');
+                        stylesheet.href = arr[_i];
+                        stylesheet.rel = 'stylesheet';
+                        stylesheet.type = 'text/css';
+                        document.getElementsByTagName('head')[0].appendChild(stylesheet);
+                    }
+                    _i++;
+                    if(_i <= t) downloadJSAtOnload(arr, callback);
+                    //if(i > t) window.myConsole('CSS chargées');
+                }
+            },
+        
+            DomLoaded = function(e){
+                // if(ie9) deferjs1.push('_js/pointereventspolyfill.js');
+                downloadJSAtOnload(deferjs1, initAfter);
+            },
+
+            detectSorientation = function(e){
+                // alert('detectSorientation');
+            },
+            
+            //iphone / ipad
+            detectWorientation = function(e){
+                if(safariMobile){
+                    
+                    var hgth = 0;
+                    var wdth = 0;
+                    var wwdth = window.outerWidth > 0 ? window.outerWidth : window.innerWidth;
+                    var hhdth = window.outerHeight > 0 ? window.outerHeight : window.innerHeight;
+                    if(screen && document.documentElement){
+                        hgth = document.documentElement.clientWidth == wwdth ? (screen.height > screen.width?screen.width:screen.height): window.innerHeight;
+                        hgth = window.outerHeight > 0? hgth : window.innerHeight;
+                        wdth = document.documentElement.clientHeight == hhdth ? (screen.width > screen.height?screen.height:screen.width): window.innerWidth;
+                        wdth = window.outerWidth > 0? wdth : window.innerWidth;
+                    }else{
+                        hgth = window.innerHeight;
+                        wdth = window.innerWidth;
+                    }
+                    
+                    _m.$dc('intro').setAttribute('style','height:'+ hgth +'px; width:'+ wdth +'px');
+                    _m.$dc('jeu').setAttribute('style','height:'+ hgth +'px; width:'+ wdth +'px');
+                    _m.$dc('pcolor').setAttribute('style','height:'+ hgth +'px; width:'+ wdth +'px');
+                    
+                    hgth+=100;
+                    _m.$dc('mybody').setAttribute('style','height:'+ hgth +'px; width:'+ wdth +'px');
+                    _m.$dc('menu').setAttribute('style','padding-top:10px');
+                    
+                    _m.listenerAdd(document,'touchmove',function(e,c,t){
+                        return false;
+                    },false);
+                    _m.listenerAdd('gui','touchmove',function(e,c,t){
+                        return false;
+                    },true);
+                    _m.listenerAdd('intro','touchmove',function(e,c,t){
+                        return false;
+                    },true);
+                    _m.listenClass('btzoom','touchmove',function(e,c,t){
+                        return false;
+                    },true)
+                        
+                }
+                window.scrollTo(0, 10);
+            };
+
+            if (window.addEventListener){
+                window.addEventListener('DOMContentLoaded', function(){DomLoaded()});
+            }else if (window.attachEvent){ // IE8
+                window.attachEvent('onload', function() { DomLoaded(); });
+            }else{
+                window.onload = DomLoaded();
+            };
+
+            if(navigator.userAgent.match(/Tablet|iPad|Mobile|Windows Phone|Lumia|Android|webOS|iPhone|iPod|Blackberry|PlayBook|BB10|Opera Mini|\bCrMo\/|Opera Mobi/i)) isMobile = true;
+            if(navigator.userAgent.match(/Safari/i) && !navigator.userAgent.match(/Chrome/i)) safariMobile = true;
+
+            // si window.orientation existe on l'utilise de preference
+            if (window.addEventListener && (screen.orientation !== undefined && screen.orientation !== null)){
+            //if (screen.orientation) window.addEventListener('orientationchange', detectSorientation, false);
+            window.addEventListener('orientationchange', detectSorientation, false);
+            }else if (window.orientation !== undefined && window.orientation !== null){
+            window.addEventListener('orientationchange', detectWorientation, false);
+            //}else if (window.orientation !== undefined && window.orientation !== null) {
+            //window.onorientationchange = detectWorientation;
+            }else if (window.attachEvent && window.addEventListener === undefined) {// IE8
+            if (screen.orientation) window.attachEvent('onorientationchange', detectSorientation);
+            if (window.orientation && (screen.orientation !== undefined || screen.orientation !== null)) window.attachEvent('onorientationchange', detectWorientation);
+            };
+
+        </script>
+
+    </body>
+
+</html>

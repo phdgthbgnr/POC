@@ -1,0 +1,980 @@
+@charset "utf-8";
+
+
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 9pt;
+    margin: 0;
+    padding: 0;
+    color:#fff;
+    overflow: hidden;
+}
+
+body{
+    overflow: hidden;
+    background: url(../_images/bgnd-l.jpg) center top no-repeat;
+    background-size: 100% auto;
+    text-align: center;
+}
+
+a:active, a:focus {
+    outline: none;
+}
+
+a img{
+    border: 0;
+}
+
+.nodisplay{
+    display: none;
+}
+
+.novisible{
+    visibility: hidden;
+}
+
+.page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height:auto;
+    text-align: center;
+}
+
+.page img.fake{
+    width: 100%;
+    height: auto;
+}
+
+.loading{
+    background-color: rgba(0,0,0,.7);
+}
+
+.page .crane{
+    position: absolute;
+    width:25%;
+    height: auto;
+    left: 35%;
+    top: 35%;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    transform: translate(-50%,-50%);
+     -webkit-animation: wpulse .8s ease-in-out 0s infinite reverse;
+    -ms-animation: mspulse .8s ease-in-out 0s infinite reverse;
+    -o-animation: opulse .8s ease-in-out 0s infinite reverse;
+    -moz-animation: mozpulse .8s ease-in-out 0s infinite reverse;
+    animation: apulse .8s ease-in-out 0s infinite reverse;
+}
+
+.page .crane img{
+    width: 100%;
+    height: auto;
+}
+
+@keyframes apulse {
+    0%   {transform:scale(1,1)}
+    50%   {transform:scale(1.2,1.2)}
+    100%   {transform:scale(1,1)}
+}
+
+@-webkit-keyframes wpulse {
+    0%   {-webkit-transform:scale(1,1)}
+    50%   {-webkit-transform:scale(1.2,1.2)}
+    100%   {-webkit-transform:scale(1,1)}
+}
+
+@-ms-keyframes mspulse {
+    0%   {-ms-transform:scale(1,1)}
+    50%   {-ms-transform:scale(1.2,1.2)}
+    100%   {-ms-transform:scale(1,1)}
+}
+
+@-o-keyframes opulse {
+    0%   {-o-transform:scale(1,1)}
+    50%   {-o-transform:scale(1.2,1.2)}
+    100%   {-o-transform:scale(1,1)}
+}
+
+@-moz-keyframes mozpulse {
+    0%   {-moz-transform:scale(1,1)}
+    50%   {-moz-transform:scale(1.2,1.2)}
+    100%   {-moz-transform:scale(1,1)}
+}
+
+.page .crane span{
+    display: block;
+}
+
+.page .heroes{
+    margin: 0 auto;
+    padding-top: 3%;
+    width: 94%;
+    height: auto;
+}
+
+.page .heroes img{
+    width: 100%;
+    height: auto;
+}
+
+.page .bloctext{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    margin: -16% auto 0 auto;
+    width: 80%;
+    height: 100%;
+}
+
+.page .bloctext .logo{
+    margin: 0 auto;
+    width: 92%;
+    height: auto;
+}
+
+.page .bloctext .logo img{
+    width: 100%;
+    height: auto;
+}
+
+.page .bloctext .comp{
+    width: 50%;
+    height: auto;
+    margin:-15% auto 0 auto;
+}
+
+.page .bloctext .comp img{
+    width: 100%;
+    height: auto;
+}
+
+.page .bloctext .trait{
+    
+    width: 100%;
+    height: auto;
+    margin:0 auto 0 auto;
+}
+
+.page .bloctext .trait img{
+    width: 70%;
+    height: auto;
+}
+
+.page .bloctext .mention{
+    margin:-1% auto 0 auto;
+    width: 85%;
+    height: auto;
+}
+
+.page .bloctext .mention img{
+    width: 100%;
+    height: auto;
+}
+
+.page .bloctext a.start{
+    display: block;
+    margin:-5% auto 0 auto;
+    width:50%;
+    height: auto;
+    font-size: 0;
+    line-height: 0;
+    background: transparent url(../_images/start.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.page .bloctext a.start img{
+    width: 100%;
+    height: auto;
+}
+
+.page .bloctext a.start:hover{
+    background-position: bottom center;
+}
+
+.page .titre{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+#page3 .titre{
+	top:15%;
+}
+
+.page .titre img{
+    width:100%;
+    height: auto;
+}
+
+.page .equipe{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+}
+
+.page .equipe img{
+    width:100%;
+    height: auto;
+}
+
+
+.page a.valider{
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: auto;
+    bottom : 0;
+    left: 50%;
+    -ms-transform: translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    background: transparent url(../_images/valider.png) top center no-repeat;
+    background-size: 100% auto;
+    font-size: 0;
+    line-height: 0;
+}
+.page a.valider img{
+    width:100%;
+    height: auto;
+}
+
+.page a.valider:hover{
+    background-position: bottom center;
+}
+
+.page a.partagerfb{
+    bottom:8%;
+    width: 40%;
+	left:10%;
+    background: transparent url(../_images/partagerfb.png) top center no-repeat;
+    background-size: 100% auto;
+	-ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+}
+
+
+.page a.partagertwt{
+    bottom:8%;
+    width: 40%;
+	left:50%;
+    background: transparent url(../_images/partagertwt.png) top center no-repeat;
+    background-size: 100% auto;
+    -ms-transform: none;
+    -webkit-transform: none;
+	transform: none;
+}
+
+
+.page a.dwnld{
+    bottom:10%;
+    width: 7%;
+    right: 4%;
+    left: auto;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+    background: transparent url(../_images/dwnld.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.page a.recommencer{
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+    background: transparent url(../_images/recommencer.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.page a.profite{
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+    background: transparent url(../_images/profite.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+
+.page .equipe .monequipe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 25%;
+    background-color: rgba(229,9,20,.75);
+}
+
+.page .capitaine{
+    background-color:transparent;
+    position: absolute;
+    top : 25% !important;
+    bottom: auto !important;
+    border: :1px solid red;
+}
+
+.page .capitaine .monequipe{
+    background-color:transparent;
+}
+
+.page .equipe .monequipe .titre{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:21%;
+    height: auto;
+}
+
+.page .equipe .monequipe .titre img{
+    width: 100%;
+    height: auto;
+}
+
+.page .equipe .monequipe ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    display: block;
+    top:6%;
+    left:22%;
+    right: 2%;
+    font-size: 0;
+    text-align: left;
+}
+
+.page .capitaine .monequipe ul{
+    left:4%;
+}
+
+.page .equipe .monequipe ul.labels{
+    bottom: 2%;
+    top: 75%;
+}
+
+.page .capitaine .monequipe ul.labels{
+    top: 115%;
+}
+
+.page .equipe .monequipe ul li{
+    display: inline-block;
+    width: 19%;
+    margin: 0 0 0 1.2%;
+    -webkit-transform: skewX(-8deg);
+    -moz-transform: skewX(-8deg);
+    -ms-transform: skewX(-8deg);
+    -o-transform: skewX(-8deg);
+    transform: skewX(-8deg);
+}
+
+.page .equipe .monequipe ul li:first-child{
+    margin: 0;
+}
+
+.page .equipe .monequipe ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    line-height: 0;
+    color: rgba(255,255,255,.5);
+}
+
+.page .equipe .monequipe ul li a:hover{
+    cursor: default;
+}
+
+.page .equipe .capit ul li a:hover{
+    cursor: pointer;
+}
+
+.page .equipe .monequipe ul li a span.lay1{
+    position: absolute;
+    display: block;
+    left: 10%;
+    right: 0;
+    top:10%;
+    height: 100%;
+    background-color: rgba(255,255,255,.5);
+}
+
+.page .equipe .monequipe ul li a span.lay2{
+    position: absolute;
+    display: block;
+    left: 0%;
+    right: 10%;
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.page .equipe .monequipe ul li a span.bordure{
+    position: absolute;
+    display: block;
+    left: 0%;
+    right: 10%;
+    height: 100%;
+    background-color:transparent;
+    border-top:2px solid rgba(255,255,255,.5);
+    border-right:2px solid rgba(255,255,255,.5);
+}
+
+.fullwhite{
+    background-color: rgb(255,255,255) !important;
+}
+
+.page .capitaine .capit a:hover span.fullred{
+    background-color: rgb(229,9,20) !important;
+}
+
+.page .capitaine .capit a.selectt span.fullred{
+    background-color: rgb(229,9,20) !important;
+}
+
+.fullborder{
+    border-color: rgb(255,255,255) !important;
+    color:#fff;
+}
+
+.fullbordered{
+    border-color: rgb(229,9,20) !important;
+    color: #e50914;
+}
+
+.page .equipe .monequipe ul li a span.bordure span.texte{
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: inherit;
+    font-size: 10pt;
+    top:50%;
+    -ms-transform: translate(0,-50%);
+    -webkit-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+}
+
+.page .equipe .monequipe ul li a span.noright{
+    border-right: none;
+    right: 0;
+}
+
+.page .equipe .monequipe ul li a span.padright{
+    right: 3%;
+}
+
+.page .equipe .monequipe ul li.noleft{
+    margin: 0 1% 0 0;
+}
+
+.page .equipe .monequipe ul li a span.lay2 img{
+    width: 120%;
+    height: auto;
+    margin-left: -5%;
+    -webkit-transform: skewX(8deg);
+    -moz-transform: skewX(8deg);
+    -ms-transform: skewX(8deg);
+    -o-transform: skewX(8deg);
+    transform: skewX(8deg);
+}
+
+.page .equipe .monequipe ul li a img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+.page .capitaine .capit ul{
+    top:45%;
+}
+
+.page .capitaine .capit ul.etoiles{
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 4%;
+    right: 2%;
+}
+
+.page .capitaine .capit ul.etoiles li{
+    display: inline-block;
+    width: 19%;
+    margin: 0 0 0 1.2%;
+    -webkit-transform: skewX(0deg);
+    -moz-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+    -o-transform: skewX(0deg);
+    transform: skewX(0deg);
+    background: transparent url(../_images/etoiles.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.page .capitaine .capit ul.etoiles li:first-child{
+    margin: 0;
+}
+
+.page .capitaine .capit ul.etoiles li img{
+    width: 100%;
+    height: auto;
+}
+
+.page .capitaine .capit ul.etoiles li.rollov{
+    background-position: bottom center;
+}
+
+
+
+
+
+
+/* joueur sur le terrain */
+.page .joueur{
+    position: absolute;
+    width: 25%;
+    height: auto;
+    font-size: 0;
+    line-height: 0;
+}
+
+.page .joueur img{
+    width: 100%;
+    height: auto;
+}
+
+
+.page .gard{
+    left: 38%;
+    top: 16%;
+}
+
+.page .def1{
+    left: 12%;
+    top: 28%;
+}
+
+.page .def2{
+    right: 12%;
+    top: 28%;
+}
+
+.page .att1{
+    top: 56%;
+    left: 20%;
+}
+
+.page .att2{
+    top: 56%;
+    right: 20%;
+}
+
+/* SURVOL COMPO */
+.compo-desc{
+	display:none;
+}
+
+#page4 .joueur:hover img{
+	display:none;
+}
+#page4 .joueur:hover .compo-desc{
+	display:block;
+}
+
+
+
+
+
+
+
+.page .carousel{
+    position: absolute;
+    top:10%;
+    left: 0;
+    right: 0;
+    height: auto;
+    overflow: hidden;
+}
+
+.page .carousel img.fake{
+    width: 100%;
+    height: auto;
+}
+
+.page .carousel .slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+    display: inline;
+
+}
+
+.transit{
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.page .carousel .slide img.dims{
+    max-height: 100%;
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+.page .carousel .slide .frise{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.page .carousel .slide .frise img{
+    height: 100%;
+    width: auto;
+}
+
+.page .carousel .slide .frise img.crsl{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: auto;
+    z-index: 2;
+}
+
+.page .carousel .slide .frise ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    z-index: 0;
+}
+
+.page .carousel .slide .back{
+    z-index: 5;
+}
+
+.page .carousel .slide .front{
+    z-index: 10;
+}
+
+.page .carousel .slide .back ul li, .page .carousel .slide .front ul li{
+    display: inline-block;
+    width:5.55%;
+    margin: 0 0 0 5.55%;
+    height: 100%;
+}
+
+.page .carousel .slide .front ul li:first-child{
+    margin:0 0 0 0;
+}
+
+
+.page .carousel .slide .frise ul li.rollv{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e50914+0,e50914+35,e50914+75,e50914+100&0+0,0.5+35,1+75,0.5+75,0+100 */
+    background: -moz-linear-gradient(top,  rgba(229,9,20,0) 0%, rgba(229,9,20,0.5) 35%, rgba(229,9,20,0.5) 75%, rgba(229,9,20,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(229,9,20,0) 0%,rgba(229,9,20,0.5) 35%,rgba(229,9,20,0.5) 75%,rgba(229,9,20,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(229,9,20,0) 0%,rgba(229,9,20,0.5) 35%,rgba(229,9,20,0.5) 75%,rgba(229,9,20,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e50914', endColorstr='#00e50914',GradientType=0 ); /* IE6-9 */
+}
+
+
+.page .carousel .slide .frise ul li.rolls{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e50914+0,e50914+35,e50914+75,e50914+100&0+0,0.5+35,1+75,0.5+75,0+100 */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 35%, rgba(255,255,255,0.5) 75%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 35%,rgba(255,255,255,0.5) 75%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 35%,rgba(255,255,255,0.5) 75%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e50914', endColorstr='#00e50914',GradientType=0 ); /* IE6-9 */
+}
+
+.page .carousel .slide ul.ahref{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right:0;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    z-index: 10;
+}
+
+.page .carousel .slide ul.ahref li{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 5.55%;
+    height: 100%;     
+}
+
+
+.page .carousel .slide ul.ahref li a{
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../_images/textes.png);
+    background-color: transparent;
+    background-size: 1800% auto;
+    background-position: top left;
+    
+}
+
+/*
+.page .carousel .slide ul.ahref li a:hover{
+    background-position: 0 33.33%;
+}*/
+
+
+
+/* diviser 100/17 * n-1 */
+
+/* rollover */
+.page .carousel .slide ul.ahref li a.p1:hover{
+    background-position: 0 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p2:hover{
+    background-position: 5.88% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p3:hover{
+    background-position: 11.76% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p4:hover{
+    background-position: 17.64% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p5:hover{
+    background-position: 23.52% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p6:hover{
+    background-position: 29.41% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p7:hover{
+    background-position: 35.29% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p8:hover{
+    background-position: 41.17% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p9:hover{
+    background-position: 47.05% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p10:hover{
+    background-position: 52.94% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p11:hover{
+    background-position: 58.82% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p12:hover{
+    background-position: 64.70% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p13:hover{
+    background-position: 70.58% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p14:hover{
+    background-position: 76.47% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p15:hover{
+    background-position: 82.35% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p16:hover{
+    background-position: 88.23% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p17:hover{
+    background-position: 94.11% 33.33%;
+}
+.page .carousel .slide ul.ahref li a.p18:hover{
+    background-position: 100% 33.33%;
+}
+
+
+/* selectionne */
+.page .carousel .slide ul.ahref li a.sp1{
+    background-position: 0 100%;
+}
+.page .carousel .slide ul.ahref li a.sp2{
+    background-position: 5.88% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp3{
+    background-position: 11.76% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp4{
+    background-position: 17.64% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp5{
+    background-position: 23.52% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp6{
+    background-position: 29.41% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp7{
+    background-position: 35.29% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp8{
+    background-position: 41.17% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp9{
+    background-position: 47.05% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp10{
+    background-position: 52.94% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp11{
+    background-position: 58.82% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp12{
+    background-position: 64.70% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp13{
+    background-position: 70.58% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp14{
+    background-position: 76.47% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp15{
+    background-position: 82.35% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp16{
+    background-position: 88.23% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp17{
+    background-position: 94.11% 100%;
+}
+.page .carousel .slide ul.ahref li a.sp18{
+    background-position: 100% 100%;
+}
+
+
+
+/* retire (hover) */
+.page .carousel .slide ul.ahref li a.sp1:hover{
+    background-position: 0 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp2:hover{
+    background-position: 5.88% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp3:hover{
+    background-position: 11.76% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp4:hover{
+    background-position: 17.64% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp5:hover{
+    background-position: 23.52% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp6:hover{
+    background-position: 29.41% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp7:hover{
+    background-position: 35.29% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp8:hover{
+    background-position: 41.17% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp9:hover{
+    background-position: 47.05% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp10:hover{
+    background-position: 52.94% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp11:hover{
+    background-position: 58.82% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp12:hover{
+    background-position: 64.70% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp13:hover{
+    background-position: 70.58% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp14:hover{
+    background-position: 76.47% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp15:hover{
+    background-position: 82.35% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp16:hover{
+    background-position: 88.23% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp17:hover{
+    background-position: 94.11% 66.66%;
+}
+.page .carousel .slide ul.ahref li a.sp18:hover{
+    background-position: 100% 66.66%;
+}
+
+.page .carousel a.nav{
+    position: absolute;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    width:10%;
+    height: auto;
+    background-size: 100% auto;
+    background-position: top center;
+    bottom: 39%;
+    border:0;
+    z-index: 15;
+}
+
+.page .carousel a.nav:active,.page .carousel a.nav:focus{
+    outline:none;
+}
+
+.page .carousel a.nav:hover{
+    background-position: bottom center;
+}
+
+.page .carousel a.nav img{
+    width: 100%;
+    height: auto;
+}
+
+.next{
+    right: 0;
+    background-image: url(../_images/arrowr.png)
+}
+
+.prev{
+    left:0;
+    background-image: url(../_images/arrowl.png)
+}
+
+/*
+
+@media screen and (orientation:portrait){
+    background: url(../_images/bgnd-l.jpg) center top no-repeat;
+}
+
+*/

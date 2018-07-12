@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+body {
+    background-color: #fff;
+    color: #666;
+    font-family: "Lucida Grande",Arial,sans-serif;
+    font-size: 12px;
+    line-height: 1.3;
+    margin: 0;
+    height: 100%;
+}
+
+html{
+    height: 100%;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+
+.page-w{
+    background-color: #fff;
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.page{
+    top:105px;
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.page-header {
+    background: #333 url(_images/bgheader.png) top left no-repeat;
+    min-width: 990px;
+    position: relative;
+    height: 105px;
+}
+
+.leftcol{
+    background: #333 url(_images/bgleft.png) top left no-repeat;
+    width: 221px;
+    height: 100%;
+    float: left;
+}
+
+.content{
+    background-color: #ccc;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.addapp{
+    width:100%;
+    height: 52px;
+    background: #fff url(_images/ajouter.png) top right no-repeat;
+}
+
+.inapp{
+    top: 53px;
+    position: absolute;
+    font-size: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    overflow-y: hidden;
+}

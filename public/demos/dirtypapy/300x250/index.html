@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document sans nom</title>
+
+</head>
+
+<body>
+
+<div style="position:relative;width:300px;height:250px;background:url(bg.png) top left no-repeat">
+<video width="300" height="168" style="" autoplay  id="Video1" onmouseover="unmuteVideo()" onmouseout="muteVideo()">
+	<source src="dirtypapy_respect.mp4" type="video/mp4"/>
+</video>
+<a href="#" onclick="restart();" id="restart" style="position:absolute;left:0;top:0;display:none;"><img src="replay.png"/> </a>
+</div>
+
+
+<script>
+
+var video = document.getElementById("Video1");
+video.muted= true;
+var elmt = document.getElementById("restart");
+ document.getElementById('Video1').addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+        elmt.style.display = "block";
+    }
+	function muteVideo(){
+		var video = document.getElementById("Video1");
+		video.muted= true;
+	}
+	
+	function unmuteVideo(){
+		var video = document.getElementById("Video1");
+		video.muted= false;
+	}
+	 function restart() {
+        var video = document.getElementById("Video1");
+        video.currentTime = 0;
+		video.play() ;
+		 elmt.style.display = "none";
+    }
+
+
+</script>
+
+</body>
+</html>

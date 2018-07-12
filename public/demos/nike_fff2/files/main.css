@@ -1,0 +1,413 @@
+.col-main .wisiwyg .std { display: none; }
+#landingnike { width: 960px;}
+
+/* ==========================================================================
+   =Normalize
+   ========================================================================== */
+
+#landingnike article,
+#landingnike aside,
+#landingnike details,
+#landingnike figcaption,
+#landingnike figure,
+#landingnike footer,
+#landingnike header,
+#landingnike hgroup,
+#landingnike main,
+#landingnike nav,
+#landingnike section,
+#landingnike summary { display: block; }
+
+#landingnike canvas,
+#landingnike video { display: inline-block; }
+
+[hidden] { display: none; }
+
+#landingnike html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+#landingnike body { margin: 0; }
+
+#landingnike a:focus { outline: thin dotted; }
+#landingnike a:active,
+#landingnike a:hover { outline: 0; }
+
+#landingnike h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+#landingnike b,
+#landingnike strong { font-weight: bold; }
+
+#landingnike hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+#landingnike q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+#landingnike small { font-size: 80%; }
+
+#landingnike sub,
+#landingnike sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+#landingnike sup { top: -0.5em; }
+#landingnike sub { bottom: -0.25em; }
+
+#landingnike img { border: 0; }
+
+#landingnike svg:not(:root) { overflow: hidden; }
+
+#landingnike figure { margin: 0; }
+
+
+/* ==========================================================================
+   =Base
+   ========================================================================== */
+
+#landingnike html {
+    font-size: 62.5%;
+}
+
+#landingnike body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.6666666666666667;
+    color: #000;
+}
+
+/* Links */
+#landingnike a:link,
+#landingnike a:visited {
+}
+#landingnike a:hover,
+#landingnike a:focus,
+#landingnike a:active {
+}
+
+#landingnike p,
+#landingnike ul,
+#landingnike ol,
+#landingnike dl,
+#landingnike blockquote,
+#landingnike figure {
+    margin: .75em 0 0;
+    line-height: 1.5;
+}
+
+#landingnike ::-moz-selection {
+    background: #000;
+    color: #fff;
+    text-shadow: none;
+}
+#landingnike ::selection {
+    background: #000;
+    color: #fff;
+    text-shadow: none;
+}
+
+#landingnike h1, #landingnike .h1-like {
+    margin: 0.6563em 0 0 0;
+    font-size: 2.2857em;
+    line-height: 1.3126;
+}
+
+#landingnike p:last-child,
+#landingnike ul:last-child,
+#landingnike ol:last-child,
+#landingnike dl:last-child,
+#landingnike blockquote:last-child {
+    margin-bottom: 0;
+}
+
+#landingnike li p,
+#landingnike li ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#landingnike td,
+#landingnike th,
+#landingnike div,
+#landingnike p {
+    word-wrap: break-word;
+
+}
+
+
+#landingnike p:first-child,
+#landingnike ul:first-child,
+#landingnike ol:first-child,
+#landingnike dl:first-child,
+#landingnike h1:first-child,
+#landingnike h2:first-child,
+#landingnike h3:first-child,
+#landingnike h4:first-child,
+#landingnike h5:first-child,
+#landingnike h6:first-child {
+    margin-top: 0;
+}
+
+
+/* ==========================================================================
+   =Layout
+   ========================================================================== */
+
+#landingnike * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#landingnike html,
+#landingnike body {
+    height: 100%;
+}
+
+#landingnike img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+
+/* ==========================================================================
+   =Content
+   ========================================================================== */
+
+#landingnike body {
+    background: #000;
+}
+
+#landingnike main {
+    margin: 0 auto;
+    width: 960px;
+}
+
+#landingnike header {
+    padding: 730px 0 0;
+    height: 769px;
+    background: #000 url(img/header-bkg2.jpg) no-repeat;
+}
+
+#landingnike header .swoosh {
+    margin: 0;
+    font-size: 0;
+    line-height: 1em;
+    text-align: center;
+}
+
+#landingnike aside {
+    height: 540px;
+}
+
+#landingnike .jersey-showroom {
+    position: relative;
+    height: 608px;
+    background: #000 url(img/jersey-showroom-bkg.jpg) no-repeat;
+	border-top:1px solid #fff;
+}
+
+#landingnike .icon-plus:link,
+#landingnike .icon-plus:hover {
+    display: block;
+    width: 37px; height: 37px;
+    background: transparent url(img/icon-plus.png) no-repeat 0 0;
+	cursor: default;
+
+    border: 0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+
+    -webkit-transition: all 250ms ease-out;
+    -moz-transition: all 250ms ease-out;
+    -o-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
+
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+}
+#landingnike .icon-plus:hover,
+#landingnike .icon-plus:focus,
+#landingnike .icon-plus:active {
+    -webkit-transform:rotate(225deg);
+    -moz-transform:rotate(225deg);
+    -o-transform:rotate(225deg);
+    transform:rotate(225deg);
+}
+
+#landingnike [class*="icon-"] {
+    position: absolute;
+}
+#landingnike .details {
+    position: absolute;
+    width: 481px; height: 152px;
+    line-height: 152px;
+    vertical-align: middle;
+    text-align: center;
+    opacity: 0;
+
+    -webkit-transition: opacity 750ms ease, background-size 750ms ease;
+    -moz-transition: opacity 750ms ease, background-size 750ms ease;
+    -o-transition: opacity 750ms ease, background-size 750ms ease;
+    transition: opacity 750ms ease, background-size 750ms ease;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translateZ(0);
+    -webkit-transform: translate3d(0,0,0);
+}
+#landingnike .details img {
+    opacity: 0;
+
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    -o-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+#landingnike [class*="icon-"]:hover + .details,
+#landingnike .details:hover {
+    opacity: 1;
+}
+#landingnike [class*="icon-"]:hover + .details img,
+#landingnike .details:hover img {
+    opacity: 1;
+}
+
+#landingnike [class*="icon-"].first {
+    top: 65px; left: 290px;
+}
+#landingnike .details.first {
+    top: 0; right: 0;
+    background: url(img/jersey-showroom-first-bkg.jpg) no-repeat 50% 50%;
+    background-size: 100% 100%;
+}
+
+#landingnike [class*="icon-"].second {
+    top: 300px; left: 320px;
+}
+#landingnike .details.second {
+    top: 152px; right: 0;
+    background: url(img/jersey-showroom-second-bkg.jpg) no-repeat 50% 50%;
+    background-size: 100% 100%;
+}
+
+#landingnike [class*="icon-"].third {
+	top: 195px; left: 150px;
+    
+}
+#landingnike .details.third {
+    top: 304px; right: 0;
+    background: url(img/jersey-showroom-third-bkg.jpg) no-repeat 50% 50%;
+    background-size: 100% 100%;
+}
+
+#landingnike [class*="icon-"].fourth {
+    top: 485px; left: 115px;
+}
+#landingnike .details.fourth {
+    top: 456px; right: 0;
+    background: url(img/jersey-showroom-fourth-bkg.jpg) no-repeat 50% 50%;
+    background-size: 100% 100%;
+}
+
+#landingnike [class*="icon-"]:hover + .details,
+#landingnike .details:hover {
+    background-size: 106% 106%;
+}
+
+/* ==========================================================================
+   =Print styles
+   ========================================================================== */
+
+@media print {
+    #landingnike * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    #landingnike a,
+    #landingnike a:visited {
+        text-decoration: underline;
+    }
+
+    #landingnike a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    #landingnike abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    #landingnike .ir a:after,
+    #landingnike a[href^="javascript:"]:after,
+    #landingnike a[href^="#"]:after {
+        content: "";
+    }
+
+    #landingnike pre,
+    #landingnike blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    #landingnike thead {
+        display: table-header-group;
+    }
+
+    #landingnike tr,
+    #landingnike img {
+        page-break-inside: avoid;
+    }
+
+    #landingnike img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    #landingnike p,
+    #landingnike h2,
+    #landingnike h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    #landingnike h2,
+    #landingnike h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+/* ==========================================================================
+   Fix font-size on orientation mouvment - iOS
+   ========================================================================== */
+   
+@media (orientation: landscape) and (max-device-width: 768px) {
+    #landingnike html,
+    #landingnike body {
+        -webkit-text-size-adjust: 100%;
+    }
+}

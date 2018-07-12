@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DEEZER - Sing</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+	<script>
+		// Listez ici vos trackings pour que le parseur de Sizmek les prenne en compte.
+		// Nous devons retrouver les mêmes que ceux définis dans le HTML ci-dessous !
+		if(void 0){
+			EB.clickthrough('click_header');
+			EB.clickthrough('click_right');
+			EB.initExpansionParams(0, 0, 0, 0);
+		}
+	</script>
+	<!-- liste des attributs utilisables :
+		système de clic :
+			Les clics fonctionnent par défaut à la manière d'un héritage (tous les enfants redirigent sur un data-clickthroughId défini sur le parent le plus proche).
+			La créa ne gère que les ids de redirection.
+			Les URLs seront gérées par Massmotionmedia lors de la diffusion.
+			En local, le clic redirigera sur la page en cours avec en hashtag l'id du clic.
+			Pour une lecture simplifier et unifier des rapports, tout id de clic doit commencer par "click_"
+
+			Attributs HTML :
+				data-clickthroughId (ex de valeur : click_video) : permet une redirection sur la valeur mentionnée pour différencier les clicks
+				data-clickthroughNoInherited (pas de valeur)     : l'élément redirigera au clic, mais ses enfants ne ridirigeront plus
+				data-clickthroughCanceled (pas de valeur)        : l'élément ne redirigera pas au clic, les enfants eux peuvent toujours rediriger par héritage
+	-->
+	<!-- comportement du format :
+		général :
+			Sauf cas exceptionnel, le format doit avoir un header de 770x120 et une partie droite de 340x770 (soit un format global de 1110x770).
+			Le format se dissocie en 2 parties afin de différencier les clics.
+			Si la différenciation n'est pas obligatoire ou si le format l'exige, ne pas hésiter à supprimer	adHeader et adRight et de travailler
+			directement dans adWrapper (en gardant en tête d'ajouter data-clickthroughId là où c'est nécessaire pour la redirection)
+		vidéo :
+			En cas d'ajout de vidéo, les trackings sont déjà gérés automatiquement. Il est interdit d'ajouter l'attribut controls si la vidéo doit rediriger au clic.
+			Il faudra alors créer des boutons personnalisés pour palier à ce problème.
+			
+	-->
+	<div id="adWrapper">
+		<div id="adHeader" data-clickthroughId="click_header">
+			<div id="contentHeader">
+				<span>Voir la bande annonce</span>
+			</div>
+		</div>
+		<div id="adRight">
+			<div id="contentRight">
+				<div id="questions">
+					<div id="q1" class="question">
+						<b>question 01/03</b>
+						<span>Quel est le meilleur pouvoir<br/>de la musique selon vous ?</span>
+					</div>
+					<div id="q2" class="question">
+						<b>question 02/03</b>
+						<span>A quoi ressemble la<br/>première musique que vous<br/>écoutez dans la journée ?</span>
+					</div>
+					<div id="q3" class="question">
+						<b>question 03/03</b>
+						<span>Dans quel mood<br/>vous sentez vous ?</span>
+					</div>
+				</div>
+				
+				<div id="reponses">
+					<div id="r1" class="reponse">
+						<a href="a" id="q1a" title="Un révélateur, elle permet de montrer sa vraie personnalité" class="colblue">
+							<div class="letter"><span>a.</span></div>
+							<div class="text"><span>Un révélateur, elle<br/>permet de montrer<br/>sa vraie personnalité</span></div>
+							<div class="arrow"><span><i class="fa fa-angle-right"></i></span></div>
+						</a>
+						<a href="b" id="q1b" title="Un exutoire, pour m’évader, penser à autre chose" class="colyellow">
+							<div class="letter"><span>b.</span></div>
+							<div class="text"><span>Un exutoire, pour<br/>m’évader, penser à<br/>autre chose</span></div>
+							<div class="arrow"><span><i class="fa fa-angle-right"></i></span></div>
+						</a>
+						<a href="c" id="q1c" title="Un motivateur, la musique a le pouvoir de changer les choses" class="colpink">
+							<div class="letter"><span>c.</span></div>
+							<div class="text"><span>Un motivateur, la<br/>musique a le pouvoir<br/>de changer les choses</span></div>
+							<div class="arrow"><span><i class="fa fa-angle-right"></i></span></div>
+						</a>
+					</div>
+					
+					<div id="r2" class="reponse">
+						<a href="a" id="q2a" title="Calme pour me réveiller en douceur" class="colblue">
+							<div class="letter"><span>a.</span></div>
+							<div class="text"><span>Calme pour me<br/>réveiller en douceur</span></div>
+							<div class="arrow"><span><i class="fa fa-angle-right"></i></span></div>
+						</a>
+						<a href="b" id="q2b" title="De quoi danser toute la journée" class="colyellow">
+							<div class="letter"><span>b.</span></div>
+							<div class="text"><span>De quoi danser toute<br/>la journée</span></div>
+							<div class="arrow"><span><i class="fa fa-angle-right"></i></span></div>
+						</a>
+						<a href="c" id="q2c" title="Il faut que ça décoiffe" class="colpink">
+							<div class="letter"><span>c.</span></div>
+							<div class="text"><span>Il faut que ça décoiffe</span></div>
+							<div class="arrow"><span><i class="fa fa-angle-right"></i></span></div>
+						</a>
+					</div>
+					
+					
+					<div id="r3" class="reponse">
+						<a href="a" id="q3a" title="RnB / Soul" class="colblue">
+							<div class="letter"><span>a.</span></div>
+							<div class="text"><span>RnB / Soul</span></div>
+							<div class="arrow"><span><i class="fa fa-angle-right"></i></span></div>
+						</a>
+						<a href="b" id="q3b" title="Pop" class="colyellow">
+							<div class="letter"><span>b.</span></div>
+							<div class="text"><span>Pop</span></div>
+							<div class="arrow"><span><i class="fa fa-angle-right"></i></span></div>
+						</a>
+						<a href="c" id="q3c" title="Rock" class="colpink">
+							<div class="letter"><span>c.</span></div>
+							<div class="text"><span>Rock</span></div>
+							<div class="arrow"><span><i class="fa fa-angle-right"></i></span></div>
+						</a>
+					</div>
+				</div>
+				
+				<div id="results">
+					<div id="resa" class="result">
+						<b>Vous êtes Johnny !</b>
+							<p>Un crooner talentueux qui croit en ses rêves et fera tout pour les réaliser.</p>
+						<a href="http://www.deezer.com/playlist/2639901864" title="Voir la playlist" target="_blank">
+							<img src="./images/johnny.jpg" alt="Johnny"/>
+						</a>
+						<a href="http://www.deezer.com/playlist/2639901864" title="Voir la playlist" target="_blank" class="voir-playlist">Voir la playlist</a>
+					</div>
+					<div id="resb" class="result">
+						<b>Vous êtes Rosita  !</b>
+						<p>Reine de la pop, la musique est pour elle le meilleur moyen de lâcher prise et devenir la star qu'elle est à l’intérieur. </p>
+						<a href="http://www.deezer.com/playlist/2639902984" title="Voir la playlist" target="_blank">
+							<img src="./images/rosita.jpg" alt="Rosita "/>
+						</a>
+						<a href="http://www.deezer.com/playlist/2639902984" title="Voir la playlist" target="_blank" class="voir-playlist">Voir la playlist</a>
+					</div>
+					<div id="resc" class="result">
+						<b>Vous êtes Ash  !</b>
+						<p>La Rock attitude ne la lâche pas. En vraie rebelle, elle garde toujours la tête haute.</p>
+						<a href="http://www.deezer.com/playlist/2639896644" title="Voir la playlist" target="_blank">
+							<img src="./images/ash.jpg" alt="Ash"/>
+						<a href="http://www.deezer.com/playlist/2639896644" title="Voir la playlist" target="_blank" class="voir-playlist">Voir la playlist</a>
+					</div>
+					<div id="resd" class="result">
+						<b>Vous êtes Buster !</b>
+						<p>Déterminé, qu’importe les épreuves, il garde la joie de vivre.</p>
+						<a href="http://www.deezer.com/playlist/2639899544" title="Voir la playlist" target="_blank">
+							<img src="./images/buster.jpg" alt="buster"/>
+						</a>
+						<a href="http://www.deezer.com/playlist/2639899544" title="Voir la playlist" target="_blank" class="voir-playlist">Voir la playlist</a>
+					</div>
+				</div>
+				
+				<img src="./images/copyright.png" alt="copyright" id="copyright"/>
+			</div>
+		</div>
+	</div>
+	<script>
+		var EBModulesToLoad = ["EBCMD"];
+		(function() {
+			var videos = document.getElementsByTagName("video");
+			if (videos.length > 0) {
+				EBModulesToLoad.push("Video");
+			}
+		})();
+    </script>
+	<script src="./libs/EBLoader.js"></script>
+	<script src="./libs/lib.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>

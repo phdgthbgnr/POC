@@ -1,0 +1,12 @@
+{
+  "transport": "ftp",
+  "uploadOnSave": false,
+  "hostname": "ftp.greengardendigital.com",
+  "port": "21",
+  "target": "/demo/infinity3",
+  "ignore": [
+    ".git/**"
+  ],
+  "username": "greengard",
+  "password": "BNxyhjHg"
+}

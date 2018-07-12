@@ -1,0 +1,1210 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+
+html, body{
+    margin:0;
+    padding:0;
+    height:100%;
+    background-color: #000;
+    background: -webkit-linear-gradient(linear, left top, left bottom, from(#b2e5ea), to(#f5d2e6)) fixed;
+    background: -moz-linear-gradient(linear, left top, left bottom, from(#b2e5ea), to(#f5d2e6)) fixed;  
+    background: linear-gradient(to bottom, #b2e5ea, #f5d2e6); 
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
+}
+
+html{
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.main{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#circle{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    /*
+    width: 500px;
+    height: 500px;
+    */
+    border-radius: 50%;
+    background: transparent url(_images/backgrnd2.png) center center no-repeat;
+    background-size: 100% auto;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    font-size: 0;
+}
+
+
+#circle img{
+    width:100%;
+    height: auto;
+    font-size:0;
+    padding: 0;
+    margin: 0;
+}
+
+#picker{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border:7px solid #fff;
+    border-radius: 50%;
+    background: #81cad2;
+    margin: 0;
+    cursor: move;
+    /* important: sets the transform origin to the center of the circle */
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    
+    top: 50%;
+    left: 50%;
+    
+}
+
+#dz-root{
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.nodisplay{
+    display: none;
+}
+
+.novisible{
+    visibility: hidden;
+}
+
+
+/* HEADER MENU ------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.header{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    background:#fff;
+    z-index: 55;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.header ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    width:100%;
+    max-width: 1400px;
+    min-width: 948px;
+}
+
+
+.header ul li{
+    display:inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+
+.header ul li.line1{
+    width:49.5%;
+    height: auto;
+}
+
+.header ul li.line2{
+    width:10.5%;
+    height: auto;
+}
+
+.header ul li.line3{
+    width:10%;
+    height: auto;
+}
+
+.header ul li.line4{
+    width:10.5%;
+    height: auto;
+}
+
+.header ul li.line5{
+    width:9%;
+    height: auto;
+}
+
+.header ul li.line6{
+    width:3.5%;
+    height: auto;
+}
+
+.header ul li.line7{
+    width:3.5%;
+    height: auto;
+}
+
+.header ul li.line8{
+    width:3.2%;
+    height: auto;
+}
+
+.header ul li img{
+    width: 100%;
+    height: auto;
+    /*width: auto;
+    height: 100%;*/
+    display: block;
+    font-size: 0;
+    overflow: hidden;
+}
+
+
+.header ul li a{
+    border:none;
+    font-size: 0;
+}
+
+
+.header ul li a.menu img{
+    width: 100%;
+    height: auto;
+   /* width: auto;
+    height: 100%;*/
+    display: inline-block;
+    border:none;
+    outline:none;
+    font-size: 0;
+}
+
+.header ul li a.menu1{
+    background: url(_images/menu1.png) top center no-repeat;
+}
+
+.header ul li a.menu2{
+    background: url(_images/menu2.png) top center no-repeat;
+}
+
+.header ul li a.menu3{
+    background: url(_images/menu3.png) top center no-repeat;
+}
+
+.header ul li a.menu4{
+    background: url(_images/menu4.png) top center no-repeat;
+}
+
+.header ul li a.menu5{
+    background: url(_images/facebook.png) top center no-repeat;
+}
+
+.header ul li a.menu6{
+    background: url(_images/twitter.png) top center no-repeat;
+}
+
+.header ul li a.menu7{
+    background: url(_images/instagram.png) top center no-repeat;
+}
+
+.header ul li a.menu{
+    width: 100%;
+    display: block;
+    background-size: cover;
+    background-color: transparent;
+}
+
+.header ul li a.menu:hover, .header ul li a.actif{
+    background-color: #c70041;
+    background-position: bottom left;
+}
+
+
+
+/* FIN HEADER MENU ------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* 4 UNIVERS HOME  ------------------------------------------------------------------------------------------------------------------------------- */
+
+.accordion{
+    position: absolute;
+    top: 5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #de4c9c;
+}
+
+.accordion img{
+    width: 100%;
+    height: 100%;
+}
+
+.accordion ul{
+    position:absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    padding:0;
+    margin: 0;
+    font-size: 0;
+    list-style: none;
+    width:85%;
+    height: 100%;
+    
+}
+
+.accordion ul li{
+    display: inline-block;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.accordion ul li a{
+    display: block;
+    width: auto;
+    height: 100%;
+}
+
+.accordion ul li a:before{
+    content=''; 
+	background:#ff0000;
+}
+
+.accordion ul li a img{
+    height: 100%;
+    border:none;
+    outline:none;
+}
+
+.accordion ul li.accordion1{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right:60%;
+    background: url(_images/home_lazy.jpg) top left no-repeat;
+    background-size: auto 200%;
+    z-index: 1;
+}
+
+.accordion ul li a span.libel{
+    position: absolute;
+    top:50%;
+    left:0;
+    right:40%;
+    text-align: center;
+    
+     -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center;
+    
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.accordion ul li a span.libel img{
+    width: auto;
+    height: auto;
+}
+
+
+.accordion ul li a:hover span.libel{
+    
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.accordion ul li.accordion1:hover{
+    background-position: bottom left;
+}
+
+.accordion ul li.accordion2{
+    position: absolute;
+    top: 0;
+    left: 23%;
+    bottom: 0;
+    right: 30%;
+    -webkit-transform: skewX(-8deg);
+    -moz-transform: skewX(-8deg);
+    -ms-transform: skewX(-8deg);
+    -o-transform: skewX(-8deg);
+    transform: skewX(-8deg);
+    z-index: 2;
+    overflow: hidden;
+}
+
+.accordion ul li.accordion2 a{
+    position: absolute;
+    top:0;
+    left:-10%;
+    right:0;
+    bottom: 0;
+    -webkit-transform: skewX(8deg);
+    -moz-transform: skewX(8deg);
+    -ms-transform: skewX(8deg);
+    -o-transform: skewX(8deg);
+    transform: skewX(8deg);
+    background: url(_images/home_sexy.jpg) top left no-repeat;
+    background-size: auto 200%;
+}
+
+.accordion ul li.accordion2 a:hover{
+    background-position: bottom left;
+}
+
+.accordion ul li.accordion3{
+    position: absolute;
+    top:0;
+    left:46.5%;
+    bottom: 0;
+    right:15%;
+    -webkit-transform: skewX(-8deg);
+    -moz-transform: skewX(-8deg);
+    -ms-transform: skewX(-8deg);
+    -o-transform: skewX(-8deg);
+    transform: skewX(-8deg);
+    z-index: 3;
+    overflow: hidden;
+}
+
+.accordion ul li.accordion3 a{
+    position: absolute;
+    top:0;
+    left:-10%;
+    right:0;
+    bottom: 0;
+    -webkit-transform: skewX(8deg);
+    -moz-transform: skewX(8deg);
+    -ms-transform: skewX(8deg);
+    -o-transform: skewX(8deg);
+    transform: skewX(8deg);
+    background: url(_images/home_fun.jpg) top left no-repeat;
+    background-size: auto 200%;
+}
+
+.accordion ul li.accordion3 a:hover{
+    background-position: bottom left;
+}
+
+.accordion ul li.accordion3 a span.libel{
+    right: 25%;
+}
+
+.accordion ul li.accordion4{
+    position: absolute;
+    top:0;
+    left:70%;
+    bottom: 0;
+    right:0;
+    -webkit-transform: skewX(-8deg);
+    -moz-transform: skewX(-8deg);
+    -ms-transform: skewX(-8deg);
+    -o-transform: skewX(-8deg);
+    transform: skewX(-8deg);
+    z-index: 4;
+    overflow:hidden;
+}
+
+.accordion ul li.accordion4 a{
+    position: absolute;
+    top:0;
+    left:-15%;
+    right:0;
+    bottom: 0;
+    -webkit-transform: skewX(8deg);
+    -moz-transform: skewX(8deg);
+    -ms-transform: skewX(8deg);
+    -o-transform: skewX(8deg);
+    transform: skewX(8deg);
+    background: url(_images/home_rock.jpg) top left no-repeat;
+    background-size: auto 200%;
+    
+}
+
+.accordion ul li.accordion4 a span.libel{
+    right: 0;
+}
+
+.accordion ul li.accordion4 a:hover{
+    background-position: bottom left;
+}
+
+
+.onglet{
+    position: absolute;
+    top:0;
+    left:80%;
+    /*left:20%;*/
+    bottom: 0;
+    right:4%;
+    -webkit-transform: skewX(-8deg);
+    -moz-transform: skewX(-8deg);
+    -ms-transform: skewX(-8deg);
+    -o-transform: skewX(-8deg);
+    transform: skewX(-8deg);
+    background: #de4c9c;
+    z-index: 50;
+    text-align: center;
+    overflow: hidden;
+}
+
+.vingt{
+    left:20%;
+}
+
+.quatrevingt{
+    left:80%;
+}
+
+.moinsvingt{
+    left: -20%;   
+}
+
+.animtranz{
+    animation: octanteTovingt .8s ease 0s 1;/* forwards;*/
+}
+
+.animtranz a{
+    display: none;
+}
+
+@keyframes octanteTovingt {
+    0%   {left:-20%;}
+    100% {left:80%;}
+}
+
+.onglet a{
+    -webkit-transform: skewX(8deg);
+    -moz-transform: skewX(8deg);
+    -ms-transform: skewX(8deg);
+    -o-transform: skewX(8deg);
+    transform: skewX(8deg);
+    position: absolute;
+    margin:0 auto;
+    top:47%;
+    text-align: right;
+    width:60%;
+    border:none;
+    outline:none;
+    left:25%;
+    font-size: 0;
+    background: url(_images/tt_feelunique.png) top center no-repeat;
+    background-size: auto 200%;
+}
+
+.onglet a:hover{
+    background-position: bottom center;
+}
+
+.onglet a img{
+    width:100%;
+    height: auto;
+    border:none;
+    outline:none;
+}
+
+/*
+.accordion ul li.accordion5{
+    position: absolute;
+    top:0;
+    left:80%;
+    bottom: 0;
+    right:4%;
+    transform: skewX(-8deg);
+    background: #de4c9c;
+    z-index: 5;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.accordion ul li.accordion5 a .ttfu{
+    transform: skewX(8deg);
+    position: absolute;
+    margin:0 auto;
+    top:40%;
+    text-align: right;
+    width:100%;
+}
+
+.accordion ul li.accordion5 a .ttfu img{
+    width:70%;
+    height: auto;
+    padding-right: 2%;
+}
+*/
+
+
+
+
+
+/* FIN 4 UNIVERS HOME  ------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* PLAYLIST SUR MESURE  ------------------------------------------------------------------------------------------------------------------------------- */
+
+.surmesure{
+    position: absolute;
+    top: 4%;
+    width: 100%;
+    bottom: 0;
+    background: url(_images/bg_unique.jpg) top left no-repeat;
+    background-size: auto 100%;
+    z-index: 51;
+}
+
+.surmesure .brhome{
+    position: absolute;
+    top: 39%;
+    bottom: 29%;
+    left:0;
+    width: 20%;
+    /* border:1px solid green; */
+}
+
+.surmesure .brhome a.rethome{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    /* border:1px solid red;*/
+    display: inline-block;
+    width: 55%;
+    left:20%;
+    height: auto;
+    margin: 0 auto;
+    background: url(_images/retour_univers.png) top center no-repeat;
+    background-size: auto 200%;
+}
+
+.surmesure .brhome a.rethome img{
+    width: 100%;
+    height: auto;
+}
+
+.surmesure .brhome a.rethome:hover{
+    background-position: bottom center;
+}
+
+.surmesure .contenu{
+    position: absolute;
+    top:0;
+    right:0;
+    bottom: 0;
+    left:20%;
+    z-index: 53;
+}
+
+.surmesure .contenu .bloccircle{
+    position: relative;
+    width: 65%;
+    height: auto; /*80%;*/
+    margin: 7% auto 0 auto;
+    /*background: url(_images/rosace.png) center center no-repeat;
+    background: contain;*/
+}
+
+.surmesure .contenu .bloccircle img{
+    width:100%;
+    height: auto;
+}
+
+.surmesure .contenu .bulle{
+    position: absolute;
+    z-index:54;
+    -webkit-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    transform-origin: center bottom;
+    width: 20%;
+    height: auto;
+    top:0;
+    left:0;
+    -ms-transform: translate(200%, 155%);
+    transform: translate(200%, 155%);
+}
+
+.surmesure .contenu .bulle img{
+    width:100%;
+    height: auto;
+}
+
+.surmesure .contenu .bloccircle .circle{
+    position: absolute;
+    top:15%;
+    left:25%;
+}
+
+.surmesure .contenu a.btplaylist{
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: auto;
+    background: url(_images/bt_playlist.png) top center no-repeat;
+    background-size: 100% auto;
+    font-size: 0;
+    z-index: 55;
+    top:50%;
+    left:50%;
+}
+
+.surmesure .contenu a.btplaylist:hover{
+    background-position: bottom center;
+}
+
+.surmesure .contenu a.btplaylist img{
+    width: 100%;
+    height: auto;
+    font-size: 0;
+}
+
+.surmesure .contenu .illustr{
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    top:0;
+    left:auto;
+    bottom: 0;
+    width: 40%;
+    text-align: right;
+    overflow: hidden;
+}
+
+.surmesure .contenu .illustr img{
+    height: 100%;
+    width: auto;
+}
+
+
+.surmesure .contenu .blocplst{
+    position: absolute;
+    right:40%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.surmesure .contenu .blocplst .bingo{
+    margin: 20% auto 0 auto;
+    width: 30%;
+    max-width: 250px;
+}
+
+.surmesure .contenu .blocplst .bingo img{
+    width: 100%;
+    height: auto;
+}
+
+.surmesure .contenu .blocplst a.btgen{
+    display: block;
+    width:30%;
+    margin:2% auto 0 auto;
+    background-position: top center;
+    background-size: 100% auto;
+    font-size: 0;
+}
+
+.surmesure .contenu .blocplst a.btgen img{
+    width: 100%;
+    height: auto;
+}
+
+.surmesure .contenu .blocplst a.gdz{
+    min-width: 270px;
+    background-image: url(_images/surdeezer.png);
+}
+
+.surmesure .contenu .blocplst a.gfb{
+    width:24%;
+    min-width: 200px;
+    background-image: url(_images/bt_facebook.png);
+}
+
+.surmesure .contenu .blocplst a.btgen:hover{
+    background-position: bottom center;
+}
+
+.surmesure .contenu .blocplst .playerplst{
+    position: relative;
+    width:40%;
+    height: auto;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.surmesure .contenu .blocplst .playerplst img{
+    display: block;
+    width:100%;
+    height: auto;
+}
+
+.surmesure .contenu .blocplst .playerplst a.onoff{
+    position: absolute;
+    display: block;
+    top:0;
+    left:0;
+    width: 100%;
+    background: url(_images/player.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.surmesure .contenu .blocplst .playerplst a.playing{
+    background-position: bottom center;
+}
+
+.surmesure .contenu .blocplst .playerplst a.onoff img{
+    width: 100%;
+    height: auto;
+}
+
+.surmesure .contenu .blocplst .playerplst .generee{
+    position: absolute;
+    top:0;
+    width: 100%;
+}
+
+.surmesure .contenu .blocplst .playerplst .generee img{
+    width: 100%;
+    height: auto;
+}
+/*
+.surmesure .contenu .bloccircle .rosace{
+    position: absolute;
+    width: 15%;
+    height: auto;
+    max-width: 180px;
+}
+
+.surmesure .contenu .bloccircle .rosace1{
+    left: 0;
+    top:48%;
+}
+
+.surmesure .contenu .bloccircle .rosace img{
+    width: 100%;
+    height: auto;
+}
+
+.surmesure .contenu .bloccircle .rosace1{
+}
+*/
+.surmesure .contenu .ttplaylt{
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    width: 37%;
+    max-width: 359px;
+}
+
+.surmesure .contenu .ttplaylt img{
+    width: 100%;
+    height: auto;
+}
+/* FIN PLAYLIST SUR MESURE  ------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* playlist feelunique  ------------------------------------------------------------------------------------------------------------------------------- */
+
+.univers{
+    position: absolute;
+    left: 0;
+    top: 4%;
+    bottom: 0;
+    width: 85%;
+    z-index: 10;
+    background-color:#e34ea0;
+}
+
+.lazy{
+    background: url(_images/univers_lazy.jpg) top left no-repeat;
+    background-size: auto 100%; 
+}
+
+.sexy{
+    background: url(_images/univers_sexy.jpg) top left no-repeat;
+    background-size: auto 100%; 
+}
+
+.fun{
+    background: url(_images/univers_fun.jpg) top left no-repeat;
+    background-size: auto 100%; 
+}
+
+.rock{
+    background: url(_images/univers_rock.jpg) top left no-repeat;
+    background-size: auto 100%; 
+}
+
+.univers .bloc{
+    position: absolute;
+    top:11%;
+    left:3%;
+    right: 17%;
+    bottom: 10%;
+}
+
+.univers .bloc .accroche{
+    width:63%;
+    margin:0 auto;
+}
+
+.univers .bloc .accroche img{
+    width: 100%;
+    height: auto;
+}
+
+.univers .bloc .tlazy{
+    background:url(_images/accroche_lazy.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.univers .bloc .tfun{
+    background:url(_images/accroche_fun.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.univers .bloc .tsexy{
+    background:url(_images/accroche_sexy.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.univers .bloc .trock{
+    background:url(_images/accroche_rock.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.univers .bloc .blocs{
+    position: absolute;
+    width:48%;
+    bottom:18%;
+    top:12%;
+    background: rgba(256,256,256,.6);
+    overflow: hidden;
+}
+
+/* -- PLAYLIST DEEZER -------------------------------------------------------------------------- */
+
+.univers .bloc .playlist{
+    position: absolute;
+    left:0;
+    right: 0;
+}
+
+
+.univers .bloc .playlist .titlep, .univers .bloc .carousel .titlep{
+    font-size: 1.5em;
+    margin: 0 7% 2% 2%;
+    border-bottom: 1px solid #000;
+    font-weight: 700;
+}
+
+.univers .bloc .playlist .plst{
+    position: absolute;
+    width:92%;
+    height: 90%;
+    overflow: hidden;
+}
+
+.univers .bloc .playlist .plst ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    top:0;
+}
+
+.univers .bloc .playlist .plst ul li{
+    display: block;
+    height: 50px;
+    width: 100%;
+    margin: 2% 1%;
+}
+
+.univers .bloc .playlist .plst ul li a{
+    display: block;
+    color:#000;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    background: url(_images/play_track.png) 52px top no-repeat;
+}
+
+
+.univers .bloc .playlist .plst ul li a.playing{
+    background-position: 52px bottom;
+}
+
+.univers .bloc .playlist .plst ul li a:hover{
+    background-color: rgba(0,0,0,.2);
+    color:#fff;
+}
+
+.univers .bloc .playlist .plst ul li a span.artist{
+    font-weight: bold;
+}
+
+.univers .bloc .playlist .plst ul li img{
+    width: auto;
+    height: 100%;
+    vertical-align: middle;
+    margin: 0 50px 0 0;
+}
+    
+
+/* ascenceur */
+
+.univers .bloc .playlist .lift{
+    position: absolute;
+    background: rgba(256,256,256,.8);
+    top:8%;
+    bottom :2%;
+    right: 2%;
+    width: 3%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.univers .bloc .playlist .lift .slider{
+    position:absolute;
+    top:0;
+    left:0;
+    right: 0;
+    height: 10%;
+    border-radius: 10px;
+    background: #000;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center;
+}
+    
+/* -- FIN PLAYLIST DEEZER -------------------------------------------------------------------------- */
+
+/* -- CAROUSEL PRODUITS -------------------------------------------------------------------------- */
+
+.univers .bloc .carousel{
+    left:52%;
+}
+
+.univers .bloc .carousel .crsl{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    top:35%;
+    /*border: 1px solid red;*/
+}
+
+.univers .bloc .carousel .crsl .slides{
+    position: relative;
+    margin:0 auto;
+    /*border: 1px solid yellow;*/
+    height: 100%;
+    width: 45%;
+    text-align: center;
+}
+
+.univers .bloc .carousel .crsl a.btcrsl{
+    position: absolute;
+    top:0;
+    bottom:0;
+    width: 25%;
+    /*border: 1px solid blue;*/
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 200%;
+}
+
+.univers .bloc .carousel .crsl a.suite{
+    right: 0;
+    background-image: url(_images/arrow_suite.png);
+}
+
+.univers .bloc .carousel .crsl a.retour{
+    left: 0;
+    background-image: url(_images/arrow_retour.png);
+}
+
+.univers .bloc .carousel .crsl a.btcrsl:hover{
+    background-position: bottom center;
+}
+
+.univers .bloc .carousel .crsl .slides img{
+    height: 100%;
+    width: 100%;
+    font-size: 0;
+}
+
+.univers .bloc .carousel .crsl .slides .slide{
+    position: absolute;
+    top:0;
+    left:0;
+    /*border: 1px solid green;*/
+    display: block;
+    width:100%;
+    height: 100%;
+    text-align: center;
+    margin: auto 0;
+    overflow: hidden;
+}
+
+.univers .bloc .carousel .crsl .slides .slide img{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width:100%;
+    height: auto;
+    margin:0 auto;
+    font-size: 0;
+    display: block;
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.univers .bloc .carousel .crsl .slides .slide img.invisible{
+    opacity: 0;
+}
+
+.univers .bloc .carousel .txtcrsl{
+    position: absolute;
+    top: 15%;
+    left:5%;
+    bottom: 66%;
+    width: 70%;
+    font-weight: 700;
+    font-size:1.6em;
+}
+
+
+.univers .bloc .carousel .txtprix{
+    position: absolute;
+    top: 15%;
+    bottom: 66%;
+    left: 76%;
+    right: 0;
+    font-weight: 700;
+    font-size: 1.6em;
+}
+
+/* -- FIN CAROUSEL PRODUITS -------------------------------------------------------------------------- */
+
+.univers .bloc a.boutons{
+    position: absolute;
+    display: inline-block;
+    font-size: 0;
+    bottom: 8%;
+    width: 15%;
+    max-width: 143px;
+    min-width: 80px;
+    border:0;
+    margin: 0;
+    padding: 0;
+}
+
+.univers .bloc a.boutons:hover{
+    background-position: bottom center;
+}
+
+.univers .bloc a.ajouter{
+    right: 58%;
+    background: url(_images/ajouter.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.univers .bloc a.partager{
+    left:6%;
+    background: url(_images/partager.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.univers .bloc a.boutons img{
+    width: 100%;
+    height: auto; 
+    border: none;
+    outline: none;
+}
+
+.univers .bloc .wants{
+    position: absolute;
+    font-size: 0;
+    bottom: 8%;
+    width:48%;
+    left:52%;
+    text-align: center;
+}
+
+.univers .bloc .wants a.want{
+    margin: 0 auto;
+    display: inline-block;
+    max-width: 207px;
+    min-width: 100px;
+}
+
+.univers .bloc .wants a.want img{
+    width: 100%;
+    height: auto;
+    border:none;
+    outline:none;
+}
+
+.univers .bloc .wants a.wlazy{
+    background: url(_images/want_lazy.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.univers .bloc .wants a.wsexy{
+    background: url(_images/want_sexy.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.univers .bloc .wants a.wfun{
+    background: url(_images/want_fun.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.univers .bloc .wants a.wrock{
+    background: url(_images/want_rock.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.univers .bloc .wants a.want:hover{
+    background-position: bottom center;
+}

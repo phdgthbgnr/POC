@@ -1,0 +1,286 @@
+@charset "utf-8";
+
+
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 9pt;
+    margin: 0;
+    padding: 0;
+    color:#fff;
+    overflow: hidden;
+}
+
+body{
+    overflow: hidden;
+    background: url(../_img/bg_intro.jpg) center top no-repeat;
+    background-size: cover;
+}
+
+.persos{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    height: auto;
+}
+
+.logo{
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    width: 25%;
+    height: auto;
+}
+
+.spotify{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 3%;
+    height: auto;
+}
+
+.row{
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    bottom: 15%;
+    background: rgba(2,16,44,.5);
+}
+
+.bloclang{
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+.vaiana{
+    width: 70%;
+    max-width: 1000px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+}
+
+.bloclang img.title{
+    width: 100%;
+    height: auto;
+}
+
+.title2{
+    margin-top:10%;
+}
+
+.bloclang ul{
+    display: block;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 70%;
+}
+
+.vaiana ul{
+    margin-top: 5%;
+    width: 40%;
+}
+
+.bloclang ul li{
+    display: inline-block;
+    width: 15%;
+    height: auto;
+    padding: 2% 3%;
+    margin: 0;
+}
+
+/*.vaiana ul li{
+    width: 20%;
+}*/
+
+.bloclang ul.bloc1 li a,.bloclang ul.bloc2 li a,.bloclang ul.bloc3 li a{
+    display: block;
+    width: 100%;
+    height: auto;
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+    background-image: url(../_imgdom/drapeau1.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 1003% auto;
+    border:1px solid #000;
+
+    -moz-box-shadow: 0px 0px 20px 0px #000000;
+    -webkit-box-shadow: 0px 0px 20px 0px #000000;
+    -o-box-shadow: 0px 0px 20px 0px #000000;
+    box-shadow: 0px 0px 20px 0px #000000;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=NaN, Strength=20);
+
+}
+
+.bloclang ul li a img{
+    width: 100%;
+    height: auto;
+}
+
+.bloclang ul li a:hover{
+    border:1px solid #fff;
+}
+
+/*
+diviser 100/9 * n-1
+*/
+.bloclang ul.bloc1 li a.uk{
+    background-position: 0 0;
+}
+.bloclang ul.bloc1 li a.au{
+    background-position: 11.11% 0;
+}
+.bloclang ul.bloc1 li a.us{
+    background-position: 22.22% 0;
+}
+.bloclang ul.bloc1 li a.ca{
+    background-position: 33.33% 0;
+}
+.bloclang ul.bloc1 li a.mys{
+    background-position: 44.44% 0;
+}
+.bloclang ul.bloc1 li a.idn{
+    background-position: 55.55% 0;
+}
+.bloclang ul.bloc1 li a.phl{
+    background-position: 66.66% 0;
+}
+.bloclang ul.bloc1 li a.sgp{
+    background-position: 77.77% 0;
+}
+.bloclang ul.bloc1 li a.ie{
+    background-position: 88.88% 0;
+}
+.bloclang ul.bloc1 li a.nz{
+    background-position: 100% 0;
+}
+
+
+
+.bloclang ul.bloc2 li a{
+    background-image: url(../_imgdom/drapeau2.jpg);
+    background-size: 703% auto;
+}
+
+/*
+diviser 100/6 * n-1
+*/
+.bloclang ul.bloc2 li a.cl{
+    background-position: 0 0;
+}
+.bloclang ul.bloc2 li a.mx{
+    background-position: 16.75% 0;
+}
+.bloclang ul.bloc2 li a.co{
+    background-position: 33.33% 0;
+}
+.bloclang ul.bloc2 li a.arg{
+    background-position: 50% 0;
+}
+.bloclang ul.bloc2 li a.bra{
+    background-position: 66.66% 0;
+}
+.bloclang ul.bloc2 li a.per{
+    background-position: 83.33% 0;
+}
+.bloclang ul.bloc2 li a.ven{
+    background-position: 100% 0;
+}
+
+
+.bloclang ul.bloc3 li a{
+    background-image: url(../_imgdom/drapeau3.jpg) !important;
+    background-size: 802% auto;
+}
+
+/*
+diviser 100/7 * n-1
+*/
+.bloclang ul.bloc3 li a.fr{
+    background-position: 0 0;
+}
+.bloclang ul.bloc3 li a.es{
+    background-position: 14.28% 0;
+}
+.bloclang ul.bloc3 li a.de{
+    background-position: 28.5% 0;
+}
+.bloclang ul.bloc3 li a.prt{
+    background-position: 42.85% 0;
+}
+.bloclang ul.bloc3 li a.nl{
+    background-position: 57.15% 0;
+}
+.bloclang ul.bloc3 li a.ennl{
+    background-position: 71.43% 0;
+}
+.bloclang ul.bloc3 li a.befr{
+    background-position: 85.72% 0;
+}
+.bloclang ul.bloc3 li a.benl{
+    background-position: 100% 0;
+}
+
+
+
+.bloclang ul li a.disabled{
+    cursor: default;
+    opacity: .2;
+}
+.bloclang ul li a.disabled:hover{
+    border:1px solid #000;
+}
+
+@media screen and (orientation:portrait){
+    .logo{
+        top: 5%;
+        width:50%;
+        height: auto;
+    }
+    .row{
+        top:20%;
+    }
+    .bloclang{
+        width: 90%;
+    }
+    .persos{
+        height: 25%;
+        width: auto;
+    }
+    .vaiana{
+        width: 100%;
+    }
+    .vaiana ul{
+        margin-top: 10%;
+        width: 95%;
+    }
+    .vaiana .title{
+        width: 100%;
+    }
+
+}

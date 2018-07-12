@@ -1,0 +1,1222 @@
+@charset "utf-8";
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
+
+html{
+  width:100%;
+}
+
+body{
+  width: 100%;
+  /*height: 100%;*/
+  background-color: #dedede;
+  padding: 0;
+  margin: 0;
+  font-size: 12pt;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+p{
+  margin:0;
+  padding: 0;
+}
+
+.global{
+  width: 100%;
+  height: auto;
+}
+
+.screens{
+  width: 100%;
+  /*height: 100%;*/
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.footer{
+  margin: 5% 0 0 0;
+}
+
+.inactif{
+  display: none;
+}
+
+.parag{
+  width:80%;
+  display: block;
+  margin:2% auto 2% auto;
+}
+
+h1,h2,h3,h4,h5,h6{
+  text-align: center;
+  width: 100%;
+  margin:0;
+  padding:0;
+  position: relative;
+  font-weight: 300;
+}
+
+
+.bouton, .bouton2{
+  display: inline-block;
+  height: 42px;
+  line-height: 42px;
+  vertical-align: middle;
+  background-color: #002871;
+  padding:0 40px 0 40px ;
+  border-radius: 22px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: .7em;
+  text-decoration: none;
+}
+
+.schead{
+  position: relative;
+  background: #10427b url(../_images/bg_head.png) top left repeat-x;
+  max-height: 136px;
+  min-height: 136px;
+  margin-bottom: 3%;
+}
+
+.schead img.logo{
+  margin-left:7%;
+  margin-top: 37px;
+}
+
+.schead h3{
+  width: 50%;
+  height: 136px;
+  line-height: 136px;
+  vertical-align: middle;
+  position: absolute;
+  top:0;
+  left: 25%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  padding-left: 46px;
+}
+
+.schead h3.hgardiens{
+  background: transparent url(../_images/terrain-gardiens.png) center left no-repeat;
+}
+
+.schead h3.hdefenseurs{
+  background: transparent url(../_images/terrain-defenseurs.png) center left no-repeat;
+}
+
+.schead h3.hmilieux{
+  background: transparent url(../_images/terrain-milieu.png) center left no-repeat;
+  width: 60%;
+}
+
+.schead h3.hattaquants{
+  background: transparent url(../_images/terrain-attaquants.png) center left no-repeat;
+}
+
+.schead h3 span.decompte{
+  padding-left: 5%;
+  font-weight: 700;
+}
+
+.schead h3 span span.lrouge{
+  color: #e63d13;
+}
+
+.disabled{
+  background-color: #dedede;
+}
+
+.clearboth{
+  clear: both;
+}
+
+/* SCREEN 1 ------------------------------------------------------------------------------------------------------------------- */
+
+.intro{
+  text-align: center;
+  padding: 0;
+  position: relative;
+  height: 100%;
+}
+
+.intro img.bgintro{
+  top:0;
+  left:0;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.intro h1{
+  position: absolute;
+  top:0;
+  margin:0;
+  padding-top: 3%;
+  width:100%;
+}
+
+.intro h1 img{
+  position: relative;
+  width:50%;
+  max-width: 616px;
+  height: auto;
+
+}
+
+.intro h2{
+  position: absolute;
+  top:0;
+  margin: 7% 0 0 0;
+  width:100%;
+
+}
+
+.intro h2 img{
+  position: relative;
+  width:50%;
+  height: auto;
+  max-width: 482px;
+}
+
+.intro span.demarre{
+  position: absolute;
+  bottom: 36px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.intro span.demarre a.demarrer{
+  position: relative;
+}
+
+/* FIN SCREEN 1 ---------------------------------------------------------------------------------------------------------------------- */
+
+
+/* LISTE JOUEURS --------------------------------------------------------------------------------------------------------------------- */
+
+.listejoueurs{
+    list-style: none;
+    width:90%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+.listejoueurs li{
+  display: inline-block;
+  width:12%;
+  min-width: 135px;
+  height: auto;
+  padding:0 2% 0 2%;
+  margin: 0;
+  vertical-align: top;
+}
+
+.rounded img{
+  display: block;
+  width:100%;
+  height: auto;
+}
+
+.rounded{
+    display: inline-block;
+    overflow:hidden;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    border:.4em solid #fff;
+    width:100%;
+    height:auto;
+    -moz-box-shadow: 0px 0px 20px 0px #656565;
+    -webkit-box-shadow: 0px 0px 20px 0px #656565;
+    -o-box-shadow: 0px 0px 20px 0px #656565;
+    box-shadow: 0px 0px 20px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=NaN, Strength=20);
+}
+
+.rounded:hover{
+  -moz-box-shadow: 0px 0px 30px 0px #2b2b2b;
+  -webkit-box-shadow: 0px 0px 30px 0px #2b2b2b;
+  -o-box-shadow: 0px 0px 30px 0px #2b2b2b;
+  box-shadow: 0px 0px 30px 0px #2b2b2b;
+}
+
+
+.selectjoueur{
+  border-color: #e63d13;
+}
+
+.selectjoueur:active{
+  border-color: #e63d13;
+}
+
+.selectjoueur:visited{
+  border-color: #e63d13;
+}
+
+
+p.texte{
+  width: 100%;
+  display: inline-block;
+  padding-left: .8em;
+  min-height: 90px;
+}
+
+.age{
+  font-size: .8em;
+}
+
+.nom{
+  font-size: .9em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color:#10427b;
+}
+
+.prenom{
+  font-weight: 400;
+}
+
+li a.selectjoueur + p.texte span.nom{
+  color: #e63d13;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* LISTE SELECTION --------------------------------------------------------------------------------------------------------------------- */
+
+.listeselect{
+  list-style: none;
+  width:90%;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.listeselect li.poste span{
+  text-transform: uppercase;
+  font-weight: 300;
+  display: inline-block;
+  margin: 2% auto 1% auto;
+  color: #10427b;
+}
+
+.listeselect li ul{
+  margin:0;
+  padding:0;
+}
+
+
+.listeselect li span{
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.listeselect li ul li{
+  display: inline-block;
+  width:8%;
+  min-width: 135px;
+  height: auto;
+  margin:0 2% 0 2%;
+  padding: 0;
+  text-align: center;
+}
+
+.rounded2{
+    margin:0;
+    padding: 0;
+    display: inline-block;
+    overflow:hidden;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    border:.2em solid #fff;
+    border-spacing: .4em;
+    width:100%;
+    height:auto;
+    -moz-box-shadow: 0px 0px 15px 0px #656565;
+    -webkit-box-shadow: 0px 0px 15px 0px #656565;
+    -o-box-shadow: 0px 0px 15px 0px #656565;
+    box-shadow: 0px 0px 15px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=NaN, Strength=15);
+}
+
+.rounded2 img{
+  display: block;
+  width:100%;
+  height: auto;
+}
+
+
+.listeselect li ul li p.texte2{
+  font-size: .6em;
+  padding-left: .6em;
+  margin:2% 0 15% 0;
+}
+
+.validpartag{
+  padding:3% 0;
+  text-align: center;
+}
+
+.continu{
+  padding:2% 0;
+  text-align: center;
+  width: auto;
+}
+
+/* FIN LISTE SELECTION --------------------------------------------------------------------------------------------------------------------- */
+
+
+/* LISTE SELECTION RECAP --------------------------------------------------------------------------------------------------------------------- */
+
+
+.rounded3{
+    margin:2% auto;
+    padding: 0;
+    display: block;
+    overflow:hidden;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    border:.2em solid #fff;
+    border-spacing: .4em;
+    width:30%;
+    min-width: 150px;
+    height:auto;
+    -moz-box-shadow: 0px 0px 15px 0px #656565;
+    -webkit-box-shadow: 0px 0px 15px 0px #656565;
+    -o-box-shadow: 0px 0px 15px 0px #656565;
+    box-shadow: 0px 0px 15px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=NaN, Strength=15);
+}
+
+.rounded3 img{
+  display: block;
+  width:100%;
+  height: auto;
+}
+
+.screens7 .schead{
+  margin: 0;
+}
+
+.blocs{
+  position: relative;
+  height:
+}
+
+.recap{
+  top:0;
+  left:0;
+  width: 60%;
+  text-align: center;
+  float:left;
+}
+
+
+.listeselect2{
+  list-style: none;
+  width:100%;
+  padding: 0;
+  margin: 0 auto 3% auto;;
+  text-align: center;
+}
+
+.listeselect2 li.poste span{
+  text-transform: uppercase;
+  font-weight: 300;
+  display: inline-block;
+  margin: 2% auto 1% auto;
+  color: #10427b;
+}
+
+.listeselect2 li ul{
+  margin:0;
+  padding:0;
+}
+
+
+.listeselect2 li span{
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.listeselect2 li ul li{
+  display: inline-block;
+  width:8%;
+  min-width: 65px;
+  height: auto;
+  margin:0 2% 0 2%;
+  padding: 0;
+  text-align: center;
+}
+
+.listeselect2 li ul li span.rounded2{
+    margin:0;
+    padding: 0;
+    display: inline-block;
+    overflow:hidden;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    border:.1em solid #fff;
+    border-spacing: .4em;
+    width:100%;
+    height:auto;
+    -moz-box-shadow: 0px 0px 15px 0px #656565;
+    -webkit-box-shadow: 0px 0px 15px 0px #656565;
+    -o-box-shadow: 0px 0px 15px 0px #656565;
+    box-shadow: 0px 0px 15px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=NaN, Strength=15);
+}
+
+.listeselect2 li ul li span.rounded2 img{
+  display: block;
+  width:100%;
+  height: auto;
+}
+
+
+.listeselect2 li ul li p.texte2{
+  font-size: .5em;
+  padding-left: .6em;
+}
+
+
+.buttons{
+  margin: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.percent{
+  margin:2% auto;
+  width: 50%;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.chiffre{
+  color:#e63d13;
+  font-weight: 700;
+}
+
+.facebook, .twitter, .dream23, .intern23{
+  font-size: .7em;
+  font-weight: 400;
+  width:auto;
+  min-width: 160px;
+  text-align: center;
+}
+
+.loadingint{
+  text-align: center;
+  padding:5%;
+  font-weight: 700;
+  color:#a2a2a2;
+  font-size: 1.2em;
+}
+
+.nodisplay{
+  display: none;
+}
+
+/* FIN LISTE SELECTION RECAP --------------------------------------------------------------------------------------------------------------------- */
+
+
+/* FORMULAIRE ------------------------------------------------------------------------------------------------------------------------------------- */
+
+.pub{
+  width:90%;
+  margin: 2% auto;
+  text-align: center;
+}
+
+.pub p{
+  margin: 0 auto 2% auto;
+}
+
+.pub p span.bleue{
+  color: #002871;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.pub a.infos{
+  margin:5% auto;
+  background: #e63d13;
+  border:none;
+}
+
+.formulaire{
+  width:32%;
+  height: 100%;
+  margin:0 0 0 60%;
+  top:0;
+  background: #dcdcdc;
+}
+
+.formulaire img{
+  width: 100%;
+  height: auto;
+}
+
+form.profil{
+  width: 100%;
+  text-align: center;
+  padding: 0 0 5% 0;
+}
+
+form.profil input{
+  color: #fff;
+  margin:1% auto;
+  width: 80%;
+  background-color: #aaaaaa;
+  border:2px solid #fff;
+  height: 26px;
+  -webkit-border-radius:14px;
+  -moz-border-radius:14px;
+  border-radius:14px;
+  padding: 0 3%;
+}
+
+form.profil input::placeholder, form.profil input::-webkit-input-placeholder{
+  color:#ff0000;
+}
+
+form.profil input.boutoni:hover{
+  cursor:pointer;
+}
+
+form.profil ul{
+  padding: 0;
+  display: inline-block;
+  margin: 0  auto 3% auto;
+  width: 90%;
+  list-style: none;
+}
+
+form.profil input.buton{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-top: -1px;
+  vertical-align: middle;
+}
+
+form.profil ul li.radios{
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: top;
+  margin-top: 2%;
+}
+
+form.profil ul li.radios span{
+  margin-right: 5%;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+form.profil ul li.mention{
+  margin-top: 6%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: .9em;
+}
+
+form.profil ul li.mention span{
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+
+form.profil input.boutoni{
+  width: auto;
+  height: auto;
+  min-height: 46px;
+  min-width: 160px;
+  display: block;
+  height: 46px;
+  line-height: 46px;
+  vertical-align: middle;
+  background-color: #002871;
+  padding:0 40px 0 40px ;
+  border-radius: 22px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .7em;
+  text-decoration: none;
+}
+
+form.profil span.erreur{
+  display: block;
+  height: 22px;
+  color:#e63d13;
+  margin-bottom: 3%;
+}
+
+
+form.profil input.checkregle{
+  margin-top: -1px;
+  vertical-align: middle;
+  padding: 0 ;
+  width: 30px;
+  height: 30px;
+}
+
+
+.legales{
+  width: 90%;
+  margin: 0 auto 3% auto;
+  font-size: .8em;
+}
+
+/* FIN FORMULIARE ------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* BULLETS SCROLL  ------------------------------------------------------------------------------------------------------------------------------- */
+
+.bullets{
+  position: fixed;
+  right: 3%;
+  bottom:42%;
+}
+
+.bullets ul{
+  list-style: none;
+}
+
+.bullets ul li{
+  padding: 0;
+  margin: 0 0 50% 0;
+}
+
+.bullets ul li a{
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+}
+
+.bullets ul li a:hover{
+  cursor: default;
+}
+
+.bullets ul li a.current{
+  background-color: #ff0000;
+}
+
+.bullets ul li a.current:hover{
+  cursor: default;
+}
+
+.bullets ul li a.played{
+  background-color: #fff;
+}
+
+.bullets ul li a.played:hover{
+  cursor: pointer;
+}
+
+/*  FIN BULLETS SCROLL  ------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+.pop23{
+}
+
+.popnone{
+  display: none;
+}
+
+.dreamteam, .internaut23{
+  margin-bottom: 2%;
+}
+
+
+.listedream{
+    list-style: none;
+    width:90%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+.listedream li{
+  display: inline-block;
+  width:12%;
+  min-width: 135px;
+  height: auto;
+  padding:0 2% 0 2%;
+  margin: 0;
+  vertical-align: top;
+}
+
+.listedream li a{
+  border-color:#fff;
+}
+
+
+.listedream li a:hover{
+  border-color:#e63d13;
+}
+
+.listedream li a.selecteam{
+  border-color: #e63d13;
+}
+
+
+
+.schead h4{
+  width: 50%;
+  position: absolute;
+  top:30px;
+  left: 25%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
+
+.schead h4 span.titre{
+  display: block;
+  position: absolute;
+  right:20%;
+  top: 50%;
+  width: 100%;
+  text-align: right;
+  transform: translateY(-50%);
+}
+
+.schead h4 span.rounded2{
+  margin-left: 15%;
+  float: right;
+  width: 14.6%;
+  max-width: 84px;
+}
+
+
+
+
+/* SELECTION DREAM TEAM ------------------------------------------------------------------------------------------------------*/
+
+.team23{
+  margin-bottom: 2%;
+}
+.listeselectdt{
+  list-style: none;
+  width:90%;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.listeselectdt li{
+  font-weight: 300;
+  color:#10427b;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+
+.listeselectdt li ul{
+  margin:1% 0 0 0;
+  padding:0;
+}
+
+.listeselectdt li span{
+  font-size: .8em;
+  font-weight: bold;
+}
+
+.listeselectdt li ul li{
+  display: inline-block;
+  width:10%;
+  min-width: 135px;
+  height: auto;
+  margin:0 1% 0 1%;
+  padding: 0;
+  text-align: center;
+  vertical-align: top;
+}
+
+.listeselectdt li ul li span.rounded2{
+  max-width: 110px;
+}
+
+.listeselectdt li ul li p.texte{
+  font-size: .5em;
+  padding-left: .3em;
+  min-height: 50px;
+  vertical-align: top;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* SELECTION INTERNAUTES ------------------------------------------------------------------------------------------------------*/
+
+.listeinternautes{
+  list-style: none;
+  width:90%;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.listeinternautes li{
+  font-weight: 300;
+  color:#10427b;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+
+.listeinternautes li ul{
+  margin:1% 0 0 0;
+  padding:0;
+}
+
+.listeinternautes li ul li{
+  position: relative;
+  display: inline-block;
+  width:10%;
+  min-width: 135px;
+  height: auto;
+  margin:0 1% 0 1%;
+  padding: 0;
+  text-align: center;
+  vertical-align: top;
+}
+
+.listeinternautes li ul li span.rounded2{
+  max-width: 110px;
+}
+
+.listeinternautes li ul li p.texte{
+  font-size: .5em;
+  padding-left: .3em;
+  min-height: 50px;
+  vertical-align: top;
+}
+
+
+.listeinternautes li ul li span.percent{
+  position: absolute;
+  right:0;
+  top: 5%;
+  width: 35px;
+  height: 35px;
+  display: block;
+  min-width: 35px;
+  min-height: 35px;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  font-size: .4em;
+  font-weight: 700;
+  text-align: center;
+  background: #fff;
+  border:2px solid #e64010;
+}
+
+.listeinternautes li ul li span.percent span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+
+.legende{
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+  color: #10427b;
+  margin : 0 0 20px 15px;
+}
+.roundedleg{
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border:2px solid #e64010;
+  background: #fff;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  float: left;
+}
+
+.roundedleg span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+
+
+
+/* MEDIA QUERIES ------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (orientation: portrait){
+  .intro{
+    height: auto;
+  }
+  .intro h1{
+    padding-top: 1%;
+  }
+  .intro span.demarre{
+    bottom: 0;
+    position: relative;
+  }
+  .intro span.demarre a{
+    bottom:0;
+    padding:0;
+    font-size: 1.0em;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 0;
+    width: 100%;
+    border-top: 1px solid #fff;
+    border-bottom: : 1px solid #fff;
+    border-right: 0;
+    border-left: 0;
+  }
+  .schead{
+    height: 68px;
+    min-height: 68px;
+  }
+  .schead img.logo{
+    height: 32px;
+    width: auto;
+    margin: 28px 0 0 16px;
+  }
+  .schead h3, .schead h4{
+    line-height:1.1;
+    font-size: 1.0em;
+    background: none !important;
+    padding:0;
+    width:80%;
+    left:11%;
+    margin:36px 0 0 0;
+    text-align: center;
+    font-weight: bold;
+    height: 32px;
+  }
+  .team23 .schead h4{
+    top:16px;
+    height: 68px;
+    margin:0 0 0 0;
+    width: 88%;
+    /*left:5%;*/
+  }
+
+  .schead h3.hmilieux{
+    width: 80%;
+  }
+
+  .team23 .schead h4 span.rounded2{
+    margin-left: 15%;
+    float: right;
+    width: 14.6%;
+    max-width: 45px;
+  }
+
+  .screens div ul{
+    margin-left: 0;
+    width: 95%;
+  }
+  .screens div ul.listeselect2{
+    margin-left: 0;
+    width: 98%;
+  }
+  .screens div ul.listeinternautes{
+    margin-left: 0;
+    width: 98%;
+  }
+
+  .screens div ul.listeselect2 li ul{
+    width: 100%;
+  }
+  .screens div ul li{
+    padding: 0 3% 0 3%;
+  }
+
+  .screens div ul li.poste span{
+    margin:6% auto 3% auto;
+  }
+
+  .screens div ul li ul li{
+    width:8%;
+    padding: 0 3% 5% 3%;
+  }
+
+  .screens div ul li ul li p.texte2{
+    padding: 3% 0 8% 0;
+  }
+
+  .recap{
+    clear:both;
+    width:100%;
+  }
+
+  .formulaire{
+    width: 100%;
+    margin:5% 0 0 0;
+  }
+
+  .screens div ul.listeselect{
+    width:98%;
+  }
+
+  .screens div ul.listeselect li ul li{
+    width:8%;
+    min-width: 60px;
+  }
+  .screens div ul.listeselect li ul li p.texte2{
+    min-height:30px;
+  }
+  .screens div ul.listeselectdt li ul li{
+    min-width: 60px;
+  }
+  .screens div ul.listeselectdt li ul{
+        margin: 3% 0 0 0;
+  }
+  .screens div ul.listeselectdt li ul li p.texte{
+        min-height: 30px;
+  }
+.screens div ul.listeselect li ul li{
+  vertical-align: top;
+}
+  .screens div ul.listeselect li ul li p.texte2{
+    min-height: 30px;
+    padding-bottom: 0;
+  }
+
+  .screens div ul.listeinternautes li ul li p.texte{
+    min-height: 20px;
+  }
+
+  .screens div ul.listeselect2 li ul li{
+    min-width: 60px;
+  }
+
+  .screens div ul.listeinternautes li ul li{
+    min-width: 60px;
+  }
+
+  .screens div ul.listeinternautes li ul{
+    margin: 3% 0 0 0;
+  }
+
+  .screens div ul.listeinternautes li ul li p.texte{
+    font-size: .4em;
+  }
+  .listeinternautes li ul li span.percent{
+    position: absolute;
+    right:0;
+    top: 2%;
+    width: 25px;
+    height: 25px;
+    display: block;
+    min-width: 25px;
+    min-height: 25px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    font-size: .4em;
+    font-weight: 700;
+    text-align: center;
+    background: #fff;
+  }
+
+  .listeinternautes li ul li span.percent span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+}
+
+@media screen and (orientation: portrait) and (min-width:767px){
+  .screens div ul.listeselect li ul li{
+    width:8%;
+    min-width: 100px;
+  }
+
+  .screens div ul.listeselectdt li ul li{
+    min-width: 100px;
+  }
+
+  .screens div ul.listeselect2 li ul li{
+    min-width: 100px;
+  }
+
+  .screens div ul.listeinternautes li ul li{
+    min-width: 100px;
+  }
+  .listeinternautes li ul li span.percent{
+    position: absolute;
+    right:0;
+    top: 5%;
+    width: 35px;
+    height: 35px;
+    display: block;
+    min-width: 35px;
+    min-height: 35px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    font-size: .3em;
+    font-weight: 700;
+    text-align: center;
+    background: #fff;
+  }
+
+  .listeinternautes li ul li span.percent span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width:1030px){
+    .header iframe{
+      height:162px;
+    }
+}

@@ -1,0 +1,37 @@
+SetEnv PHP_VER 5
+SetEnv REGISTER_GLOBALS 0
+# php_value auto_prepend_file moanajax.php
+
+
+# empeche les requetes POST ---------
+
+<IfModule mod_rewrite.c>
+ RewriteEngine On
+ RewriteCond %{REQUEST_METHOD} !^(POST)
+ # RewriteCond %{QUERY_STRING} !token 
+ # (^|&)tototo=(.*) [NC]
+ # RewriteCond %{THE_REQUEST} ^.*(\\r|\\n|%0A|%0D).* [NC]
+ # RewriteRule ^(.*)$ - [F,L]
+ RewriteRule .* - [F]
+</IfModule>
+
+# --------------------------------------------------------------
+
+# autorise les requetes AJAX (POST)
+
+SetEnvIfNoCase X-Requested-With XMLHttpRequest ajax
+
+# order Deny,Allow
+
+Deny from all
+# Allow from servermac.local
+# Allow from 192.168.1
+Allow from env=ajax
+
+# empeche les requetes autres qu'ajax sans token
+<IfModule mod_rewrite.c>
+ RewriteCond %{HTTP:X-Requested-With} !=XMLHttpRequest
+ RewriteCond %{QUERY_STRING} !token
+ # (^|&)totot=(.*) [NC]
+ RewriteRule .* - [F]
+</IfModule>

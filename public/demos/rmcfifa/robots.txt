@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /_inc/
+Disallow: /_json/
+Disallow: /_services/
+Disallow: /_import_joueurs/
+Disallow: /_js/
+Disallow: /_export_internautes/

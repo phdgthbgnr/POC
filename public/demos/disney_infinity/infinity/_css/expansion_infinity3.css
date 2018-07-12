@@ -1,0 +1,248 @@
+.novisible{
+  display: none;
+}
+.liens{
+  margin: 20px auto 0;
+}
+h5{
+  text-align: left;
+}
+.zooms{
+  padding: 0;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+}
+.zooms li{
+  width: 19.5%;
+  display: inline-block;
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.zooms li.addt{
+  width:30%;
+}
+.zooms li a{
+  display: block;
+  width:100%;
+  text-align: center;
+}
+.zooms li a img{
+  display: block;
+  border: 0;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.zooms li a img.zoom{
+  /*width:25%;*/
+  width: 40px;
+  max-width: 40px;
+  height: auto;
+  margin: 0 auto;
+  z-index: 5;
+}
+.zooms li a span.popup{
+  display: block;
+  width:auto;
+  position: absolute;
+  z-index: 4;
+  /*bottom: 17%;*/
+  bottom: 42px;
+  right:0;
+  left: 0;
+  font-size: 12px;
+  border: 2px solid #a0a0a0;
+  padding:5%;
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.8);
+  -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33ffffff,endColorstr=#33ffffff);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33ffffff,endColorstr=#33ffffff);
+  zoom: 1;
+  color: #000;
+  text-align: left;
+  visibility: hidden;
+  line-height: 18px;
+}
+.zooms li a span.selected{
+  visibility: visible;
+}
+.zooms li a span.popup span.popuptitle{
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6%;
+  text-transform: uppercase;
+}
+
+.figuradd{
+  width: 100%;
+  max-width: 1170;
+  text-align: center;
+}
+
+h3.cntadd{
+  margin-top: 5%;
+  color: #eb5e1c;
+  text-transform: uppercase;
+  font-size: 23px;
+}
+
+h4.cntaddtxt{
+  margin:3% auto;
+  max-width: 1170px;
+}
+
+.figuradd li{
+  list-style: none;
+  display: inline-block;
+  width: 24%;
+  max-width: 120px;
+}
+
+.figuradd li img{
+  width:100%;
+  height: auto;
+}
+
+.container-bg {
+	background:url(../img/packsaventure/bg_bloc1.jpg) center left repeat-x;
+}
+
+.visu-bloc {
+	margin: 20px auto;
+}
+
+.visu-left, .visu-right {
+	display: inline-block;
+}
+
+.visu-left img, .visu-right img {
+	max-width: 100%;
+	height: auto;
+}
+
+.visu-narrow {
+	width: 30%;
+}
+
+.visu-wide {
+	width: 65%;
+}
+
+/* ------------------------------------------------------------------------------------ CAROUSEL */
+
+.carousel{
+  display: block;
+  position:relative;
+  margin:0 auto;
+  text-align: center;
+  width: 100%;
+  max-width: 1170px;
+  background: #666;
+  margin:0 auto;
+}
+.carousel img{
+  width: 100%;
+  height: auto;
+}
+
+.carousel ul{
+  position: absolute;
+  top:0;
+  width: 100%;
+}
+
+.carousel ul li{
+  width: 100%;
+  height: auto;
+  list-style: none;
+  position: absolute;
+}
+
+.carousel ul li img{
+  line-height: 0;
+  width: 100%;
+  height: auto;
+}
+
+.carousel a{
+  position: absolute;
+  top:0;
+  bottom: 0;
+  border: 1px solid red;
+  padding:10px;
+  text-align:center;
+}
+
+.carousel a.cleft{
+  left:0;
+  right:70%;
+}
+
+.carousel a.cright{
+  left:70%;
+  right:0;
+}
+
+.carousel a span{
+  position: absolute;
+   top: 50%;
+   left: 50%;
+   height: auto;
+   width: 30%;
+   margin: -25% 0 0 -15%;
+   border:1px solid white;
+}
+
+.carousel a.cleft span{
+  background: url(../img/packsaventure/carousel/carousel_left.png) top left no-repeat;
+  background-size: 100% auto;
+}
+
+.carousel a span img{
+}
+
+/* ------------------------------------------------------------------------------------ PETITS ECRANS */
+
+@media screen and (max-width:767px){
+  .gris{
+    margin:10px auto 20px auto;
+  }
+  .onglets li a span{
+    font-size: 11px;
+    font-weight: bold;
+    padding:0 2%;
+  }
+  .zooms{
+    margin-top:5%;
+  }
+  .zooms li{
+    width:100%;
+    height: auto;
+  }
+  .zooms li.addt{
+    width: 95%;
+  }
+
+  .zooms li a img{
+    width:60%;
+    max-width: 200px;
+  }
+  .zooms li a img.zoom{
+    /*width:15%;*/
+    width: 40px;
+    max-width: 40px;
+  }
+  .zooms li a span.popup{
+    right: 5%;
+    left: 5%;
+    font-size: 14px;
+  }
+  .container-bg {
+    background: none;
+  }
+}

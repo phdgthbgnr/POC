@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deezer - mby</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+
+</head>
+<body>
+	<script>
+		// Listez ici vos trackings pour que le parseur de Sizmek les prenne en compte.
+		// Nous devons retrouver les mêmes que ceux définis dans le HTML ci-dessous !
+		if(void 0){
+			EB.clickthrough('click_header');
+			EB.clickthrough('click_right');
+			EB.initExpansionParams(0, 0, 0, 0);
+		}
+	</script>
+	<!-- liste des attributs utilisables :
+		système de clic :
+			Les clics fonctionnent par défaut à la manière d'un héritage (tous les enfants redirigent sur un data-clickthroughId défini sur le parent le plus proche).
+			La créa ne gère que les ids de redirection.
+			Les URLs seront gérées par Massmotionmedia lors de la diffusion.
+			En local, le clic redirigera sur la page en cours avec en hashtag l'id du clic.
+			Pour une lecture simplifier et unifier des rapports, tout id de clic doit commencer par "click_"
+
+			Attributs HTML :
+				data-clickthroughId (ex de valeur : click_video) : permet une redirection sur la valeur mentionnée pour différencier les clicks
+				data-clickthroughNoInherited (pas de valeur)     : l'élément redirigera au clic, mais ses enfants ne ridirigeront plus
+				data-clickthroughCanceled (pas de valeur)        : l'élément ne redirigera pas au clic, les enfants eux peuvent toujours rediriger par héritage
+	-->
+	<!-- comportement du format :
+		général :
+			Sauf cas exceptionnel, le format doit avoir un header de 770x120 et une partie droite de 340x700 (soit un format global de 1110x700).
+			Le format se dissocie en 2 parties afin de différencier les clics.
+			Si la différenciation n'est pas obligatoire ou si le format l'exige, ne pas hésiter à supprimer	adHeader et adRight et de travailler
+			directement dans adWrapper (en gardant en tête d'ajouter data-clickthroughId là où c'est nécessaire pour la redirection)
+		vidéo :
+			En cas d'ajout de vidéo, les trackings sont déjà gérés automatiquement. Il est interdit d'ajouter l'attribut controls si la vidéo doit rediriger au clic.
+			Il faudra alors créer des boutons personnalisés pour palier à ce problème.
+	-->
+	<div id="adWrapper" class="adBorder">
+		<div id="adHeader" data-clickthroughNoInherited="click_header">
+			<div id="contentHeader">
+				<div id="step-1" class="step">
+
+					<div id="text-1">
+						<img src="images/texte.png"/>
+					</div>
+
+					<div id="form-search" method="post">
+						<div class="form-group">
+							<input type="text" name="s" id="s" value="Suche nach einem Titel, Künstler oder Album..." placeholder="Suche nach einem Titel, Künstler oder Album..."/>
+							<span id="rechercher"></span>
+						</div>
+					</div>
+				</div>
+				<div id="step-2" class="step">
+					<div id="title-step-2">
+						<span id="autre-titre">&#9668; Suche nach einem anderen Titel</span>
+					</div>
+				</div>
+				<div id="step-3" class="step">
+					<div id="text-3">
+						<b>Du hast teilgenommen!</b> Um an der Verlosung teilzunehmen, gib deine Emailadresse ein.
+					</div>
+					<div id="form-Email">
+						<div class="form-group">
+							<div id="div-email" class="clearfix">
+								<input type="text" name="email" id="email" value="contact@mail.com" placeholder="contact@mail.com"/>
+								<span id="valider">Jetzt&nbsp;abschicken</span>
+							</div>
+							<div id="regl" class="clearfix">
+								<input type="checkbox" name="check-reglement" id="check-reglement"/>
+								<span>Ich akzeptiere <a href="http://cdn-content.deezer.com/ads/Ops/HD/ReglementHD.pdf " title="Réglement" id="reglement" target="blank">die Teilnahmebedingungen</a></span>
+								<div id="msg"></div>
+							</div>
+							<input type="hidden" name="idtrack" id="idtrack" value=""/>
+						</div>
+
+					</div>
+				</div>
+				<div id="step-4" class="step">
+					<div id="text-4">
+						<b>Danke!</b>
+						Die Gewinner werden per Email benachrichtigt
+					</div>
+					<div id="lien-playlist">
+						<a href="http://www.deezer.com/playlist/1809875902" title="Découvrir la playlist" target="blank">Schau dir die Playlist an</a>
+						<!-- <img src="images/happy-inside.png"/> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="adRight">
+      <div id="ad" class="video-container" data-cc>
+						<div id="videoWrapper" data-cc>
+							<video id="video" poster="images/poster.jpg" class="centered" data-cc>
+								<source src="videos/video.mp4" type="video/mp4">
+							</video>
+							<img src="images/controls/play.svg" id="play" class="inject-me" data-cc/>
+							<img src="images/controls/pause.svg" id="pause" class="inject-me" data-cc/>
+							<img src="images/controls/sound.svg" id="sound" class="inject-me" data-cc/>
+							<img src="images/controls/mute.svg" id="mute" class="inject-me" data-cc/>
+						</div>
+						<img src="images/controls/replay.svg" id="replay" class="inject-me" data-cc/>
+						<img src="images/controls/play.svg" id="play2" class="inject-me" data-cc/>
+			</div>
+      <!--
+      <div id="video-container" class="video-container centered">
+                <video id="video" poster="images/poster.jpg" muted="muted">
+                    <source src="videos/video.mp4" type="video/mp4">
+                            Your browser does not support the <code>video</code> element.
+                </video>
+
+                <div id="sdk-video-player" class="sdk-video-player">
+                    <div id="sdk-video-play-button" class="sdk-video-player-button centered"></div>
+                </div>
+
+      </div>
+    -->
+      <div id="contentRight" data-clickthroughNoInherited="click_right">
+        <a href="http://www.deezer.com/playlist/1809875902">
+				      <img src="images/ban-right.jpg" alt="ein ganzes halbes jahr"/>
+        </a>
+			</div>
+		</div>
+	</div>
+	<script>
+
+		var EBModulesToLoad = ["EBCMD"];
+		(function() {
+			var videos = document.getElementsByTagName("video");
+			if (videos.length > 0) {
+				EBModulesToLoad.push("Video");
+			}
+		})();
+
+    </script>
+	<script src="libs/EBLoader.js"></script>
+  <script src="libs/svg/svg-injector.min.js"></script>
+ <script src="libs/ad.min.js"></script>
+	<script src="libs/lib.js"></script>
+	<script src="libs/main.js"></script>
+</body>
+</html>

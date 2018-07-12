@@ -1,0 +1,548 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Tungsten-Medium';
+  src: url('medium/Tungsten-Medium.eot?#iefix') format('embedded-opentype'),  url('medium/Tungsten-Medium.otf')  format('opentype'),
+	     url('medium/Tungsten-Medium.woff') format('woff'), url('medium/Tungsten-Medium.ttf')  format('truetype'), url('medium/Tungsten-Medium.svg#Tungsten-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+html{
+    width:100%;
+    height: auto;
+    font-family: 'Tungsten-Medium' !important;
+}
+
+body{
+    overflow-x: hidden;
+    width:100%;
+    background-color: #000;
+    padding: 0;
+    margin: 0;
+    font-size: 36pt;
+    font-family: 'Tungsten-Medium';
+    color:#fff;
+    background: #000 url(../_images/bg-nba2k-desktop.jpg) top center no-repeat;
+    background-size: auto auto;
+}
+
+*{
+    font-family: 'Tungsten-Medium';
+    color:#fff;
+}
+
+.novisible{
+    display: none;
+    visibility: hidden;
+    height: 0;
+    margin:0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+.main{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main .logo{
+    width: 58%;
+    height: auto;
+    margin: 4% 0 0 4%;
+}
+
+.main .logo img{
+    width: 100%;
+    height: auto;
+}
+
+.main .page{
+    
+}
+
+.main .page .texte{
+    text-align: center;
+    width: 58%;
+    margin: 5% 0 0 4%;
+}
+
+.main .page .bloc0 p{
+    color:#fff;
+    text-transform: uppercase;
+    margin:0;
+}
+
+.main .page .bloc0 p.para1{
+    color:#cdcecf;
+    font-size: 3.5vw;
+}
+
+.main .page .bloc0 p.para2{
+    font-size: 7vw;
+    line-height: 6vw;
+}
+
+.main .page .bloc0 p.para3{
+    font-size: 3vw;
+    line-height: 5.7vw;
+}
+
+.main .page .texte a.jouer{
+    margin: 6% auto 0 auto;
+    display: inline-block;
+    width: 40.68%;
+    height: auto;
+    font-size: 0;
+    line-height: 0;
+    border:0;
+    padding:0;
+    background: transparent url(../_images/bt-jouer.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.main .page .texte a.jouer img{
+    border: 0;
+}
+
+.main .page .texte a.continuer{
+    background: transparent url(../_images/bt-continuer.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.main .page .texte a.jouer img{
+    width: 100%;
+    height: auto;
+}
+
+.main .page .texte a.jouer:hover{
+    background-position: bottom center;
+}
+
+.main .page .bloc0 p.reglement{
+    display: block;
+    line-height: 10pt;
+    margin:2% auto 5% auto;
+}
+
+.main .page .bloc0 p.reglement a{
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+}
+
+.main .legals{
+    width: 95%;
+    height: auto;
+    margin:3% auto 0 auto;
+    font-size: 0;
+}
+
+.main .legals img{
+    width: 100%;
+    height: auto;
+}
+
+.main .page .texte p.punch{
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+
+.main .page .texte p.punch span{
+    display: block;
+}
+
+.main .page .texte .blocq{
+    border: 1px solid #fff;
+    border-radius: 30px;
+    background-color: rgba(256,256,256,.15);
+    padding: 3%;
+}
+
+.main .page .texte .blocq .numquestion{
+    margin: 2% auto 0 auto;
+    text-transform: uppercase;
+    font-size: 2.8vw;
+}
+
+.main .page .texte .blocq .question{
+    font-size: 3vw;
+    margin: 4% auto;
+}
+
+.main .page .texte .blocq ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main .page .texte .blocq ul li{
+    border: 1px solid #9e9d9d;
+    margin-top: 3%;
+    text-align: left;
+}
+
+.main .page .texte .blocq ul li a{
+    display: block;
+    color:#fff;
+    text-decoration: none;
+    padding-left: 2%;
+    background-color: rgba(256,256,256,.35); 
+}
+
+.main .page .texte .blocq ul li a:hover{
+    background-color: #fff;
+    color: #ed1c24;
+}
+
+.main .page .texte .blocq ul li a.checked{
+    background-color: #fff;
+    color: #ed1c24;
+    background-image: url(../_images/checked.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.main .page .texte .blocq a.facebook{
+    margin: 0 auto;
+    display: inline-block;
+    width: 61.15%;
+    height: auto;
+    font-size: 0;
+    border:0;
+    padding:0;
+    background: transparent url(../_images/bt-facebook.png) top center no-repeat;
+    background-size: 100% auto;
+}
+
+.main .page .texte .blocq a.facebook img{
+    border: 0;
+}
+
+.main .page .texte .blocq a.facebook:hover{
+    background-position: bottom center;
+}
+
+.main .page .texte .blocq .punch2{
+    font-size: 2.5vw;
+    text-align: center;
+    text-shadow: 2px 2px 3px #ed1c24;
+}
+
+
+.main .page .texte .blocq .bravo{
+    font-size: 6vw;
+    text-transform: uppercase;
+    margin: 1% auto 0 auto;
+}
+
+.main .page .texte .blocq .formulaire{
+    display: inline-block;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.main .page .texte .blocq .formulaire label{
+    font-size: 1.8vw;
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    margin-bottom: 3%;
+    text-align: left;
+}
+
+.main .page .texte .blocq .formulaire input.regle{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.main .page .texte .blocq .formulaire input{
+    display: block;
+    width: 100%;
+    font-size: 2.3vw;
+    text-align: center;
+    margin: 0 0 3% 0;
+    color:#000;
+    padding: 0;
+}
+
+.main .page .texte .blocq a.inscrire{
+    display: block;
+    width: 32.2%;
+    height: auto;
+    border:0;
+    margin: 3% auto;
+    background: transparent url(../_images/bt-inscrire.png) top center no-repeat;
+    background-size: 100% auto;
+    cursor: pointer;
+    line-height: 0;
+}
+
+.main .page .texte .blocq a.inscrire img{
+    width: 100%;
+    height: auto;
+}
+
+.main .page .texte .blocq a.inscrire:hover{
+    background-position: bottom center;
+}
+
+.main .page .texte .blocq .erreurs{
+    font-size: 2vw;
+    color: #d70017;
+    margin: 1% auto;
+}
+
+.main .page .texte .blocq a.share{
+    border:0;
+    display: inline-block;
+    line-height: 0;
+    background-position: top center;
+    background-size: 100% auto;
+    width: 20%;
+    height: auto;
+}
+
+.main .page .texte .blocq a.sharefb{
+    background-image: url(../_images/logo_facebook.png);
+    margin-right: 5%;
+}
+
+.main .page .texte .blocq a.sharetwt{
+    background-image: url(../_images/logo_twitter.png);
+}
+
+.main .page .texte .blocq a.share img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* -- VIDEO YT ------------------------------------------------------------------------------------------- */
+
+.nbavideo{
+    margin:0 auto;
+    position: relative;
+    width: 80.8%;
+    text-align: center;
+    height: auto;  
+}
+
+.nbavideo img{
+    width: 100%;
+    height: auto;
+}
+
+.videoyt{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+}
+
+.player{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+@media screen and (max-width:1280px){
+    body{
+        background-size:100% auto;
+    }
+    .main{
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+
+
+@media screen and (min-width:1280px){
+    .main{
+        width: 1280px;
+        overflow: hidden;
+    }
+    
+    .main .page .bloc0 p.para1{
+        font-size: 45px;
+    }
+    
+    .main .page .bloc0 p.para2{
+        font-size: 90px;
+        line-height: 77px;
+    }
+    
+    .main .page .bloc0 p.para3{
+        font-size: 38.85px;
+        line-height: 73px;
+    }
+    
+    .main .page .texte p.punch{
+        font-size: 35px;
+    }
+    
+    .main .page .texte .blocq .punch2{
+        font-size: 32.4px;
+    }
+    
+    .main .page .texte .blocq .formulaire label{
+        font-size: 21.3px;
+    }
+    
+    .main .page .texte .blocq .formulaire input{
+        font-size: 29.8px;
+    }
+    
+    .main .page .texte .blocq .bravo{
+        font-size: 78px;
+    }
+}
+
+
+
+@media screen and (max-width:1024px){
+    .main .page .texte .blocq .punch2{
+        font-size:26px;
+    }
+    
+    .main .page .texte .blocq .bravo{
+        font-size: 61.5px;
+    }
+}
+
+
+
+/* PORTRAIT ------------------------------------------------------------------------------------------------------- PORTRAIT */
+
+@media screen and (orientation: portrait){
+    body{
+        background: #000 url(../_images/bg-nba2k-mobile.jpg) top center no-repeat;
+        background-size: 100% auto;
+    }
+    
+    .main .logo{
+        width:94%;
+        height: auto;
+    }
+    
+    .main .page{
+        margin-top:75%;
+    }
+    
+    .main .page .texte{
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .main .page .bloc0 p.para1{
+        font-size: 8.5vw;
+        line-height: 10vw;
+        text-shadow: 1px 0px 9px #000;
+    }
+    
+    .main .page .bloc0 p.para2{
+        font-size: 16vw;
+        line-height: 15vw;
+    }
+    
+    .main .page .bloc0 p.para3{
+        font-size: 8.5vw;
+        line-height: 10vw;
+    }
+    
+    .main .page .texte a.jouer{
+        width: 50%;
+    }
+    
+    /* YT VIDEO -------------------------------------------------------------------------- */   
+    .nbavideo{
+        margin:0 auto;
+        position: relative;
+        width: 91%;
+        text-align: center;
+        height: auto;
+        border:1px solid #fff;
+    }
+    /* ------------------------------------------------------------------------------------ */
+       
+    .main .legals{
+        width: 95%;
+        height: auto;
+        margin:7% auto 0 auto;
+        font-size: 0;
+    }
+    
+    .main .page .texte p.punch{
+        font-size: 7.5vw;
+        line-height: 7vw;
+        margin: 0;
+        text-shadow: 1px 0px 9px #000;
+    }
+    
+    .main .page .texte p.punch span{
+        display: inline;
+    }
+    
+    .main .page .texte .blocq{
+        margin-top: 5%;
+        padding: 5%;
+    }
+    
+    .main .page .texte .blocq .numquestion{
+        font-size: 8vw;
+    }
+
+    .main .page .texte .blocq .question{
+        font-size: 7.5vw;
+        margin: 4% auto;
+    }
+    
+    .main .page .texte .blocq ul li{
+        font-size: 7vw;
+    }
+    
+    .main .page .texte .blocq ul li a.checked{
+         background-size: auto 90%;
+    }
+    
+    .main .page .texte .blocq a.facebook{
+        width: 86.15%;
+    }
+    
+    .main .page .texte .blocq a.inscrire{
+        width: 42.2%
+    }
+    
+    .main .page .texte .blocq .formulaire{
+        width: 85%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .main .page .texte .blocq .formulaire input{
+        margin: 0 0 3% 0;
+        font-size: 6vw;
+    }
+    
+    .main .page .texte .blocq .formulaire label{
+        font-size: 4vw;
+    }
+    
+    .main .page .texte .blocq .erreurs{
+        font-size: 6vw;
+    }
+
+
+}

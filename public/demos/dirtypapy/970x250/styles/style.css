@@ -1,0 +1,288 @@
+body {
+    font-family: Arial, sans-serif;
+}
+button {
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    user-select: none;
+}
+button:hover,
+button:active {
+    color: #FAF000;
+}
+button:active {
+    font-size: 11px;
+}
+.label {
+    color: #0D2A4D;
+    position: absolute;
+    margin-left: 10px;
+    top: 35px;
+}
+body {
+    margin: 0px;
+}
+#ad {
+	position:relative;
+    display: block;
+    border: rgb(145, 153, 153) 1px solid;
+    overflow: hidden;
+    width: 968px;
+    height: 248px;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#banner {
+    position: absolute;
+    display: block;
+    width: 968px;
+    height: 248px;
+    background-color: transparent;
+    background-image: none;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+	top:0;
+	left:0;
+}
+.button {
+    height: 250px;
+    width: 970px;
+}
+.label {
+    top: 65px;
+}
+/*.buttons {
+  left: 10px;
+  bottom: 60px;
+}
+
+.buttons button{
+  margin: 3px 0;
+}*/
+
+.video-container {
+	
+    height: 182px;
+    position: absolute;
+    width: 440px;
+    visibility: hidden;
+	overflow:hidden
+}
+.centered {
+    left: 507px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 35px;
+}
+video {
+    height: 101%;
+    width: 101%;
+}
+.ios-center-video-controls video::-webkit-media-controls {
+    min-width: 0;
+}
+.sdk .sdk-video-player {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: url("../images/poster.jpg");
+    background-size: cover;
+}
+.sdk .sdk-video-player-button {
+    cursor: pointer;
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background: url("../images/play.png") no-repeat scroll 0px 0px;
+    background-size: cover;
+}
+
+.sound{
+	position:absolute;
+	top:5px;
+	right:5px;
+	width:13px;
+	height:12px;
+	display:block;
+}
+
+.nodisplay{
+	display:none;
+}
+
+.background{
+	overflow:hidden;
+	position: absolute;
+	width: 970px;
+	height: 250px;
+	background: url("../images/bg.jpg") top center no-repeat;
+	background-size:100% auto;
+	transform-origin: top left ;
+	
+	-webkit-animation: background 5 ease-out 0s;
+	        animation: background 5s ease-out 0s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes background {
+	0% {-webkit-transform: scale(1.1);}
+	100% {-webkit-transform: scale(1);}
+}
+@keyframes background {
+	0% {transform: scale(1.1);}
+	100% {transform: scale(1);}
+}
+
+#ad:hover .date{
+	-webkit-transform: scale(1.08);
+	transform: scale(1.08);
+
+}
+
+.dirty{
+	position: absolute;
+	width: 202px;
+	height: 68px;
+	top: 53px;
+	left: 550px;
+	opacity:0;
+	filter: alpha(opacity=0);
+	background: transparent url("../images/dirty.png") no-repeat scroll center top;
+	
+
+	-webkit-animation: dirty 0.8s cubic-bezier(0.435, 1.340, 0.685, 1.005) 0.5s;
+	        animation: dirty 0.8s cubic-bezier(0.435, 1.340, 0.685, 1.005) 0.5s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+
+.papy{
+	position: absolute;
+	width: 211px;
+	height: 68px;
+	top: 100px;
+	left: -200px;
+	opacity:0;
+	filter: alpha(opacity=0);
+	background: url("../images/papy.png") top center no-repeat;
+	
+	-webkit-animation: papy 0.8s cubic-bezier(0.435, 1.340, 0.685, 1.005) 0.5s;
+			animation: papy 0.8s cubic-bezier(0.435, 1.340, 0.685, 1.005) 0.5s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+
+.name1{
+	position: absolute;
+	width: 170px;
+	height: 19px;
+	top: 18px;
+	left: 172px;
+	background: url("../images/name1.png") top center no-repeat;
+
+	opacity: 0;
+	
+	-webkit-animation: scaleup 0.6s ease-out 1s;
+	        animation: scaleup 0.6s ease-out 1s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;*/
+}
+
+.name2{
+	position: absolute;
+	width: 110px;
+	height: 18px;
+	top: 18px;
+	left: 355px;
+	background: url("../images/name2.png") top center no-repeat;
+	
+	opacity: 0;
+	
+	-webkit-animation: scaleup 0.6s ease-out 1.2s;
+	        animation: scaleup 0.6s ease-out 1.2s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;*/
+}
+
+.date{
+	position: absolute;
+	width: 170px;
+	height: 39px;
+	left: 314px;
+	top: 197px;
+	
+	-webkit-transition: all 0.2s; 
+    transition: all 0.2s;
+
+}	
+
+.date2{
+	position: absolute;
+	width: 170px;
+	height: 39px;
+	left: 0px;
+	top: 0px;
+	background: url("../images/date.png") center no-repeat;
+	background-size: cover;
+	opacity: 0;
+	
+	-webkit-animation: scaleup 0.6s cubic-bezier(0.435, 1.340, 0.685, 1.005) 1.5s;
+	        animation: scaleup 0.6s cubic-bezier(0.435, 1.340, 0.685, 1.005) 1.5s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+	
+}
+
+
+@-webkit-keyframes dirty {
+	0% {left: 500px;opacity: 0; filter: alpha(opacity=0);}
+	100% {left: 265px; opacity: 1; filter: alpha(opacity=100);}
+}
+@keyframes dirty {
+	0% {left: 500px;opacity: 0;}
+	100% {left: 265px; opacity: 1;}
+}
+
+@-webkit-keyframes papy {
+	0% {left: -200px;opacity: 0; filter: alpha(opacity=0);}
+	100% {left: 205px; opacity: 1; filter: alpha(opacity=100);}
+}
+@keyframes papy {
+	0% {left: -200px;opacity: 0;}
+	100% {left: 205px; opacity: 1;}
+}
+
+@-webkit-keyframes scaleup {
+	0% {-webkit-transform: scale(0.2); opacity: 0; filter: alpha(opacity=0);}
+	100% {-webkit-transform: scale(1); opacity: 1; filter: alpha(opacity=100);}
+}
+@keyframes scaleup {
+	0% {transform: scale(0.2); opacity: 0;}
+	100% {transform: scale(1); opacity: 1;}
+}
+
+@-webkit-keyframes ctahover {
+	0%, 60%, 100% {top: 17px; height: 90px;}
+	20%, 40% {top: 0px; height: 124px;}
+}
+@keyframes ctahover {
+	0%, 60%, 100% {top: 17px; height: 90px; }
+	20%, 40% {top: 0px; height: 124px;}
+}

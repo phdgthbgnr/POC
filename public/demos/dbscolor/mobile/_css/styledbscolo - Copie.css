@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.zoom{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    overflow: hidden;
+}
+
+.zoom .contsvg{
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    transition: all .3s ease-out;
+    /* -webkit-transform: translate(0,-50%) scale(2);
+    -ms-transform: translate(0,-50%) scale(2);
+    -moz-transform: translate(0,-50%) scale(2);
+    transform: translate(0,-50%) scale(2); */
+}
+
+.zoom .contsvg img{
+    position: absolute;
+    height: auto;
+    width: 100%;
+    /* top:50%; */
+    top:0;
+    left:0;
+    /* transform: translate(0.05%,-50%); */
+}
+
+.btzoom{
+    position: absolute;
+    right:10px;
+    padding:10px;
+    border-radius: 50%;
+    border:1px solid #000;
+    color: #000;
+    background: #fff;
+    text-decoration: none;
+}
+
+.zoomin{
+    top: 10px;
+}
+
+.zoomout{
+    top: 60px;
+}
+
+svg{
+    position: absolute;
+    height: 95%;
+    width: auto;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+canvas.exportsvg{
+    display: block;
+    width:1312px;
+    height: 1681px;
+}
+
+
+/* GUI ----------------------------------------------------------------------------------------------------------------------------------- */
+
+.gui{
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 50%;
+    background-color: #fff;
+}
+
+.colorpicker{
+    position: absolute;
+    width:80%;
+    left:50%;
+    transform: translate(-50%,0);
+}
+
+.colorpicker ul{
+    position: absolute;
+    top:20%;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.colorpicker ul li{
+    display: inline-block;
+    width: 20%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.colorpicker ul li a{
+    display: block;
+    height: 100%;
+    width: 100;
+    background-color: #ccc;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border:4px solid #f0f0f0;
+}
+
+.colorpicker ul li a img{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (orientation: portrait){
+    .contsvg img{
+        height: 100%;
+        width: auto;
+        top:0;
+        left:50%;
+        transform: translate(-50%,0.05%);
+    }
+} 

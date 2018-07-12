@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Deezer Feel Unique</title>
+        <meta name="keywords" content="" />
+        <meta property="og:url" content="http://www.deezer.com/app/feelunique/" /> 
+        <meta property="og:title" content="Feelunique vous propose la playlist idéale pour chaque instant" />
+        <meta property="og:description" content="Entre dans la rébellion, et tente de gagner des invitations pour la sortie de Hunger Games !" /> 
+        <meta property="og:image" content="http://entertainmentggd.com/deezerfeelunique/feelunique.jpg" />
+        <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+    </head>
+    
+    <body>
+        <canvas id="myCanvas" width="300" height="300"></canvas>
+        <div id="circle">
+            <div id="circle-in"></div>
+            <div id="picker2">
+                <div id="picker-circle2"></div>
+            </div>
+            <div id="picker">
+                <div id="picker-circle"></div>
+            </div>
+            
+        </div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <p id="coord1">...</p>
+        <p id="coord2">...</p>
+        
+        <div id="dz-root"></div>
+        
+        <!-- <script type="text/javascript" src="_js/q.min.js"></script> -->
+        <script src="http://cdn-files.deezer.com/js/min/dz.js"></script>
+        
+        <!--
+        <script type="text/javascript">
+            window.dzAsyncInit = function() {
+                DZ.init({
+                    appId  : '183922', //'145651',
+                    channelUrl : 'http://entertainmentggd.com/deezerfeelunique/channel.html',
+                    player: {
+                        onload: function(response) {
+                            //console.log('DZ.player is ready', response);
+                            DZ.Event.subscribe('player_position', function(track, evt_name){
+                               // console.log("position in the track", track);
+                                //posTrack=track[0];
+                            });
+
+                            DZ.Event.subscribe('player_paused', function(track, evt_name){
+                               // console.log("position in the track", track);
+                                /*
+                                var o=DZ.player.getCurrentTrack();
+                                var id=parseInt(o.id);
+                                if($.inArray(id,arrAlbums)>-1)  curAlbum=0;
+                                if($.inArray(id,arrPlsts)>-1)  curPlst=0;
+                                */
+                                //posTrack=track[0];
+                            });
+
+                        }
+                    }
+                });
+                
+                DZ.ready(function(sdk_options){
+                    console.log('sdk_options : ');
+                  //  console.log(sdk_options);
+                })
+
+            };
+        
+            
+            (function() {
+                var e = document.createElement('script');
+                e.src = 'http://cdn-files.deezer.com/js/min/dz.js';
+                e.async = true;
+                document.getElementById('dz-root').appendChild(e);
+                //console.log(e);
+            }());
+            
+        </script>
+        -->
+        <script src="_js/feelunique.js" type="text/javascript"></script>
+        
+
+    </body>
+</html>

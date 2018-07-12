@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html">
+        <meta charset="utf-8">
+        <title>book phlpp</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> -->
+        <style>
+            body,html{
+                margin: 0;
+                padding: 0;
+            }
+            .nodisplay{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="contener nodisplay" id="contener">
+
+            <div id="header" class="header">
+                <!-- https://codepen.io/benoitwimart/pen/ORPmrg -->
+                <!-- https://www.w3schools.com/howto/howto_css_menu_icon.asp -->
+                
+                <div class="menu">
+                    <h1 id="titre">-</h1>
+                    <div class="switch">
+                        <input id="vues" class="switchvue"  type="checkbox" checked/>
+                        <label for="vues" class="lb-switch">
+                            <span class="sq1"></span>
+                            <span class="sq2"></span>
+                            <span class="sq3"></span>
+                            <span class="sq4"></span>
+                        </label>
+                    </div>
+                    <div class="contacts">
+                        <input id="contact" class="contact" type="checkbox">
+                        <label for="contact" class="lb-contact">
+                            <span class="email">phdgnr@gmail.com</span>
+                        </label>
+                    </div>
+                </div>
+                <a href="#header" class="burger" id="open">
+                    <span class="bar1"></span>
+                    <span class="bar2"></span>
+                    <span class="bar3"></span>
+                </a>
+                <a href="#" class="burger" id="close"></a>
+            </div>
+
+            <div class="allthumb" id="allthumb">
+                <div class="forscroll" id="forscroll">
+                    <div class="content" id="content"></div>
+                </div>
+                <div class="pscroll nodisplay" id="pscroll"><div class="cscroll" id="cscroll"></div></div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+            var ie8 = false;
+            var ie9 = false;
+            var ie10 = false
+            /*@cc_on
+                if (/^10/.test(@_jscript_version)) {
+                    ie10 = true;
+                }
+            @*/
+        </script>
+        <!--[if IE 8]> <script> ie8 = true </script><![endif]-->
+        <!--[if IE 9]> <script> ie9 = true </script><![endif]-->
+
+        <script>
+    
+            var _ieVers = 0, _i = 0, _isTouch = false, _isSafari = false, isMobile = false, safariMobile = false;
+            (function(){
+
+
+
+                // register SW -------------------------------------------------------------------------------------------------
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker
+                        .register('sw.js')
+                        .then(function() { console.log('Service Worker Registered'); });
+                }
+                // ------------------------------------------------------------------------------------------------------------
+
+
+
+                console.log('start 0');
+
+                 deferjs1 = [
+                     '_css/style.css',
+                     '_js/manageEvents15.js',
+                     '_js/manageEventsAnimation10.js',
+                     '_js/q2.js',
+                     '_js/manageEventsPromises12.js',
+                     '_js/app01.js'
+                    //  '_js/animate-css-grid.js',
+                ],
+
+                initAfter = function(){
+                    //fire event start
+                    console.log('initafter');
+                    var event = new CustomEvent("startLogic", {
+                        detail: { loaded: true , payload:'_json/base.json'}
+                    });
+                    window.dispatchEvent(event);
+                },
+
+                resizeWind = function(){
+
+                },
+
+                is_touch_device = function() {
+                    return (('ontouchstart' in window)
+                    || (navigator.MaxTouchPoints > 0)
+                    || (navigator.msMaxTouchPoints > 0));
+                },
+
+                downloadJSCSSAtOnload = function(arr, callback) {
+                    // charge JS et CSS
+                    var t = arr.length-1;
+                    if (arr[_i].match('^(.*\.js)')){
+                    var element = document.createElement('script');
+                        element.setAttribute('type','text/javascript');
+                        element.setAttribute('src',arr[_i]);
+                        if (element.addEventListener != undefined){
+                            element.addEventListener('load',function(e){
+                                _i++;
+                                if(_i <= t) downloadJSCSSAtOnload(arr, callback);
+                                if(_i > t) {
+                                    callback();
+                                }
+                            });
+                        }else if (element.readyState){ // IE8
+                            element.onreadystatechange = function(){
+                                if(element.readyState == 'loaded' || element.readyState == 'complete') {
+                                    _i++;
+                                if(_i <= t) downloadJSCSSAtOnload(arr, callback);
+                                    if(_i > t) {
+                                        callback();
+                                    }
+                                }
+                            }
+                        }else{
+                            //
+                        }
+                        if(_i <= t) document.body.appendChild(element);
+                    };
+                    // chargement CSS
+                    if (arr[_i].match('^(.*\.css)$')){
+                        // loadStylesheet(deferjs[i]);
+                        if (document.createStyleSheet){
+                            document.createStyleSheet(arr[_i]);
+                        }else {
+                            var stylesheet = document.createElement('link');
+                            stylesheet.href = arr[_i];
+                            stylesheet.rel = 'stylesheet';
+                            stylesheet.type = 'text/css';
+                            document.getElementsByTagName('head')[0].appendChild(stylesheet);
+                        }
+                        _i++;
+                        if(_i <= t) downloadJSCSSAtOnload(arr, callback);
+                        //if(i > t) window.myConsole('CSS chargées');
+                    }
+                },
+
+                DomLoaded = function(){
+                    // if (ie9) deferjs1.push('_js/Points.js');
+                    console.log(navigator.userAgent)
+                    // TODO regex safari sans chrome
+                    if(navigator.userAgent.match(/Tablet|iPad|Mobile|Windows Phone|Lumia|Android|webOS|iPhone|iPod|Blackberry|PlayBook|BB10|Opera Mini|\bCrMo\/|Opera Mobi/i)) isMobile = true;
+                    if(navigator.userAgent.match(/Safari/i) && !navigator.userAgent.match(/Chrome/i)) safariMobile = true;
+
+                    if(navigator.userAgent.match('/.*Safari/') && !navigator.userAgent.match('/.*Chrome/')) _isSafari = true;
+                    // if(navigator.userAgent.match('/*.Safari/')) _isSafari = true;
+                    if(navigator.userAgent.match('/Edge\/18|Edge\/17|Edge\/16|Edge\/15|Edge\/14|Edge\/13|Edge\/12')) _ieVers = 12;
+                    if(navigator.userAgent.match('/trident\/7|rv:11')) _ieVers = 11;
+                    if(ie10 || navigator.userAgent.match('/trident\/6|MSIE 10/')) _ieVers = 10;
+                    if(ie9) _ieVers = 9;
+                    if(ie8) _ieVers = 8;
+                    if(_ieVers < 12 && _ieVers > 0) deferjs1.push(
+                        '_js/polyfill/foreach.polyfill.js', 
+                        '_js/polyfill/foreachnodelist.polyfill.js',
+                        '_js/polyfill/customEvent.polyfill.js',
+                        '_js/polyfill/requestanimationframe.polyfill.js',
+                        '_js/polyfill/append.polyfill.js',
+                        '_js/polyfill/dist/IntersectionObserver.js'
+                    );
+                    if(_isSafari) deferjs1.push('_js/polyfill/intersectionObserver.js')
+                    // if(_ieVers == 15) deferjs1.push('_js/setdragimagepolyfill.js');
+                    _isTouch = is_touch_device();
+                    _winH = window.innerHeight < window.innerWidth ? window.innerHeight : window.innerWidth;
+                    downloadJSCSSAtOnload(deferjs1, initAfter);
+
+                    if (window.addEventListener){
+                        window.addEventListener('resize', resizeWind); // passage on / off fullscreen
+                    }else if (window.attachEvent){ // IE8
+                        window.attachEvent('onresize', resizeWind);
+                    }else{
+                        window.onreisze = resizeWind();
+                    };
+
+                };
+
+                if (window.addEventListener){
+                    window.addEventListener('DOMContentLoaded', function(){DomLoaded()});
+                    // window.addEventListener('resize', resizeWind); // passage on / off fullscreen
+                }else if (window.attachEvent){ // IE8
+                    window.attachEvent('onload', function() { DomLoaded(); });
+                    // window.attachEvent('onresize', resizeWind);
+                }else{
+                    window.onload = DomLoaded();
+                    // window.onreisze = resizeWind();
+                };
+
+            })();
+
+            
+        </script>
+    </body>
+</html>

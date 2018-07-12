@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Deezer Feel Unique</title>
+        <meta name="keywords" content="" />
+        <link rel="canonical" href="http://www.deezer.com/app/feelunique" />
+        <meta property="og:url" content="http://www.deezer.com/app/feelunique" /> 
+        <meta property="og:title" content="Et vous, quel est votre mood aujourd'hui ?" />
+        <meta property="og:description" content="#Feelunique vient de composer ma playlist parfaite, and i love it" /> 
+        <meta property="og:image" content="http://entertainmentggd.com/deezerfeelunique/20160708-feelunique-1200x625.jpg" />
+        <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+    </head>
+    
+    <body>
+        
+        <div id="main" class="main">
+            
+            <div class="header">
+            
+                <ul>
+                    <li class="line1"><a href="#home" id="home"><img src="_images/tt_head_blk.gif"/></a></li>
+                    <!--
+                    
+                    -->
+                    <li class="line5"></li>
+                    <li class="line6"><a href="#facebook" class="menu menu5" id="facebook"><img src="_images/header_blk.gif"/></a></li>
+                    <!-- <li class="line6"><a href="javascript:window.open('http://www.facebook.com/share.php?u=http://www.deezer.com/app/feelunique','share','toolbar=0,status=0,width=580,height=436')" onclick="return fbs_click();" class="menu menu5"><img src="_images/facebook_blk.gif"/></a></li> -->
+                    <li class="line7"><a href="#twitter" class="menu menu6" id="twitter"><img src="_images/header_blk.gif"/></a></li>
+                    <li class="line8"><a href="https://www.instagram.com/feelunique" target="_blank" class="menu menu7" id="instagram"><img src="_images/header_blk.gif"/></a></li>
+                </ul>
+                <div class="mood" id="mood"><strong>et vous dans quel mood êtes-vous aujourd'hui&nbsp;?</strong><br/>Feelunique vous propose la playlist idéale pour cahque instant&nbsp;!</div>
+                <ul class="smenu hide">
+                    <li class="line2"><a href="#lazy" class="menu menu1" id="mlazy"><img src="_images/menu_blk.gif"/></a></li>
+                    <li class="line2"><a href="#sexy" class="menu menu2" id="msexy"><img src="_images/menu_blk.gif"/></a></li>
+                    <li class="line2"><a href="#fun" class="menu menu3" id="mfun"><img src="_images/menu_blk.gif"/></a></li>
+                    <li class="line2"><a href="#rock" class="menu menu4" id="mrock"><img src="_images/menu_blk.gif"/></a></li>
+                </ul>
+            
+            </div>
+            
+            <div class="accordion">
+                <ul>
+                    <li class="accordion1"><a href="#lazy" id="lazy" class="universclic"><img src="_images/accordion_blk.gif"/><span class="libel"><img src="_images/tt_lazy.png"/></span></a></li>
+                    <li class="accordion2"><a href="#sexy" id="sexy" class="universclic"><img src="_images/accordion_blk.gif"/><span class="libel"><img src="_images/tt_sexy.png"/></span></a></li>
+                    <li class="accordion3"><a href="#fun" id="fun" class="universclic"><img src="_images/accordion_blk.gif"/><span class="libel"><img src="_images/tt_fun.png"/></span></a></li>
+                    <li class="accordion4"><a href="#rock" id="rock" class="universclic"><img src="_images/accordion_blk.gif"/><span class="libel"><img src="_images/tt_rock.png"/></span></a></li>
+                    <!-- <li class="accordion5"><a href="#unique" id="unique" class="universclic"><img src="_images/accordion_blk.gif"/><div class="ttfu"><img src="_images/tt_feelunique.png"/></div></a></li> -->
+                </ul>
+            </div>
+            
+            
+            <div class="univers nodisplay" id="univers"> <!-- Add class lazy sexy fun rock-->
+            
+                <div class="bloc">
+                
+                    <div class="accroche" id="accroche"><img src="_images/accroche_blk.gif"/></div>
+
+                    <div class="blocs playlist">
+                        <div  class="titlep" id="titlep"></div>
+                        <div class="contenu plst" id="playlistdz"></div>
+                        <div class="lift" id="lift"><a href="#lift" class="slider" id="slider"></a></div>
+                    </div>
+                    
+                    <a href="#favori" class="boutons ajouter" id="favori" data-idz=""><img src="_images/ajouter_blk.gif"/></a>
+                    <a href="#partager" class="boutons partager"><img src="_images/ajouter_blk.gif"/></a>
+
+                    <div class="blocs carousel">
+                        <div class="titlep">les indispensables</div>
+                        <div class="txtcrsl" id="txtprod"></div>
+                        <div class="txtprix" id="txtprix"></div>
+                        <div class="contenu crsl" id="carprod">
+                            <a href="#suite" id="suite" class="btcrsl suite"></a>
+                            <a href="#retour" id="retour" class="btcrsl retour"></a>
+                            <div class="slides" id="slides"><img src="_produits/empty.gif"/><div class="slide" id="slide"><img src="_produits/empty.gif"/></div></div>
+                        </div>
+                    </div>
+                    
+                    <div class="wants"><a href="#iwantit" class="want" id="want"><img src="_images/want_blk.gif"/></a></div>
+                
+                </div>
+            
+            </div>
+            
+            
+            <div class="surmesure novisible" id="surmesure">
+                <div class="onglet" id="ongletd"></div>
+                
+                <div class="contenu novisible" id="contenu1" >
+                    <div class="bulle" id="bulle"><img src="_images/bulle1.png"/></div>
+                    <div class="ttplaylt"><img src="_images/maplaylist.png"/></div>
+                    <div class="bloccircle">
+                        <img src="_images/rosace.png"/>
+                        <div id="circle" class="circle">
+                            <img src="_images/circle_blk.gif"/>
+                            <div id="picker"></div>
+                            <a class="btplaylist novisible" id="btplaylist" href="#playlist"><img src="_images/bt_playlist_blk.gif"/></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contenu novisible" id="contenu2">
+                    <div class="blocplst">
+                        <div class="bingo"><img src="_images/bingo.png"/></div>
+                        <div id="playerplst" class="playerplst">
+                            <img src="_images/player_blk.gif"/>
+                            <div id="generee" class="generee"><img src="_images/250x250-000000-80-0-0.jpg"/></div>
+                            <a href="#playerplster" class="onoff" id="playerplster"><img src="_images/player_blk.gif"/></a>
+                        </div>
+                        <a href="#deezer" class="btgen gdz" id="gdz"><img src="_images/surdeezer_blk.gif"/></a>
+                        <a href="#facebook" class="btgen gfb" id="gfb"><img src="_images/bt_facebook_blk.gif"/></a>
+                    </div>
+                    <div class="illustr"><img src="_images/illustr.jpg"/></div>
+                </div>
+                <div class="brhome"><a href="#home" id="rethome" class="rethome"><img src="_images/retour_univers_blk.gif"/></a></div>
+            </div>  
+            
+            
+            <div class="onglet" id="ongletanim">
+            
+                <!--<a href="#unique" id="unique" class="universclic"><div class="ttfu"><img src="_images/tt_feelunique.png"/></div></a>-->
+                <a href="#unique" id="unique" class="universclic"><img src="_images/tt_feelunique_blk.gif"/></a>
+                
+            </div>
+        
+        </div>
+
+        
+        <div id="dz-root"></div>
+        
+        <!-- <script type="text/javascript" src="_js/q.min.js"></script> -->
+        <script src="http://cdn-files.deezer.com/js/min/dz.js"></script>
+        
+        
+        <script src="_js/feelunique.js" type="text/javascript"></script>
+        
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '862130783893575',
+              xfbml      : true,
+              version    : 'v2.6'
+            });
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+        
+        </script>
+
+    </body>
+</html>

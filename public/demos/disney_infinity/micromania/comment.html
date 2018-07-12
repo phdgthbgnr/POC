@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Infinity</title>
+<link rel="stylesheet" type="text/css" href="./scripts/webfontkit/stylesheet.css">
+<link href="./styles/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="styles/skin.css" />
+
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.easing.compatibility.js"></script>
+<script type="text/javascript" src="scripts/jquery.jcarousel.js"></script>
+
+<script type="text/javascript"> 
+$(document).ready(function(){
+	
+	/*####### SLIDER #######*/
+	function mycarousel_initCallback(carousel){
+		// Disable autoscrolling if the user clicks the prev or next button.
+		carousel.buttonNext.bind('click', function() {
+			carousel.startAuto(0);
+		});
+	
+		carousel.buttonPrev.bind('click', function() {
+			carousel.startAuto(0);
+		});
+	
+		// Pause autoscrolling if the user moves with the cursor over the clip.
+		carousel.clip.hover(function() {
+			carousel.stopAuto();
+		}, function() {
+			carousel.startAuto();
+		});
+	};
+	
+	$('#carousel').jcarousel({
+		wrap: 'circular',
+		//auto: 5,
+		initCallback: mycarousel_initCallback
+	});
+	
+	/*####### TOOLTIP #######*/	
+	$('#carousel li').tooltip({
+		items: "img",
+		content: "Sélectionnez une figurine DISNEY INFINITY et posez-la sur le lecteur DISNEY INFINITY ci-dessous",
+		position: {
+			my: "left-15 bottom-180",
+		}		
+	});
+	
+	/*####### DRAG AND DROP #######*/
+
+	$('.figur').draggable({
+		containment:'#drag_tool',
+		helper: 'clone',
+		zIndex: 999,
+		cursorAt: {top:94, left:70}
+	});
+	$('#portal').droppable({
+		drop: handleDropEvent	
+		
+	});
+	
+	function handleDropEvent(event, ui){
+		var draggable = ui.draggable;
+		var figur_id = draggable.attr('id');
+		var portal_img = "portal_"+ figur_id + ".png";
+		$('#portal').css('background-image','url(images/portal/'+portal_img+')');
+		
+		$('.details_start').css('display', 'none');
+		$('.details'+'_'+figur_id).css('display','block');
+		
+		$('.figur').mousedown(function(){
+			$('.details'+'_'+figur_id).css('display','none');
+			$('.details_start').css('display', 'block');
+		
+	});
+	}
+	
+	$('.figur').mousedown(function(){
+		$('#portal').css('background-image','url(images/portal/portal.png)');
+		
+	});
+	
+});
+ 
+</script>
+
+<!--[if lt IE 9]>
+<style>
+
+#content_wrapper{
+	zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#c8c8c9', Direction=0, Strength=10)
+    progid:DXImageTransform.Microsoft.Shadow(color='#c8c8c9', Direction=180, Strength=10);
+    margin: -10px 0 10px 0;
+}
+
+#content{
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+</style>
+<![endif]-->
+
+</head>
+<body>
+	<div id="header">
+    <div class="bloch">
+    	<div class="revenir">
+    	<a href="http://www.micromania.fr/vente/rayon.php?titrerecherche=infinity+disney" target="_blank"><img src="logo_Micromania.png"/></a>
+        </div>
+		<div id="logo">
+			<a href="./index.html"><img src="./images/logo.png" /></a>
+	  	</div>
+        <div class="retourne">
+        <a href="http://www.micromania.fr/vente/rayon.php?titrerecherche=infinity+disney" target="_blank"><img src="logo_Micromania.png"/></a>
+        </div>
+        </div>
+	</div>
+	<div class="navig">
+		<ul>
+			<li><a href="./index.html"><img src="./images/navigAccueil.jpg" /></a></li>
+			<li  id="navigComment"><a href="./comment.html"><img src="./images/navigCommentHover.jpg" /></a></li>
+			<li><a href="./pack.html"><img src="./images/navigPack.jpg" /></a></li>
+			<li><a href="./toy-box.html"><img src="./images/navigToy.jpg" /></a></li>
+			<li id="lastLi"><a href="./commander.html"><img src="./images/navigCommander.jpg" /></a></li>
+		</ul>
+	</div>	
+	<div id="commentContent">
+		<div class="content">
+			<div class="leftcol3">
+				<h1>Le Pack<br/><span>de démarrage</span></h1>	
+				<p class="txttype2">
+					<br/>
+				<span>Il contient tout<br/>le nécessaire pour vous<br/>lancer dans laventure<br/>Disney Infinity.</span><br/>
+				Avec les figurines de Jack Sparrow,<br/>M. Indestructible, Sulli, le lecteur, un power disc,<br/>un trophée et le jeu vidéo.<br/><br/>
+				</p>
+			</div>
+			<div class="rightcol3">
+				<img src="./images/commentTopRight.jpg" />
+			</div>
+		</div>
+		<div class="shadowsep"></div>
+		<div class="content">
+			<span class="titre">Une fois posée sur le lecteur,<br/>
+	la figurine prend vie dans le jeu.</span><br/>
+			<img src="./images/img-infinity.jpg" />
+			<div class="clearer"></div>
+			<div class="packCol">
+				<p class="txttype">
+				<span>Imaginez un monde pour jouer à linfini</span><br/>
+Placez vos figurines Disney Infinity<br/>sur le lecteur pour incarner vos personnages favoris dans le jeu vidéo<br/>et vivre dincroyables aventures dans les mondes de Monstres Academy,<br/>
+Les Indestructibles, Pirates des Caraïbes.
+				</p>
+			</div>
+			<div class="packCol">
+				<p class="txttype">
+				<span>Les Packs Aventure</span><br/> 
+				Il vous est possible d&rsquo;acheter des Packs Aventure (Cars et Lone Ranger) suppl&eacute;mentaires et de nouvelles figurines pour jouer &agrave; Disney Infinity. </p>
+			</div>
+			<div class="packCol" id="lastpackCol">
+				<p class="txttype">
+				<span>Les Power Discs</span><br/> 
+Il vous est aussi possible de prolonger votre expérience en utilisant les POWER DISCS.<br/> 
+Les POWER DISCS ronds, posés sous les figurines, influent sur les aptitudes des personnages.<br/> 
+Les POWER DISCS hexagonaux, posés sur lemplacement hexagonal<br/>du lecteur, apportent de nouveaux accessoires et permettent de customiser votre univers dans la TOY BOX. 
+				</p>
+			</div>
+		</div>
+		<div class="clearer"></div>
+		<div id="figurines">
+		</div>		
+		<div class="clearer"></div>
+		<div class="content">
+		<div id="drag_tool">
+			    <div id="slider">
+			        <div  class="jcarousel-skin-tango">
+			            	<div class="jcarousel-clip">
+			                	<ul class="jcarousel-list" id="carousel" >
+			         <li class="figur" id="sully"><img src="images/figuren/sully.png"/></li>
+                     <li class="figur" id="sully-cristal"><img src="images/figuren/sully-cristal.png"/></li>
+                     <li class="figur" id="mike"><img src="images/figuren/mike.png" /></li>
+                     <li class="figur" id="jack"><img src="images/figuren/jack.png" /></li>
+                     <li class="figur" id="jack-cristal"><img src="images/figuren/jack-cristal.png" /></li>
+			         <li class="figur" id="barbossa"><img src="images/figuren/barbossa.png" /></li>
+			        <li class="figur" id="davy_jones"><img src="images/figuren/davy_jones.png" /></li>
+                    <li class="figur" id="ranger"><img src="images/figuren/ranger.png" /></li>
+			        <li class="figur" id="ranger-cristal"><img src="images/figuren/ranger-cristal.png" /></li>
+			        <li class="figur" id="tonto"><img src="images/figuren/tonto.png" /></li>
+                    <li class="figur" id="flash"><img src="images/figuren/flash.png"/></li>
+			        <li class="figur" id="flash-cristal"><img src="images/figuren/flash-cristal.png"/></li>
+			        <li class="figur" id="holley"><img src="images/figuren/holley.png"/></li>
+			        <li class="figur" id="martin"><img src="images/figuren/martin.png"/></li>
+			        <li class="figur" id="francesco"><img src="images/figuren/francesco.png"/></li>
+                 <li class="figur" id="mr_incredible"><img src="images/figuren/mr_incredible.png" /></li>
+			        <li class="figur" id="mr_incredible-cristal"><img src="images/figuren/mr_incredible-cristal.png" /></li>
+			        <li class="figur" id="helen"><img src="images/figuren/helen.png" /></li>
+			        <li class="figur" id="dash"><img src="images/figuren/dash.png" /></li>
+			        <li class="figur" id="violet"><img src="images/figuren/violet.png" /></li>
+			        <li class="figur" id="syndrome"><img src="images/figuren/syndrome.png" /></li>
+                    <li class="figur" id="jackskellington"><img src="images/figuren/jackskellington.png" /></li>
+                        <li class="figur" id="raiponse"><img src="images/figuren/raiponse.png" /></li>
+                        <li class="figur" id="ralph"><img src="images/figuren/ralph.png" /></li>
+                        <li class="figur" id="vanellope"><img src="images/figuren/vanellope.png" /></li>
+                        <li class="figur" id="elsa"><img src="images/figuren/elsa.png" /></li>
+                        <li class="figur" id="anna"><img src="images/figuren/anna.png" /></li>
+                        <li class="figur" id="mickey"><img src="images/figuren/mickey.png" /></li>
+                        <li class="figur" id="woody"><img src="images/figuren/woody.png" /></li>
+                    <li class="figur" id="buzz"><img src="images/figuren/buzz.png" /></li>
+                        <li class="figur" id="buzz-cristal"><img src="images/figuren/buzz-cristal.png" /></li>
+                        <li class="figur" id="jessie"><img src="images/figuren/jessie.png" /></li>
+                        <li class="figur" id="agentp"><img src="images/figuren/agentp.png" /></li>
+                  <li class="figur" id="agentp-cristal"><img src="images/figuren/agentp-cristal.png" /></li>
+                       <li class="figur" id="phineas"><img src="images/figuren/phineas.png" /></li>
+						<li class="figur" id="leon"><img src="images/figuren/leon.png" /></li>
+			                  	</ul>
+                                <div style="clear:both;font-family: arial_blackregular; color:#c52b4a;padding-top:20px">Sélectionnez une figurine DISNEY INFINITY<br/>et posez-là sur le lecteur DISNEY INFINITY ci-dessous </div>
+			                </div>
+                            
+			                <div disabled="disabled" class="jcarousel-prev jcarousel-prev-disabled"></div>
+			                <div class="jcarousel-next"></div>
+			        </div>			
+				</div>
+	
+			<div id="portal"></div>
+    
+		    <div id="details">
+		    
+		    <p class="details_start"><img src="images/lineup_small.jpg" width="414"/></p>
+            </p>
+		   <p class="details_sully" style="display:none;">
+		    <strong>Sulli</strong><br /><br />
+		Cette « terreur délite » au faciès aussi redoutable que ses hurlements nest autre que le brave Sulli, dont la devise est : « Je fais peur et je le fais bien ». Cette bête à fourrure bleu passe en mode furtif pour se faufiler discrètement et ensuite  il hurle.
+		    </p>
+		    <p class="details_sully-cristal" style="display:none;">
+		    <strong>Sulli Cristal</strong><br /><br />
+		Sulli bat des records de vitesse à vélo, il tend des pièges aux monstres imprudents et il maîtrise le redoutable art de la peur. Avec sa figurine Cristal, gagnez des points de vie et d'expérience bonus afin de donner à votre personnage des avantages décisifs dans le jeu.
+		    </p>
+		    <p class="details_mike" style="display:none;">
+		    <strong>Bob</strong><br /><br />
+			Quand il nassiste pas son meilleur ami Sulli, Bob peut se faufiler et se montrer redoutable dans lart de faire peur. Ce petit farceur à mono prunelle, dynamique et enthousiaste adore faire des blagues. 
+		    </p>
+             </p>
+		    <p class="details_jack" style="display:none;">
+		    <strong>Jack Sparrow</strong><br /><br />
+			Rapide, agile et intrépide, le fringant Capitaine Jack Sparrow est le beau parleur le plus spirituel et le plus fanfaron des Sept Mers.	
+		    </p>
+		    <p class="details_jack-cristal" style="display:none;">
+		    <strong>Jack Sparrow Cristal</strong><br /><br />
+			Rejoignez le Capitaine Jack Sparrow pour une aventure de pirates épique avec pillages, chasses au trésor et batailles navales à la clé. Avec sa figurine Cristal, gagnez des points de vie et d'expérience bonus afin de donner à votre personnage des avantages décisifs dans le jeu.		
+		    </p>
+		    <p class="details_barbossa" style="display:none;">
+		    <strong>Barbossa</strong><br /><br />
+			Méfiez-vous de Barbossa. Ce capitaine retors et prompt à croiser le fer ne reculera devant rien pour atteindre son but.		
+		    </p>
+		    <p class="details_davy_jones" style="display:none;">
+		    <strong>Davy Jones</strong><br /><br />
+			Le démon des profondeurs, Davy Jones est redouté de tous les loups de mer. Prenez garde à son sabre virevoltant et à ses tentacules tournoyantes.
+		
+		    </p>
+             <p class="details_flash" style="display:none;">
+		    <strong>Flash McQueen</strong><br /><br />
+			De sa suspension élastique au rugissement de son moteur, Flash McQueen est équipé pour la course &agrave; grande vitesse, et les cascades.
+			
+		    </p>
+		     <p class="details_flash-cristal" style="display:none;">
+		    <strong>Flash McQueen Cristal</strong><br /><br />
+			Quelle que soit la tâche qu'on lui confie, Flash McQueen agit avec la vitesse de l'éclair. Qu'il s'agisse de sauter par-dessus un canyon ou de faire la course dans le désert, rien ne le ralentit. Avec sa figurine Cristal, gagnez des points de vie et d'expérience bonus afin de donner à votre personnage des avantages décisifs dans le jeu.
+			
+		    </p>
+		     <p class="details_holley" style="display:none;">
+		    <strong>Holley Shitwell</strong><br /><br />
+			La belle et intelligente Holley Shiftwell a quitté son poste de réceptionniste en Angleterre pour se reconvertir en espionne. Faites un tour de piste avec Holley Shiftwell et écoutez ce ronronnement de moteur.
+		
+		    </p>
+		     <p class="details_martin" style="display:none;">
+		    <strong>Martin</strong><br /><br />
+			Martin est une dépanneuse un peu usée mais toujours là quand on a besoin delle. Ses maladresses en font un ami irrésistible, avec son cur dor, Martin aide Flash à découvrir limportance de lamitié.
+		    </p>
+		     <p class="details_francesco" style="display:none;">
+		    <strong>Francesco</strong><br /><br />
+			Francesco Bernoulli est un véritable bolide, il est lessence même de la course sur circuit, tout en lui est orienté vers la compétition automobile. Admiré de tous, son talent lui monte parfois à la tête mais même ses adversaires lui envient sa vitesse.
+		    </p>
+             <p class="details_mr_incredible" style="display:none;">
+		    <strong>M.Indestructible</strong><br /><br />
+			Toujours prêt à sauver le monde,<br>
+M. Indestructible (alias Bob Parr) utilise sa super force et ses supers techniques de combat pour vaincre les non moins super "super méchants" ! 
+		    </p>
+		    
+		    <p class="details_mr_incredible-cristal" style="display:none;">
+		    <strong>M.Indestructible Cristal</strong><br /><br />
+			M. Indestructible quitte une fois de plus sa retraite et il est bien décidé à sauver le monde. Utilisez sa super force et ses super combos d'attaques pour vaincre les méchants. Avec sa figurine Cristal, gagnez des points de vie et d'expérience bonus afin de donner à votre personnage des avantages décisifs dans le jeu.
+		    </p>
+		    <p class="details_helen" style="display:none;">
+		    <strong>Mme Indestructible</strong><br /><br />
+			Grâce à son corps super extensible, Mme Indestructible (alias Helen Parr),  peut traverser la ville en un éclair, tirer des objets vers elle en un clin dil et enjamber des bâtiments. Les malfaiteurs seraient bien avisés de ne pas trop tirer sur lélastique.
+		
+		    </p>
+		    <p class="details_dash" style="display:none;">
+		    <strong>Flèche</strong><br /><br />
+			Le gamin le plus rapide de la planète, Flèche se sert de sa super vitesse pour exécuter des manuvres et des attaques fulgurantes. Les ennemis qui tentent de le rattraperrestent littéralement sur place.
+		
+		    </p>
+		    <p class="details_violet" style="display:none;">
+		    <strong>Violette</strong><br /><br />
+			Que ce soit lorsquelle génère son champ de force pour le combat rapproché où lorsquelle devient invisible pour éviter les méchants, dès quil sagit de faire appel à ses super pouvoirs, Violette est vraiment super.
+		
+		    </p>
+		    <p class="details_syndrome" style="display:none;">
+		    <strong>Syndrome</strong><br /><br />
+			Ennemi juré de M. Indestructible, Syndrome nest pas un génie du mal ordinaire, cest un génie du mal colérique. Évitez coûte que coûte sa Neutra-Énergie.
+		
+		    </p>
+               <p class="details_agentp" style="display:none;">
+		    <strong>Agent P.</strong><br /><br />
+Où est Perry ? Rejoignez lintelligent ornithorynque qui utilise son chapeau volant et son Briseur d'ornithorynque durant des missions secret-défense pour supprimer les troubles fêtes, où quils se cachent. Doofenshmirtz et les ennemis nont quà bien se tenir !
+		    </p>
+               <p class="details_agentp-cristal" style="display:none;">
+		    <strong>Agent P. Cristal</strong><br /><br />
+Où est Perry ? Rejoignez lintelligent ornithorynque qui utilise son chapeau volant et son Briseur d'ornithorynque durant des missions secret défense pour supprimer les troubles fêtes, où quils se cachent. Doofenshmirtz et les ennemis nont quà bien se tenir ! Avec sa figurine Cristal, gagne des points de vie et d'expérience bonus afin de donner à ton personnage des avantages décisifs dans le jeu.		
+		    </p>
+                 <p class="details_phineas" style="display:none;">
+		    <strong>Phineas</strong><br /><br />
+Pour des mouvements éclairs et novateurs retrouvez Phinéas avec son Croque n Roll et son Lanceur. La question étant à quel point êtes-VOUS innovant ?
+		    </p>
+            
+		    <p class="details_leon" style="display:none;">
+		    <strong>Léon</strong><br /><br />
+			Léon Bogue, malicieux, rivalise dingéniosité avec ses plans toujours plus diaboliques pour semparer de la première place. Sa capacité à changer de couleur et à disparaître dans nimporte quel décor lui vaut le nom de « Léon le Caméléon ».
+		
+		    </p>
+		    
+		    <p class="details_tonto" style="display:none;">
+		    <strong>Tonto</strong><br /><br />
+			Jouer avec le brillant partenaire lanceur de tomahawk de Lone Ranger est toujours amusant. Tonto est un excellent cavalier, un adversaire redoutable et a de l'allure grâce à sa coiffe corbeau.
+		
+		    </p>
+               <p class="details_ranger" style="display:none;">
+		    <strong>Lone Ranger</strong><br /><br />
+			Avec ce justicier masqué et excellent tireur on ne s'ennuie jamais. Même si toutes les chances sont contre vous, utilisez vos capacités à escalader, chevaucher et faire des ricochets de balles pour sauver votre peau dans le Pack Aventure Lone Ranger.
+		
+		    </p>
+		    
+		    <p class="details_ranger-cristal" style="display:none;">
+		    <strong>Lone Ranger Cristal</strong><br /><br />
+			On ne s'ennuie jamais quand on joue avec le justicier masqué, as de la gâchette. Faites appel à vos compétences en escalade, à cheval et au tir par ricochet pour relever tous les défis. Avec sa figurine Cristal, gagnez des points de vie et d'expérience bonus afin de donner à votre personnage des avantages décisifs dans le jeu.
+		
+		    </p>
+            
+            <p class="details_jackskellington" style="display:none;">
+		    <strong>Jack Skellington</strong><br /><br />
+			Bouh ! Pour Halloween, Jack Skellington a plus dun tour dans son sac à malice. Cramponnez-vous tandis que le Roi dHalloween utilise des Lanternes-citrouilles et pousse des cris stridents pour faire peur à ses rivaux. Êtes-vous prêts pour le grand frisson ?
+            
+		    </p>
+            
+             <p class="details_raiponse" style="display:none;">
+		    <strong>Raiponse</strong><br /><br />
+Ne vous  laissez pas abuser par les longs cheveux de Raiponce. Cette rêveuse à lâme fougueuse ne laisse personne se dresser sur son chemin. Sa poêle à frire savère être une arme dévastatrice  et elle sait sen servir !  
+            
+		    </p>
+            
+             <p class="details_ralph" style="display:none;">
+		    <strong>Ralph-la-casse</strong><br /><br />
+			Pulvérisez, écrasez et aplatissez tout ce que vous croisez avec Ralph. Ce gentil colosse est prêt à casser la baraque  et tout ce qui se présentera devant lui  à laide de ses poings impressionnants et de ses bombes cerises surpuissantes. Ne vous mettez pas en travers de sa route ou vous allez mordre la poussière !
+            
+		    </p>
+            
+             <p class="details_vanellope" style="display:none;">
+		    <strong>Vanellope</strong><br /><br />
+			Elle créé des bugs pour se déplacer à la vitesse de léclair! Vanellope fait monter la température ou utilise ses bombes cerises. Remporter la compétition est pour elle un jeu denfant ! 
+            
+		    </p>
+            
+             <p class="details_elsa" style="display:none;">
+		    <strong>Elsa</strong><br /><br />
+Brrrr ! Quand la température monte sous leffet de laction, Elsa garde son sang-froid. Elle glace le sang des ennemis grâce à sa balle givrée.  Si les méchants tentent de briser la glace, ils sen mordront les doigts.             
+		    </p>
+            
+             <p class="details_anna" style="display:none;">
+		    <strong>Anna</strong><br /><br />
+Personne ne peut glacer le sang de notre vaillante Anna au grand cur. Avec sa détermination, son grappin descalade, et son coup de pelle, ni les glaciers, ni les hommes des neiges ne peuvent larrêter. Elle est toujours au sommet de son talent.            
+		    </p>
+            
+             <p class="details_mickey" style="display:none;">
+		    <strong>Mickey lApprenti Sorcier</strong><br /><br />
+Incarnez Mickey, lApprenti Sorcier, dans la Toy Box. Muni de son chapeau magique emprunté au sorcier Yensid, utilisez ses pouvoirs fantastiques : ensorcelez vos ennemis et générez des explosions magiques.             
+		    </p>
+            
+             <p class="details_woody" style="display:none;">
+		    <strong>Woody</strong><br /><br />
+			Passez à laction avec Woody, le cowboy le plus rapide de lOuest et utilisez son attaque coup dépaule pour chasser les méchants des plaines du Far West.  
+            
+		    </p>
+           
+             <p class="details_buzz" style="display:none;">
+		    <strong>Buzz</strong><br /><br />
+			Jouez avec Buzz LÉclair et préparez-vous à défendre la galaxie ! Entre son redoutable coup dépaule et son jetpack, rien ni personne ne résiste à  ce Ranger de lespace. Vers linfini et au-delà !
+            
+		    </p>
+           
+             <p class="details_buzz-cristal" style="display:none;">
+		    <strong>Buzz Cristal</strong><br /><br />
+			Embarquez avec Buzz léclair et défendez la galaxie !
+Grâce à ces coups dépaule surpuissants et son jetpack, ils expulsent ses ennemis vers linfini et au-delà ! 3-2-1 Décollage ! Collectionnez cette figurine Cristal et donnez une longueur davance à votre personnage en récoltant plus de points dexpérience et de santé. 
+            
+		    </p>
+            
+             <p class="details_jessie" style="display:none;">
+		    <strong>Jessie</strong><br /><br />
+			Yi-ha ! En selle avec Jessie ! Maîtrisez son attaque « coup dépaule » pour vivre des scènes daction à couper le souffle. Pour ce qui est de mettre les méchants hors détat de nuire, cette impétueuse et intrépide jeune fille na de leçon à recevoir de personne.
+            
+		    </p>
+		    
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<div class="clearer"></div>
+	<div id="footer">
+	  <div id="copyright">
+	    <div id="plusinfo" style="position:relative; margin: 0 auto; top: 15px;"><a href="https://infinity.disney.com/fr" target="_blank">Plus d&rsquo;infos sur Disney.com/Infinity</a>&nbsp;| &copy; 2014 Disney &copy; 2014 Disney / Pixar</div>
+	    <div id="footerlogos">
+	      <ul>
+	        <li><a href="http://www.xbox.com/fr-FR/" target="_blank"><img src="./images/logo360.png" alt="" width="99" height="23" /></a></li>
+	        <li><a href="http://www.xbox.com/fr-FR/" target="_blank"><img src="./images/logoXBL.png" alt="" width="41" height="24" /></a></li>
+	        <li><a href="http://fr.playstation.com/" target="_blank"><img src="./images/logoPS.png" alt="" width="20" height="24" /></a></li>
+	        <li><a href="http://fr.playstation.com/" target="_blank"><img src="./images/logoPSN.png" alt="" width="34" height="24" /></a></li>
+	        <li><a href="http://fr.playstation.com/" target="_blank"><img src="./images/logoPs3.png" alt="" width="65" height="22" /></a></li>
+	        <li><a href="http://www.nintendo.fr/" target="_blank"><img src="./images/logoWi.png" alt="" width="46" height="23" /></a></li>
+	        <li><a href="http://www.nintendo.fr/" target="_blank"><img src="./images/logoWiu.png" alt="" width="70" height="24" /></a></li>
+	        <li></li>
+          </ul>
+	      <div id="text" style="font-size:9px; position:relative; margin:0 auto; width:900px;">
+	        <p>&copy; 2014 Disney &copy; Disney/Pixar. M. Indestructible, Sulli et le Capitaine Jack Sparrow sont inclus dans le pack de d&eacute;marrage. Les autres figurines seront vendues s&eacute;par&eacute;ment. L&rsquo;exp&eacute;rience multi-joueurs varie selon les plateformes. Xbox, Xbox 360, Xbox LIVE et les logos Xbox sont des marques du groupe Microsoft et sont utilis&eacute;s sous licence de Microsoft. &rdquo;[PS logo]&ldquo;PlayStation&rdquo;, &ldquo;[PSN logo]&rdquo;, et &ldquo;[PS3 logo]&rdquo;  sont des marques d&eacute;pos&eacute;es par  Sony Computer Entertainment Inc. Les marques sont la propri&eacute;t&eacute; de leurs propri&eacute;taires respectifs. Wii et Wii U sont des marques de Nintendo.</p>
+            <p>&copy; 2014 Nintendo. THE LONE RANGER. &copy; Disney Enterprises, Inc. and Jerry Bruckheimer, Inc.</p>
+          </div>
+        </div>
+      </div>
+	</div>
+</body>
+</html>

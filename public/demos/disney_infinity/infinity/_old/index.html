@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Disney Infinity</title>
+	
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<!--<link href="css/starter-template.css" rel="stylesheet">-->
+	<link href="css/infinity3.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+
+
+
+    <div class="container">
+
+		<div class="col-md-12 header">
+			<img class="width" src="img/header.jpg"/>
+		</div>
+	
+		<!--<div class="starter-template">
+			<h1>Bootstrap starter template</h1>
+			<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+		</div>-->
+
+    </div>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<!--<a class="navbar-brand" href="#">Project name</a>-->
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active monoligne"><a href="#">Accueil</a></li>
+					<li><a href="#about">Le pack de<br />démarrage</a></li>
+					<li><a href="#contact">les packs<br />aventure</a></li>
+					<li><a href="#about">les figurines et<br />les powerdiscs</a></li>
+					<li><a href="#contact">les toy box<br />expansion games</a></li>
+					<li class="monoligne"><a href="#about">la toy box</a></li>
+					<li class="select monoligne"><a href="#contact">commander</a></li>
+					<li><a href="#about">tout<br />disney infinity</a></li>
+				</ul>
+			</div>
+		</div>
+    </nav>
+	
+	<div class="container">
+		<h1>Découvrez Disney infinity&nbsp;3.0&nbsp;: Star&nbsp;Wars</h1>
+		<h2>et vivez d’incroyables aventures dans une galaxie lointaine, très lointaine</h2>
+		<p class="center" >Plongez dans un tout nouvel univers rempli d’action, créez vos propres aventures et devenez un héros légendaire.</p>
+	</div>
+	
+	<div class="container">
+		<div id="tab11" onclick="javascript:tab1(1);" class="col-md-6 tab tabselect">
+			<br />
+			LE PACK DE DEMARRAGE DISNEY INFINITY&nbsp;3.0&nbsp;: STAR&nbsp;WARS
+		</div>
+		<div id="tab12" onclick="javascript:tab1(2);" class="col-md-6 tab">
+			<br />
+			LE PACK DE DEMARRAGE DISNEY INFINITY&nbsp;3.0&nbsp;: STAR&nbsp;WARS EDITION SPÉCIALE POUR PLAYSTATION
+		</div>
+	</div>
+	
+	<div id="tabline"></div>
+	
+	<div id="tab11box" class="container">
+		<div class="col-md-6">
+			<img class="width" src="packs/2-packdemarrage.png"/>
+		</div>
+		<div class="col-md-6">
+			<br />
+			<p>
+				<b>LE PACK DE DÉMARRAGE DISNEY INFINITY 3.0 STAR WARS™ INCLUT :</b>
+			</p>
+			<p>
+				• Le logiciel de jeu vidéo Disney Infinity 3.0<br />
+				• Le lecteur Disney Infinity<br />
+				• 2 figurines Star Wars™ : Ahsoka Tano, Anakin Skywalker<br />
+				• 1 pack aventure Star Wars™ Twilight of the Republic<br />
+				• 1 carte de code pour le jeu en ligne<br />
+			</p>
+			<p>
+				<b>Disponible le 27 août 2015 sur PlayStation®4, PlayStation®3, Wii U™, Xbox One, Xbox 360</b><br /><br />
+				<img src="img/logos1.jpg" />
+			</p>
+			
+		</div>
+	</div>
+	
+	<div id="tab12box" class="container" style="display: none;">
+		<h1>tab12box</h1><br /><br /><br /><br /><br /><br />
+	</div>
+	
+	<div id="social">
+		<div id="socialbox">
+			<a href="#" class="ico-fb"></a>
+			<a href="#" class="ico-yt"></a>
+			<a href="#" class="ico-tw"></a>
+		</div>
+	</div>
+	
+	<div id="footer">
+		<div id="footerbox">
+			<img src="img/7.jpg"/>
+			<img src="img/disney.jpg"/>
+			<img src="img/starwars.jpg"/>
+			<img src="img/ps.jpg"/>
+			<img src="img/ps4.jpg"/>
+			<img src="img/ps3.jpg"/>
+			<img src="img/psn.jpg"/>
+			<img src="img/one.jpg"/>
+			<img src="img/360.jpg"/>
+			<img src="img/wiiu.jpg"/>
+			<p>
+				*Jouez à l’infini. © 2015 Disney. © Disney/Pixar. © 2015 Marvel. STAR WARS © & TM Lucasfilm Ltd. Tous droits réservés.“<img src="img/f-ps.png"/>”, “PlayStation”, “<img src="img/f-psn.png"/>”, et “<img src="img/f-ps3.png"/>”  sont des marques déposées par  Sony Computer Entertainment Inc. “<img src="img/f-ps4.png"/>” est une marque de la même entreprise. Wii U est une marque de Nintendo. © 2015 Nintendo. Anakin Skywalker et Ahsoka Tano sont inclus dans le pack de démarrage. D’autres figurines et contenus sont vendus séparément. La date de sortie peut-être soumise à des modifications. 
+			</p>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/infinity3.js"></script>
+	
+</body>
+</html>

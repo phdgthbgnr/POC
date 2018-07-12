@@ -1,0 +1,7 @@
+# blocage des connards qui n'ont rien d'autre à foutre
+Deny from 213.251.182.106
+Deny from 42.200.34.83
+Deny from 188.163.107.139
+
+SetEnv PHP_VER 5
+Options -Indexes

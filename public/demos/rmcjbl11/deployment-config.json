@@ -1,0 +1,9 @@
+{
+    "type": "ftp",
+    "host": "ftp.entertainmentggd.com",
+    "username": "entertaici",
+    "password": "rEZkKqss9duy",
+    "port": 21,
+    "remotePath": "rmcjbl11/",
+    "uploadOnSave": false
+}

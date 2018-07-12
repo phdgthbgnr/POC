@@ -1,0 +1,720 @@
+<!doctype html>
+<html>
+    
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML5 Standard Banner: 320x50</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/EBLoader.js"></script>
+    <script src="scripts/script.js"></script>
+    
+    <!--[if lte IE 10]> <html class="ie9" lang="fr"> <![endif]-->
+    
+    <style>
+		html, body {
+			margin: 0; padding: 0;
+            background: #fff;
+		}
+		
+		body, button {
+			font-family: 'Times New Roman', serif;
+			color: #f8f1d6;
+		}
+		
+		button {
+			white-space: nowrap;
+		}
+		
+		#ad, #banner {
+			width: 298px;
+			height: 248px;
+			cursor: pointer;
+		}
+        
+        /* anim background ---------------------------------------------------------------------------- */
+        
+        .bkgd{
+            opacity: 0;
+            position: absolute;
+            width: 300px;
+            height: 250px;
+            top:0;
+            left:0;
+            
+            background-image: url(./images/bckgrd.jpg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+            
+            -webkit-animation-name: animationwbg;
+            -webkit-animation-duration: 1.4s;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-timing-function: ease-out;
+            -webkit-animation-delay: 0.2s;
+            -webkit-animation-fill-mode: forwards;
+            
+            animation :  animationwbg 1.4s ease-out .2s forwards;
+            
+            /* next : animationwii */
+        }
+ 
+        
+        @keyframes animationwbg {
+            0% { opacity:0; background-size: 130% auto;}
+            5% { opacity:1;}
+            8% { opacity:.2;}
+            11% { opacity:1;}
+            14% { opacity:0;}
+            17% { opacity:.8;}
+            20% { opacity:.1;}
+            23% { opacity:1;}
+            26% { opacity:.2;}
+            29% { opacity:.7;}
+            100% {opacity:1 ;background-size: 100% auto;}
+        }
+
+        @-webkit-keyframes animationwbg {
+            0% { opacity:0; background-size: 130% auto;}
+            5% { opacity:1;}
+            8% { opacity:.2;}
+            11% { opacity:1;}
+            14% { opacity:0;}
+            17% { opacity:.8;}
+            20% { opacity:.1;}
+            23% { opacity:1;}
+            26% { opacity:.2;}
+            29% { opacity:.7;}
+            100% {opacity:1 ;background-size: 100% auto;}
+        }
+        
+        /*
+        html[data-useragent*='MSIE 10.0'] div {
+            background-size: 100% auto;
+        }
+        */
+        
+        
+        /* anim wiiu ---------------------------------------------------------------------------- */
+        
+        .logo-wiiu {
+            opacity: 0;
+			position: absolute;
+			width: 60px;
+			height: 18px;
+			background-image: url(./images/logo-wiiu.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			right: 10px;
+			bottom: 14px;
+            
+            -webkit-animation-name: animationwii;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-timing-function: ease-out;
+            -webkit-animation-delay: .7s;
+            -webkit-animation-fill-mode: forwards;
+            
+            animation :  animationwii .3s ease-out .7s forwards;
+		}
+        
+        @keyframes animationwii {
+          0% {
+            opacity:0;
+          }
+          100%{
+            opacity:1;
+          }
+        }
+
+        @-webkit-keyframes animationwii {
+          0% {
+            opacity:0;
+          }
+          100%{
+            opacity:1;
+          }
+        }
+        
+        
+         /* anim logo PZ ---------------------------------------------------------------------------- */
+        
+        .logo-pz {
+			position: absolute;
+			width: 100px;
+			height: 58px;
+            opacity: 0;
+			background-image: url(./images/logo-pz-fx.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			left: 10px;
+			bottom: 10px;
+			-webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+            
+            -webkit-animation-name: animationwpz;
+            -webkit-animation-duration: 1.6s;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-timing-function: ease-out;
+            -webkit-animation-delay: 1.4s;
+            -webkit-animation-fill-mode: forwards;
+            
+            animation :  animationwpz 1.6s cubic-bezier(.58,.42,0,1.19) 1.4s forwards;
+			
+		}
+        
+        @keyframes animationwpz{
+            0%{
+                opacity: 0;
+                -webkit-transform: translate(0px, 0px) scale(1);
+                transform: translate(0px, 0px) scale(1);
+            }
+            40%{
+                opacity: 1;
+                -webkit-transform: translate(16px, -50px) scale(2.5);
+                transform: translate(16px, -50px) scale(2.5);
+            }
+            80%{
+                opacity: 1;
+                -webkit-transform: translate(16px, -50px) scale(2.5);
+                transform: translate(16px, -50px) scale(2.5);
+            }
+            100%{
+                opacity: 1;
+                -webkit-transform: translate(20px, -30px) scale(1.7);
+                transform: translate(20px, -30px) scale(1.7);
+            }
+        }
+        
+        @-webkit-keyframes animationwpz{
+            0%{
+                opacity: 0;
+                -webkit-transform: translate(0px, 0px) scale(1);
+                transform: translate(0px, 0px) scale(1);
+            }
+            40%{
+                opacity: 1;
+                -webkit-transform: translate(16px, -50px) scale(2.5);
+                transform: translate(16px, -50px) scale(2.5);
+            }
+            80%{
+                opacity: 1;
+                -webkit-transform: translate(16px, -50px) scale(2.5);
+                transform: translate(16px, -50px) scale(2.5);
+            }
+            100%{
+                opacity: 1;
+                -webkit-transform: translate(20px, -30px) scale(1.7);
+                transform: translate(20px, -30px) scale(1.7);
+            }
+        }
+        
+        
+        /* anim coyText ---------------------------------------------------------------------------- */
+        
+        #copyText {
+            top: 50px;
+			opacity: 0;
+			position: absolute;
+			text-align: center;
+			top: 100px;
+			left: 20px;
+			width: 200px;
+			color: #f8f1d6;
+			white-space: nowrap;
+            
+            -webkit-animation-name: animationtext;
+            -webkit-animation-duration: .6s;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-timing-function: cubic-bezier(.59,.64,0,1.41);
+            -webkit-animation-delay: 3s;
+            -webkit-animation-fill-mode: forwards;
+            
+            animation :  animationtext .6s cubic-bezier(.59,.64,0,1.41) 3s forwards;
+		}
+        
+        
+        @keyframes animationtext{
+            0%{
+                opacity: 0;
+                top:100px;
+            }
+            100%{
+                opacity: 1;
+                top:5px;
+            }
+        }
+        
+        @-webkit-keyframes animationtext{
+            0%{
+                opacity: 0;
+                top:100px;
+            }
+            100%{
+                opacity: 1;
+                top:5px;
+            }
+        }
+        
+        
+        
+        /* anim bouton BA ---------------------------------------------------------------------------- */
+        
+        .button-trailer {
+			position: absolute;
+			bottom: -100px;
+			left: 36px;
+			visibility: hidden;
+
+			opacity: 0;
+			color: #fff !important;
+			font-size: 11px;
+            
+            -webkit-animation-name: animationbtn;
+            -webkit-animation-duration: .6s;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-timing-function: cubic-bezier(.58,.42,0,1.19);
+            -webkit-animation-delay: 3.2s;
+            -webkit-animation-fill-mode: forwards;
+            
+            animation :  animationbtn .6s cubic-bezier(.58,.42,0,1.19) 3.2s forwards;
+		}
+        
+        /*
+        .button-trailer {
+			position: absolute;
+			bottom: -100px;
+			left: 37%;
+			visibility: hidden;
+			-webkit-transition: all .6s cubic-bezier(.58,.42,0,1.19) .8s;
+			transition: all .6s cubic-bezier(.58,.42,0,1.19) .8s;
+			opacity: 0;
+			color: #fff !important;
+			font-size: 14px;
+		}
+        */
+        
+        @keyframes animationbtn{
+            0%{
+                visibility: visible;
+                opacity: 0;
+                bottom: -100px;
+            }
+            100%{
+                visibility: visible;
+                opacity: 1;
+                bottom: 5px;
+            }
+        }
+        
+        @-webkit-keyframes animationbtn{
+            0%{
+                visibility: visible;
+                opacity: 0;
+                bottom: -100px;
+            }
+            100%{
+                visibility: visible;
+                opacity: 1;
+                bottom: 5px;
+            }
+        }
+    
+        
+        
+        .text-date, .text-download, .text-chapters {
+			font-size: 12px;
+			display: block;
+			text-shadow: 0 0 5px rgba(255,255,255,.5);
+			line-height: 17px;
+		}
+        
+        .text-date {
+            text-transform: uppercase;
+           
+        }
+        
+        
+        .text-download, .text-chapters{
+            text-transform: normal;
+             font-size: 14px;
+            line-height: 16px;
+        }
+		
+		.text-date, .text-date-white {
+			font-size: 18px !important;
+			font-weight: bolder;	
+		}
+		
+		.text-date-white {
+			color: #fff;
+		}
+		
+		.logo-nintendoshop {
+			width: 100px;
+			height: 20px;
+			background-image: url(./images/logo-nintendoshop.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin: 5px auto 0;
+			-webkit-transform: scale(1.25);
+			transform: scale(1.25);
+		}
+        
+ 
+		
+		.logo-overlay {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+		}
+		
+		
+		
+		.button {
+			width: auto;
+			height: auto;
+			background-color: transparent;
+			text-transform: uppercase;
+			padding: 5px;
+			/*background-image: url(./images/button.jpg);
+			background-size: cover;*/
+			font-weight: bold;
+			color: #fff;
+			overflow: visible;
+		}
+		
+		.button .button-text { 
+			position: relative;
+			z-index: 20;
+			display: block;
+		}
+		
+		.button .button-background { 
+			position: absolute;
+			z-index: 1;
+			display: block;
+		}
+		
+		
+		#moreBtn {
+			position: relative;
+			font-size: 12px;
+		}
+		
+		#moreBtn .button-text {
+			position: relative;
+			visibility: visible;
+			color: #fff !important;
+			width: auto;
+			height: auto;
+		}
+		
+		.button-trailer .button-background, #moreBtn .button-background {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-image: url(./images/button.jpg);
+			background-size: cover;
+			background-position: center center;
+			box-shadow: 0px 0px 2px 2px rgba(0,0,0,.5);
+		}
+		
+		.button-trailer:hover .button-background, #moreBtn.hovered .button-background {
+			box-shadow: inset 0 0 20px rgba(255,255,255,.5);
+			color: #fff !important;
+			-webkit-transition: all .2s ease;
+			transition: all .2s ease;
+		}
+		
+		.button-trailer .button-background {
+			/* The animation has been made random in JavaScript, refer to the annabelleButtons() function */
+			/*-webkit-transform: translate(0%, 0%);
+			transform: translate(0%, 0%);*/
+			-webkit-animation: annabelleFxTrailer .5s infinite;
+			animation: annabelleFxTrailer .25s infinite;
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+		}
+
+		
+		#moreBtn .button-background {
+			/* The animation has been made random in JavaScript, refer to the annabelleButtons() function */
+			/*-webkit-transform: translate(0%, 0%);
+			transform: translate(0%, 0%);
+			-webkit-animation: annabelleFxMore .3s infinite;
+			animation: annabelleFxMore .3s infinite;*/
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+		}
+
+		
+		#moreBtn.hovered #more-button-text
+		{
+			font-size: 100%;
+			animation: annabelleText .5s infinite;
+            -webkit-animation: annabelleText .5s infinite;
+		}
+		
+        
+		@keyframes annabelleText {
+			0% { font-size: 100%; }
+			25% { font-size: 102%; }
+			50% { font-size: 97%; }
+			75% { font-size: 101%; }
+			100% { font-size: 100%; }
+		}
+        
+        @-webkit-keyframes annabelleText {
+			0% { font-size: 100%; }
+			25% { font-size: 102%; }
+			50% { font-size: 97%; }
+			75% { font-size: 101%; }
+			100% { font-size: 100%; }
+		}
+        
+        #user-action-button:hover #trailer-button-text {
+            
+            font-size: 100%;
+			animation: annabelleText2 .5s infinite;
+            -webkit-animation: annabelleText2 .5s infinite;
+        }
+        
+        @keyframes annabelleText2 {
+			0% { padding: 0px; }
+			25% { padding: 1px; }
+			50% { padding: .5px; }
+			75% { padding: 1px; }
+			100% { padding: 0px; }
+		}
+        
+        @-webkit-keyframes annabelleText2 {
+			0% { padding: 0px; }
+			25% { padding: 1px; }
+			50% { padding: .5px; }
+			75% { padding: 1px; }
+			100% { padding: 0px; }
+		}
+		
+		#clickthrough-button {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			z-index: 999;
+			background: rgba(0,0,0,.001);
+		}
+		
+
+		
+		.clickthrough {
+			margin: 5px auto;
+			padding: 5px 10px;
+		}
+        
+        .ie9 .bkgd{
+            opacity: 1;
+            position: absolute;
+            width: 300px;
+            height: 250px;
+            top:0;
+            left:0;
+            
+            background-image: url(./images/bckgrd.jpg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+        }
+        
+        .ie9 #copyText {
+            top: 5px !important;
+			opacity: 1;
+			position: absolute;
+			text-align: center;
+			top: 100px;
+			left: 20px;
+			width: 200px;
+			color: #f8f1d6;
+			white-space: nowrap;
+        }
+        
+        .ie9 .logo-pz {
+			position: absolute;
+			width: 190px;
+			height: 90px;
+            opacity: 1;
+			background-image: url(./images/logo-pz-fx.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			left: 35px;
+			bottom: 47px;
+        }
+        
+        .ie9 .button-trailer {
+			position: absolute;
+			bottom: 5px;
+			left: 36px;
+			opacity: 1;
+			color: #fff !important;
+			font-size: 11px;
+            visibility: visible !important;
+		}
+	</style>
+    
+</head>
+
+<body>
+    
+    <div id="ad">
+        
+        <div id="banner">
+            <div class="bkgd" id="bkgd"></div>
+            <div class="logo-wiiu"></div>
+			
+            <div id="endslate">
+				<div class="logo-overlay">
+					<div class="logo-pz"></div>
+					
+				</div>
+				
+				<div id="copyText">
+					<span><span class="text-date">Dès le <span class="text-date-white">30 octobre</span></span></span>
+					<span class="text-download">Téléchargez gratuitement</span>
+					<span class="text-chapters">les 2 premiers chapitres sur</span>
+					<div class="logo-nintendoshop"></div>
+					<div><button class="button clickthrough" id="moreBtn"><span class="button-background" id="more-button-background"></span><span class="button-text" id="more-button-text">en savoir plus</span></button></div>
+				</div>
+			</div>
+			
+			<div id="clickthrough-button">
+				<button id="user-action-button" class="button useraction button-trailer"><span class="button-background" id="trailer-button-background"></span><span class="button-text" id="trailer-button-text">cliquez ici pour<br />voir la bande annonce</span></button>
+			</div>
+        </div>
+        
+    </div>
+    
+    <script>
+	
+	function checkInit() {
+			if (!EB.isInitialized()) {
+				EB.addEventListener(EBG.EventName.EB_INITIALIZED, onInit); // This code checks whether the EB object is initialized, if the object is initialized, it launches the function "onInit", otherwise it registers to the "EB_INITIALIZED" event.
+			}
+			else {
+				onInit();
+			}
+		}
+ 
+        //var doc = document.documentElement;
+        //doc.setAttribute('data-useragent', navigator.userAgent);
+        
+        var redraw=0;
+        
+		function onInit() {
+			var $dc = function(id) {
+				return this.document.getElementById(id);
+			};
+			
+			//document.getElementById('ad').listenerAdd('mouseover', soundVid);
+			//document.getElementById('ad').listenerAdd('mouseout', muteVid);
+			//video.listenerAdd('ended', displayEndslate);
+			//document.getElementById('clickthrough-button').listenerAdd('click', function(){console.log('clicktag');});
+			
+			/*-- IE ClassList Polyfill --*/
+			"document"in self&&("classList"in document.createElement("_")?!function(){"use strict";var t=document.createElement("_");if(t.classList.add("c1","c2"),!t.classList.contains("c2")){var e=function(t){var e=DOMTokenList.prototype[t];DOMTokenList.prototype[t]=function(t){var n,i=arguments.length;for(n=0;i>n;n++)t=arguments[n],e.call(this,t)}};e("add"),e("remove")}if(t.classList.toggle("c3",!1),t.classList.contains("c3")){var n=DOMTokenList.prototype.toggle;DOMTokenList.prototype.toggle=function(t,e){return 1 in arguments&&!this.contains(t)==!e?e:n.call(this,t)}}t=null}():!function(t){"use strict";if("Element"in t){var e="classList",n="prototype",i=t.Element[n],s=Object,r=String[n].trim||function(){return this.replace(/^\s+|\s+$/g,"")},o=Array[n].indexOf||function(t){for(var e=0,n=this.length;n>e;e++)if(e in this&&this[e]===t)return e;return-1},a=function(t,e){this.name=t,this.code=DOMException[t],this.message=e},c=function(t,e){if(""===e)throw new a("SYNTAX_ERR","An invalid or illegal string was specified");if(/\s/.test(e))throw new a("INVALID_CHARACTER_ERR","String contains an invalid character");return o.call(t,e)},l=function(t){for(var e=r.call(t.getAttribute("class")||""),n=e?e.split(/\s+/):[],i=0,s=n.length;s>i;i++)this.push(n[i]);this._updateClassName=function(){t.setAttribute("class",this.toString())}},u=l[n]=[],f=function(){return new l(this)};if(a[n]=Error[n],u.item=function(t){return this[t]||null},u.contains=function(t){return t+="",-1!==c(this,t)},u.add=function(){var t,e=arguments,n=0,i=e.length,s=!1;do t=e[n]+"",-1===c(this,t)&&(this.push(t),s=!0);while(++n<i);s&&this._updateClassName()},u.remove=function(){var t,e,n=arguments,i=0,s=n.length,r=!1;do for(t=n[i]+"",e=c(this,t);-1!==e;)this.splice(e,1),r=!0,e=c(this,t);while(++i<s);r&&this._updateClassName()},u.toggle=function(t,e){t+="";var n=this.contains(t),i=n?e!==!0&&"remove":e!==!1&&"add";return i&&this[i](t),e===!0||e===!1?e:!n},u.toString=function(){return this.join(" ")},s.defineProperty){var h={get:f,enumerable:!0,configurable:!0};try{s.defineProperty(i,e,h)}catch(g){-2146823252===g.number&&(h.enumerable=!1,s.defineProperty(i,e,h))}}else s[n].__defineGetter__&&i.__defineGetter__(e,f)}}(self));
+			/*--*/
+			
+			function listenerAdd(id, eventNew){
+				
+				$dc(id).addEventListener = $dc(id).addEventListener || function (e, f) { $dc(id).attachEvent('on' + e, f); };
+				
+				$dc(id).addEventListener(eventNew,function(e){
+					
+					e = e || window.event;
+					listen(e,this);
+					
+				});
+
+			}
+			
+			function listen(e,t){
+				var target = e.target || e.srcElement;
+				
+				if(e.preventDefault){
+					e.preventDefault();
+					e.stopPropagation();
+				}else{
+					e.returnValue = false;
+					e.cancelBubble = true;
+				}
+				
+
+				
+				switch (target.getAttribute('id')){
+					case 'clickthrough-button':
+
+						if(e.type == 'mouseover' || e.type == 'onmouseover') {   $dc('moreBtn').classList.add('hovered'); }
+						if(e.type == 'mouseout' || e.type == 'onmouseout') {   $dc('moreBtn').classList.remove('hovered'); }
+					break;
+					case 'user-action-button':
+				
+					if(e.type == 'click') {
+							//window.open('https://www.youtube.com/watch?v=a-nsFs8nMb4', '_blank'); // open in a new window (defined in Sizmek)
+						}
+					break;
+				}
+			}
+			
+			listenerAdd('clickthrough-button','mouseover');
+			listenerAdd('clickthrough-button','mouseout');
+			listenerAdd('clickthrough-button','click');
+			listenerAdd('user-action-button','click');
+			
+			function displayEndslate() {
+				$dc('clickthrough-button').removeEventListener('mouseover', void(0));
+				$dc('clickthrough-button').removeEventListener('mouseout', void(0));
+				$dc('copyText').classList.add('reveal-label');
+				$dc('user-action-button').classList.add('showTrailerBtn');
+			}
+			
+			function annabelleButtons() { // shake buttons at random
+				var annabelleOffset = Math.abs(Math.random() * -3) - 3,
+					annabelleOffset2 = Math.abs(Math.random() * -3) - 3,
+					annabelleFactor = 1.2;
+				
+				$dc('more-button-background').style.top = annabelleOffset + 'px';
+				$dc('more-button-background').style.bottom = annabelleOffset + 'px';
+				$dc('more-button-background').style.left = annabelleOffset * annabelleFactor + 'px';
+				$dc('more-button-background').style.right = annabelleOffset * annabelleFactor + 'px';
+				
+				$dc('trailer-button-background').style.top = annabelleOffset2 + 'px';
+				$dc('trailer-button-background').style.bottom = annabelleOffset2 + 'px';
+				$dc('trailer-button-background').style.left = annabelleOffset2 * annabelleFactor + 'px';
+				$dc('trailer-button-background').style.right = annabelleOffset2 * annabelleFactor + 'px';
+			}
+			
+			setInterval(annabelleButtons, 50);
+        
+            
+        
+            var myinterval = setInterval(function(){
+                redraw++;
+                if(redraw>3) clearInterval(myinterval);
+                var elm = $dc('banner'),
+                newone = elm.cloneNode(true);
+                $dc('ad').replaceChild(newone, elm);
+				startAd();
+				onInit();
+            },8000);
+                        
+        
+           // displayEndslate();
+	}
+	</script>
+    <script type="text/javascript">checkInit()</script>
+</body>
+
+</html>
