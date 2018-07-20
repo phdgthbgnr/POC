@@ -1,5 +1,5 @@
 # POC
-POC chargement et population DOM + mise en cache BLOB images (cache API) + Service Worker
+POC chargement et population DOM + mise en cache BLOB images (cache API) + Service Worker.
 
 ````js
 !function(i,t,m,mb,sm){
