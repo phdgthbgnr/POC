@@ -151,7 +151,7 @@
         _currentNode = cln.querySelector('a');
         _currentNode.setAttribute('id','a-duplicate');
         _currentTargetId = 'a-duplicate';
-
+        _m.addAclass(cln.querySelector('.poptexte'),'nodisplay');
         _m.addAclass(cln,'zoom');
             //_m.addAclass(_currentParent,'zoom');
 
@@ -870,6 +870,7 @@
         a.setAttribute('href','#all');
         a.setAttribute('data-text','Tous les projets');
         _m.addAclass(a,'itemburger');
+        _m.addAclass(a,'current');
         a.append('Voir tout');
         li.append(a);
         fragment.append(li);

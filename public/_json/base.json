@@ -736,7 +736,7 @@
     {
         "name": "Nike FFF",
         "type": "One page",
-        "type_op": "Présenation produit nouveau maillot",
+        "type_op": "Nouveau produit",
         "thumb": "nike_fff.jpg",
         "thumbloaded": false,
         "rep_images": "nike_fff",
